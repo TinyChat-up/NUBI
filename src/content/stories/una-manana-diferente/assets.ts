@@ -7,6 +7,8 @@ const BASE = '/media/stories/una-manana-diferente';
 const NO_TEXT = 'Sin texto dentro de la imagen (los textos y bocadillos los pone la app).';
 
 interface SceneInput {
+  status?: AssetSpec['status'];
+  variants?: number[];
   id: string;
   usage: string;
   description: string;
@@ -21,6 +23,8 @@ interface SceneInput {
 const scene = (i: SceneInput): AssetSpec =>
   defineAsset('escena', {
     id: `ume-${i.id}`,
+    status: i.status ?? 'pendiente',
+    variants: i.variants,
     file: `${BASE}/scenes/${i.id}.webp`,
     usage: i.usage,
     description: i.description,
@@ -63,6 +67,9 @@ const option = (i: SceneInput): AssetSpec =>
 export const unaMananaDiferenteAssets: AssetSpec[] = [
   defineAsset('cubierta', {
     id: 'ume-cover',
+    status: 'listo',
+    focus: { x: 48, y: 48 },
+    variants: [1200],
     file: `${BASE}/cover.webp`,
     usage: 'Tarjeta en el catálogo de historias, ficha de la historia y póster del vídeo',
     description:
@@ -78,6 +85,8 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   // ───────── Escenas del cuento ─────────
   scene({
     id: 's1-puerta',
+    status: 'listo',
+    variants: [1200],
     usage: 'Escena 1 · pasos 1-2',
     description: 'Teo y su abuela Rosa llegan a la verja del colegio. Rosa le da la mano. Otros niños entran al fondo. Teo mira el reloj del colegio.',
     characters: ['teo', 'rosa'],

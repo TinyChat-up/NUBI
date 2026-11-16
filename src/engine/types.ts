@@ -117,6 +117,21 @@ export interface AssetSpec {
     icon?: string;
     tint?: 'crema' | 'petroleo' | 'coral' | 'salvia' | 'mostaza';
   };
+
+  // ── Campos OPCIONALES de presentación (contrato: docs/ILLUSTRATION_INTEGRATION.md) ──
+
+  /**
+   * Punto focal en % (0-100) de la zona pedagógicamente importante (caras, gestos,
+   * comunicador). Solo se usa cuando un contenedor no tiene la misma proporción que
+   * el recurso y hay que recortar. Por defecto: centro (50, 50).
+   */
+  focus?: { x: number; y: number };
+  /**
+   * Anchos (px) de variantes responsive ya exportadas junto al archivo principal,
+   * con el sufijo `-<ancho>w`: p. ej. `s1-puerta-1200w.webp` para 1200.
+   * El archivo principal (`file`) se usa como tamaño mayor.
+   */
+  variants?: number[];
 }
 
 // ───────────────────────── Personajes ─────────────────────────

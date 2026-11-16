@@ -1,0 +1,398 @@
+[
+  {
+    "id": "portada-fondo",
+    "path": "/media/common/portada-fondo.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "portada-fondo",
+    "path": "/media/common/portada-fondo-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "nubi-saludo",
+    "path": "/media/characters/nubi-saludo.png",
+    "width": 1024,
+    "height": 1024,
+    "transparent": true,
+    "actual": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "nubi-saludo",
+    "path": "/media/characters/nubi-saludo-256w.png",
+    "width": 256,
+    "height": 256,
+    "transparent": true,
+    "actual": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "nubi-pensando",
+    "path": "/media/characters/nubi-pensando.png",
+    "width": 1024,
+    "height": 1024,
+    "transparent": true,
+    "actual": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      253
+    ]
+  },
+  {
+    "id": "nubi-pensando",
+    "path": "/media/characters/nubi-pensando-256w.png",
+    "width": 256,
+    "height": 256,
+    "transparent": true,
+    "actual": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-nubi",
+    "path": "/media/characters/nubi.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-nubi",
+    "path": "/media/characters/nubi-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "char-teo",
+    "path": "/media/characters/teo.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-teo",
+    "path": "/media/characters/teo-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-aya",
+    "path": "/media/characters/aya.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-aya",
+    "path": "/media/characters/aya-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-bruno",
+    "path": "/media/characters/bruno.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-bruno",
+    "path": "/media/characters/bruno-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-lia",
+    "path": "/media/characters/lia.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-lia",
+    "path": "/media/characters/lia-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "char-andres",
+    "path": "/media/characters/andres.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-andres",
+    "path": "/media/characters/andres-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-carmen",
+    "path": "/media/characters/carmen.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-carmen",
+    "path": "/media/characters/carmen-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-pilar",
+    "path": "/media/characters/pilar.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-pilar",
+    "path": "/media/characters/pilar-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-rosa",
+    "path": "/media/characters/rosa.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-rosa",
+    "path": "/media/characters/rosa-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "ume-cover",
+    "path": "/media/stories/una-manana-diferente/cover.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-cover",
+    "path": "/media/stories/una-manana-diferente/cover-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-s1-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s1-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  }
+]

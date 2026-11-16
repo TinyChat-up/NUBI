@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **0 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -21,7 +21,7 @@ Estado: **0 de 72** recursos entregados. Mientras un recurso esté `pendiente`, 
 
 | Personaje | Papel | Descripción visual |
 |---|---|---|
-| **Nubi** | Guía del mundo de historias | Pequeña nube redondeada, color crema cálido con borde azul petróleo suave, ojos de punto, mejillas coral. Sin boca grande ni gestos exagerados. Flota a poca altura. Diseño PROVISIONAL. |
+| **Nubi** | Guía del mundo de historias | Pequeña nube redondeada, color crema cálido con borde azul petróleo suave, ojos de punto, mejillas coral. Sin boca grande ni gestos exagerados. Flota a poca altura. Diseño maestro editorial en docs/art-direction/models/nubi.webp. |
 | **Teo** | Protagonista · 8 años | Niño de 8 años, pelo castaño despeinado, sudadera azul petróleo con capucha, mochila mostaza con un llavero de tren. Lleva unos cascos antirruido verdes colgados de la mochila. |
 | **Aya** | Compañera de clase | Niña de 8 años, pelo negro recogido en dos moños, jersey coral, gafas redondas. |
 | **Bruno** | Compañero de clase | Niño de 9 años, pelo rizado pelirrojo, camiseta mostaza, rodilleras de jugar al fútbol. |
@@ -35,18 +35,18 @@ Estado: **0 de 72** recursos entregados. Mientras un recurso esté `pendiente`, 
 
 | ID | Tipo | Archivo | Estado |
 |---|---|---|---|
-| `portada-fondo` | Portada | `/media/common/portada-fondo.webp` | pendiente |
-| `nubi-saludo` | Personaje | `/media/characters/nubi-saludo.png` | pendiente |
-| `nubi-pensando` | Personaje | `/media/characters/nubi-pensando.png` | pendiente |
-| `char-nubi` | Personaje | `/media/characters/nubi.png` | pendiente |
-| `char-teo` | Personaje | `/media/characters/teo.png` | pendiente |
-| `char-aya` | Personaje | `/media/characters/aya.png` | pendiente |
-| `char-bruno` | Personaje | `/media/characters/bruno.png` | pendiente |
-| `char-lia` | Personaje | `/media/characters/lia.png` | pendiente |
-| `char-andres` | Personaje | `/media/characters/andres.png` | pendiente |
-| `char-carmen` | Personaje | `/media/characters/carmen.png` | pendiente |
-| `char-pilar` | Personaje | `/media/characters/pilar.png` | pendiente |
-| `char-rosa` | Personaje | `/media/characters/rosa.png` | pendiente |
+| `portada-fondo` | Portada | `/media/common/portada-fondo.webp` | listo |
+| `nubi-saludo` | Personaje | `/media/characters/nubi-saludo.png` | listo |
+| `nubi-pensando` | Personaje | `/media/characters/nubi-pensando.png` | listo |
+| `char-nubi` | Personaje | `/media/characters/nubi.png` | listo |
+| `char-teo` | Personaje | `/media/characters/teo.png` | listo |
+| `char-aya` | Personaje | `/media/characters/aya.png` | listo |
+| `char-bruno` | Personaje | `/media/characters/bruno.png` | listo |
+| `char-lia` | Personaje | `/media/characters/lia.png` | listo |
+| `char-andres` | Personaje | `/media/characters/andres.png` | listo |
+| `char-carmen` | Personaje | `/media/characters/carmen.png` | listo |
+| `char-pilar` | Personaje | `/media/characters/pilar.png` | listo |
+| `char-rosa` | Personaje | `/media/characters/rosa.png` | listo |
 | `place-colegio` | Lugar | `/media/places/colegio.webp` | pendiente |
 | `place-casa` | Lugar | `/media/places/casa.webp` | pendiente |
 | `place-parque` | Lugar | `/media/places/parque.webp` | pendiente |
@@ -113,7 +113,7 @@ Estado: **0 de 72** recursos entregados. Mientras un recurso esté `pendiente`, 
 
 - **Nombre de archivo:** `public/media/characters/nubi.png`
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
-- **Descripción visual:** Retrato de cuerpo entero de Nubi, de frente y en reposo. Diseño provisional de la guía: debe poder animarse con movimientos muy suaves (flotar, parpadear). Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
+- **Descripción visual:** Retrato de cuerpo entero de Nubi, de frente y en reposo. Diseño maestro editorial entregado; movimientos muy suaves (flotar, parpadear). Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Nubi
 - **Emoción o acción:** Neutral, amable
 - **Proporción:** 3:4
@@ -516,8 +516,8 @@ Estado: **0 de 72** recursos entregados. Mientras un recurso esté `pendiente`, 
 
 | ID | Tipo | Archivo | Estado |
 |---|---|---|---|
-| `ume-cover` | Cubierta | `/media/stories/una-manana-diferente/cover.webp` | pendiente |
-| `ume-s1-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-puerta.webp` | pendiente |
+| `ume-cover` | Cubierta | `/media/stories/una-manana-diferente/cover.webp` | listo |
+| `ume-s1-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-puerta.webp` | listo |
 | `ume-s1-pasillo` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-pasillo.webp` | pendiente |
 | `ume-s2-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-puerta.webp` | pendiente |
 | `ume-s2-anuncio` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-anuncio.webp` | pendiente |

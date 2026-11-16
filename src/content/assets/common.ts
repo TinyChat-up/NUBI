@@ -10,6 +10,9 @@ const TRANSPARENT_BG = 'Sin fondo (PNG/WebP con canal alfa). Sombra de contacto 
 const portada: AssetSpec[] = [
   defineAsset('portada', {
     id: 'portada-fondo',
+    status: 'listo',
+    variants: [1200],
+    focus: { x: 50, y: 66 },
     file: '/media/common/portada-fondo.webp',
     usage: 'Portada (pantalla A) — fondo panorámico',
     description:
@@ -22,6 +25,8 @@ const portada: AssetSpec[] = [
   }),
   defineAsset('personaje', {
     id: 'nubi-saludo',
+    status: 'listo',
+    variants: [256],
     file: '/media/characters/nubi-saludo.png',
     usage: 'Portada y pantallas de bienvenida',
     description: 'Nubi, la nube guía, flotando y saludando con un pequeño brazo de nube. Expresión amable y serena.',
@@ -35,6 +40,8 @@ const portada: AssetSpec[] = [
   }),
   defineAsset('personaje', {
     id: 'nubi-pensando',
+    status: 'listo',
+    variants: [256],
     file: '/media/characters/nubi-pensando.png',
     usage: 'Escenas de reflexión (preguntas de Nubi)',
     description: 'Nubi ligeramente inclinada, mirando hacia arriba, con una pequeña chispa de idea a su lado.',
@@ -50,9 +57,11 @@ const portada: AssetSpec[] = [
 
 // ───────────── Hojas de personaje (referencia de estilo) ─────────────
 
-const characterSheet = (id: string, name: string, notes: string): AssetSpec =>
+const characterSheet = (id: string, name: string, notes: string, status: AssetSpec['status'] = 'pendiente'): AssetSpec =>
   defineAsset('personaje', {
     id: `char-${id}`,
+    status,
+    variants: status === 'listo' ? [384] : undefined,
     file: `/media/characters/${id}.png`,
     usage: 'Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones',
     description: `Retrato de cuerpo entero de ${name}, de frente y en reposo. ${notes} Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.`,
@@ -66,15 +75,15 @@ const characterSheet = (id: string, name: string, notes: string): AssetSpec =>
   });
 
 const characterSheets: AssetSpec[] = [
-  characterSheet('nubi', 'Nubi', 'Diseño provisional de la guía: debe poder animarse con movimientos muy suaves (flotar, parpadear).'),
-  characterSheet('teo', 'Teo', 'Cascos antirruido verdes visibles colgando de la mochila.'),
-  characterSheet('aya', 'Aya', 'Gafas redondas, postura abierta y curiosa.'),
-  characterSheet('bruno', 'Bruno', 'Energía de movimiento, rodilleras de fútbol.'),
-  characterSheet('lia', 'Lía', 'Su comunicador de pictogramas siempre visible y presentado con naturalidad, como parte de ella.'),
-  characterSheet('andres', 'Andrés', 'Adulto cercano; evitar rasgos de autoridad intimidante.'),
-  characterSheet('carmen', 'Carmen', 'Aparece solo en recuerdos o retratos.'),
-  characterSheet('pilar', 'Pilar', 'Transmite confianza y calma.'),
-  characterSheet('rosa', 'Rosa', 'Abuela activa, con bolso de tela.'),
+  characterSheet('nubi', 'Nubi', 'Diseño maestro editorial entregado; movimientos muy suaves (flotar, parpadear).', 'listo'),
+  characterSheet('teo', 'Teo', 'Cascos antirruido verdes visibles colgando de la mochila.', 'listo'),
+  characterSheet('aya', 'Aya', 'Gafas redondas, postura abierta y curiosa.', 'listo'),
+  characterSheet('bruno', 'Bruno', 'Energía de movimiento, rodilleras de fútbol.', 'listo'),
+  characterSheet('lia', 'Lía', 'Su comunicador de pictogramas siempre visible y presentado con naturalidad, como parte de ella.', 'listo'),
+  characterSheet('andres', 'Andrés', 'Adulto cercano; evitar rasgos de autoridad intimidante.', 'listo'),
+  characterSheet('carmen', 'Carmen', 'Aparece solo en recuerdos o retratos.', 'listo'),
+  characterSheet('pilar', 'Pilar', 'Transmite confianza y calma.', 'listo'),
+  characterSheet('rosa', 'Rosa', 'Abuela activa, con bolso de tela.', 'listo'),
 ];
 
 // ───────────── Lugares de "Mi mundo" ─────────────
