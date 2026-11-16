@@ -3,7 +3,7 @@ import { emotionList } from '../content/emotions.ts';
 import { tools } from '../content/tools.ts';
 import type { EmotionId } from '../engine/types.ts';
 import { Icon } from '../components/Icon.tsx';
-import { Nubi } from '../components/Nubi.tsx';
+import { EmotionArt } from '../components/illustration/GuideArt.tsx';
 import { LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
 
@@ -35,7 +35,7 @@ export function EmotionsScreen() {
                 onClick={() => setSelected(e.id)}
                 className={`tap flex flex-col items-center gap-1 rounded-3xl border-[3px] p-3 font-extrabold ${on ? 'border-petroleo-600 bg-crema-50' : `border-transparent ${TONES[i % 4]}`}`}
               >
-                <Nubi mood={e.mood} size={64} />
+                <EmotionArt emotion={e.id} mood={e.mood} size={64} />
                 <span className="reading-text text-center leading-tight">{e.name}</span>
               </button>
             );
@@ -44,7 +44,7 @@ export function EmotionsScreen() {
 
         <section aria-live="polite" className="card animate-pop p-6" key={emotion.id}>
           <div className="flex items-center gap-4">
-            <Nubi mood={emotion.mood} size={100} className="animate-float" />
+            <EmotionArt emotion={emotion.id} mood={emotion.mood} size={100} className="animate-sway" />
             <div>
               <h2 className="text-3xl text-petroleo-900">{emotion.name}</h2>
               <p className="reading-text text-lg">{emotion.childText}</p>

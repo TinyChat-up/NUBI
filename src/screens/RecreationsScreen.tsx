@@ -4,7 +4,7 @@ import { getStory, storyList } from '../content/stories/index.ts';
 import { getChoiceStep } from '../engine/storyEngine.ts';
 import type { ChoiceOption } from '../engine/types.ts';
 import { Illustration } from '../components/Illustration.tsx';
-import { Nubi } from '../components/Nubi.tsx';
+import { GuideArt } from '../components/illustration/GuideArt.tsx';
 import { ChoiceGrid, ConsequenceBody, ExploredMeter } from '../components/player/interactions.tsx';
 import { Button, LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
@@ -27,7 +27,7 @@ export function RecreationsScreen() {
           return (
             <li key={rec.id}>
               <Link to={`/recreaciones/${story.id}/${rec.id}`} className="tap card flex h-full flex-col overflow-hidden hover:shadow-[var(--shadow-lift)]">
-                <Illustration id={rec.cover} decorative className="aspect-[4/3] w-full" />
+                <Illustration id={rec.cover} decorative ratio sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="w-full" />
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <p className="text-sm font-black tracking-wider text-coral-700 uppercase">{story.title}</p>
                   <h2 className="text-2xl text-petroleo-900">{rec.title}</h2>
@@ -75,7 +75,7 @@ export function RecreationPlayScreen({ storyId, recId }: { storyId: string; recI
       {!option ? (
         <>
           <div className="card mb-6 flex flex-col items-center gap-4 p-5 sm:flex-row">
-            <Nubi mood="thinking" size={90} />
+            <GuideArt mood="thinking" size={90} />
             <p className="reading-text text-lg">{rec.intro}</p>
           </div>
           <ChoiceGrid step={step} explored={explored} onChoose={choose} />

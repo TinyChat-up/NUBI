@@ -1,6 +1,7 @@
 import { storyList } from '../content/stories/index.ts';
 import { Icon } from '../components/Icon.tsx';
-import { Illustration } from '../components/Illustration.tsx';
+import { Illustration, hasFinalArt } from '../components/Illustration.tsx';
+import { GuideArt } from '../components/illustration/GuideArt.tsx';
 import { Nubi } from '../components/Nubi.tsx';
 import { LinkButton } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
@@ -16,7 +17,22 @@ export function HomeScreen() {
     <div className="relative">
       {/* Escena principal */}
       <section className="relative isolate flex min-h-[100dvh] flex-col overflow-hidden" aria-labelledby="home-title">
-        <Illustration id="portada-fondo" decorative className="absolute inset-x-0 bottom-0 -z-10 h-[62%] w-full [&_svg]:h-full" />
+        {hasFinalArt('portada-fondo') ? (
+          <>
+            <Illustration
+              id="portada-fondo"
+              decorative
+              priority
+              fit="cover"
+              className="absolute inset-x-0 bottom-0 -z-10 w-full portrait:aspect-[4/3] landscape:top-0 landscape:h-full"
+              imgClassName="portrait:[mask-image:linear-gradient(to_bottom,transparent,black_38%)]"
+            />
+            {/* Velo de papel en la parte superior para que el título se lea sobre cualquier cielo. */}
+            <div aria-hidden className="absolute inset-x-0 top-0 -z-10 hidden h-[55%] bg-gradient-to-b from-crema-100/85 via-crema-100/45 to-transparent landscape:block" />
+          </>
+        ) : (
+          <Illustration id="portada-fondo" decorative className="absolute inset-x-0 bottom-0 -z-10 h-[62%] w-full [&_svg]:h-full" />
+        )}
 
         {/* nubes que derivan (decorativas, se detienen con movimiento reducido) */}
         <div aria-hidden className="pointer-events-none absolute inset-x-0 top-24 -z-10 h-40 overflow-hidden">
@@ -36,7 +52,11 @@ export function HomeScreen() {
         </header>
 
         <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-start gap-6 px-6 pt-[4vh] pb-[30vh] text-center lg:flex-row lg:items-start lg:justify-start lg:gap-10 lg:pt-[8vh] lg:text-left">
-          <Nubi size={190} mood="happy" wave className="animate-float drop-shadow-[0_18px_24px_rgba(34,51,58,0.15)] max-sm:w-36" label="Nubi, la nube guía, te saluda" />
+          {hasFinalArt('nubi-saludo') ? (
+            <GuideArt size={200} className="w-36 animate-sway sm:w-48" label="Nubi, la nube guía, te saluda" />
+          ) : (
+            <Nubi size={190} mood="happy" wave className="animate-float drop-shadow-[0_18px_24px_rgba(34,51,58,0.15)] max-sm:w-36" label="Nubi, la nube guía, te saluda" />
+          )}
           <div className="animate-rise">
             <h1 id="home-title" className="text-[4.5rem] leading-none font-black tracking-[0.12em] text-petroleo-800 sm:text-[6.5rem]">
               NUBI
@@ -57,7 +77,7 @@ export function HomeScreen() {
       {/* Historia destacada */}
       <section aria-labelledby="featured-title" className="relative -mt-[16vh] px-4 pb-16 sm:px-8">
         <div className="card mx-auto grid max-w-5xl overflow-hidden md:grid-cols-[1.1fr_1fr]">
-          <Illustration id={featured.cover} className="aspect-[4/3] w-full md:aspect-auto md:h-full" />
+          <Illustration id={featured.cover} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full md:self-center" />
           <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">
             <p className="text-sm font-black tracking-widest text-coral-700 uppercase">Episodio piloto</p>
             <h2 id="featured-title" className="text-3xl text-petroleo-900 sm:text-4xl">

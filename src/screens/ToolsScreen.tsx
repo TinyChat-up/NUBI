@@ -20,7 +20,7 @@ export function ToolsScreen() {
           return (
             <li key={t.id} className="animate-rise" style={{ animationDelay: `${i * 50}ms` }}>
               <Link to={`/herramientas/${t.id}`} className="tap card flex h-full gap-4 p-4 hover:shadow-[var(--shadow-lift)]">
-                <Illustration id={t.illustration} decorative className={`size-24 shrink-0 rounded-2xl ${toneBg[t.color]}`} />
+                <Illustration id={t.illustration} decorative sizes="96px" className={`size-24 shrink-0 rounded-2xl ${toneBg[t.color]}`} />
                 <span className="flex flex-1 flex-col gap-1">
                   <span className="text-xl font-black text-petroleo-900">{t.name}</span>
                   <span className="reading-text text-tinta-suave">{t.childText}</span>
@@ -88,7 +88,7 @@ export function ToolDetailScreen({ toolId }: { toolId: string }) {
       </div>
 
       <section className={`grid gap-6 overflow-hidden rounded-[var(--radius-card)] p-6 sm:grid-cols-[auto_1fr] sm:items-center sm:p-8 ${toneBg[tool.color]}`}>
-        <Illustration id={tool.illustration} className="mx-auto size-44 rounded-[2rem] bg-crema-50 sm:size-52" />
+        <Illustration id={tool.illustration} priority sizes="208px" className="mx-auto size-44 rounded-[2rem] bg-crema-50 sm:size-52" />
         <div>
           <h1 className={`text-4xl sm:text-5xl ${toneText[tool.color]}`}>{tool.name}</h1>
           <p className="reading-text mt-3 text-xl font-bold">{tool.childText}</p>

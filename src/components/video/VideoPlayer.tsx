@@ -3,7 +3,7 @@ import type { Story, VideoSpec } from '../../engine/types.ts';
 import { useSettings } from '../../state/settings.tsx';
 import { Icon } from '../Icon.tsx';
 import { Illustration } from '../Illustration.tsx';
-import { Nubi } from '../Nubi.tsx';
+import { GuideArt } from '../illustration/GuideArt.tsx';
 import { LinkButton, ToolButton } from '../ui.tsx';
 
 const fmt = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
@@ -41,7 +41,7 @@ export function VideoPlayer({ story, video }: { story: Story; video: VideoSpec }
           <Illustration id={video.poster} className="aspect-[16/9] w-full" decorative />
           <div className="relative grid place-items-center bg-petroleo-900/55 p-4 sm:absolute sm:inset-0">
             <div className="flex max-w-lg flex-col items-center gap-3 rounded-[var(--radius-card)] bg-crema-50 p-6 text-center">
-              <Nubi mood="calm" size={90} />
+              <GuideArt mood="calm" size={90} />
               <h2 className="text-2xl text-petroleo-900">Vídeo en producción</h2>
               <p className="reading-text text-lg">{error ? 'No se ha podido cargar el vídeo en este dispositivo.' : video.productionNote}</p>
               <div className="flex flex-wrap justify-center gap-3">

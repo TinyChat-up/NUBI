@@ -19,7 +19,7 @@ export function StoryCard({ story }: { story: Story }) {
   return (
     <Link to={`/historias/${story.id}`} className="tap card group flex h-full flex-col overflow-hidden hover:shadow-[var(--shadow-lift)]">
       <div className="relative">
-        <Illustration id={story.cover} decorative className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]" />
+        <Illustration id={story.cover} decorative sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]" />
         {p && (
           <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-crema-50/95 px-3 py-1 text-sm font-bold text-salvia-700 shadow-[var(--shadow-soft)]">
             <Icon name={p.completedAt ? 'check' : 'footsteps'} size={16} strokeWidth={2.5} />

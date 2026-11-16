@@ -33,7 +33,7 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
       </div>
 
       <section className="card grid overflow-hidden lg:grid-cols-[1.15fr_1fr]">
-        <Illustration id={story.cover} className="aspect-[4/3] w-full lg:aspect-auto lg:h-full" showBadge />
+        <Illustration id={story.cover} priority sizes="(min-width: 1024px) 55vw, 100vw" className="aspect-[4/3] w-full lg:aspect-auto lg:h-full" showBadge />
         <div className="flex flex-col gap-4 p-6 sm:p-8">
           <div className="flex flex-wrap gap-2">
             <Chip icon={place.icon}>{place.name}</Chip>
@@ -107,7 +107,7 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
               const c = characters[id];
               return (
                 <li key={id} className="flex flex-col items-center gap-1 text-center">
-                  <Illustration id={`char-${id}`} className="aspect-[3/4] w-full rounded-2xl bg-crema-50" />
+                  <Illustration id={`char-${id}`} ratio sizes="160px" className="w-full rounded-2xl bg-crema-50" />
                   <span className="font-black text-petroleo-900">{c.name}</span>
                   <span className="text-xs leading-tight text-tinta-suave">{c.role}</span>
                 </li>

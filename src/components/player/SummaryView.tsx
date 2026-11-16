@@ -3,7 +3,7 @@ import { findStep } from '../../engine/storyEngine.ts';
 import type { Story, SummaryStep } from '../../engine/types.ts';
 import { tools } from '../../content/tools.ts';
 import { Icon } from '../Icon.tsx';
-import { Nubi } from '../Nubi.tsx';
+import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, LinkButton } from '../ui.tsx';
 
 interface Item {
@@ -44,7 +44,7 @@ export function SummaryView({ story, state, step, onRestart }: { story: Story; s
   return (
     <div className="animate-rise">
       <div className="mb-6 flex flex-col items-center gap-3 text-center sm:flex-row sm:text-left">
-        <Nubi size={110} mood="happy" className="animate-float shrink-0" />
+        <GuideArt size={110} mood="happy" className="shrink-0 animate-sway" />
         <div>
           <h2 className="text-3xl text-petroleo-900 sm:text-4xl">{step.title}</h2>
           <p className="reading-text mt-1 text-lg text-tinta-suave">Esto es lo que elegiste. No hay respuestas buenas ni malas: son las tuyas.</p>

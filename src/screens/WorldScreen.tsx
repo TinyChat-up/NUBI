@@ -3,7 +3,7 @@ import { storiesByPlace } from '../content/stories/index.ts';
 import type { Place, PlaceId } from '../engine/types.ts';
 import { Icon } from '../components/Icon.tsx';
 import { Illustration } from '../components/Illustration.tsx';
-import { Nubi } from '../components/Nubi.tsx';
+import { GuideArt } from '../components/illustration/GuideArt.tsx';
 import { StoryCard } from '../components/StoryCard.tsx';
 import { LinkButton, Page, PageHeader, toneBg, toneText } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
@@ -28,7 +28,7 @@ export function WorldScreen() {
           return (
             <li key={place.id} className="animate-rise" style={{ animationDelay: `${i * 60}ms` }}>
               <Link to={placeHref(place)} className="tap card group block h-full overflow-hidden hover:shadow-[var(--shadow-lift)]">
-                <Illustration id={place.illustration} decorative className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]" />
+                <Illustration id={place.illustration} decorative sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]" />
                 <div className="flex items-center gap-4 p-5">
                   <span className={`grid size-14 shrink-0 place-items-center rounded-2xl ${toneBg[place.color]} ${toneText[place.color]}`}>
                     <Icon name={place.icon} size={28} />
@@ -74,7 +74,7 @@ export function PlaceScreen({ placeId }: { placeId: string }) {
         </ul>
       ) : (
         <div className="card mx-auto flex max-w-xl flex-col items-center gap-4 p-8 text-center">
-          <Nubi mood="calm" size={120} />
+          <GuideArt mood="calm" size={120} />
           <h2 className="text-2xl text-petroleo-900">Aquí todavía no hay historias</h2>
           <p className="reading-text text-lg">Las estamos preparando con calma. Mientras tanto, puedes visitar el colegio.</p>
           <LinkButton to="/mundo/colegio" icon="school">
