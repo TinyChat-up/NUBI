@@ -82,15 +82,15 @@ Todas en Chromium headless con las variables de §4. Tiempos de la ejecución fi
 
 | Prueba | Resultado | Tiempo | Detalle |
 |---|---|---|---|
-| `art-files.mjs` | ✅ PASS | ~5 s | 36 recursos listos / 116 archivos: SHA-256, decodificación, dimensiones y alfa |
-| `art-layout.mjs` | ✅ PASS | ~70 s | 390/820/1180: cargado 88, provisional 72, **error 0**. Único recorte: `portada-fondo`, decorativo y previsto |
+| `art-files.mjs` | ✅ PASS | ~14 s | 36 recursos listos / 116 archivos: SHA-256, decodificación, dimensiones y alfa |
+| `art-layout.mjs` | ✅ PASS | ~71 s | 390/820/1180: cargado 88, provisional 72, **error 0**. Único recorte: `portada-fondo`, decorativo y previsto |
 | `art-batch-2.mjs` | ✅ PASS | ~22 s | 10 escenas × 3 tamaños: orientación (3:4 en vertical, 16:9 en horizontal), proporción, texto, controles, cómic y Nubi |
 | `art-batch-3.mjs` | ✅ PASS | ~12 s | Seis decisiones y doce momentos × 3 tamaños: 4:3 sin recorte, fuentes responsive, texto exacto y vuelta atrás |
-| `quality.mjs` | ✅ PASS | ~2 min | Cuento y cómic, seis opciones, emociones, intensidad, resumen, persistencia, borrado, teclado y vídeo × 3 tamaños. axe (WCAG 2.0/2.1/2.2 A/AA): **0 infracciones** en 36 estados |
+| `quality.mjs` | ✅ PASS | ~127 s | Cuento y cómic, seis opciones, emociones, intensidad, resumen, persistencia, borrado, teclado y vídeo × 3 tamaños. axe (WCAG 2.0/2.1/2.2 A/AA): **0 infracciones** en 36 estados |
 | `story-fit.mjs` | ✅ PASS | ~57 s | 23 páginas × 3 tamaños × 2 tamaños de letra. Con letra normal no hay desplazamiento. Con letra grande, el desplazamiento permitido afecta a 15 páginas en móvil y 3 en horizontal |
 | `narration.mjs` | ✅ PASS | ~2 s | Rechazo de voz remota con alternativa textual; voz local, error asíncrono y detener |
 | `screens.mjs` | ✅ PASS | ~6 s | 9 rutas generales sin infracciones de axe ni desbordamiento |
-| `focus-obscured.mjs` **(nueva)** | ✅ PASS | ~3 min | 12 rutas × 3 tamaños × 2 tamaños de letra: ningún control enfocado queda bajo una barra fija. **Sin la corrección falla con 43 casos** |
+| `focus-obscured.mjs` **(nueva)** | ✅ PASS | ~74 s | 12 rutas × 3 tamaños × 2 tamaños de letra: ningún control enfocado queda bajo una barra fija. **Sin la corrección falla con 43 casos** |
 
 La primera ejecución, con el código de partida, dio el mismo resultado en las ocho baterías originales. Ninguna prueba se ha desactivado ni relajado.
 
