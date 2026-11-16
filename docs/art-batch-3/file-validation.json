@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "portada-fondo",
+    "path": "/media/common/portada-fondo.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "portada-fondo",
+    "path": "/media/common/portada-fondo-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "nubi-saludo",
+    "path": "/media/characters/nubi-saludo.png",
+    "width": 1024,
+    "height": 1024,
+    "transparent": true,
+    "actual": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "nubi-saludo",
+    "path": "/media/characters/nubi-saludo-256w.png",
+    "width": 256,
+    "height": 256,
+    "transparent": true,
+    "actual": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "nubi-saludo",
+    "path": "/media/characters/nubi-saludo-512w.png",
+    "width": 512,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      253
+    ]
+  },
+  {
+    "id": "nubi-pensando",
+    "path": "/media/characters/nubi-pensando.png",
+    "width": 1024,
+    "height": 1024,
+    "transparent": true,
+    "actual": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      253
+    ]
+  },
+  {
+    "id": "nubi-pensando",
+    "path": "/media/characters/nubi-pensando-256w.png",
+    "width": 256,
+    "height": 256,
+    "transparent": true,
+    "actual": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "nubi-pensando",
+    "path": "/media/characters/nubi-pensando-512w.png",
+    "width": 512,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      253
+    ]
+  },
+  {
+    "id": "char-nubi",
+    "path": "/media/characters/nubi.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-nubi",
+    "path": "/media/characters/nubi-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "char-teo",
+    "path": "/media/characters/teo.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-teo",
+    "path": "/media/characters/teo-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-aya",
+    "path": "/media/characters/aya.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-aya",
+    "path": "/media/characters/aya-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-bruno",
+    "path": "/media/characters/bruno.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-bruno",
+    "path": "/media/characters/bruno-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-lia",
+    "path": "/media/characters/lia.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-lia",
+    "path": "/media/characters/lia-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      254
+    ]
+  },
+  {
+    "id": "char-andres",
+    "path": "/media/characters/andres.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-andres",
+    "path": "/media/characters/andres-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-carmen",
+    "path": "/media/characters/carmen.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-carmen",
+    "path": "/media/characters/carmen-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-pilar",
+    "path": "/media/characters/pilar.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-pilar",
+    "path": "/media/characters/pilar-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-rosa",
+    "path": "/media/characters/rosa.png",
+    "width": 1536,
+    "height": 2048,
+    "transparent": true,
+    "actual": [
+      1536,
+      2048
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "char-rosa",
+    "path": "/media/characters/rosa-384w.png",
+    "width": 384,
+    "height": 512,
+    "transparent": true,
+    "actual": [
+      384,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "id": "ume-cover",
+    "path": "/media/stories/una-manana-diferente/cover.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-cover",
+    "path": "/media/stories/una-manana-diferente/cover-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-s1-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s1-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s1-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s1-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s1-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s1-pasillo",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-pasillo.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s1-pasillo",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s1-pasillo:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s1-pasillo:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s1-pasillo:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s2-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-puerta.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s2-puerta",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s2-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s2-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s2-puerta:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s2-anuncio",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-anuncio.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s2-anuncio",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s2-anuncio:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s2-anuncio:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s2-anuncio:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s2-reacciones",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-reacciones.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s2-reacciones",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s2-reacciones:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s2-reacciones:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s2-reacciones:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s3-pizarra",
+    "path": "/media/stories/una-manana-diferente/scenes/s3-pizarra.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s3-pizarra",
+    "path": "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s3-pizarra:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s3-pizarra:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s3-pizarra:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s4-teo-piensa",
+    "path": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s4-teo-piensa",
+    "path": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s4-teo-piensa:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s4-teo-piensa:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s4-teo-piensa:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s6-plan",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-plan.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s6-plan",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s6-plan:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s6-plan:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s6-plan:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s6-biblioteca",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s6-biblioteca",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s6-biblioteca:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s6-biblioteca:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s6-biblioteca:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-s7-salida",
+    "path": "/media/stories/una-manana-diferente/scenes/s7-salida.webp",
+    "width": 2400,
+    "height": 1350,
+    "transparent": false,
+    "actual": [
+      2400,
+      1350
+    ]
+  },
+  {
+    "id": "ume-s7-salida",
+    "path": "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp",
+    "width": 1200,
+    "height": 675,
+    "transparent": false,
+    "actual": [
+      1200,
+      675
+    ]
+  },
+  {
+    "id": "ume-s7-salida:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical.webp",
+    "width": 1536,
+    "height": 2048,
+    "transparent": false,
+    "actual": [
+      1536,
+      2048
+    ]
+  },
+  {
+    "id": "ume-s7-salida:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-768w.webp",
+    "width": 768,
+    "height": 1024,
+    "transparent": false,
+    "actual": [
+      768,
+      1024
+    ]
+  },
+  {
+    "id": "ume-s7-salida:portrait",
+    "path": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-1024w.webp",
+    "width": 1024,
+    "height": 1365,
+    "transparent": false,
+    "actual": [
+      1024,
+      1365
+    ]
+  },
+  {
+    "id": "ume-opt-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/opt-preguntar.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/c-preguntar.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/c-preguntar-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-preguntar",
+    "path": "/media/stories/una-manana-diferente/options/c-preguntar-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-opt-horario",
+    "path": "/media/stories/una-manana-diferente/options/opt-horario.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-horario",
+    "path": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-horario",
+    "path": "/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-horario",
+    "path": "/media/stories/una-manana-diferente/options/c-horario.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-horario",
+    "path": "/media/stories/una-manana-diferente/options/c-horario-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-horario",
+    "path": "/media/stories/una-manana-diferente/options/c-horario-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-opt-adulto",
+    "path": "/media/stories/una-manana-diferente/options/opt-adulto.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-adulto",
+    "path": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-adulto",
+    "path": "/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-adulto",
+    "path": "/media/stories/una-manana-diferente/options/c-adulto.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-adulto",
+    "path": "/media/stories/una-manana-diferente/options/c-adulto-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-adulto",
+    "path": "/media/stories/una-manana-diferente/options/c-adulto-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-opt-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/opt-regulacion.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/c-regulacion.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/c-regulacion-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-regulacion",
+    "path": "/media/stories/una-manana-diferente/options/c-regulacion-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-opt-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/opt-tiempo.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/c-tiempo.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/c-tiempo-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-tiempo",
+    "path": "/media/stories/una-manana-diferente/options/c-tiempo-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-opt-salir",
+    "path": "/media/stories/una-manana-diferente/options/opt-salir.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-opt-salir",
+    "path": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-opt-salir",
+    "path": "/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-c-salir",
+    "path": "/media/stories/una-manana-diferente/options/c-salir.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-c-salir",
+    "path": "/media/stories/una-manana-diferente/options/c-salir-800w.webp",
+    "width": 800,
+    "height": 600,
+    "transparent": false,
+    "actual": [
+      800,
+      600
+    ]
+  },
+  {
+    "id": "ume-c-salir",
+    "path": "/media/stories/una-manana-diferente/options/c-salir-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  },
+  {
+    "id": "ume-k1-1",
+    "path": "/media/stories/una-manana-diferente/comic/k1-1.webp",
+    "width": 2048,
+    "height": 1536,
+    "transparent": false,
+    "actual": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "id": "ume-k1-1",
+    "path": "/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+    "width": 1200,
+    "height": 900,
+    "transparent": false,
+    "actual": [
+      1200,
+      900
+    ]
+  }
+]

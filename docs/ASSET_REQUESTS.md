@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -539,18 +539,18 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 | `ume-s6-plan` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-plan.webp` | listo |
 | `ume-s6-biblioteca` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp` | listo |
 | `ume-s7-salida` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s7-salida.webp` | listo |
-| `ume-opt-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-preguntar.webp` | pendiente |
-| `ume-c-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-preguntar.webp` | pendiente |
-| `ume-opt-horario` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-horario.webp` | pendiente |
-| `ume-c-horario` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-horario.webp` | pendiente |
-| `ume-opt-adulto` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-adulto.webp` | pendiente |
-| `ume-c-adulto` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-adulto.webp` | pendiente |
-| `ume-opt-regulacion` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-regulacion.webp` | pendiente |
-| `ume-c-regulacion` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-regulacion.webp` | pendiente |
-| `ume-opt-tiempo` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-tiempo.webp` | pendiente |
-| `ume-c-tiempo` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-tiempo.webp` | pendiente |
-| `ume-opt-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-salir.webp` | pendiente |
-| `ume-c-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-salir.webp` | pendiente |
+| `ume-opt-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-preguntar.webp` | listo |
+| `ume-c-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-preguntar.webp` | listo |
+| `ume-opt-horario` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-horario.webp` | listo |
+| `ume-c-horario` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-horario.webp` | listo |
+| `ume-opt-adulto` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-adulto.webp` | listo |
+| `ume-c-adulto` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-adulto.webp` | listo |
+| `ume-opt-regulacion` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-regulacion.webp` | listo |
+| `ume-c-regulacion` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-regulacion.webp` | listo |
+| `ume-opt-tiempo` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-tiempo.webp` | listo |
+| `ume-c-tiempo` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-tiempo.webp` | listo |
+| `ume-opt-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-salir.webp` | listo |
+| `ume-c-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-salir.webp` | listo |
 | `ume-k1-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-1.webp` | listo |
 | `ume-k1-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-2.webp` | pendiente |
 | `ume-k1-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-3.webp` | pendiente |
@@ -744,6 +744,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-preguntar`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-preguntar.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Preguntar" y escena 5
 - **Descripción visual:** Teo levanta la mano desde su sitio. Andrés le mira atento.
 - **Personajes:** Teo, Andrés
@@ -757,6 +758,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-preguntar`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-preguntar.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-preguntar-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-preguntar-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Preguntar"
 - **Descripción visual:** Andrés responde contando con los dedos. Teo escucha con los hombros más relajados.
 - **Personajes:** Teo, Andrés
@@ -770,6 +772,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-horario`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-horario.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-horario-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-horario-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Horario" y escena 5
 - **Descripción visual:** Teo, junto a la mesa del maestro, señala la pizarra vacía.
 - **Personajes:** Teo, Andrés
@@ -783,6 +786,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-horario`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-horario.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-horario-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-horario-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Horario"
 - **Descripción visual:** Pizarra con el horario dibujado (cinco iconos). Teo lo recorre con el dedo.
 - **Personajes:** Teo
@@ -796,6 +800,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-adulto`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-adulto.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-adulto-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Adulto de confianza" y escena 5
 - **Descripción visual:** Teo camina por el pasillo hacia la puerta abierta del aula de apoyo, donde está Pilar.
 - **Personajes:** Teo, Pilar
@@ -809,6 +814,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-adulto`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-adulto.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-adulto-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-adulto-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Adulto de confianza"
 - **Descripción visual:** Pilar, Teo y Andrés hablando juntos en la puerta de la clase. Pilar apoya la mano en el hombro de Teo (si él lo acepta).
 - **Personajes:** Pilar, Teo, Andrés
@@ -822,6 +828,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-regulacion`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-regulacion.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Recurso para calmarse" y escena 5
 - **Descripción visual:** Teo se pone los cascos verdes y aprieta una pelota blanda.
 - **Personajes:** Teo
@@ -835,6 +842,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-regulacion`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-regulacion.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-regulacion-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-regulacion-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Recurso para calmarse"
 - **Descripción visual:** Misma composición; las ondas de ruido alrededor de Teo se han vuelto suaves y lejanas. Teo con expresión calmada.
 - **Personajes:** Teo
@@ -848,6 +856,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-tiempo`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-tiempo.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Necesito tiempo" y escena 5
 - **Descripción visual:** Teo enseña a Andrés su tarjeta de descanso (sin texto legible, un símbolo de pausa).
 - **Personajes:** Teo, Andrés
@@ -861,6 +870,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-tiempo`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-tiempo.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-tiempo-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-tiempo-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Necesito tiempo"
 - **Descripción visual:** Teo, sentado junto a la puerta, observa a la clase que prepara sus cosas. Andrés le hace un gesto tranquilo desde lejos.
 - **Personajes:** Teo, Andrés
@@ -874,6 +884,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-opt-salir`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/opt-salir.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/opt-salir-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/opt-salir-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 4 · opción "Salir sin avisar" y escena 5
 - **Descripción visual:** Teo en el pasillo vacío, apoyado en la pared, respirando. Sin dramatismo.
 - **Personajes:** Teo
@@ -887,6 +898,7 @@ Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-c-salir`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/options/c-salir.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/options/c-salir-800w.webp` (800 px), `public/media/stories/una-manana-diferente/options/c-salir-1200w.webp` (1200 px)
 - **Escena / uso:** Escena 5 · consecuencia de "Salir sin avisar"
 - **Descripción visual:** Andrés sale de la clase mirando a ambos lados del pasillo, preocupado. Teo, al fondo, no le ha visto aún.
 - **Personajes:** Andrés, Teo
