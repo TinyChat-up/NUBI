@@ -1,0 +1,5 @@
+
+> nubi@0.1.0 assets:doc
+> node scripts/generate-asset-requests.ts
+
+docs/ASSET_REQUESTS.md generado (72 recursos).

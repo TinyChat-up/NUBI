@@ -1,0 +1,68 @@
+
+> nubi@0.1.0 check
+> npm run typecheck && npm run test && npm run build
+
+
+> nubi@0.1.0 typecheck
+> tsc -b
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+
+> nubi@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 /workspace/NUBI
+
+
+ Test Files  6 passed (6)
+      Tests  46 passed (46)
+   Start at  21:41:57
+   Duration  307ms (import 39%, transform 29%, tests 20%, worker 11%)
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+
+> nubi@0.1.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 67 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                          0.72 kB │ gzip:   0.43 kB
+dist/assets/atkinson-hyperlegible-latin-ext-400-normal-Bbz-b3yf.woff     7.35 kB
+dist/assets/atkinson-hyperlegible-latin-ext-700-normal-CKkU2Dpt.woff     7.35 kB
+dist/assets/atkinson-hyperlegible-latin-ext-700-normal-BoVPHkS0.woff2    9.37 kB
+dist/assets/atkinson-hyperlegible-latin-ext-400-normal-DRk46D-x.woff2    9.38 kB
+dist/assets/nunito-vietnamese-wght-normal-U01xdrZh.woff2                13.09 kB
+dist/assets/atkinson-hyperlegible-latin-400-normal-BbWidj28.woff        14.02 kB
+dist/assets/atkinson-hyperlegible-latin-700-normal-BK6Glc0m.woff        14.29 kB
+dist/assets/atkinson-hyperlegible-latin-400-normal-BrHNak5F.woff2       17.20 kB
+dist/assets/atkinson-hyperlegible-latin-700-normal-GZI4o3u0.woff2       17.52 kB
+dist/assets/nunito-cyrillic-wght-normal-CY6AOgYE.woff2                  20.77 kB
+dist/assets/nunito-cyrillic-ext-wght-normal-D4X5GqEv.woff2              28.92 kB
+dist/assets/nunito-latin-ext-wght-normal-CXYtwYOx.woff2                 35.58 kB
+dist/assets/nunito-latin-wght-normal-BzFMHfZw.woff2                     39.12 kB
+dist/assets/index-DY1JHy6E.css                                          49.00 kB │ gzip:  10.15 kB
+dist/assets/index-BveDeqss.js                                          420.20 kB │ gzip: 125.82 kB
+
+✓ built in 314ms
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice

@@ -1,0 +1,920 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-800w.webp",
+      "width": 360,
+      "height": 270,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-preguntar-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/c-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-horario-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/c-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-adulto-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/c-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-regulacion-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/c-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-tiempo-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/c-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "id": "ume-c-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-salir-800w.webp",
+      "width": 360,
+      "height": 268.5,
+      "natural": [
+        390,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/c-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+      "width": 372,
+      "height": 279,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-preguntar-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/c-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-horario-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/c-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-adulto-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/c-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-regulacion-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/c-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-tiempo-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/c-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "dpr": 1,
+    "id": "ume-c-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-salir-1200w.webp",
+      "width": 370,
+      "height": 276,
+      "natural": [
+        410,
+        307
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/c-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+      "width": 351.328125,
+      "height": 263.484375,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+      "width": 351.328125,
+      "height": 263.484375,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+      "width": 351.34375,
+      "height": 263.5,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+      "width": 351.328125,
+      "height": 263.484375,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+      "width": 351.328125,
+      "height": 263.484375,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+      "width": 351.34375,
+      "height": 263.5,
+      "natural": [
+        389,
+        292
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-preguntar",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-preguntar-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-preguntar-800w.webp 800w, /media/stories/una-manana-diferente/options/c-preguntar-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-preguntar.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-horario",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-horario-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-horario-800w.webp 800w, /media/stories/una-manana-diferente/options/c-horario-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-horario.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-adulto",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-adulto-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-adulto-800w.webp 800w, /media/stories/una-manana-diferente/options/c-adulto-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-adulto.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-regulacion",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-regulacion-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-regulacion-800w.webp 800w, /media/stories/una-manana-diferente/options/c-regulacion-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-regulacion.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-tiempo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-tiempo-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-tiempo-800w.webp 800w, /media/stories/una-manana-diferente/options/c-tiempo-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-tiempo.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-opt-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/opt-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/opt-salir.webp 2048w"
+    }
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "dpr": 1,
+    "id": "ume-c-salir",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/options/c-salir-1200w.webp",
+      "width": 536,
+      "height": 400.5,
+      "natural": [
+        590,
+        442
+      ],
+      "fit": "cover",
+      "srcset": "/media/stories/una-manana-diferente/options/c-salir-800w.webp 800w, /media/stories/una-manana-diferente/options/c-salir-1200w.webp 1200w, /media/stories/una-manana-diferente/options/c-salir.webp 2048w"
+    }
+  }
+]

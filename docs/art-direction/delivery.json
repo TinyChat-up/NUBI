@@ -1228,6 +1228,642 @@
           "width": 1200
         }
       ]
+    },
+    {
+      "id": "ume-opt-preguntar",
+      "file": "/media/stories/una-manana-diferente/options/opt-preguntar.webp",
+      "source": "exec-74926233-1894-43b7-bab3-5692fd84b7f7.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 309660,
+      "sha256": "708f33e5da90b83fec689ad3663a00f98ecad8c799d3622c4ea236822327bd6e",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-preguntar-800w.webp",
+          "source": "exec-74926233-1894-43b7-bab3-5692fd84b7f7.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 82068,
+          "sha256": "17b5104b09b2d90061870d1a0c0350684bde17c7026ea67a64760520c7da5a0e",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-preguntar-1200w.webp",
+          "source": "exec-74926233-1894-43b7-bab3-5692fd84b7f7.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 158008,
+          "sha256": "fecb2e7164622db703cbeacba7739044dd7e2574c0caa0db155948c087bd2115",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-preguntar",
+      "file": "/media/stories/una-manana-diferente/options/c-preguntar.webp",
+      "source": "exec-28ec33a9-efe2-444e-91a9-22b02d140df5.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 267642,
+      "sha256": "cc0b6d0ca1a456210a422ac626d8e5a666c81ce799b1e85aabc734383ef49025",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-preguntar-800w.webp",
+          "source": "exec-28ec33a9-efe2-444e-91a9-22b02d140df5.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 74724,
+          "sha256": "7fc284922808464b140368b035a04d395ef4cb67fa8b76fc33d5a69450eeee62",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-preguntar-1200w.webp",
+          "source": "exec-28ec33a9-efe2-444e-91a9-22b02d140df5.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 138820,
+          "sha256": "025af426fcbb64dcad32e0657fb66f59a32aa31ba4e0fe623a8e13e93a128a5f",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-opt-horario",
+      "file": "/media/stories/una-manana-diferente/options/opt-horario.webp",
+      "source": "exec-5b595dbd-1a2d-4925-9e7a-dbe9a5064906.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 343834,
+      "sha256": "3aaec5f50bbacf9526a838a7a9a7e83351e1d1acd13bd8465ec03dc2f242d4ab",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-horario-800w.webp",
+          "source": "exec-5b595dbd-1a2d-4925-9e7a-dbe9a5064906.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 88666,
+          "sha256": "263785a70fb85421a1f7231837cf01867a4659bf177d6b4ddcc7410925167106",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-horario-1200w.webp",
+          "source": "exec-5b595dbd-1a2d-4925-9e7a-dbe9a5064906.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 174908,
+          "sha256": "5106cf7ef1dc7836f0499ef835a26895579368ceb9196099bee490b603a42c05",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-horario",
+      "file": "/media/stories/una-manana-diferente/options/c-horario.webp",
+      "source": "exec-7ae44c05-d013-4c2f-8b9e-7c5689beea97.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 344714,
+      "sha256": "d475e9d5e7c79fbf6e053b5d6b4f77060c00b564e060821b1a8e0bd42443c706",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-horario-800w.webp",
+          "source": "exec-7ae44c05-d013-4c2f-8b9e-7c5689beea97.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 88816,
+          "sha256": "570954ec14c03f976ccd454a18e9a131354e8caaa8e8dbf3d5905d3e55483ca8",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-horario-1200w.webp",
+          "source": "exec-7ae44c05-d013-4c2f-8b9e-7c5689beea97.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 173994,
+          "sha256": "fe68dfa3cc73b2a89c832f36cd6ab2858bead3535cec6edfc1f1fef8b29fbd58",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-opt-adulto",
+      "file": "/media/stories/una-manana-diferente/options/opt-adulto.webp",
+      "source": "exec-61e55187-5e6e-4ab8-8614-e447a863086f.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 388242,
+      "sha256": "5c3391a31abf34af5744b5838cc1c4db897dbd1a1a2d10b082e79e5473ca29c5",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-adulto-800w.webp",
+          "source": "exec-61e55187-5e6e-4ab8-8614-e447a863086f.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 102450,
+          "sha256": "6b6567bab223ed5aa725c2d8133c4deb5842879ead8e0adc7b63b6810f49cd50",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-adulto-1200w.webp",
+          "source": "exec-61e55187-5e6e-4ab8-8614-e447a863086f.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 199754,
+          "sha256": "9cebf3776616f4bc3bd9fb7af621b07b36f073b4e2d5c5648cc763643522a2bb",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-adulto",
+      "file": "/media/stories/una-manana-diferente/options/c-adulto.webp",
+      "source": "exec-641df2cb-9c0d-492d-a52e-8527fc7bef53.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 376066,
+      "sha256": "bdae314181cf2de152367812b7a8a8b54f6eeee74ef951f80d5716bd5e43f0fb",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-adulto-800w.webp",
+          "source": "exec-641df2cb-9c0d-492d-a52e-8527fc7bef53.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 99064,
+          "sha256": "014348a88bcc20705b9bda1879e09be9356fcbc78b74144a3a525929d9f6b98c",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-adulto-1200w.webp",
+          "source": "exec-641df2cb-9c0d-492d-a52e-8527fc7bef53.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 192050,
+          "sha256": "911ad0ac9c03ebd202b7b012dc27a0cba5df1fd32e278836804d768cb20cbb7e",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-opt-regulacion",
+      "file": "/media/stories/una-manana-diferente/options/opt-regulacion.webp",
+      "source": "exec-4c0a7473-6d9e-422d-8254-1a49bf9ab89c.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 309250,
+      "sha256": "03e9d866bc3cefd43bc90dbcf43ff9aebdac7d85639538aff2c1aa33fbd9ea00",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-regulacion-800w.webp",
+          "source": "exec-4c0a7473-6d9e-422d-8254-1a49bf9ab89c.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 84444,
+          "sha256": "35fa3be7cd9cd09b577bac3df25b59d82429cbacecfcd676d05ebf8d5b140806",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-regulacion-1200w.webp",
+          "source": "exec-4c0a7473-6d9e-422d-8254-1a49bf9ab89c.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 156358,
+          "sha256": "44aa6a876425c6d339df6282e392900ab1f0a80cb5bfe2bca258504d151f3879",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-regulacion",
+      "file": "/media/stories/una-manana-diferente/options/c-regulacion.webp",
+      "source": "exec-83c1ea0a-6d8d-4fee-82b2-5c4e1123e25d.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 270622,
+      "sha256": "353d4f4aca25fad1471b7a7755d83d81eaa0e2277ce9e83870f468d4794fc892",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-regulacion-800w.webp",
+          "source": "exec-83c1ea0a-6d8d-4fee-82b2-5c4e1123e25d.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 74244,
+          "sha256": "bbbcc9df5f78e9bc3edff022fdf9e0fda7266368431175089e79d936d545ec9c",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-regulacion-1200w.webp",
+          "source": "exec-83c1ea0a-6d8d-4fee-82b2-5c4e1123e25d.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 140068,
+          "sha256": "572057b9aeaf52b4591f387bab7e6ba7a1e9e0ae9270ee997745152c3598f6f7",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-opt-tiempo",
+      "file": "/media/stories/una-manana-diferente/options/opt-tiempo.webp",
+      "source": "exec-1333b446-d517-4311-a369-b629c94fd11f.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 336094,
+      "sha256": "ae47fe79606c24b422604f8de564b4479c33f1ca2bc20805f19b819719c11aff",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-tiempo-800w.webp",
+          "source": "exec-1333b446-d517-4311-a369-b629c94fd11f.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 91036,
+          "sha256": "daad14212112937966aa801e3b059b232fba25d02ef6337bf8330af152f40acd",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-tiempo-1200w.webp",
+          "source": "exec-1333b446-d517-4311-a369-b629c94fd11f.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 174792,
+          "sha256": "2bdc00b1f9c7644f7591a5c6a286266c0f634841530aadf2e90b3facc508ae49",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-tiempo",
+      "file": "/media/stories/una-manana-diferente/options/c-tiempo.webp",
+      "source": "exec-148208f0-808e-4eef-82d1-71e597fe63b8.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 335934,
+      "sha256": "cc6d5ab61bdfec0660120fd54aed0a24165d6ceb827ab0ddce1f6a8a7e2d8fd6",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-tiempo-800w.webp",
+          "source": "exec-148208f0-808e-4eef-82d1-71e597fe63b8.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 90554,
+          "sha256": "be02bc6a2738112780ca3d0444d22e21da7b171ec8affc1bfa4638f7870540f8",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-tiempo-1200w.webp",
+          "source": "exec-148208f0-808e-4eef-82d1-71e597fe63b8.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 172576,
+          "sha256": "dac0e7a1dbbc203e686bb8e3ac578a6a42eeeceea5dc0971e1070d9d6e4af8bf",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-opt-salir",
+      "file": "/media/stories/una-manana-diferente/options/opt-salir.webp",
+      "source": "exec-3f09de78-a010-4acc-98d1-283edd97d65c.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 352646,
+      "sha256": "cddc52f9d8cd43f12979b6cacf127655383c75e3a42dd965809437ceff479885",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-salir-800w.webp",
+          "source": "exec-3f09de78-a010-4acc-98d1-283edd97d65c.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 94440,
+          "sha256": "e500813e8fc097204684a932b5e53aaf946c6f64341a943655267e7daa048545",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/opt-salir-1200w.webp",
+          "source": "exec-3f09de78-a010-4acc-98d1-283edd97d65c.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 177962,
+          "sha256": "1b02fd8d194b479a8fd426fa50c9e24d30c32e84964e441eaff4f78225b76c1c",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
+    },
+    {
+      "id": "ume-c-salir",
+      "file": "/media/stories/una-manana-diferente/options/c-salir.webp",
+      "source": "exec-09e1105f-56d9-4697-8162-ee21b92d33e2.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 362494,
+      "sha256": "52b4a892de7f0d7fbcc9e5dad1b9174cb8dfb5eb28a0e3651fa060301717d3eb",
+      "quality": 78,
+      "resampled": true,
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-salir-800w.webp",
+          "source": "exec-09e1105f-56d9-4697-8162-ee21b92d33e2.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            800,
+            600
+          ],
+          "bytes": 95382,
+          "sha256": "faf8a240b212f8673a726f8dd4ba093d8b20d1096c2fb7c1d76adc7ad83dbde1",
+          "quality": 78,
+          "resampled": true,
+          "width": 800
+        },
+        {
+          "file": "/media/stories/una-manana-diferente/options/c-salir-1200w.webp",
+          "source": "exec-09e1105f-56d9-4697-8162-ee21b92d33e2.png",
+          "sourceSize": [
+            1448,
+            1086
+          ],
+          "exportSize": [
+            1200,
+            900
+          ],
+          "bytes": 183260,
+          "sha256": "e26b453cc2d1dea3066c2590a16ebc68ca6480e600e57f88e346ba5335dde1eb",
+          "quality": 78,
+          "resampled": true,
+          "width": 1200
+        }
+      ]
     }
   ],
   "modelSheets": {
@@ -1241,5 +1877,5 @@
     "carmen": "exec-f485d49f-d466-46b3-83db-fa58e5b5c076.png",
     "pilar": "exec-e2734d76-bf85-4119-8b28-f17997204d38.png"
   },
-  "lastBatch": "phase-4-batch-2"
+  "lastBatch": "phase-6-batch-3"
 }

@@ -1,0 +1,62 @@
+390 portada {"cargado":3} recortes: portada-fondo
+390 mundo {"provisional":6}
+390 ficha {"cargado":4,"cargando":5}
+390 cuento {"cargado":1}
+390 cuento-cambio-1 {"cargado":1}
+390 cuento-cambio-2 {"cargado":1}
+390 cuento-cambio-3 {"cargado":2}
+390 cuento-cambio-4 {"cargado":2}
+390 cuento-cambio-5 {"cargado":2}
+390 cuento-cambio-6 {"cargado":1}
+390 decision {"cargado":6}
+390 consecuencia {"cargado":2}
+390 comic-1 {"provisional":1}
+390 comic-2 {"provisional":2}
+390 comic-3 {"provisional":3}
+390 comic-4 {"provisional":4}
+390 /recreaciones {"cargado":1}
+390 /herramientas {"provisional":7}
+390 /herramientas/descansar {"provisional":1}
+390 /emociones {}
+820 portada {"cargado":3} recortes: portada-fondo
+820 mundo {"provisional":6}
+820 ficha {"cargado":9}
+820 cuento {"cargado":1}
+820 cuento-cambio-1 {"cargado":1}
+820 cuento-cambio-2 {"cargado":1}
+820 cuento-cambio-3 {"cargado":2}
+820 cuento-cambio-4 {"cargado":2}
+820 cuento-cambio-5 {"cargado":2}
+820 cuento-cambio-6 {"cargado":1}
+820 decision {"cargado":6}
+820 consecuencia {"cargado":2}
+820 comic-1 {"provisional":1}
+820 comic-2 {"provisional":2}
+820 comic-3 {"provisional":3}
+820 comic-4 {"provisional":4}
+820 /recreaciones {"cargado":1}
+820 /herramientas {"provisional":7}
+820 /herramientas/descansar {"provisional":1}
+820 /emociones {}
+1180 portada {"cargado":3} recortes: portada-fondo
+1180 mundo {"provisional":6}
+1180 ficha {"cargado":9}
+1180 cuento {"cargado":1}
+1180 cuento-cambio-1 {"cargado":1}
+1180 cuento-cambio-2 {"cargado":1}
+1180 cuento-cambio-3 {"cargado":2}
+1180 cuento-cambio-4 {"cargado":2}
+1180 cuento-cambio-5 {"cargado":2}
+1180 cuento-cambio-6 {"cargado":1}
+1180 decision {"cargado":6}
+1180 consecuencia {"cargado":2}
+1180 comic-1 {"provisional":1}
+1180 comic-2 {"provisional":2}
+1180 comic-3 {"provisional":3}
+1180 comic-4 {"provisional":4}
+1180 /recreaciones {"cargado":1}
+1180 /herramientas {"provisional":7}
+1180 /herramientas/descansar {"provisional":1}
+1180 /emociones {}
+Estados de recursos vistos: {"cargado":88,"provisional":72,"error":0}
+PASS integración de ilustraciones (390/820/1180)
