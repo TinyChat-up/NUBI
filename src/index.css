@@ -191,6 +191,18 @@ p {
   box-shadow: 0 0 0 7px var(--color-coral-700);
 }
 
+/* El foco de teclado nunca queda bajo la cabecera fija ni bajo la barra inferior (WCAG 2.4.11).
+   En rem para que acompañe al ajuste de tamaño de letra. La barra inferior solo existe por debajo de lg. */
+html {
+  scroll-padding-top: calc(4.5rem + 1rem);
+  scroll-padding-bottom: calc(5.25rem + max(0.75rem, env(safe-area-inset-bottom)) + 1rem);
+}
+@media (min-width: 64rem) {
+  html {
+    scroll-padding-bottom: 1rem;
+  }
+}
+
 /* Escenario del reproductor: recibe el foco tras cambiar de paso. Anillo interior (no tapa la cabecera). */
 .stage-focus:focus-visible {
   outline: none;
