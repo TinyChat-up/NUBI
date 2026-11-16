@@ -2,6 +2,8 @@
 
 Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican íntegramente. Este archivo solo añade notas prácticas para Claude Code.
 
+> **Trabajo en curso:** la fase 7 continúa en la nube. Leer primero **[docs/HANDOFF_PHASE_7.md](docs/HANDOFF_PHASE_7.md)**.
+
 ## Comandos
 
 ```bash
