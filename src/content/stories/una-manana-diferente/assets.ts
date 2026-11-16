@@ -9,6 +9,7 @@ const NO_TEXT = 'Sin texto dentro de la imagen (los textos y bocadillos los pone
 interface SceneInput {
   status?: AssetSpec['status'];
   variants?: number[];
+  portrait?: AssetSpec['portrait'];
   id: string;
   usage: string;
   description: string;
@@ -25,13 +26,14 @@ const scene = (i: SceneInput): AssetSpec =>
     id: `ume-${i.id}`,
     status: i.status ?? 'pendiente',
     variants: i.variants,
+    portrait: i.portrait,
     file: `${BASE}/scenes/${i.id}.webp`,
     usage: i.usage,
     description: i.description,
     characters: i.characters,
     emotionOrAction: i.emotionOrAction,
     aspect: '16:9',
-    background: `${i.background} Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. ${NO_TEXT}`,
+    background: `${i.background} ${NO_TEXT}`,
     alt: i.alt,
     placeholder: { motif: i.motif, figures: i.figures },
   });
@@ -39,6 +41,8 @@ const scene = (i: SceneInput): AssetSpec =>
 const panel = (i: SceneInput & { wide?: boolean }): AssetSpec =>
   defineAsset('vineta', {
     id: `ume-${i.id}`,
+    status: i.status ?? 'pendiente',
+    variants: i.variants,
     file: `${BASE}/comic/${i.id}.webp`,
     usage: i.usage,
     description: i.description,
@@ -87,6 +91,7 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
     id: 's1-puerta',
     status: 'listo',
     variants: [1200],
+    portrait: { file: `${BASE}/scenes/s1-puerta-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 1 · pasos 1-2',
     description: 'Teo y su abuela Rosa llegan a la verja del colegio. Rosa le da la mano. Otros niños entran al fondo. Teo mira el reloj del colegio.',
     characters: ['teo', 'rosa'],
@@ -98,6 +103,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's1-pasillo',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s1-pasillo-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 1 · pasos 3-4',
     description: 'Teo en el pasillo, junto a las perchas, con la mano dentro de la mochila tocando sus cascos verdes. A su alrededor, niños pasan corriendo (ligeramente desenfocados).',
     characters: ['teo'],
@@ -109,6 +117,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's2-puerta',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s2-puerta-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 2 · paso 1',
     description: 'Puerta de la clase. Andrés, desconocido para Teo, espera en la puerta con una carpeta. Teo se ha detenido a unos pasos, sorprendido.',
     characters: ['teo', 'andres'],
@@ -120,6 +131,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's2-anuncio',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s2-anuncio-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 2 · pasos 2-3',
     description: 'Andrés, de pie delante de la pizarra, habla a la clase con gesto tranquilo. Los niños sentados escuchan.',
     characters: ['andres', 'teo', 'aya', 'bruno', 'lia'],
@@ -131,6 +145,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's2-reacciones',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s2-reacciones-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 2 · pasos 4-6',
     description:
       'Plano de la clase con cuatro reacciones distintas: Aya inclinada hacia delante con la mano levantada (curiosidad), Bruno con los brazos cruzados (frustración), Lía mirando su comunicador (inseguridad), Teo quieto moviendo los dedos (sorpresa). Ninguna reacción se ve como "mala".',
@@ -148,6 +165,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's3-pizarra',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s3-pizarra-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 3 · paso 1',
     description: 'Nubi flota junto a una pizarra dividida en dos columnas: a la izquierda, cuatro dibujos sencillos (una silueta de maestra con una flecha de "mañana", un adulto, un libro, una paleta); a la derecha, signos de interrogación.',
     characters: ['nubi'],
@@ -159,6 +179,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's4-teo-piensa',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s4-teo-piensa-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 3 · paso final, escena 4 · paso 1, portada de la recreación',
     description: 'Teo sentado en su mesa, con varias burbujas de pensamiento vacías flotando sobre él (reloj, libro, puerta, cascos, pizarra). Mueve los dedos.',
     characters: ['teo'],
@@ -170,6 +193,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's6-plan',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s6-plan-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 6 · paso 1',
     description: 'Andrés dibuja en la pizarra un horario visual con cinco dibujos en fila (libro, pelota, lápiz, plato, pincel). Teo, a su lado, lo señala.',
     characters: ['andres', 'teo'],
@@ -181,6 +207,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's6-biblioteca',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s6-biblioteca-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 6 · pasos 2-4',
     description: 'Biblioteca escolar. Teo con sus cascos verdes elige un libro de trenes. Lía, sentada a su lado, señala su comunicador. Aya hojea un libro de volcanes. Bruno, en un puf, respira tranquilo.',
     characters: ['teo', 'lia', 'aya', 'bruno'],
@@ -197,6 +226,9 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   }),
   scene({
     id: 's7-salida',
+    status: 'listo',
+    variants: [1200],
+    portrait: { file: `${BASE}/scenes/s7-salida-vertical.webp`, aspect: '3:4', size: { width: 1536, height: 2048 }, variants: [768, 1024] },
     usage: 'Escena 7 · todos los pasos',
     description: 'Mediodía. Teo sale del colegio y camina junto a su abuela Rosa, contándole algo con las manos. Nubi flota en el cielo.',
     characters: ['teo', 'rosa', 'nubi'],
@@ -222,7 +254,7 @@ export const unaMananaDiferenteAssets: AssetSpec[] = [
   option({ id: 'c-salir', usage: 'Escena 5 · consecuencia de "Salir sin avisar"', description: 'Andrés sale de la clase mirando a ambos lados del pasillo, preocupado. Teo, al fondo, no le ha visto aún.', characters: ['andres', 'teo'], emotionOrAction: 'Preocupación del adulto (no enfado)', background: 'Pasillo.', alt: 'Andrés busca a Teo por el pasillo con cara de preocupación.', motif: 'hallway', figures: [{ character: 'andres', mood: 'worried' }, { character: 'teo', mood: 'neutral' }] }),
 
   // ───────── Viñetas del cómic ─────────
-  panel({ id: 'k1-1', usage: 'Cómic · escena 1 · viñeta 1', description: 'Plano medio: Rosa se despide de Teo en la verja. Bocadillos: Rosa arriba a la derecha, Teo abajo a la izquierda.', characters: ['rosa', 'teo'], emotionOrAction: 'Despedida tranquila', background: 'Verja del colegio.', alt: 'Rosa se despide de Teo en la puerta del colegio.', motif: 'school-gate', figures: [{ character: 'rosa', mood: 'happy' }, { character: 'teo', mood: 'neutral' }] }),
+  panel({ id: 'k1-1', status: 'listo', variants: [1200], usage: 'Cómic · escena 1 · viñeta 1', description: 'Plano medio: Rosa se despide de Teo en la verja. Bocadillos: Rosa arriba a la derecha, Teo abajo a la izquierda.', characters: ['rosa', 'teo'], emotionOrAction: 'Despedida tranquila', background: 'Verja del colegio.', alt: 'Rosa se despide de Teo en la puerta del colegio.', motif: 'school-gate', figures: [{ character: 'rosa', mood: 'happy' }, { character: 'teo', mood: 'neutral' }] }),
   panel({ id: 'k1-2', usage: 'Cómic · escena 1 · viñeta 2', description: 'Pasillo lleno de movimiento, niños corriendo. Teo en primer plano. Zona arriba a la derecha para onomatopeya; abajo a la izquierda para pensamiento.', characters: ['teo'], emotionOrAction: 'Ruido', background: 'Pasillo.', alt: 'Teo en un pasillo lleno de niños corriendo.', motif: 'hallway', figures: [{ character: 'teo', mood: 'worried' }] }),
   panel({ id: 'k1-3', wide: true, usage: 'Cómic · escena 1 · viñeta 3', description: 'Primer plano de la mano de Teo dentro de la mochila tocando los cascos verdes.', characters: ['teo'], emotionOrAction: 'Seguridad', background: 'Interior de mochila, detalle.', alt: 'La mano de Teo toca sus cascos dentro de la mochila.', motif: 'calm-corner', figures: [{ character: 'teo', mood: 'calm' }] }),
   panel({ id: 'k2-1', usage: 'Cómic · escena 2 · viñeta 1', description: 'Teo ante la puerta de la clase, desde atrás. Arriba a la izquierda, espacio para pensamiento.', characters: ['teo'], emotionOrAction: 'Extrañeza', background: 'Puerta de clase.', alt: 'Teo se detiene ante la puerta de su clase.', motif: 'classroom-door', figures: [{ character: 'teo', mood: 'surprised' }] }),

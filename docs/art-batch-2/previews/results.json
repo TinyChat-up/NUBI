@@ -1,0 +1,446 @@
+[
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s1-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s1-pasillo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s2-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s2-anuncio",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s2-reacciones",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s3-pizarra",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s4-teo-piensa",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s6-plan",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-plan-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s6-biblioteca",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "id": "ume-s7-salida",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s7-salida-vertical-1024w.webp",
+      "width": 345,
+      "height": 460,
+      "fit": "cover"
+    }
+  },
+  {
+    "width": 390,
+    "comic": "loaded; both bubbles visible"
+  },
+  {
+    "width": 390,
+    "nubiSrc": "http://127.0.0.1:5173/media/characters/nubi-saludo-512w.png"
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s1-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s1-pasillo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s2-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s2-anuncio",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s2-reacciones",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s3-pizarra",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s4-teo-piensa",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s6-plan",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-plan-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s6-biblioteca",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "id": "ume-s7-salida",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s7-salida-vertical-1024w.webp",
+      "width": 597,
+      "height": 796,
+      "fit": "cover"
+    }
+  },
+  {
+    "width": 820,
+    "comic": "loaded; both bubbles visible"
+  },
+  {
+    "width": 820,
+    "nubiSrc": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png"
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s1-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s1-pasillo",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s2-puerta",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s2-anuncio",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s2-reacciones",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s3-pizarra",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s4-teo-piensa",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s6-plan",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s6-biblioteca",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "id": "ume-s7-salida",
+    "image": {
+      "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp",
+      "width": 761.078125,
+      "height": 428.09375,
+      "fit": "cover"
+    }
+  },
+  {
+    "width": 1180,
+    "comic": "loaded; both bubbles visible"
+  },
+  {
+    "width": 1180,
+    "nubiSrc": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png"
+  }
+]

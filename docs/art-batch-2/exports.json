@@ -1,0 +1,1556 @@
+[
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo.webp",
+    "source": "exec-40763efa-117b-4fb3-9b69-2ad790f2bf38.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 341684,
+    "sha256": "83c6d60efa9eabf6a8be180215b3cf4d1e30d30ba9abfc9f4e0e25a5fdecb693",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s1-pasillo",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+        "source": "exec-40763efa-117b-4fb3-9b69-2ad790f2bf38.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 137944,
+        "sha256": "628c94c7644793f12e0182c09e702649faf22c6e952a60f3ce5acb73b0167ff7",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical.webp",
+      "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 340230,
+      "sha256": "50e123773dd1cdc1f121e8e2650ea63f3ece4ca1baada1beb14c2c9267f5baab",
+      "quality": 76,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-768w.webp",
+          "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 121004,
+          "sha256": "e45bce299caa4f122518510abf61faea485a979c4119ec3b14b35111fabab9dd",
+          "quality": 58,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+    "source": "exec-40763efa-117b-4fb3-9b69-2ad790f2bf38.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 137944,
+    "sha256": "628c94c7644793f12e0182c09e702649faf22c6e952a60f3ce5acb73b0167ff7",
+    "quality": 76,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-puerta.webp",
+    "source": "exec-1402b083-1d7f-4fbf-a83b-bc9f8014a33c.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 331122,
+    "sha256": "91b2b5c359624197119b46dfd7efb530fa266bff6a93abbd9d2ad8d73d4b8c26",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s2-puerta",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+        "source": "exec-1402b083-1d7f-4fbf-a83b-bc9f8014a33c.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 132920,
+        "sha256": "5d246930a69cf0752162ea83488acea676cc4a9d40644dbee2f56e3ae66b1b5d",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical.webp",
+      "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 347822,
+      "sha256": "4b5e8b97d0b0129056a8a6e219ebe36fd14cddace137479046b2492aad72b681",
+      "quality": 80,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-768w.webp",
+          "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 116474,
+          "sha256": "56f1c09a82e1dd132de15b9d474a5ce9a3fad71ace29ebaa1668d5661fea35e2",
+          "quality": 68,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+    "source": "exec-1402b083-1d7f-4fbf-a83b-bc9f8014a33c.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 132920,
+    "sha256": "5d246930a69cf0752162ea83488acea676cc4a9d40644dbee2f56e3ae66b1b5d",
+    "quality": 76,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio.webp",
+    "source": "exec-c5ee02be-4302-4ce9-8445-2a921db6ab2a.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 310352,
+    "sha256": "ca7e92c59340ae97c9e177bcdea9233616191981b08c4602d99443f43594bbe8",
+    "quality": 76,
+    "resampled": true,
+    "id": "ume-s2-anuncio",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+        "source": "exec-c5ee02be-4302-4ce9-8445-2a921db6ab2a.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 131692,
+        "sha256": "c1c8adf29d960d653048b34dedeac669baed830e7e976e9c6bcf3c401c3a21cb",
+        "quality": 72,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical.webp",
+      "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 349672,
+      "sha256": "11a8c29f21634c95b61e4ea4abaa1c3eb9dcf08578a3366f7271a879efc07650",
+      "quality": 80,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-768w.webp",
+          "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 119638,
+          "sha256": "8e8635cfbbd6a0feda4017e79c62ea6f9c124dab054181da70d0d677e13fdd9d",
+          "quality": 68,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+    "source": "exec-c5ee02be-4302-4ce9-8445-2a921db6ab2a.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 131692,
+    "sha256": "c1c8adf29d960d653048b34dedeac669baed830e7e976e9c6bcf3c401c3a21cb",
+    "quality": 72,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones.webp",
+    "source": "exec-58ecc8b6-1dba-4e92-97f2-f87596ff13aa.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 341430,
+    "sha256": "a3d97c103e6975d629622957331bdc34479eeb703e44c24d4890dc6b38727963",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s2-reacciones",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+        "source": "exec-58ecc8b6-1dba-4e92-97f2-f87596ff13aa.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 141444,
+        "sha256": "dda1b0fc0f070765c18d80dfc82ae495bb250a4baf241d7eaf1531f902dce333",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical.webp",
+      "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 307134,
+      "sha256": "5a425556b1873c6b67231c3191e9fb9a8c2a79211d2b13acc77a1e806d3d9224",
+      "quality": 76,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-768w.webp",
+          "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 117864,
+          "sha256": "79e43d3e039f1179ed7bb172388985d2e8bf69d3020e0d8acb44ec315550f96a",
+          "quality": 60,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+    "source": "exec-58ecc8b6-1dba-4e92-97f2-f87596ff13aa.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 141444,
+    "sha256": "dda1b0fc0f070765c18d80dfc82ae495bb250a4baf241d7eaf1531f902dce333",
+    "quality": 76,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra.webp",
+    "source": "exec-6ac2dade-f839-402b-b7f6-654f85239345.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 224974,
+    "sha256": "6e87039b9815e972a87d75f3da0cbccda0d7dd41d81d6271ac98b43a2fa107bd",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s3-pizarra",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+        "source": "exec-6ac2dade-f839-402b-b7f6-654f85239345.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 102238,
+        "sha256": "294e17452876d541642279eda863b9c3e11e0f6f706ebeebc68d12f1d82f0860",
+        "quality": 80,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical.webp",
+      "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 248864,
+      "sha256": "0421b3c3fc7a567483654de7a9275ff699a53e2994a574f2629ab40638941400",
+      "quality": 80,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-768w.webp",
+          "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 114306,
+          "sha256": "776cdcbd2dc260abbc6251e71389e8146e3804beb45299ba31618220c090aa2d",
+          "quality": 80,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+    "source": "exec-6ac2dade-f839-402b-b7f6-654f85239345.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 102238,
+    "sha256": "294e17452876d541642279eda863b9c3e11e0f6f706ebeebc68d12f1d82f0860",
+    "quality": 80,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp",
+    "source": "exec-5f0d584a-5c1d-4fcb-b83f-b6326f7eec92.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 264806,
+    "sha256": "fb1cddfc59c0e8c8d9fb88c0157114c0ac3a7b4a2434bb2919c7a9f9851b9645",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s4-teo-piensa",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+        "source": "exec-5f0d584a-5c1d-4fcb-b83f-b6326f7eec92.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 125132,
+        "sha256": "7bb1e75d960be4086418ae0c69adea1826ae76d87e5f0242380740cddc87a90e",
+        "quality": 80,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical.webp",
+      "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 284218,
+      "sha256": "e43cb6018275fcfc897fc2085093c7646544e315b630088b30f6ba54bc782a03",
+      "quality": 80,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-768w.webp",
+          "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 111262,
+          "sha256": "f500372da245478c2340e626f25533f2fb39e9f496f35ccc63f14a55ca325d31",
+          "quality": 76,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+    "source": "exec-5f0d584a-5c1d-4fcb-b83f-b6326f7eec92.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 125132,
+    "sha256": "7bb1e75d960be4086418ae0c69adea1826ae76d87e5f0242380740cddc87a90e",
+    "quality": 80,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-plan.webp",
+    "source": "exec-eff68b0e-72c3-464e-a757-bda8de28d7df.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 351840,
+    "sha256": "67a47619988176cfb49dc8ddb80d0062bbf72643c813e4a036a9f0bd7a6f19e4",
+    "quality": 80,
+    "resampled": true,
+    "id": "ume-s6-plan",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+        "source": "exec-eff68b0e-72c3-464e-a757-bda8de28d7df.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 130396,
+        "sha256": "9dca16973262503e1f816347f1f87699e21f293d0c52db925edcd3d3e20338eb",
+        "quality": 72,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical.webp",
+      "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 336546,
+      "sha256": "03c81d349f90ef5695b172af1afc5f547bc50e94d8eb422849c9a42912a686d5",
+      "quality": 80,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-768w.webp",
+          "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 116686,
+          "sha256": "181f33e97bd57169896a877c00899bc16ed591b59b62db083a41a64f62a049f0",
+          "quality": 68,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+    "source": "exec-eff68b0e-72c3-464e-a757-bda8de28d7df.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 130396,
+    "sha256": "9dca16973262503e1f816347f1f87699e21f293d0c52db925edcd3d3e20338eb",
+    "quality": 72,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp",
+    "source": "exec-3802668d-20ff-4fb0-b7cb-b526b8749557.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 350872,
+    "sha256": "0762e8c6c2e559b43ec52ccd611aa9dab37046a2407216a5b1cfbe1254701cf7",
+    "quality": 72,
+    "resampled": true,
+    "id": "ume-s6-biblioteca",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+        "source": "exec-3802668d-20ff-4fb0-b7cb-b526b8749557.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 143100,
+        "sha256": "f97c67778e84f8521ef72c8b14d7393cf9e338982a35ef697e507d917e49dfbc",
+        "quality": 58,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical.webp",
+      "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 357422,
+      "sha256": "abb37e9d244bf70a46aad03a4f99b4ad5db6e59aa970f5c2a23c6f42a2b12121",
+      "quality": 68,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-768w.webp",
+          "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 148792,
+          "sha256": "8528aa9856b8967b0e8b17b4adc51d7af2822a586c812f38c1ac02b6a33132a7",
+          "quality": 58,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+    "source": "exec-3802668d-20ff-4fb0-b7cb-b526b8749557.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 143100,
+    "sha256": "f97c67778e84f8521ef72c8b14d7393cf9e338982a35ef697e507d917e49dfbc",
+    "quality": 58,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s7-salida.webp",
+    "source": "exec-e192501f-e14f-4b6c-b6e4-9deb021561c9.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 349678,
+    "sha256": "216d0719673cc0f6349153ff790b94dccbab5b057c8c176e269b16c83c59f4d6",
+    "quality": 60,
+    "resampled": true,
+    "id": "ume-s7-salida",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp",
+        "source": "exec-e192501f-e14f-4b6c-b6e4-9deb021561c9.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 170340,
+        "sha256": "01989fa1bf5b15f0be1ba79fccfaec91541579c4a1908328809f5f8f183f2099",
+        "quality": 58,
+        "resampled": true,
+        "width": 1200
+      }
+    ],
+    "portrait": {
+      "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical.webp",
+      "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 369786,
+      "sha256": "792da762ae5bbf4e193e919241a25e0e14c38c0a6f2c45ca34ad25738ea3cfb7",
+      "quality": 58,
+      "resampled": true,
+      "aspect": "3:4",
+      "variants": [
+        {
+          "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-768w.webp",
+          "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+          "sourceSize": [
+            1086,
+            1448
+          ],
+          "exportSize": [
+            768,
+            1024
+          ],
+          "bytes": 176544,
+          "sha256": "1a888be3c74df971ebddc90bbca16bc959e50da48cf38f3655a93a89a869a402",
+          "quality": 58,
+          "resampled": true,
+          "width": 768
+        }
+      ]
+    }
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp",
+    "source": "exec-e192501f-e14f-4b6c-b6e4-9deb021561c9.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      1200,
+      675
+    ],
+    "bytes": 170340,
+    "sha256": "01989fa1bf5b15f0be1ba79fccfaec91541579c4a1908328809f5f8f183f2099",
+    "quality": 58,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/comic/k1-1.webp",
+    "source": "exec-5b29c79f-8ff6-4d4c-856f-aebf54a25bd0.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 348630,
+    "sha256": "fff8ba34b6810620c2bb6c19be0de2e270ee339b099132bad148b7375fc88eb2",
+    "quality": 72,
+    "resampled": true,
+    "id": "ume-k1-1",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+        "source": "exec-5b29c79f-8ff6-4d4c-856f-aebf54a25bd0.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 181576,
+        "sha256": "aabf27a0754290f51b6a2cd553197628b8a2448e5c40c6251f928bb81432908a",
+        "quality": 58,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+    "source": "exec-5b29c79f-8ff6-4d4c-856f-aebf54a25bd0.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      1200,
+      900
+    ],
+    "bytes": 181576,
+    "sha256": "aabf27a0754290f51b6a2cd553197628b8a2448e5c40c6251f928bb81432908a",
+    "quality": 58,
+    "resampled": true,
+    "width": 1200
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical.webp",
+    "source": "exec-37bdaac7-f6fe-409f-95d4-f275f630f272.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 349284,
+    "sha256": "4b0a771110cdfe0cb6793b90bfeb2bd77323a0021dff0a006718e9f24408e141",
+    "quality": 64,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-768w.webp",
+        "source": "exec-37bdaac7-f6fe-409f-95d4-f275f630f272.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 158342,
+        "sha256": "fdb5a92d7595f8d88d824427059d129b13d7b2318931e307ff04f1576d54a386",
+        "quality": 58,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-768w.webp",
+    "source": "exec-37bdaac7-f6fe-409f-95d4-f275f630f272.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 158342,
+    "sha256": "fdb5a92d7595f8d88d824427059d129b13d7b2318931e307ff04f1576d54a386",
+    "quality": 58,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical.webp",
+    "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 340230,
+    "sha256": "50e123773dd1cdc1f121e8e2650ea63f3ece4ca1baada1beb14c2c9267f5baab",
+    "quality": 76,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-768w.webp",
+        "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 121004,
+        "sha256": "e45bce299caa4f122518510abf61faea485a979c4119ec3b14b35111fabab9dd",
+        "quality": 58,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-768w.webp",
+    "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 121004,
+    "sha256": "e45bce299caa4f122518510abf61faea485a979c4119ec3b14b35111fabab9dd",
+    "quality": 58,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical.webp",
+    "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 347822,
+    "sha256": "4b5e8b97d0b0129056a8a6e219ebe36fd14cddace137479046b2492aad72b681",
+    "quality": 80,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-768w.webp",
+        "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 116474,
+        "sha256": "56f1c09a82e1dd132de15b9d474a5ce9a3fad71ace29ebaa1668d5661fea35e2",
+        "quality": 68,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-768w.webp",
+    "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 116474,
+    "sha256": "56f1c09a82e1dd132de15b9d474a5ce9a3fad71ace29ebaa1668d5661fea35e2",
+    "quality": 68,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical.webp",
+    "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 349672,
+    "sha256": "11a8c29f21634c95b61e4ea4abaa1c3eb9dcf08578a3366f7271a879efc07650",
+    "quality": 80,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-768w.webp",
+        "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 119638,
+        "sha256": "8e8635cfbbd6a0feda4017e79c62ea6f9c124dab054181da70d0d677e13fdd9d",
+        "quality": 68,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-768w.webp",
+    "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 119638,
+    "sha256": "8e8635cfbbd6a0feda4017e79c62ea6f9c124dab054181da70d0d677e13fdd9d",
+    "quality": 68,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical.webp",
+    "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 307134,
+    "sha256": "5a425556b1873c6b67231c3191e9fb9a8c2a79211d2b13acc77a1e806d3d9224",
+    "quality": 76,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-768w.webp",
+        "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 117864,
+        "sha256": "79e43d3e039f1179ed7bb172388985d2e8bf69d3020e0d8acb44ec315550f96a",
+        "quality": 60,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-768w.webp",
+    "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 117864,
+    "sha256": "79e43d3e039f1179ed7bb172388985d2e8bf69d3020e0d8acb44ec315550f96a",
+    "quality": 60,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical.webp",
+    "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 248864,
+    "sha256": "0421b3c3fc7a567483654de7a9275ff699a53e2994a574f2629ab40638941400",
+    "quality": 80,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-768w.webp",
+        "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 114306,
+        "sha256": "776cdcbd2dc260abbc6251e71389e8146e3804beb45299ba31618220c090aa2d",
+        "quality": 80,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-768w.webp",
+    "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 114306,
+    "sha256": "776cdcbd2dc260abbc6251e71389e8146e3804beb45299ba31618220c090aa2d",
+    "quality": 80,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical.webp",
+    "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 284218,
+    "sha256": "e43cb6018275fcfc897fc2085093c7646544e315b630088b30f6ba54bc782a03",
+    "quality": 80,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-768w.webp",
+        "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 111262,
+        "sha256": "f500372da245478c2340e626f25533f2fb39e9f496f35ccc63f14a55ca325d31",
+        "quality": 76,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-768w.webp",
+    "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 111262,
+    "sha256": "f500372da245478c2340e626f25533f2fb39e9f496f35ccc63f14a55ca325d31",
+    "quality": 76,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical.webp",
+    "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 336546,
+    "sha256": "03c81d349f90ef5695b172af1afc5f547bc50e94d8eb422849c9a42912a686d5",
+    "quality": 80,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-768w.webp",
+        "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 116686,
+        "sha256": "181f33e97bd57169896a877c00899bc16ed591b59b62db083a41a64f62a049f0",
+        "quality": 68,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-768w.webp",
+    "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 116686,
+    "sha256": "181f33e97bd57169896a877c00899bc16ed591b59b62db083a41a64f62a049f0",
+    "quality": 68,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical.webp",
+    "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 357422,
+    "sha256": "abb37e9d244bf70a46aad03a4f99b4ad5db6e59aa970f5c2a23c6f42a2b12121",
+    "quality": 68,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-768w.webp",
+        "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 148792,
+        "sha256": "8528aa9856b8967b0e8b17b4adc51d7af2822a586c812f38c1ac02b6a33132a7",
+        "quality": 58,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-768w.webp",
+    "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 148792,
+    "sha256": "8528aa9856b8967b0e8b17b4adc51d7af2822a586c812f38c1ac02b6a33132a7",
+    "quality": 58,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical.webp",
+    "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1536,
+      2048
+    ],
+    "bytes": 369786,
+    "sha256": "792da762ae5bbf4e193e919241a25e0e14c38c0a6f2c45ca34ad25738ea3cfb7",
+    "quality": 58,
+    "resampled": true,
+    "aspect": "3:4",
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-768w.webp",
+        "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+        "sourceSize": [
+          1086,
+          1448
+        ],
+        "exportSize": [
+          768,
+          1024
+        ],
+        "bytes": 176544,
+        "sha256": "1a888be3c74df971ebddc90bbca16bc959e50da48cf38f3655a93a89a869a402",
+        "quality": 58,
+        "resampled": true,
+        "width": 768
+      }
+    ]
+  },
+  {
+    "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-768w.webp",
+    "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      768,
+      1024
+    ],
+    "bytes": 176544,
+    "sha256": "1a888be3c74df971ebddc90bbca16bc959e50da48cf38f3655a93a89a869a402",
+    "quality": 58,
+    "resampled": true,
+    "width": 768
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-1024w.webp",
+    "source": "exec-37bdaac7-f6fe-409f-95d4-f275f630f272.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 253448,
+    "sha256": "bad383ea71d37feffaaac54f5c691f4b4525fd64eff009dddfb1fc3606452296",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-1024w.webp",
+    "source": "exec-f5c0f091-ed85-428e-8313-c7706a3d5263.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 201644,
+    "sha256": "ca3d58488f2b0b27bb8b65620d51452481d7f00f12831c34f9a1a75509e48e45",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-1024w.webp",
+    "source": "exec-c28886f3-f681-4e90-a565-4d8cd567b60a.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 168648,
+    "sha256": "2b9e7e9cd534019531d882fcac16968776f7ff5ba5e20b37827b27321d2978a6",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-1024w.webp",
+    "source": "exec-91d28ac4-c2cb-4d96-ae9b-4c1e54939a37.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 180842,
+    "sha256": "abb36e09d3afa3bc870932219eea0bcff1bc59cab4d0ab67f68ba0288efcb10a",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-1024w.webp",
+    "source": "exec-253ddb02-dfd6-4cd5-a4b5-aeb4465b882e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 183440,
+    "sha256": "2ee85e44b8417844a2c0c092b53a58da8e4d066b542859c5fa84b265ed3b171b",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-1024w.webp",
+    "source": "exec-bf29e44a-d794-45ce-a722-5eb38c80c512.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 113674,
+    "sha256": "b6be2ebdc858eb2114799287299530d76f59dca71e3ce6f9f339f0dfa210fa08",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-1024w.webp",
+    "source": "exec-81200a64-efdc-4a54-8d04-cef0ae3373dc.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 137242,
+    "sha256": "df756137cd2bde52d133473086b9cf45b5f5e4d3d85740e79888b6aa78cf0632",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s6-plan-vertical-1024w.webp",
+    "source": "exec-30210208-262f-4a5d-b834-a6ebfa8ec8f1.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 169030,
+    "sha256": "b2f1a2bf5a9de6653ee54379f220f46d16ee078b75c92979c2ccd272ad59a3fb",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-1024w.webp",
+    "source": "exec-7e3cf539-7082-4e4b-84ba-24253867100e.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 243772,
+    "sha256": "a39de5b0c2998226640769715871c6e1fcb6b218adb1e7e4e0ff0ee159129683",
+    "quality": 64,
+    "resampled": true
+  },
+  {
+    "width": 1024,
+    "file": "/media/stories/una-manana-diferente/scenes/s7-salida-vertical-1024w.webp",
+    "source": "exec-c0225c2b-e82d-4550-8140-6171b5941400.png",
+    "sourceSize": [
+      1086,
+      1448
+    ],
+    "exportSize": [
+      1024,
+      1365
+    ],
+    "bytes": 279486,
+    "sha256": "9b3029668da5252e78f7697a9170f2f8a2710b2e92037719dd1d40db467de581",
+    "quality": 64,
+    "resampled": true
+  }
+]

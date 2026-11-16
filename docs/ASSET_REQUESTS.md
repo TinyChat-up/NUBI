@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **24 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -73,6 +73,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `portada-fondo`
 
 - **Nombre de archivo:** `public/media/common/portada-fondo.webp`
+- **Variantes:** `public/media/common/portada-fondo-1200w.webp` (1200 px)
 - **Escena / uso:** Portada (pantalla A) — fondo panorámico
 - **Descripción visual:** Paisaje panorámico al amanecer visto desde una colina: un pequeño pueblo europeo con tejados coral, un colegio con reloj, un parque con un árbol grande y una casa con jardín, conectados por un camino serpenteante. Nubes suaves. Mucho aire en el tercio superior para el logotipo.
 - **Personajes:** —
@@ -86,6 +87,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `nubi-saludo`
 
 - **Nombre de archivo:** `public/media/characters/nubi-saludo.png`
+- **Variantes:** `public/media/characters/nubi-saludo-256w.png` (256 px), `public/media/characters/nubi-saludo-512w.png` (512 px)
 - **Escena / uso:** Portada y pantallas de bienvenida
 - **Descripción visual:** Nubi, la nube guía, flotando y saludando con un pequeño brazo de nube. Expresión amable y serena.
 - **Personajes:** Nubi
@@ -99,6 +101,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `nubi-pensando`
 
 - **Nombre de archivo:** `public/media/characters/nubi-pensando.png`
+- **Variantes:** `public/media/characters/nubi-pensando-256w.png` (256 px), `public/media/characters/nubi-pensando-512w.png` (512 px)
 - **Escena / uso:** Escenas de reflexión (preguntas de Nubi)
 - **Descripción visual:** Nubi ligeramente inclinada, mirando hacia arriba, con una pequeña chispa de idea a su lado.
 - **Personajes:** Nubi
@@ -112,6 +115,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-nubi`
 
 - **Nombre de archivo:** `public/media/characters/nubi.png`
+- **Variantes:** `public/media/characters/nubi-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Nubi, de frente y en reposo. Diseño maestro editorial entregado; movimientos muy suaves (flotar, parpadear). Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Nubi
@@ -125,6 +129,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-teo`
 
 - **Nombre de archivo:** `public/media/characters/teo.png`
+- **Variantes:** `public/media/characters/teo-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Teo, de frente y en reposo. Cascos antirruido verdes visibles colgando de la mochila. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Teo
@@ -138,6 +143,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-aya`
 
 - **Nombre de archivo:** `public/media/characters/aya.png`
+- **Variantes:** `public/media/characters/aya-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Aya, de frente y en reposo. Gafas redondas, postura abierta y curiosa. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Aya
@@ -151,6 +157,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-bruno`
 
 - **Nombre de archivo:** `public/media/characters/bruno.png`
+- **Variantes:** `public/media/characters/bruno-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Bruno, de frente y en reposo. Energía de movimiento, rodilleras de fútbol. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Bruno
@@ -164,6 +171,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-lia`
 
 - **Nombre de archivo:** `public/media/characters/lia.png`
+- **Variantes:** `public/media/characters/lia-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Lía, de frente y en reposo. Su comunicador de pictogramas siempre visible y presentado con naturalidad, como parte de ella. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Lía
@@ -177,6 +185,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-andres`
 
 - **Nombre de archivo:** `public/media/characters/andres.png`
+- **Variantes:** `public/media/characters/andres-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Andrés, de frente y en reposo. Adulto cercano; evitar rasgos de autoridad intimidante. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Andrés
@@ -190,6 +199,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-carmen`
 
 - **Nombre de archivo:** `public/media/characters/carmen.png`
+- **Variantes:** `public/media/characters/carmen-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Carmen, de frente y en reposo. Aparece solo en recuerdos o retratos. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Carmen
@@ -203,6 +213,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-pilar`
 
 - **Nombre de archivo:** `public/media/characters/pilar.png`
+- **Variantes:** `public/media/characters/pilar-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Pilar, de frente y en reposo. Transmite confianza y calma. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Pilar
@@ -216,6 +227,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `char-rosa`
 
 - **Nombre de archivo:** `public/media/characters/rosa.png`
+- **Variantes:** `public/media/characters/rosa-384w.png` (384 px)
 - **Escena / uso:** Presentación de personajes en la ficha de historia · referencia de consistencia para todas las ilustraciones
 - **Descripción visual:** Retrato de cuerpo entero de Rosa, de frente y en reposo. Abuela activa, con bolso de tela. Entregar además (fuera de la app) una hoja de modelo con vistas de frente, perfil y espalda y 4 expresiones: tranquilo, sorpresa, preocupación, alegría.
 - **Personajes:** Rosa
@@ -518,15 +530,15 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 |---|---|---|---|
 | `ume-cover` | Cubierta | `/media/stories/una-manana-diferente/cover.webp` | listo |
 | `ume-s1-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-puerta.webp` | listo |
-| `ume-s1-pasillo` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-pasillo.webp` | pendiente |
-| `ume-s2-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-puerta.webp` | pendiente |
-| `ume-s2-anuncio` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-anuncio.webp` | pendiente |
-| `ume-s2-reacciones` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-reacciones.webp` | pendiente |
-| `ume-s3-pizarra` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s3-pizarra.webp` | pendiente |
-| `ume-s4-teo-piensa` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp` | pendiente |
-| `ume-s6-plan` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-plan.webp` | pendiente |
-| `ume-s6-biblioteca` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp` | pendiente |
-| `ume-s7-salida` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s7-salida.webp` | pendiente |
+| `ume-s1-pasillo` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s1-pasillo.webp` | listo |
+| `ume-s2-puerta` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-puerta.webp` | listo |
+| `ume-s2-anuncio` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-anuncio.webp` | listo |
+| `ume-s2-reacciones` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s2-reacciones.webp` | listo |
+| `ume-s3-pizarra` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s3-pizarra.webp` | listo |
+| `ume-s4-teo-piensa` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp` | listo |
+| `ume-s6-plan` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-plan.webp` | listo |
+| `ume-s6-biblioteca` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp` | listo |
+| `ume-s7-salida` | Escena de cuento | `/media/stories/una-manana-diferente/scenes/s7-salida.webp` | listo |
 | `ume-opt-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-preguntar.webp` | pendiente |
 | `ume-c-preguntar` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-preguntar.webp` | pendiente |
 | `ume-opt-horario` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-horario.webp` | pendiente |
@@ -539,7 +551,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 | `ume-c-tiempo` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-tiempo.webp` | pendiente |
 | `ume-opt-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-salir.webp` | pendiente |
 | `ume-c-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-salir.webp` | pendiente |
-| `ume-k1-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-1.webp` | pendiente |
+| `ume-k1-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-1.webp` | listo |
 | `ume-k1-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-2.webp` | pendiente |
 | `ume-k1-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-3.webp` | pendiente |
 | `ume-k2-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-1.webp` | pendiente |
@@ -558,6 +570,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-cover`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/cover.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/cover-1200w.webp` (1200 px)
 - **Escena / uso:** Tarjeta en el catálogo de historias, ficha de la historia y póster del vídeo
 - **Descripción visual:** Teo, de espaldas a tres cuartos, en la puerta abierta de su clase. Dentro se intuye una figura adulta nueva (Andrés) junto a una pizarra con dibujos cambiados de sitio. Luz de mañana entrando por la ventana. Sensación de umbral: algo nuevo, pero no amenazante.
 - **Personajes:** Teo, Andrés
@@ -571,130 +584,160 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-s1-puerta`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s1-puerta.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s1-puerta-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s1-puerta-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 1 · pasos 1-2
 - **Descripción visual:** Teo y su abuela Rosa llegan a la verja del colegio. Rosa le da la mano. Otros niños entran al fondo. Teo mira el reloj del colegio.
 - **Personajes:** Teo, Rosa
 - **Emoción o acción:** Rutina conocida, tranquilidad
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Exterior del colegio por la mañana: verja, árbol, reloj en la fachada. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Exterior del colegio por la mañana: verja, árbol, reloj en la fachada. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Teo llega al colegio de la mano de su abuela.»
 
 ### `ume-s1-pasillo`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s1-pasillo.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s1-pasillo-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 1 · pasos 3-4
 - **Descripción visual:** Teo en el pasillo, junto a las perchas, con la mano dentro de la mochila tocando sus cascos verdes. A su alrededor, niños pasan corriendo (ligeramente desenfocados).
 - **Personajes:** Teo
 - **Emoción o acción:** Busca su apoyo; pasillo ruidoso
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Pasillo con perchas de colores, dibujos infantiles en la pared, luz de ventanal. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Pasillo con perchas de colores, dibujos infantiles en la pared, luz de ventanal. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Teo en el pasillo toca sus cascos dentro de la mochila.»
 
 ### `ume-s2-puerta`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s2-puerta.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s2-puerta-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s2-puerta-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 2 · paso 1
 - **Descripción visual:** Puerta de la clase. Andrés, desconocido para Teo, espera en la puerta con una carpeta. Teo se ha detenido a unos pasos, sorprendido.
 - **Personajes:** Teo, Andrés
 - **Emoción o acción:** Sorpresa
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Puerta de aula con un cartel de la clase (sin texto legible). Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Puerta de aula con un cartel de la clase (sin texto legible). Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «En la puerta de la clase hay una persona que Teo no conoce.»
 
 ### `ume-s2-anuncio`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s2-anuncio.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s2-anuncio-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 2 · pasos 2-3
 - **Descripción visual:** Andrés, de pie delante de la pizarra, habla a la clase con gesto tranquilo. Los niños sentados escuchan.
 - **Personajes:** Andrés, Teo, Aya, Bruno, Lía
 - **Emoción o acción:** Andrés se presenta y explica el cambio
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Aula luminosa con pizarra verde, mesas en grupos, ventana a la izquierda. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Aula luminosa con pizarra verde, mesas en grupos, ventana a la izquierda. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Andrés se presenta a la clase delante de la pizarra.»
 
 ### `ume-s2-reacciones`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s2-reacciones.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s2-reacciones-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 2 · pasos 4-6
 - **Descripción visual:** Plano de la clase con cuatro reacciones distintas: Aya inclinada hacia delante con la mano levantada (curiosidad), Bruno con los brazos cruzados (frustración), Lía mirando su comunicador (inseguridad), Teo quieto moviendo los dedos (sorpresa). Ninguna reacción se ve como "mala".
 - **Personajes:** Aya, Bruno, Lía, Teo
 - **Emoción o acción:** Curiosidad, frustración, inseguridad, sorpresa
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Aula, plano medio, fondo simplificado para que destaquen las cuatro figuras. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Aula, plano medio, fondo simplificado para que destaquen las cuatro figuras. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Aya levanta la mano, Bruno cruza los brazos, Lía mira su comunicador y Teo mueve los dedos.»
 
 ### `ume-s3-pizarra`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s3-pizarra.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s3-pizarra-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 3 · paso 1
 - **Descripción visual:** Nubi flota junto a una pizarra dividida en dos columnas: a la izquierda, cuatro dibujos sencillos (una silueta de maestra con una flecha de "mañana", un adulto, un libro, una paleta); a la derecha, signos de interrogación.
 - **Personajes:** Nubi
 - **Emoción o acción:** Ordenar lo que sabemos y lo que no
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Pizarra grande ocupando dos tercios, aula difuminada detrás. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Pizarra grande ocupando dos tercios, aula difuminada detrás. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Nubi junto a una pizarra con dos columnas: lo que sabemos y lo que no.»
 
 ### `ume-s4-teo-piensa`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s4-teo-piensa-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 3 · paso final, escena 4 · paso 1, portada de la recreación
 - **Descripción visual:** Teo sentado en su mesa, con varias burbujas de pensamiento vacías flotando sobre él (reloj, libro, puerta, cascos, pizarra). Mueve los dedos.
 - **Personajes:** Teo
 - **Emoción o acción:** Pensar qué hacer
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Mesa de Teo en primer plano, aula muy difuminada. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Mesa de Teo en primer plano, aula muy difuminada. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Teo piensa en su mesa, rodeado de burbujas de pensamiento.»
 
 ### `ume-s6-plan`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s6-plan.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s6-plan-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s6-plan-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s6-plan-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 6 · paso 1
 - **Descripción visual:** Andrés dibuja en la pizarra un horario visual con cinco dibujos en fila (libro, pelota, lápiz, plato, pincel). Teo, a su lado, lo señala.
 - **Personajes:** Andrés, Teo
 - **Emoción o acción:** Anticipación; Teo más tranquilo
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Pizarra en primer plano. Dibujos de tiza sencillos y reconocibles. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Pizarra en primer plano. Dibujos de tiza sencillos y reconocibles. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Andrés dibuja el plan de la mañana en la pizarra y Teo lo señala.»
 
 ### `ume-s6-biblioteca`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s6-biblioteca-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 6 · pasos 2-4
 - **Descripción visual:** Biblioteca escolar. Teo con sus cascos verdes elige un libro de trenes. Lía, sentada a su lado, señala su comunicador. Aya hojea un libro de volcanes. Bruno, en un puf, respira tranquilo.
 - **Personajes:** Teo, Lía, Aya, Bruno
 - **Emoción o acción:** Cada uno usa su estrategia
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Estanterías bajas de madera, alfombra, pufs, luz cálida. Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Estanterías bajas de madera, alfombra, pufs, luz cálida. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «En la biblioteca, Teo lleva sus cascos, Lía usa su comunicador, Aya lee y Bruno descansa en un puf.»
 
 ### `ume-s7-salida`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/scenes/s7-salida.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp` (1200 px)
+- **Composición vertical:** `public/media/stories/una-manana-diferente/scenes/s7-salida-vertical.webp` · 3:4 · 1536 × 2048 px
+- **Variantes verticales:** `public/media/stories/una-manana-diferente/scenes/s7-salida-vertical-768w.webp` (768 px), `public/media/stories/una-manana-diferente/scenes/s7-salida-vertical-1024w.webp` (1024 px)
 - **Escena / uso:** Escena 7 · todos los pasos
 - **Descripción visual:** Mediodía. Teo sale del colegio y camina junto a su abuela Rosa, contándole algo con las manos. Nubi flota en el cielo.
 - **Personajes:** Teo, Rosa, Nubi
 - **Emoción o acción:** Cierre tranquilo, satisfacción
 - **Proporción:** 16:9
 - **Dimensiones recomendadas:** 2400 × 1350 px
-- **Fondo y composición:** Exterior del colegio a mediodía, luz más cálida que en la escena 1 (misma localización). Dejar el cuarto inferior con poco detalle: ahí se superpone el texto en móvil. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
+- **Fondo y composición:** Exterior del colegio a mediodía, luz más cálida que en la escena 1 (misma localización). Sin texto dentro de la imagen (los textos y bocadillos los pone la app).
 - **Transparencia:** No
 - **Texto alternativo:** «Teo sale del colegio con su abuela y le cuenta cómo ha ido la mañana.»
 
@@ -857,6 +900,7 @@ Estado: **14 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k1-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k1-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k1-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 1 · viñeta 1
 - **Descripción visual:** Plano medio: Rosa se despide de Teo en la verja. Bocadillos: Rosa arriba a la derecha, Teo abajo a la izquierda.
 - **Personajes:** Rosa, Teo

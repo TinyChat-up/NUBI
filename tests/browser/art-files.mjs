@@ -20,6 +20,17 @@ for (const a of ready) {
    const v=m.variants.find(x=>x.width===w);assert(v);
    files.push({ id: a.id, path: v.file, width: w, height: Math.round(a.size.height*w/a.size.width), transparent: a.transparent });
  }
+ if (a.portrait) {
+   const p = a.portrait;
+   assert.equal(p.file, m.portrait?.file, a.id);
+   assert.equal(createHash('sha256').update(readFileSync(new URL('../../public' + p.file, import.meta.url))).digest('hex'), m.portrait.sha256);
+   files.push({ id: a.id + ':portrait', path: p.file, width: p.size.width, height: p.size.height, transparent: false });
+   for (const w of p.variants || []) {
+     const v = m.portrait.variants.find(x => x.width === w); assert(v);
+     assert.equal(createHash('sha256').update(readFileSync(new URL('../../public' + v.file, import.meta.url))).digest('hex'), v.sha256);
+     files.push({ id: a.id + ':portrait', path: v.file, width: w, height: Math.round(p.size.height*w/p.size.width), transparent: false });
+   }
+ }
 }
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',args:['--no-sandbox']});
 try {
