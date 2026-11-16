@@ -191,6 +191,12 @@ p {
   box-shadow: 0 0 0 7px var(--color-coral-700);
 }
 
+/* Escenario del reproductor: recibe el foco tras cambiar de paso. Anillo interior (no tapa la cabecera). */
+.stage-focus:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 4px var(--color-coral-700);
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;

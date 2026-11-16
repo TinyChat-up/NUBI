@@ -133,8 +133,14 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
 
   // Al cambiar de paso, el escenario vuelve arriba (salvo en el cómic, que desplaza hasta la viñeta nueva).
   const isPanel = play.kind === 'panel';
+  // El foco se mueve al contenido solo tras un cambio de paso, nunca al abrir: así no aparece
+  // un anillo de foco sin que el niño o la niña haya interactuado.
+  // (Se compara con el paso anterior para que el doble efecto de StrictMode tampoco enfoque al abrir.)
+  const lastStepKey = useRef(stepKey);
   useEffect(() => {
     if (!isPanel) stageRef.current?.scrollTo({ top: 0 });
+    if (lastStepKey.current === stepKey) return;
+    lastStepKey.current = stepKey;
     stageRef.current?.focus({ preventScroll: true });
   }, [stepKey, isPanel]);
 
@@ -285,8 +291,8 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </header>
 
       {/* Escenario */}
-      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="flex-1 touch-pan-y overflow-x-hidden overflow-y-auto focus-visible:shadow-none focus-visible:[outline-offset:-6px]" {...swipe}>
-        <div className={`mx-auto flex min-h-full w-full flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'max-w-7xl justify-center' : 'max-w-6xl'}`}>{stage}</div>
+      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="stage-focus flex-1 touch-pan-y overflow-x-hidden overflow-y-auto" {...swipe}>
+        <div className={`mx-auto flex min-h-full w-full flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'max-w-7xl portrait:pt-0 landscape:justify-center' : 'max-w-6xl'}`}>{stage}</div>
       </div>
 
       {/* Región viva para lectores de pantalla */}

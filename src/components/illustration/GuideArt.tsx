@@ -11,8 +11,8 @@ export function GuideArt({ mood = 'happy', size = 120, className = '', label }: 
   if (hasFinalArt(id)) {
     // Tamaño fijo por defecto; `className` puede sobrescribir el ancho (p. ej. w-36 sm:w-48).
     return (
-      <span className={`block shrink-0 ${className}`} style={/\bw-/.test(className) ? undefined : { width: size }}>
-        <Illustration id={id} decorative={!label} className="w-full" fit="contain" ratio imgClassName="drop-shadow-[0_10px_14px_rgba(34,51,58,0.12)]" sizes={`${size}px`} />
+      <span className={`block shrink-0 drop-shadow-[0_10px_14px_rgba(34,51,58,0.12)] ${className}`} style={/\bw-/.test(className) ? undefined : { width: size }}>
+        <Illustration id={id} decorative={!label} className="w-full" fit="contain" ratio sizes={`${size}px`} />
       </span>
     );
   }

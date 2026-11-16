@@ -92,7 +92,10 @@ function Panel({ panel, current }: { panel: ComicPanel; current: boolean }) {
         <Illustration id={panel.illustration} ratio priority={current} sizes="(min-width: 1024px) 50vw, 100vw" className="w-full" />
         {/* Bocadillos superpuestos: solo si la viñeta es ancha. */}
         {ordered.map((b, i) => (
-          <p key={b.id} className={`absolute z-10 hidden max-w-[44%] animate-pop flex-col gap-1 @lg:flex ${POS[b.position]}`} style={{ animationDelay: `${250 + i * 450}ms` }}>
+          <p
+            key={b.id}
+            // Abajo: la etiqueta va debajo del bocadillo para que la cola (hacia arriba) no la pise.
+            className={`absolute z-10 hidden max-w-[44%] animate-pop gap-1 @lg:flex ${b.position.startsWith('bottom') ? 'flex-col-reverse' : 'flex-col'} ${POS[b.position]}`} style={{ animationDelay: `${250 + i * 450}ms` }}>
             <SpeakerLabel bubble={b} />
             <BubbleBody bubble={b} tail={b.kind === 'speech' || b.kind === 'thought' ? b.position : undefined} />
           </p>

@@ -1,7 +1,7 @@
 import { useCallback, useState, type CSSProperties } from 'react';
 import { getAsset } from '../content/assets/index.ts';
 import { Placeholder } from './placeholder/Placeholder.tsx';
-import { buildSrcSet, cssAspect, defaultFit, isReady, objectPosition, type Fit } from './illustration/imageSource.ts';
+import { buildSrcSet, cssAspect, defaultFit, isReady, objectPosition, portraitSrcSet, type Fit } from './illustration/imageSource.ts';
 
 interface IllustrationProps {
   id: string;
@@ -60,36 +60,53 @@ export function Illustration({
 
   const ready = isReady(asset) && !failed;
   const position = /\b(absolute|fixed)\b/.test(className) ? '' : 'relative';
-  const style: CSSProperties | undefined = ratio ? { aspectRatio: cssAspect(asset.aspect) } : undefined;
+  // Con versión vertical, la caja cambia de proporción según la orientación (la misma que usa <picture>).
+  const portrait = ready ? asset.portrait : undefined;
+  const style: CSSProperties | undefined = !ratio
+    ? undefined
+    : portrait
+      ? ({ '--ar': cssAspect(asset.aspect), '--ar-p': cssAspect(portrait.aspect) } as CSSProperties)
+      : { aspectRatio: cssAspect(asset.aspect) };
   const mode = fit ?? defaultFit(asset);
   const srcSet = ready ? buildSrcSet(asset) : undefined;
 
+  const image = ready ? (
+    <img
+      key={asset.id}
+      ref={imgRef}
+      src={asset.file}
+      srcSet={srcSet}
+      sizes={srcSet ? sizes : undefined}
+      width={asset.size.width}
+      height={asset.size.height}
+      alt={decorative ? '' : asset.alt}
+      loading={priority ? 'eager' : 'lazy'}
+      fetchPriority={priority ? 'high' : undefined}
+      decoding="async"
+      draggable={false}
+      onLoad={markLoaded}
+      onError={() => setLoad({ id, loaded: false, failed: true })}
+      className={`h-full w-full transition-opacity duration-500 ${mode === 'cover' ? 'object-cover' : 'object-contain'} ${loaded ? 'opacity-100' : 'opacity-0'} ${imgClassName}`}
+      style={{ objectPosition: objectPosition(asset) }}
+    />
+  ) : null;
+
   return (
     <div
-      className={`${position} overflow-hidden ${ready && !loaded && !asset.transparent ? 'bg-crema-200' : ''} ${className}`}
+      className={`${position} overflow-hidden ${ratio && portrait ? '[aspect-ratio:var(--ar)] portrait:[aspect-ratio:var(--ar-p)]' : ''} ${ready && !loaded && !asset.transparent ? 'bg-crema-200' : ''} ${className}`}
       style={style}
       data-asset={asset.id}
       data-asset-state={ready ? (loaded ? 'cargado' : 'cargando') : failed ? 'error' : 'provisional'}
     >
       {ready ? (
-        <img
-          key={asset.id}
-          ref={imgRef}
-          src={asset.file}
-          srcSet={srcSet}
-          sizes={srcSet ? sizes : undefined}
-          width={asset.size.width}
-          height={asset.size.height}
-          alt={decorative ? '' : asset.alt}
-          loading={priority ? 'eager' : 'lazy'}
-          fetchPriority={priority ? 'high' : undefined}
-          decoding="async"
-          draggable={false}
-          onLoad={markLoaded}
-          onError={() => setLoad({ id, loaded: false, failed: true })}
-          className={`h-full w-full transition-opacity duration-500 ${mode === 'cover' ? 'object-cover' : 'object-contain'} ${loaded ? 'opacity-100' : 'opacity-0'} ${imgClassName}`}
-          style={{ objectPosition: objectPosition(asset) }}
-        />
+        portrait ? (
+          <picture className="contents">
+            <source media="(orientation: portrait)" srcSet={portraitSrcSet(asset)} sizes={sizes} width={portrait.size.width} height={portrait.size.height} />
+            {image}
+          </picture>
+        ) : (
+          image
+        )
       ) : (
         <div className="h-full w-full" aria-hidden={decorative || undefined}>
           <Placeholder asset={asset} className="block h-full w-full" />

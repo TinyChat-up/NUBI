@@ -16,12 +16,25 @@ export function variantPath(file: string, width: number): string {
 }
 
 /** srcset con las variantes declaradas + el archivo principal como el ancho mayor. */
-export function buildSrcSet(asset: AssetSpec): string | undefined {
-  const widths = (asset.variants ?? []).filter((w) => Number.isFinite(w) && w > 0 && w < asset.size.width);
+export function buildSrcSet(source: { file: string; size: { width: number }; variants?: number[] }): string | undefined {
+  const widths = (source.variants ?? []).filter((w) => Number.isFinite(w) && w > 0 && w < source.size.width);
   if (widths.length === 0) return undefined;
   const unique = Array.from(new Set(widths)).sort((a, b) => a - b);
-  return [...unique.map((w) => `${variantPath(asset.file, w)} ${w}w`), `${asset.file} ${asset.size.width}w`].join(', ');
+  return [...unique.map((w) => `${variantPath(source.file, w)} ${w}w`), `${source.file} ${source.size.width}w`].join(', ');
 }
+
+/** srcset completo de la versión vertical (incluye siempre el archivo principal). */
+export function portraitSrcSet(asset: AssetSpec): string | undefined {
+  const p = asset.portrait;
+  if (!p) return undefined;
+  return buildSrcSet(p) ?? `${p.file} ${p.size.width}w`;
+}
+
+/** Proporción numérica (ancho/alto) de un aspecto del registro. */
+export const ratioOf = (aspect: AspectRatio): number => {
+  const [w, h] = aspect.split(':').map(Number);
+  return w / h;
+};
 
 /** Transparentes (personajes, herramientas, emociones) nunca se recortan. */
 export const defaultFit = (asset: AssetSpec): Fit => (asset.transparent ? 'contain' : 'cover');

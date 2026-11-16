@@ -4,6 +4,7 @@ import { getStory, storyList } from '../content/stories/index.ts';
 import { tools } from '../content/tools.ts';
 import type { ToolId } from '../engine/types.ts';
 import { Icon } from '../components/Icon.tsx';
+import { FORMAT_META } from '../components/StoryCard.tsx';
 import { Button, Chip, LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { useLocation } from '../lib/router.tsx';
 import { useProgress } from '../state/progress.tsx';
@@ -117,7 +118,7 @@ export function FamilyScreen() {
                   <li key={s.id} className="rounded-2xl bg-crema-100 p-4">
                     <p className="text-lg font-black">{s.title}</p>
                     <p className="text-tinta-suave">
-                      Escenas visitadas: {p.visitedScenes.length} de {s.scenes.length} · Formatos: {p.formatsUsed.join(', ')}
+                      Escenas visitadas: {p.visitedScenes.length} de {s.scenes.length} · Formatos: {p.formatsUsed.map((f) => FORMAT_META[f as keyof typeof FORMAT_META]?.label ?? f).join(', ')}
                       {p.completedAt ? ' · Terminada' : ''}
                     </p>
                     {p.exploredOptions.length > 0 && <p className="text-tinta-suave">Posibilidades exploradas: {p.exploredOptions.length}</p>}

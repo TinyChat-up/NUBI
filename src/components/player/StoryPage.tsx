@@ -1,6 +1,9 @@
 import type { BeatStep, Character } from '../../engine/types.ts';
 import { Icon } from '../Icon.tsx';
+import type { CSSProperties } from 'react';
+import { getAsset } from '../../content/assets/index.ts';
 import { Illustration } from '../Illustration.tsx';
+import { ratioOf } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
 
 export type PageDirection = 'next' | 'prev';
@@ -28,18 +31,28 @@ export function StoryPage({ beat, text, speaker, opener, direction, mode, showTe
   const pageAnim = direction === 'prev' ? 'animate-page-prev' : 'animate-page-next';
   const isGuide = Boolean(speaker?.isGuide);
   const isDialogue = Boolean(speaker && !isGuide);
+  // Proporciones del arte real (o del placeholder) para dimensionar la página sin recortar.
+  const asset = getAsset(beat.illustration);
+  const ratio = asset ? ratioOf(asset.aspect) : 16 / 9;
+  const portraitRatio = asset?.status === 'listo' && asset.portrait ? ratioOf(asset.portrait.aspect) : ratio;
 
   return (
     <article className="grid w-full items-center gap-4 sm:gap-6 lg:landscape:grid-cols-[minmax(0,2.3fr)_minmax(17rem,1fr)] lg:landscape:gap-10">
-      {/* Ilustración: a sangre en móvil; altura limitada para que el texto quepa sin desplazar. */}
-      <div className="-mx-3 sm:mx-0">
+      {/*
+        Ilustración:
+        - Vertical (móvil y tableta): a sangre y pegada a la cabecera, como la página de un álbum.
+          Su ancho se limita para que imagen + texto quepan sin desplazar (reserva ~24rem para cabecera,
+          controles y texto). Con arte vertical (`portrait`), la imagen ocupa mucho más alto.
+        - Horizontal: doble página con la ilustración a la izquierda.
+      */}
+      <div className="-mx-3 sm:-mx-6 lg:landscape:mx-0" style={{ '--r': ratio, '--r-p': portraitRatio } as CSSProperties}>
         <Illustration
           key={beat.illustration}
           id={beat.illustration}
           ratio
           priority
           sizes="(min-width: 1024px) and (orientation: landscape) 64vw, 100vw"
-          className={`mx-auto w-full max-w-[calc(60dvh*16/9)] sm:rounded-[1.75rem] sm:shadow-[var(--shadow-soft)] lg:landscape:max-w-none ${pageAnim}`}
+          className={`mx-auto w-full portrait:max-w-[calc((100dvh-24rem)*var(--r-p))] landscape:max-w-[calc(60dvh*var(--r))] lg:landscape:max-w-none lg:landscape:rounded-[1.75rem] lg:landscape:shadow-[var(--shadow-soft)] ${pageAnim}`}
         />
       </div>
 
@@ -65,7 +78,7 @@ export function StoryPage({ beat, text, speaker, opener, direction, mode, showTe
           </div>
         ) : isGuide ? (
           <div className="flex items-end gap-3">
-            <GuideArt mood="happy" size={72} className={`shrink-0 ${beat.motion === 'float' ? 'animate-sway' : ''}`} />
+            <GuideArt mood="happy" size={96} className={`w-20 shrink-0 sm:w-24 ${beat.motion === 'float' ? 'animate-sway' : ''}`} />
             <Bubble tail="left" speaker={speaker} text={text} tone="guide" />
           </div>
         ) : isDialogue ? (

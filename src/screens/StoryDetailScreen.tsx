@@ -107,7 +107,7 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
               const c = characters[id];
               return (
                 <li key={id} className="flex flex-col items-center gap-1 text-center">
-                  <Illustration id={`char-${id}`} ratio sizes="160px" className="w-full rounded-2xl bg-crema-50" />
+                  <Illustration id={`char-${id}`} ratio sizes="(min-width: 1024px) 140px, (min-width: 640px) 22vw, 30vw" className="w-full rounded-2xl bg-crema-50" />
                   <span className="font-black text-petroleo-900">{c.name}</span>
                   <span className="text-xs leading-tight text-tinta-suave">{c.role}</span>
                 </li>

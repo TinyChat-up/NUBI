@@ -34,11 +34,13 @@ export function HomeScreen() {
           <Illustration id="portada-fondo" decorative className="absolute inset-x-0 bottom-0 -z-10 h-[62%] w-full [&_svg]:h-full" />
         )}
 
-        {/* nubes que derivan (decorativas, se detienen con movimiento reducido) */}
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-24 -z-10 h-40 overflow-hidden">
-          <div className="absolute top-2 h-10 w-40 animate-drift rounded-full bg-crema-50/80 blur-[1px]" />
-          <div className="absolute top-20 h-8 w-28 animate-drift rounded-full bg-crema-50/70 [animation-delay:-35s]" />
-        </div>
+        {/* Nubes CSS de relleno: solo mientras no haya paisaje ilustrado (el arte final ya tiene su cielo). */}
+        {!hasFinalArt('portada-fondo') && (
+          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-24 -z-10 h-40 overflow-hidden">
+            <div className="absolute top-2 h-10 w-40 animate-drift rounded-full bg-crema-50/80 blur-[1px]" />
+            <div className="absolute top-20 h-8 w-28 animate-drift rounded-full bg-crema-50/70 [animation-delay:-35s]" />
+          </div>
+        )}
 
         <header className="flex items-center justify-end gap-2 px-4 pt-4 sm:px-8 sm:pt-6">
           <Link to="/ajustes" className="tap flex min-h-12 items-center gap-2 rounded-full bg-crema-50/85 px-4 font-extrabold text-petroleo-800 shadow-[var(--shadow-soft)]">
@@ -75,7 +77,7 @@ export function HomeScreen() {
       </section>
 
       {/* Historia destacada */}
-      <section aria-labelledby="featured-title" className="relative -mt-[16vh] px-4 pb-16 sm:px-8">
+      <section aria-labelledby="featured-title" className="relative px-4 pb-16 portrait:-mt-[6vh] landscape:-mt-[16vh] sm:px-8">
         <div className="card mx-auto grid max-w-5xl overflow-hidden md:grid-cols-[1.1fr_1fr]">
           <Illustration id={featured.cover} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full md:self-center" />
           <div className="flex flex-col justify-center gap-4 p-6 sm:p-8">

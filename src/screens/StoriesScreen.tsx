@@ -3,7 +3,7 @@ import { placeList } from '../content/places.ts';
 import { storyList } from '../content/stories/index.ts';
 import type { PlaceId } from '../engine/types.ts';
 import { Icon } from '../components/Icon.tsx';
-import { Nubi } from '../components/Nubi.tsx';
+import { GuideArt } from '../components/illustration/GuideArt.tsx';
 import { StoryCard } from '../components/StoryCard.tsx';
 import { Page, PageHeader } from '../components/ui.tsx';
 
@@ -41,7 +41,7 @@ export function StoriesScreen() {
           </li>
         ))}
         <li className="flex min-h-64 flex-col items-center justify-center gap-3 rounded-[var(--radius-card)] border-[3px] border-dashed border-crema-300 p-6 text-center text-tinta-suave">
-          <Nubi size={80} mood="calm" />
+          <GuideArt size={80} mood="calm" />
           <p className="reading-text text-lg font-bold">Más historias en camino</p>
           <p className="reading-text text-sm">Las preparamos con calma y con ayuda de familias y docentes.</p>
         </li>

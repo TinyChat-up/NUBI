@@ -1,7 +1,9 @@
+/// <reference types="node" />
+import { existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import type { AssetSpec } from '../../engine/types.ts';
 import { assets } from '../../content/assets/index.ts';
-import { buildSrcSet, cssAspect, defaultFit, isReady, objectPosition, variantPath } from './imageSource.ts';
+import { buildSrcSet, cssAspect, defaultFit, isReady, objectPosition, portraitSrcSet, ratioOf, variantPath } from './imageSource.ts';
 
 const base = assets['ume-s1-puerta'];
 const with_ = (patch: Partial<AssetSpec>): AssetSpec => ({ ...base, ...patch });
@@ -42,6 +44,24 @@ describe('fuentes de ilustración', () => {
         expect(a.focus.y, a.id).toBeLessThanOrEqual(100);
       }
       for (const w of a.variants ?? []) expect(w, a.id).toBeLessThan(a.size.width);
+    }
+  });
+
+  it('la versión vertical (dirección de arte) genera su propio srcset', () => {
+    expect(portraitSrcSet(with_({ portrait: undefined }))).toBeUndefined();
+    const portrait = { file: '/media/x/s1-vertical.webp', aspect: '3:4' as const, size: { width: 1536, height: 2048 } };
+    expect(portraitSrcSet(with_({ portrait }))).toBe('/media/x/s1-vertical.webp 1536w');
+    expect(portraitSrcSet(with_({ portrait: { ...portrait, variants: [768] } }))).toBe('/media/x/s1-vertical-768w.webp 768w, /media/x/s1-vertical.webp 1536w');
+    expect(ratioOf('16:9')).toBeCloseTo(1.778, 3);
+  });
+
+  it('los recursos listos tienen en disco su versión vertical y sus variantes', () => {
+    for (const a of Object.values(assets)) {
+      if (a.status !== 'listo') continue;
+      for (const w of a.variants ?? []) expect(existsSync(`public${variantPath(a.file, w)}`), `${a.id} ${w}w`).toBe(true);
+      if (!a.portrait) continue;
+      expect(existsSync(`public${a.portrait.file}`), `${a.id} vertical`).toBe(true);
+      for (const w of a.portrait.variants ?? []) expect(existsSync(`public${variantPath(a.portrait.file, w)}`), `${a.id} vertical ${w}w`).toBe(true);
     }
   });
 });

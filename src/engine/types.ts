@@ -132,6 +132,17 @@ export interface AssetSpec {
    * El archivo principal (`file`) se usa como tamaño mayor.
    */
   variants?: number[];
+  /**
+   * Versión RECOMPUESTA para pantallas en vertical (dirección de arte, no un recorte):
+   * misma escena con más cielo/suelo para que la ilustración llene la pantalla del móvil.
+   * Se sirve con <picture media="(orientation: portrait)">. Debe existir si el recurso está `listo`.
+   */
+  portrait?: {
+    file: string;
+    aspect: AspectRatio;
+    size: { width: number; height: number };
+    variants?: number[];
+  };
 }
 
 // ───────────────────────── Personajes ─────────────────────────
