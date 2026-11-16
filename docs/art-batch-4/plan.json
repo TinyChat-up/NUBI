@@ -1,0 +1,770 @@
+{
+  "base": "5d95c92",
+  "panels": [
+    {
+      "scene": "llegada",
+      "id": "k1-1",
+      "illustration": "ume-k1-1",
+      "span": "half",
+      "caption": "Martes, 8:55",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "rosa",
+          "text": "¡Que tengas un buen día, Teo!",
+          "position": "top-right"
+        },
+        {
+          "id": "b2",
+          "kind": "speech",
+          "speaker": "teo",
+          "text": "Primero, mates con Carmen.",
+          "position": "bottom-left"
+        }
+      ],
+      "asset": {
+        "status": "listo",
+        "transparent": false,
+        "background": "Verja del colegio. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "rosa",
+          "teo"
+        ],
+        "emotionOrAction": "Despedida tranquila",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k1-1",
+        "variants": [
+          1200
+        ],
+        "file": "/media/stories/una-manana-diferente/comic/k1-1.webp",
+        "usage": "Cómic · escena 1 · viñeta 1",
+        "description": "Plano medio: Rosa se despide de Teo en la verja. Bocadillos: Rosa arriba a la derecha, Teo abajo a la izquierda.",
+        "aspect": "4:3",
+        "alt": "Rosa se despide de Teo en la puerta del colegio.",
+        "placeholder": {
+          "motif": "school-gate",
+          "figures": [
+            {
+              "character": "rosa",
+              "mood": "happy"
+            },
+            {
+              "character": "teo",
+              "mood": "neutral"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "llegada",
+      "id": "k1-2",
+      "illustration": "ume-k1-2",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "sound",
+          "text": "¡Hola! ¡Corre, corre!",
+          "position": "top-right"
+        },
+        {
+          "id": "b2",
+          "kind": "thought",
+          "speaker": "teo",
+          "text": "Hoy hay mucho ruido en el pasillo.",
+          "position": "bottom-left"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Pasillo. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Ruido",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k1-2",
+        "file": "/media/stories/una-manana-diferente/comic/k1-2.webp",
+        "usage": "Cómic · escena 1 · viñeta 2",
+        "description": "Pasillo lleno de movimiento, niños corriendo. Teo en primer plano. Zona arriba a la derecha para onomatopeya; abajo a la izquierda para pensamiento.",
+        "aspect": "4:3",
+        "alt": "Teo en un pasillo lleno de niños corriendo.",
+        "placeholder": {
+          "motif": "hallway",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "worried"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "llegada",
+      "id": "k1-3",
+      "illustration": "ume-k1-3",
+      "span": "full",
+      "caption": "Teo toca sus cascos dentro de la mochila. Saber que están ahí le tranquiliza.",
+      "bubbles": [],
+      "motion": "float",
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Interior de mochila, detalle. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Seguridad",
+        "size": {
+          "width": 2400,
+          "height": 1350
+        },
+        "kind": "vineta",
+        "id": "ume-k1-3",
+        "file": "/media/stories/una-manana-diferente/comic/k1-3.webp",
+        "usage": "Cómic · escena 1 · viñeta 3",
+        "description": "Primer plano de la mano de Teo dentro de la mochila tocando los cascos verdes.",
+        "aspect": "16:9",
+        "alt": "La mano de Teo toca sus cascos dentro de la mochila.",
+        "placeholder": {
+          "motif": "calm-corner",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "calm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cambio",
+      "id": "k2-1",
+      "illustration": "ume-k2-1",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "thought",
+          "speaker": "teo",
+          "text": "¿Dónde está Carmen?",
+          "position": "top-left"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Puerta de clase. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Extrañeza",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k2-1",
+        "file": "/media/stories/una-manana-diferente/comic/k2-1.webp",
+        "usage": "Cómic · escena 2 · viñeta 1",
+        "description": "Teo ante la puerta de la clase, desde atrás. Arriba a la izquierda, espacio para pensamiento.",
+        "aspect": "4:3",
+        "alt": "Teo se detiene ante la puerta de su clase.",
+        "placeholder": {
+          "motif": "classroom-door",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "surprised"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cambio",
+      "id": "k2-2",
+      "illustration": "ume-k2-2",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "andres",
+          "text": "Hola, me llamo Andrés. Carmen hoy no ha podido venir. Está bien y vuelve mañana.",
+          "position": "top-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Aula. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "andres"
+        ],
+        "emotionOrAction": "Presentación amable",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k2-2",
+        "file": "/media/stories/una-manana-diferente/comic/k2-2.webp",
+        "usage": "Cómic · escena 2 · viñeta 2",
+        "description": "Andrés, plano medio, se presenta con la mano en el pecho. Espacio arriba a la derecha.",
+        "aspect": "4:3",
+        "alt": "Andrés se presenta.",
+        "placeholder": {
+          "motif": "classroom",
+          "figures": [
+            {
+              "character": "andres",
+              "mood": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cambio",
+      "id": "k2-3",
+      "illustration": "ume-k2-3",
+      "span": "full",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "andres",
+          "text": "La plástica pasa a la tarde. Ahora vamos a la biblioteca.",
+          "position": "top-left"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Pizarra. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "andres"
+        ],
+        "emotionOrAction": "Explicar el cambio",
+        "size": {
+          "width": 2400,
+          "height": 1350
+        },
+        "kind": "vineta",
+        "id": "ume-k2-3",
+        "file": "/media/stories/una-manana-diferente/comic/k2-3.webp",
+        "usage": "Cómic · escena 2 · viñeta 3",
+        "description": "Andrés mueve en la pizarra el dibujo de un pincel hacia la parte de la tarde. Espacio arriba a la izquierda.",
+        "aspect": "16:9",
+        "alt": "Andrés mueve la plástica a la tarde en el horario de la pizarra.",
+        "placeholder": {
+          "motif": "board-schedule",
+          "figures": [
+            {
+              "character": "andres",
+              "mood": "neutral"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cambio",
+      "id": "k2-4",
+      "illustration": "ume-k2-4",
+      "span": "full",
+      "caption": "Teo se queda quieto y mueve los dedos. No esperaba este cambio.",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "aya",
+          "text": "¿Y qué haremos allí?",
+          "position": "top-left"
+        },
+        {
+          "id": "b2",
+          "kind": "speech",
+          "speaker": "bruno",
+          "text": "¡Pero yo quería plástica!",
+          "position": "top-right"
+        },
+        {
+          "id": "b3",
+          "kind": "device",
+          "speaker": "lia",
+          "text": "NO SÉ",
+          "position": "bottom-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Aula. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "aya",
+          "bruno",
+          "lia",
+          "teo"
+        ],
+        "emotionOrAction": "Reacciones diversas",
+        "size": {
+          "width": 2400,
+          "height": 1350
+        },
+        "kind": "vineta",
+        "id": "ume-k2-4",
+        "file": "/media/stories/una-manana-diferente/comic/k2-4.webp",
+        "usage": "Cómic · escena 2 · viñeta 4",
+        "description": "Panorámica de la clase con las cuatro reacciones (ver ume-s2-reacciones). Bocadillos arriba a izquierda y derecha; comunicador de Lía abajo a la derecha.",
+        "aspect": "16:9",
+        "alt": "Aya pregunta, Bruno protesta, Lía usa su comunicador y Teo mueve los dedos.",
+        "placeholder": {
+          "motif": "classroom",
+          "figures": [
+            {
+              "character": "aya",
+              "mood": "curious"
+            },
+            {
+              "character": "bruno",
+              "mood": "frustrated"
+            },
+            {
+              "character": "lia",
+              "mood": "worried"
+            },
+            {
+              "character": "teo",
+              "mood": "surprised"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "saber",
+      "id": "k3-1",
+      "illustration": "ume-k3-1",
+      "span": "half",
+      "motion": "float",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "nubi",
+          "text": "¿Qué sabemos ya? ¿Qué nos falta por saber?",
+          "position": "top-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Pizarra. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "nubi"
+        ],
+        "emotionOrAction": "Pregunta abierta",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k3-1",
+        "file": "/media/stories/una-manana-diferente/comic/k3-1.webp",
+        "usage": "Cómic · escena 3 · viñeta 1",
+        "description": "Nubi flota delante de la pizarra de dos columnas.",
+        "aspect": "4:3",
+        "alt": "Nubi pregunta qué sabemos.",
+        "placeholder": {
+          "motif": "board-schedule",
+          "figures": [
+            {
+              "character": "nubi",
+              "mood": "thinking"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "saber",
+      "id": "k3-2",
+      "illustration": "ume-k3-2",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "thought",
+          "speaker": "teo",
+          "text": "¿Y después de la biblioteca, qué? ¿Y el recreo?",
+          "position": "top-left"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Mesa. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Dudas",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k3-2",
+        "file": "/media/stories/una-manana-diferente/comic/k3-2.webp",
+        "usage": "Cómic · escena 3 · viñeta 2",
+        "description": "Teo en su mesa con una gran burbuja de pensamiento (arriba a la izquierda).",
+        "aspect": "4:3",
+        "alt": "Teo piensa en sus dudas.",
+        "placeholder": {
+          "motif": "classroom",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "thinking"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "posibilidades",
+      "id": "k4-1",
+      "illustration": "ume-k4-1",
+      "span": "full",
+      "caption": "Teo tiene muchas preguntas en la cabeza.",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "thought",
+          "speaker": "teo",
+          "text": "¿Qué puedo hacer?",
+          "position": "top-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Fondo abstracto crema con caminos. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Considerar opciones",
+        "size": {
+          "width": 2400,
+          "height": 1350
+        },
+        "kind": "vineta",
+        "id": "ume-k4-1",
+        "file": "/media/stories/una-manana-diferente/comic/k4-1.webp",
+        "usage": "Cómic · escena 4 · viñeta 1",
+        "description": "Teo en el centro; a su alrededor, seis pequeños caminos o puertas que representan posibilidades (sin texto).",
+        "aspect": "16:9",
+        "alt": "Teo rodeado de varios caminos posibles.",
+        "placeholder": {
+          "motif": "classroom",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "thinking"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "estrategias",
+      "id": "k6-1",
+      "illustration": "ume-k6-1",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "teo",
+          "text": "¿Me puedes dibujar el plan?",
+          "position": "top-left"
+        },
+        {
+          "id": "b2",
+          "kind": "speech",
+          "speaker": "andres",
+          "text": "¡Claro! Mira: biblioteca, recreo, lengua…",
+          "position": "bottom-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Pizarra. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo",
+          "andres"
+        ],
+        "emotionOrAction": "Colaboración",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k6-1",
+        "file": "/media/stories/una-manana-diferente/comic/k6-1.webp",
+        "usage": "Cómic · escena 6 · viñeta 1",
+        "description": "Teo y Andrés frente a la pizarra; Andrés empieza a dibujar. Bocadillos arriba izquierda y abajo derecha.",
+        "aspect": "4:3",
+        "alt": "Teo pide a Andrés que dibuje el plan.",
+        "placeholder": {
+          "motif": "board-schedule",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "neutral"
+            },
+            {
+              "character": "andres",
+              "mood": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "estrategias",
+      "id": "k6-2",
+      "illustration": "ume-k6-2",
+      "span": "half",
+      "caption": "En la biblioteca hay eco. Teo se pone los cascos.",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "thought",
+          "speaker": "teo",
+          "text": "Ahora puedo pensar.",
+          "position": "top-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Biblioteca. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo"
+        ],
+        "emotionOrAction": "Calma",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k6-2",
+        "file": "/media/stories/una-manana-diferente/comic/k6-2.webp",
+        "usage": "Cómic · escena 6 · viñeta 2",
+        "description": "Teo con cascos en la biblioteca, sosteniendo un libro de trenes. Ondas de sonido suaves al fondo.",
+        "aspect": "4:3",
+        "alt": "Teo con sus cascos en la biblioteca.",
+        "placeholder": {
+          "motif": "library",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "calm"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "estrategias",
+      "id": "k6-3",
+      "illustration": "ume-k6-3",
+      "span": "full",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "bruno",
+          "text": "No me gusta este cambio. Necesito un rato.",
+          "position": "top-left"
+        },
+        {
+          "id": "b2",
+          "kind": "speech",
+          "speaker": "aya",
+          "text": "¿Hay libros de volcanes?",
+          "position": "top-right"
+        },
+        {
+          "id": "b3",
+          "kind": "device",
+          "speaker": "lia",
+          "text": "QUIERO · SENTARME · CON TEO",
+          "position": "bottom-right"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Biblioteca. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "bruno",
+          "aya",
+          "lia"
+        ],
+        "emotionOrAction": "Estrategias distintas",
+        "size": {
+          "width": 2400,
+          "height": 1350
+        },
+        "kind": "vineta",
+        "id": "ume-k6-3",
+        "file": "/media/stories/una-manana-diferente/comic/k6-3.webp",
+        "usage": "Cómic · escena 6 · viñeta 3",
+        "description": "Bruno en un puf (izquierda), Aya junto a la estantería (derecha), Lía mostrando su comunicador (abajo derecha).",
+        "aspect": "16:9",
+        "alt": "Bruno descansa, Aya busca libros y Lía usa su comunicador.",
+        "placeholder": {
+          "motif": "library",
+          "figures": [
+            {
+              "character": "bruno",
+              "mood": "calm"
+            },
+            {
+              "character": "aya",
+              "mood": "curious"
+            },
+            {
+              "character": "lia",
+              "mood": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cierre",
+      "id": "k7-1",
+      "illustration": "ume-k7-1",
+      "span": "half",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "rosa",
+          "text": "¿Qué tal la mañana?",
+          "position": "top-right"
+        },
+        {
+          "id": "b2",
+          "kind": "speech",
+          "speaker": "teo",
+          "text": "Diferente. Carmen no estaba.",
+          "position": "bottom-left"
+        }
+      ],
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Verja del colegio a mediodía. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo",
+          "rosa"
+        ],
+        "emotionOrAction": "Reencuentro",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k7-1",
+        "file": "/media/stories/una-manana-diferente/comic/k7-1.webp",
+        "usage": "Cómic · escena 7 · viñeta 1",
+        "description": "Teo y Rosa salen por la verja. Bocadillos arriba derecha y abajo izquierda.",
+        "aspect": "4:3",
+        "alt": "Rosa recoge a Teo a la salida.",
+        "placeholder": {
+          "motif": "school-gate",
+          "figures": [
+            {
+              "character": "rosa",
+              "mood": "happy"
+            },
+            {
+              "character": "teo",
+              "mood": "neutral"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scene": "cierre",
+      "id": "k7-2",
+      "illustration": "ume-k7-2",
+      "span": "half",
+      "caption": "Mañana vuelve Carmen. Y si algún día cambia otra vez el plan, Teo sabe algunas cosas que puede hacer.",
+      "bubbles": [
+        {
+          "id": "b1",
+          "kind": "speech",
+          "speaker": "teo",
+          "text": "Pedí ver el plan. Y me puse los cascos.",
+          "position": "top-left"
+        }
+      ],
+      "motion": "rise",
+      "asset": {
+        "status": "pendiente",
+        "transparent": false,
+        "background": "Calle arbolada. Reservar una zona despejada para los bocadillos indicada en la descripción. Línea de contorno algo más marcada que en el cuento. Sin texto dentro de la imagen (los textos y bocadillos los pone la app).",
+        "characters": [
+          "teo",
+          "rosa",
+          "nubi"
+        ],
+        "emotionOrAction": "Cierre tranquilo",
+        "size": {
+          "width": 2048,
+          "height": 1536
+        },
+        "kind": "vineta",
+        "id": "ume-k7-2",
+        "file": "/media/stories/una-manana-diferente/comic/k7-2.webp",
+        "usage": "Cómic · escena 7 · viñeta 2",
+        "description": "Teo y Rosa caminando de espaldas por la acera; Nubi en el cielo.",
+        "aspect": "4:3",
+        "alt": "Teo y su abuela caminan hacia casa.",
+        "placeholder": {
+          "motif": "park",
+          "figures": [
+            {
+              "character": "teo",
+              "mood": "happy"
+            },
+            {
+              "character": "rosa",
+              "mood": "happy"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

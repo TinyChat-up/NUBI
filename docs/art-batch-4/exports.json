@@ -1,0 +1,744 @@
+[
+  {
+    "id": "ume-k1-2",
+    "file": "/media/stories/una-manana-diferente/comic/k1-2.webp",
+    "source": "exec-d7e0f0fc-1dfc-4a61-bf2c-7b6891709386.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 302778,
+    "sha256": "8831bdadaf8c515cabec8878f7777c781e04bd1b5697371fcc8a034f74b744fc",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k1-2-800w.webp",
+        "source": "exec-d7e0f0fc-1dfc-4a61-bf2c-7b6891709386.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 85598,
+        "sha256": "366843c6d8de32f27fae77cf092fc22c5ed011cd5e8f48e50074daf84057938f",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k1-2-1200w.webp",
+        "source": "exec-d7e0f0fc-1dfc-4a61-bf2c-7b6891709386.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 161476,
+        "sha256": "72d9e1dc3de229e3892826ee1aa5f18d11c963351acdcced8dce01c95552d7be",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k1-3",
+    "file": "/media/stories/una-manana-diferente/comic/k1-3.webp",
+    "source": "exec-1b7bf01c-34e8-455b-986f-276bb68549f6.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 291250,
+    "sha256": "5bba32e481d5f9b5fce5f3ff87c91cf5184da7676103657dd037b0dfeaff017e",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k1-3-800w.webp",
+        "source": "exec-1b7bf01c-34e8-455b-986f-276bb68549f6.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          800,
+          450
+        ],
+        "bytes": 60970,
+        "sha256": "97d11457cce55b3cf439eb5cd2be4ce9a5bd78f2ba928d574056a7d87fd73f17",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k1-3-1200w.webp",
+        "source": "exec-1b7bf01c-34e8-455b-986f-276bb68549f6.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 118700,
+        "sha256": "381e1058d1a21a13ca6da060e24e836dd5321f2b453b218fcdd767a630226e18",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k2-1",
+    "file": "/media/stories/una-manana-diferente/comic/k2-1.webp",
+    "source": "exec-9ea7d181-f4ce-4fb5-a768-9ca4235f9100.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 291844,
+    "sha256": "7b47cd165fb17dde173ae208bef192df3f35af33bcac41b10934b8e501f9fbbb",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-1-800w.webp",
+        "source": "exec-9ea7d181-f4ce-4fb5-a768-9ca4235f9100.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 68630,
+        "sha256": "8ba0d6ed0352ce93ff2a43c6c242e9423f68f0ec3062465a418f94133afca44e",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-1-1200w.webp",
+        "source": "exec-9ea7d181-f4ce-4fb5-a768-9ca4235f9100.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 142288,
+        "sha256": "e193d4731d1f65599285a6eb476bcce207376ea4f620927a72835faba99b6871",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k2-2",
+    "file": "/media/stories/una-manana-diferente/comic/k2-2.webp",
+    "source": "exec-e3941ff0-36b1-45b5-b1bc-5df61ff0087f.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 259608,
+    "sha256": "9b42b16bda0ba321b4cb1d637c8ce8059e75aa1a3e25250c02324cb4685b4472",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-2-800w.webp",
+        "source": "exec-e3941ff0-36b1-45b5-b1bc-5df61ff0087f.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 61690,
+        "sha256": "b026e4660252731a0bae7a887c98bb2031cbbba895033e61803fd24af6ad54c0",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-2-1200w.webp",
+        "source": "exec-e3941ff0-36b1-45b5-b1bc-5df61ff0087f.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 124738,
+        "sha256": "90b96b6ce6fbefa57d00c36c9e257bbcfcd407f09ea87cf09d68bb264d9f940c",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k2-3",
+    "file": "/media/stories/una-manana-diferente/comic/k2-3.webp",
+    "source": "exec-97e1146c-1850-4644-9ef4-321922a1e4fb.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 244328,
+    "sha256": "2bda621159deec7dcc9d04aa7fce46be45e5794b23cf8484bb22d7beb0d9511a",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-3-800w.webp",
+        "source": "exec-97e1146c-1850-4644-9ef4-321922a1e4fb.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          800,
+          450
+        ],
+        "bytes": 42248,
+        "sha256": "9ca8d28f37e9af9ef79a5860c96da84b6a65e3745c1fe178478beff4e62a71d7",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-3-1200w.webp",
+        "source": "exec-97e1146c-1850-4644-9ef4-321922a1e4fb.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 88904,
+        "sha256": "e304f43d1b6e6446b2a1b8512064f7b92bedbc4116ec55b1380cedbdd89e136c",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k3-1",
+    "file": "/media/stories/una-manana-diferente/comic/k3-1.webp",
+    "source": "exec-b5572b10-055b-479a-ab19-9a1e08f7a9b2.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 205534,
+    "sha256": "d716a43069d81fa6ccfd5ce0bfb7e9bb24ae6d3882a080be23f94a1ab018f02a",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k3-1-800w.webp",
+        "source": "exec-b5572b10-055b-479a-ab19-9a1e08f7a9b2.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 49866,
+        "sha256": "af85e08be32e1a98adbf03a6b0a7a7bc8bb7234024de28a842fea1bfbe2e4bfb",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k3-1-1200w.webp",
+        "source": "exec-b5572b10-055b-479a-ab19-9a1e08f7a9b2.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 99092,
+        "sha256": "0d2273dc66662a11210d19b7f3816dc59178e4736588e3196b3c86812faf10bb",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k3-2",
+    "file": "/media/stories/una-manana-diferente/comic/k3-2.webp",
+    "source": "exec-5a2aca51-c58f-4aaa-9814-4662559f5d9e.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 275502,
+    "sha256": "6d2ecf9b20ca8024a59d42c6d9c7397ffa6111c79322d5a95eeb0aa18bef564d",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k3-2-800w.webp",
+        "source": "exec-5a2aca51-c58f-4aaa-9814-4662559f5d9e.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 68546,
+        "sha256": "6f422945b8e5c43227c966c59e92fb9a155d8717c7fd325493f410e04eadb871",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k3-2-1200w.webp",
+        "source": "exec-5a2aca51-c58f-4aaa-9814-4662559f5d9e.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 136758,
+        "sha256": "886aeb7865ac5e56606859eb298c4135dcd5c0eaaa5ae017382561e71fc4a37d",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k4-1",
+    "file": "/media/stories/una-manana-diferente/comic/k4-1.webp",
+    "source": "exec-d50b3b1a-a625-416e-a662-766b44d5229d.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 218596,
+    "sha256": "7b1aa3ed353bcd572da914f8b28ec6bcd5af9f671ab12a81202f4d5cc60fea73",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k4-1-800w.webp",
+        "source": "exec-d50b3b1a-a625-416e-a662-766b44d5229d.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          800,
+          450
+        ],
+        "bytes": 39040,
+        "sha256": "7d203c688ad356dc2f3f119037b243761274e53bbaa3ccfdd5d194b3d0251548",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k4-1-1200w.webp",
+        "source": "exec-d50b3b1a-a625-416e-a662-766b44d5229d.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 80230,
+        "sha256": "c517f75216ca3f38155f38972947475cf0072389d532fe74ecfd5d93ac6d8b07",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k6-1",
+    "file": "/media/stories/una-manana-diferente/comic/k6-1.webp",
+    "source": "exec-414516ce-8948-433e-b792-eb17853bbc56.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 318768,
+    "sha256": "ca33427cf13a23964005d8907094024d8ad6f07b64b12b4b66de29dccfb48ce1",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-1-800w.webp",
+        "source": "exec-414516ce-8948-433e-b792-eb17853bbc56.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 81938,
+        "sha256": "d32ee210ab14278f3c2db198ceee8c2a8966d10610f8e6ada18ed7f28e16d66f",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-1-1200w.webp",
+        "source": "exec-414516ce-8948-433e-b792-eb17853bbc56.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 162430,
+        "sha256": "e5fcaa34a55e8a520c81935f6c8c2ce3bc9c21f8ea913c7164b2845e402e7786",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k6-2",
+    "file": "/media/stories/una-manana-diferente/comic/k6-2.webp",
+    "source": "exec-79cd3151-5669-4c1a-883a-c06dd292bcd9.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 345678,
+    "sha256": "8b32de8c68843768e992dd7a369044e292066ff491426eceb2fa7432b3f9b7a2",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-2-800w.webp",
+        "source": "exec-79cd3151-5669-4c1a-883a-c06dd292bcd9.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 92844,
+        "sha256": "7ca1f08f53af6bde854b1863a01141ff129d3fa1c458086d40f3f30ba745435b",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-2-1200w.webp",
+        "source": "exec-79cd3151-5669-4c1a-883a-c06dd292bcd9.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 177480,
+        "sha256": "6621383467858bcf4b7d8443ba1735fc4cdc6beeb9625628990d6b6d7fe3355f",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k7-1",
+    "file": "/media/stories/una-manana-diferente/comic/k7-1.webp",
+    "source": "exec-4c77d5a0-3472-4792-a4ed-68007c70545a.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 397038,
+    "sha256": "89fe82e6b4eac9de79d78f59a6666df6bebb03c4977462546b3301ecbe3ab7ae",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k7-1-800w.webp",
+        "source": "exec-4c77d5a0-3472-4792-a4ed-68007c70545a.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 115150,
+        "sha256": "c7ef2b4104a5df655c5c78515c7640a6140d39ac92bd39b55082c208bca07b05",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k7-1-1200w.webp",
+        "source": "exec-4c77d5a0-3472-4792-a4ed-68007c70545a.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 212624,
+        "sha256": "1acb9284cd73a5be10c7b6879f02ad658ca75d7017db27f0fb9fcde5c593598f",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k7-2",
+    "file": "/media/stories/una-manana-diferente/comic/k7-2.webp",
+    "source": "exec-2df01bfd-5155-4944-b47e-5388417f249e.png",
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "bytes": 431568,
+    "sha256": "95f3266a57e13877a5ca2ffa3602c7f39ba235658b1a8a5f561e16b78116ce85",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k7-2-800w.webp",
+        "source": "exec-2df01bfd-5155-4944-b47e-5388417f249e.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          800,
+          600
+        ],
+        "bytes": 118692,
+        "sha256": "40f668ce223a84cbcb9087f30942d264aff3f8cdc642b6caf210ad2fd4da2de2",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k7-2-1200w.webp",
+        "source": "exec-2df01bfd-5155-4944-b47e-5388417f249e.png",
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "exportSize": [
+          1200,
+          900
+        ],
+        "bytes": 228874,
+        "sha256": "7104320a38fde2aafb3c84a966d814a408d83664cd6ed0ecb709dc30e71a0a7f",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k6-3",
+    "file": "/media/stories/una-manana-diferente/comic/k6-3.webp",
+    "source": "exec-55ea4dce-bf84-4206-95cd-d79b406a077e.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 350888,
+    "sha256": "88e9d7d8801c3c719ac8a4474a2b8c98f06836c0a5a197eeeeb9285a42a74cc0",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-3-800w.webp",
+        "source": "exec-55ea4dce-bf84-4206-95cd-d79b406a077e.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          800,
+          450
+        ],
+        "bytes": 75658,
+        "sha256": "53f07c3bf1dd478536bdaffe6bf22bbd64e552b6ee4421f2441665d729c333a7",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k6-3-1200w.webp",
+        "source": "exec-55ea4dce-bf84-4206-95cd-d79b406a077e.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 149730,
+        "sha256": "9145ed1319f291a453688a787d343cd42ac0088351f760ae9e1ac28cae9cf2df",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  },
+  {
+    "id": "ume-k2-4",
+    "file": "/media/stories/una-manana-diferente/comic/k2-4.webp",
+    "source": "exec-898310b3-396f-4c91-9278-5dcd9c7a4e07.png",
+    "sourceSize": [
+      1672,
+      941
+    ],
+    "exportSize": [
+      2400,
+      1350
+    ],
+    "bytes": 280292,
+    "sha256": "2b0225c7304781f04b0c4f38aa41f9589e5ec0bfc4b1be73e883967da45eccab",
+    "quality": 76,
+    "resampled": true,
+    "variants": [
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-4-800w.webp",
+        "source": "exec-898310b3-396f-4c91-9278-5dcd9c7a4e07.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          800,
+          450
+        ],
+        "bytes": 59354,
+        "sha256": "5cea7041f6c9df21d7481bddee5f757aae2743afb53af857ddbc558b38076eed",
+        "quality": 76,
+        "resampled": true,
+        "width": 800
+      },
+      {
+        "file": "/media/stories/una-manana-diferente/comic/k2-4-1200w.webp",
+        "source": "exec-898310b3-396f-4c91-9278-5dcd9c7a4e07.png",
+        "sourceSize": [
+          1672,
+          941
+        ],
+        "exportSize": [
+          1200,
+          675
+        ],
+        "bytes": 117204,
+        "sha256": "64360e1c6796ad760155cd973911514ff13b8a08211f86a5f2a468da8a94816f",
+        "quality": 76,
+        "resampled": true,
+        "width": 1200
+      }
+    ]
+  }
+]

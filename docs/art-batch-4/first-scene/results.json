@@ -1,0 +1,248 @@
+[
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "scene": "llegada",
+    "panel": "k1-1",
+    "id": "ume-k1-1",
+    "width": 358,
+    "height": 268.5,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+    "natural": [
+      390,
+      292
+    ],
+    "overlays": [],
+    "below": true,
+    "shown": [
+      "Martes, 8:55",
+      "¡Que tengas un buen día, Teo!",
+      "Primero, mates con Carmen."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "scene": "llegada",
+    "panel": "k1-2",
+    "id": "ume-k1-2",
+    "width": 358,
+    "height": 268.5,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-2-800w.webp",
+    "natural": [
+      390,
+      292
+    ],
+    "overlays": [],
+    "below": true,
+    "shown": [
+      "¡Hola! ¡Corre, corre!",
+      "Hoy hay mucho ruido en el pasillo."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 2
+    },
+    "scene": "llegada",
+    "panel": "k1-3",
+    "id": "ume-k1-3",
+    "width": 358,
+    "height": 201.375,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-3-800w.webp",
+    "natural": [
+      390,
+      219
+    ],
+    "overlays": [],
+    "below": false,
+    "shown": [
+      "Teo toca sus cascos dentro de la mochila. Saber que están ahí le tranquiliza."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-1",
+    "id": "ume-k1-1",
+    "width": 764,
+    "height": 573,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+    "natural": [
+      820,
+      615
+    ],
+    "overlays": [
+      {
+        "x": 0.6122791230366492,
+        "y": 0.020942408376963352,
+        "w": 0.37201407068062825,
+        "h": 0.13743455497382198,
+        "text": "Rosa\n¡Que tengas un buen día, Teo!"
+      },
+      {
+        "x": 0.015706806282722512,
+        "y": 0.8416230366492147,
+        "w": 0.3552437827225131,
+        "h": 0.13743455497382198,
+        "text": "Teo\nPrimero, mates con Carmen."
+      }
+    ],
+    "below": false,
+    "shown": [
+      "Martes, 8:55",
+      "¡Que tengas un buen día, Teo!",
+      "Primero, mates con Carmen."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-2",
+    "id": "ume-k1-2",
+    "width": 764,
+    "height": 573,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-2-1200w.webp",
+    "natural": [
+      820,
+      615
+    ],
+    "overlays": [
+      {
+        "x": 0.7039021596858639,
+        "y": 0.020942408376963352,
+        "w": 0.28039103403141363,
+        "h": 0.06282722513089005,
+        "text": "¡Hola! ¡Corre, corre!"
+      },
+      {
+        "x": 0.015706806282722512,
+        "y": 0.8416230366492147,
+        "w": 0.4264152486910995,
+        "h": 0.13743455497382198,
+        "text": "Teo piensa\nHoy hay mucho ruido en el pasillo."
+      }
+    ],
+    "below": false,
+    "shown": [
+      "¡Hola! ¡Corre, corre!",
+      "Hoy hay mucho ruido en el pasillo."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 820,
+      "height": 1180,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-3",
+    "id": "ume-k1-3",
+    "width": 764,
+    "height": 429.75,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-3-1200w.webp",
+    "natural": [
+      820,
+      461
+    ],
+    "overlays": [],
+    "below": false,
+    "shown": [
+      "Teo toca sus cascos dentro de la mochila. Saber que están ahí le tranquiliza."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-1",
+    "id": "ume-k1-1",
+    "width": 469.109375,
+    "height": 351.828125,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+    "natural": [
+      590,
+      442
+    ],
+    "overlays": [],
+    "below": true,
+    "shown": [
+      "Martes, 8:55",
+      "¡Que tengas un buen día, Teo!",
+      "Primero, mates con Carmen."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-2",
+    "id": "ume-k1-2",
+    "width": 469.109375,
+    "height": 351.828125,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-2-1200w.webp",
+    "natural": [
+      590,
+      442
+    ],
+    "overlays": [],
+    "below": true,
+    "shown": [
+      "¡Hola! ¡Corre, corre!",
+      "Hoy hay mucho ruido en el pasillo."
+    ],
+    "intersections": []
+  },
+  {
+    "viewport": {
+      "width": 1180,
+      "height": 820,
+      "dpr": 1
+    },
+    "scene": "llegada",
+    "panel": "k1-3",
+    "id": "ume-k1-3",
+    "width": 966.21875,
+    "height": 543.484375,
+    "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-3-1200w.webp",
+    "natural": [
+      590,
+      331
+    ],
+    "overlays": [],
+    "below": false,
+    "shown": [
+      "Teo toca sus cascos dentro de la mochila. Saber que están ahí le tranquiliza."
+    ],
+    "intersections": []
+  }
+]

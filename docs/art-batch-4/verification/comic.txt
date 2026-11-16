@@ -1,0 +1,3 @@
+PASS 390: comic order, loading, aspect ratios, bubbles once, reserved regions and navigation
+PASS 820: comic order, loading, aspect ratios, bubbles once, reserved regions and navigation
+PASS 1180: comic order, loading, aspect ratios, bubbles once, reserved regions and navigation

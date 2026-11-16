@@ -1,0 +1,200 @@
+[
+  {
+    "width": 390,
+    "name": "01-inicio",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "02-ficha",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "03-cuento",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "04-cuento-emociones",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "05-cuento-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "06-cuento-resumen",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "03-comic",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "04-comic-emociones",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "05-comic-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "06-comic-resumen",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "07-video",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "name": "08-familias",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "functional": "passed",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 820,
+    "name": "01-inicio",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "02-ficha",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "03-cuento",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "04-cuento-emociones",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "05-cuento-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "06-cuento-resumen",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "03-comic",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "04-comic-emociones",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "05-comic-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "06-comic-resumen",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "07-video",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "name": "08-familias",
+    "violations": []
+  },
+  {
+    "width": 820,
+    "functional": "passed",
+    "errors": [],
+    "external": []
+  },
+  {
+    "width": 1180,
+    "name": "01-inicio",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "02-ficha",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "03-cuento",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "04-cuento-emociones",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "05-cuento-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "06-cuento-resumen",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "03-comic",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "04-comic-emociones",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "05-comic-consecuencia",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "06-comic-resumen",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "07-video",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "name": "08-familias",
+    "violations": []
+  },
+  {
+    "width": 1180,
+    "functional": "passed",
+    "errors": [],
+    "external": []
+  }
+]
