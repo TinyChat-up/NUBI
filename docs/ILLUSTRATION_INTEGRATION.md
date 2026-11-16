@@ -72,6 +72,31 @@ public/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp  ← varia
 
 La app genera `srcset` + `sizes` y el navegador elige. Probado de extremo a extremo: a 390, 820 y 1180 px se descarga la variante de 1200 px. Recomendado para escenas, viñetas y opciones: `variants: [1200]` (o `[800, 1600]`). Un test comprueba que las variantes son menores que el original.
 
+### `portrait` (dirección de arte vertical) — añadido en la fase 4
+
+Una escena 16:9 en un móvil o tableta en vertical ocupa poco alto: queda espacio libre bajo el texto. Para que la ilustración llene la pantalla **sin recortar nada**, se puede entregar una **versión recompuesta** de la misma escena en vertical (más cielo, suelo o entorno; los personajes y objetos importantes, enteros):
+
+```ts
+scene({
+  id: 's1-puerta',
+  status: 'listo',
+  variants: [1200],
+  portrait: {
+    file: '/media/stories/una-manana-diferente/scenes/s1-puerta-vertical.webp',
+    aspect: '3:4',
+    size: { width: 1536, height: 2048 },
+    variants: [768],   // opcional, mismo sufijo -<ancho>w
+  },
+  /* … */
+})
+```
+
+- Se sirve con `<picture>` + `media="(orientation: portrait)"`; en horizontal se sigue usando el original 16:9.
+- Proporción recomendada: **3:4** (en 390×844 y 820×1180 imagen + texto caben sin desplazar).
+- No es un recorte: si el recorte bastara, no haría falta el campo. Debe mantener continuidad con la versión horizontal (mismo momento, misma luz).
+- `imageSource.test.ts` comprueba que el archivo vertical y sus variantes existen cuando el recurso está `listo`.
+- Validado con una copia aislada y una imagen de prueba (no incluida): en vertical se sirve la versión 3:4 y la página se llena hasta los controles; en horizontal, la 16:9.
+
 ## 5. Formato y peso recomendados
 
 | Tipo | Formato | Peso orientativo |
