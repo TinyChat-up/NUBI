@@ -1,5 +1,7 @@
 # Resultados de pruebas — 16/11/2026
 
+Actualización posterior: [Fase 4 — segundo lote artístico](ART_BATCH_2_REPORT.md), con 24/72 recursos y pruebas gráficas de la integración.
+
 Entorno: Linux, Node 24.22.1, npm 11.9.0, Chromium del entorno, herramientas externas Playwright y axe-core. Base de Claude: 447edf0. No se instalaron dependencias nuevas en NUBI ni se cambió su lockfile.
 
 ## Ejecuciones

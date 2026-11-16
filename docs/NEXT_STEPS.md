@@ -1,5 +1,7 @@
 # Siguiente fase
 
+Actualización posterior: [Fase 4 — segundo lote artístico](ART_BATCH_2_REPORT.md), con 24/72 recursos y pruebas gráficas de la integración.
+
 ## Claude / revisión técnica
 
 1. Revisar `feat/codex-quality` contra `feat/claude-foundation` y ejecutar `npm run check`; no fusionar sin autorización. Revisar en especial la validación de partidas antiguas (se descartan si son incompatibles), foco y apertura en lectura.
