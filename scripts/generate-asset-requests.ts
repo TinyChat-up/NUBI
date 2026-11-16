@@ -63,6 +63,12 @@ for (const group of assetGroups) {
     p(`### \`${a.id}\``);
     p();
     p(`- **Nombre de archivo:** \`public${a.file}\``);
+    const variantFile = (file: string, width: number) => file.replace(/(\.[^.]+)$/, `-${width}w$1`);
+    if (a.variants?.length) p(`- **Variantes:** ${a.variants.map((w) => `\`public${variantFile(a.file, w)}\` (${w} px)`).join(', ')}`);
+    if (a.portrait) {
+      p(`- **Composición vertical:** \`public${a.portrait.file}\` · ${a.portrait.aspect} · ${a.portrait.size.width} × ${a.portrait.size.height} px`);
+      if (a.portrait.variants?.length) p(`- **Variantes verticales:** ${a.portrait.variants.map((w) => `\`public${variantFile(a.portrait!.file, w)}\` (${w} px)`).join(', ')}`);
+    }
     p(`- **Escena / uso:** ${a.usage}`);
     p(`- **Descripción visual:** ${a.description}`);
     p(`- **Personajes:** ${a.characters.length ? a.characters.map((id) => characters[id]?.name ?? id).join(', ') : '—'}`);

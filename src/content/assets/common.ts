@@ -26,7 +26,7 @@ const portada: AssetSpec[] = [
   defineAsset('personaje', {
     id: 'nubi-saludo',
     status: 'listo',
-    variants: [256],
+    variants: [256, 512],
     file: '/media/characters/nubi-saludo.png',
     usage: 'Portada y pantallas de bienvenida',
     description: 'Nubi, la nube guía, flotando y saludando con un pequeño brazo de nube. Expresión amable y serena.',
@@ -41,7 +41,7 @@ const portada: AssetSpec[] = [
   defineAsset('personaje', {
     id: 'nubi-pensando',
     status: 'listo',
-    variants: [256],
+    variants: [256, 512],
     file: '/media/characters/nubi-pensando.png',
     usage: 'Escenas de reflexión (preguntas de Nubi)',
     description: 'Nubi ligeramente inclinada, mirando hacia arriba, con una pequeña chispa de idea a su lado.',
