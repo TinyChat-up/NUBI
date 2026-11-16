@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+/*
+ * NUBI — Sistema visual. Documentado en docs/VISUAL_GUIDE.md.
+ * Paleta: crema, azul petróleo, coral, verde salvia (+ mostaza como acento cálido).
+ */
+@theme {
+  --color-crema-50: #fffcf6;
+  --color-crema-100: #fbf5ea;
+  --color-crema-200: #f4ead7;
+  --color-crema-300: #e9dbc0;
+  --color-crema-400: #d8c4a0;
+
+  --color-petroleo-50: #eef6f6;
+  --color-petroleo-100: #d9ebec;
+  --color-petroleo-200: #b4d5d8;
+  --color-petroleo-400: #4f909a;
+  --color-petroleo-500: #2f7581;
+  --color-petroleo-600: #22606b;
+  --color-petroleo-700: #1c4f59;
+  --color-petroleo-800: #163f47;
+  --color-petroleo-900: #102f36;
+
+  --color-coral-50: #fef3ee;
+  --color-coral-100: #fce4da;
+  --color-coral-200: #f8c9b7;
+  --color-coral-300: #f3a78d;
+  --color-coral-400: #ec8a6c;
+  --color-coral-500: #e2704f;
+  --color-coral-700: #a5432a;
+
+  --color-salvia-50: #f2f6ef;
+  --color-salvia-100: #e3ecdd;
+  --color-salvia-200: #c9dac0;
+  --color-salvia-400: #8eab87;
+  --color-salvia-500: #6f8f69;
+  --color-salvia-700: #46603f;
+
+  --color-mostaza-50: #fdf7e9;
+  --color-mostaza-100: #faecc9;
+  --color-mostaza-200: #f3d898;
+  --color-mostaza-400: #e3ae4c;
+  --color-mostaza-700: #8a5f12;
+
+  --color-tinta: #22333a;
+  --color-tinta-suave: #4b5f66;
+
+  --font-sans: 'Nunito Variable', 'Nunito', ui-rounded, 'SF Pro Rounded', system-ui, sans-serif;
+  --font-legible: 'Atkinson Hyperlegible', 'Nunito Variable', system-ui, sans-serif;
+
+  --radius-card: 1.75rem;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 1px 2px rgb(34 51 58 / 0.06), 0 8px 24px -8px rgb(34 51 58 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(34 51 58 / 0.06), 0 18px 40px -14px rgb(34 51 58 / 0.25);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-rise: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-drift: drift 80s linear infinite;
+  --animate-pop: pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes drift {
+    from {
+      transform: translateX(-10%);
+    }
+    to {
+      transform: translateX(110%);
+    }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* ───────── Base ───────── */
+
+:root {
+  color-scheme: light;
+  --reading-line-height: 1.55;
+  --reading-letter-spacing: 0.005em;
+  --reading-word-spacing: 0.02em;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-crema-100);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  font-weight: 560;
+  line-height: var(--reading-line-height);
+  letter-spacing: var(--reading-letter-spacing);
+  word-spacing: var(--reading-word-spacing);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 850;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Foco visible y consistente sobre cualquier fondo: anillo doble. */
+:focus-visible {
+  outline: 3px solid var(--color-crema-50);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 7px var(--color-coral-700);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ───────── Preferencias de lectura (data-* en <html>) ───────── */
+
+html[data-text-size='l'] {
+  font-size: 112.5%;
+}
+html[data-text-size='xl'] {
+  font-size: 125%;
+}
+
+html[data-spacing='wide'] {
+  --reading-line-height: 1.9;
+  --reading-letter-spacing: 0.06em;
+  --reading-word-spacing: 0.16em;
+}
+
+html[data-font='legible'] body {
+  font-family: var(--font-legible);
+  font-weight: 400;
+}
+html[data-font='legible'] :is(h1, h2, h3) {
+  font-weight: 700;
+}
+
+html[data-case='upper'] .reading-text {
+  text-transform: uppercase;
+}
+
+html[data-contrast='high'] {
+  --color-tinta-suave: #22333a;
+  --color-crema-100: #ffffff;
+  --color-crema-200: #f6f1e6;
+}
+html[data-contrast='high'] .soft-border {
+  border-color: var(--color-tinta) !important;
+}
+
+/* ───────── Movimiento ───────── */
+
+html[data-motion='reduced'] *,
+html[data-motion='reduced'] *::before,
+html[data-motion='reduced'] *::after {
+  animation: none !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion='full']) *,
+  html:not([data-motion='full']) *::before,
+  html:not([data-motion='full']) *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* "Detener animaciones" del reproductor. */
+.anim-paused,
+.anim-paused * {
+  animation-play-state: paused !important;
+}
+
+/* ───────── Utilidades propias ───────── */
+
+@utility paper {
+  background-color: var(--color-crema-100);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgb(248 201 183 / 0.35), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgb(201 218 192 / 0.4), transparent 45%);
+}
+
+@utility card {
+  background: var(--color-crema-50);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility tap {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@utility safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}

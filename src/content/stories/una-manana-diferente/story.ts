@@ -588,6 +588,7 @@ export const unaMananaDiferente: Story = {
       id: 'cuando-cambia-el-plan',
       title: 'Cuando cambia el plan',
       description: 'Prueba distintas formas de actuar y descubre qué puede pasar con cada una.',
+      intro: 'Teo llega a clase y descubre que hoy hay una persona nueva y que el plan ha cambiado. No hay una única respuesta buena: explora las posibilidades que quieras.',
       sceneId: 'posibilidades',
       choiceStepId: 'posibilidades-elegir',
       cover: 'ume-s4-teo-piensa',
@@ -641,8 +642,8 @@ export const unaMananaDiferente: Story = {
       { id: 'p5', title: 'Puedo decir que no me gusta', text: 'Cuando exprese desacuerdo, escuchadlo primero sin corregir. Después, buscad juntos qué parte se puede negociar.', tool: 'expresar-desacuerdo' },
     ],
     pendingActivities: [
-      { id: 'a1', title: 'Explorar todas las posibilidades', text: 'En la escena 4 hay seis posibilidades. Se pueden explorar en distintos días.' },
-      { id: 'a2', title: 'Elegir una herramienta para probar', text: 'Elegir una herramienta de la escena 6 y probarla esta semana en una situación real.' },
+      { id: 'a1', title: 'Explorar todas las posibilidades', text: 'En la escena 4 hay seis posibilidades. Se pueden explorar en distintos días.', doneWhen: 'all-options-explored' },
+      { id: 'a2', title: 'Elegir una herramienta para probar', text: 'Elegir una herramienta de la escena 6 y probarla esta semana en una situación real.', doneWhen: 'any-tool-practiced' },
       { id: 'a3', title: 'Hablar con el colegio', text: 'Compartir con el equipo docente qué apoyos ayudan al niño o la niña ante cambios de profesorado u horario.' },
     ],
     resources: [

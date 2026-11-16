@@ -313,6 +313,8 @@ export interface Recreation {
   id: string;
   title: string;
   description: string;
+  /** Contexto breve que se muestra antes de elegir. */
+  intro: string;
   sceneId: SceneId;
   choiceStepId: StepId;
   cover: AssetId;
@@ -324,7 +326,8 @@ export interface FamilyGuide {
   duringReading: string[];
   afterReading: string[];
   dailyPractice: { id: string; title: string; text: string; tool?: ToolId }[];
-  pendingActivities: { id: string; title: string; text: string }[];
+  /** `doneWhen` permite marcarlas como hechas a partir del progreso local. */
+  pendingActivities: { id: string; title: string; text: string; doneWhen?: 'all-options-explored' | 'any-tool-practiced' | 'story-completed' }[];
   resources: { id: string; title: string; description: string; status: 'disponible' | 'en-preparacion'; href?: string }[];
   pauseSignals: string[];
   respectNotes: string[];
