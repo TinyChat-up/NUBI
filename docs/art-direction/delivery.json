@@ -1,0 +1,340 @@
+{
+  "generator": "image_gen.imagegen",
+  "date": "2026-11-16",
+  "note": "Arte generado; ImageMagick solo exporta tamaños, formatos y márgenes. Originales conservados en /workspace/generated_images; exportaciones remuestreadas según sourceSize.",
+  "assets": [
+    {
+      "id": "char-nubi",
+      "file": "/media/characters/nubi.png",
+      "source": "exec-2d262066-7a62-4202-ada3-07bd88df8255.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1594419,
+      "sha256": "168ca0269d76e0482410ef4b7f57ee15e17df3b91558016f42a735181a0d9079",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/nubi-384w.png",
+          "bytes": 115402
+        }
+      ]
+    },
+    {
+      "id": "char-teo",
+      "file": "/media/characters/teo.png",
+      "source": "exec-bec70335-d9b8-4b90-89c1-86ae8e57f6d7.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1766368,
+      "sha256": "f77c37f5761451e138ac0f8325d8925942d145a00e86c73a91726e3f60ee6fb2",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/teo-384w.png",
+          "bytes": 136358
+        }
+      ]
+    },
+    {
+      "id": "char-rosa",
+      "file": "/media/characters/rosa.png",
+      "source": "exec-bac4be33-eff3-4b97-a1c9-d7c981e766bf.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1722896,
+      "sha256": "89c50e1777cb9861788ef1fb52ba6ea380826b620139514143dd0d41fe7e3140",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/rosa-384w.png",
+          "bytes": 139228
+        }
+      ]
+    },
+    {
+      "id": "char-andres",
+      "file": "/media/characters/andres.png",
+      "source": "exec-f3a9a01c-067c-4b6c-ad32-43a9f3a719ad.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1450822,
+      "sha256": "a5544ce82548a867fdd000df125145c400d7116f66cc467586a5e9591c225b95",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/andres-384w.png",
+          "bytes": 114867
+        }
+      ]
+    },
+    {
+      "id": "char-aya",
+      "file": "/media/characters/aya.png",
+      "source": "exec-69aa1cf7-e9e5-4df3-a737-a089319237c7.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1413852,
+      "sha256": "f5e965c6422c2fda91b49ae28dd6ba2d3b5e9953394874e127c69047e381ea05",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/aya-384w.png",
+          "bytes": 112596
+        }
+      ]
+    },
+    {
+      "id": "char-bruno",
+      "file": "/media/characters/bruno.png",
+      "source": "exec-dfc82aa0-708d-4585-a35f-ff64df261371.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1509794,
+      "sha256": "d2b37277444c3ea97b26037a393ff1e0e4fe4c5a19c62968d900306fcdb7ced4",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/bruno-384w.png",
+          "bytes": 123740
+        }
+      ]
+    },
+    {
+      "id": "char-lia",
+      "file": "/media/characters/lia.png",
+      "source": "exec-f80615c7-d154-4904-8ec8-5aa9d5d95e66.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1563213,
+      "sha256": "d1e360ac339bbb510d725bb8d881bccd858beed4d34e6ff56510800c7f583695",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/lia-384w.png",
+          "bytes": 123823
+        }
+      ]
+    },
+    {
+      "id": "char-carmen",
+      "file": "/media/characters/carmen.png",
+      "source": "exec-eafc7a43-d1b0-4d64-9fec-8fc219d77e6f.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1466465,
+      "sha256": "26968c1994f53848f4cbd9f89886b785c86cf763c9d1ad8c7e1548af569deba8",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/carmen-384w.png",
+          "bytes": 115195
+        }
+      ]
+    },
+    {
+      "id": "char-pilar",
+      "file": "/media/characters/pilar.png",
+      "source": "exec-4d72e39f-4a29-4b35-96bd-b02c3e799ab4.png",
+      "sourceSize": [
+        1086,
+        1448
+      ],
+      "exportSize": [
+        1536,
+        2048
+      ],
+      "bytes": 1499469,
+      "sha256": "492231f820ddf6f23ea5f5c2b5dadd48405df08302ac84a8aab828739c75c1d2",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 384,
+          "file": "/media/characters/pilar-384w.png",
+          "bytes": 119154
+        }
+      ]
+    },
+    {
+      "id": "nubi-saludo",
+      "file": "/media/characters/nubi-saludo.png",
+      "source": "exec-9bc02362-7955-4bfd-8d69-72c95f01d595.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "exportSize": [
+        1024,
+        1024
+      ],
+      "bytes": 566060,
+      "sha256": "506be38a151419e197a926ebefbc5a4c491d7921f9ff3fb48f10f97ada3c2f6d",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 256,
+          "file": "/media/characters/nubi-saludo-256w.png",
+          "bytes": 41640
+        }
+      ]
+    },
+    {
+      "id": "nubi-pensando",
+      "file": "/media/characters/nubi-pensando.png",
+      "source": "exec-a25b7220-ca3e-4d9e-9b5f-381b14dd8560.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "exportSize": [
+        1024,
+        1024
+      ],
+      "bytes": 634080,
+      "sha256": "0b3451bbe91ecfe24589f7506ad110bb57e8ddcda2acb341b5b58facd86419d7",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 256,
+          "file": "/media/characters/nubi-pensando-256w.png",
+          "bytes": 45627
+        }
+      ]
+    },
+    {
+      "id": "portada-fondo",
+      "file": "/media/common/portada-fondo.webp",
+      "source": "exec-afcd093d-b17d-4ce5-9352-c90f4b4fdaa6.png",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "exportSize": [
+        2400,
+        1350
+      ],
+      "bytes": 373510,
+      "sha256": "5177c08d7a4eae795903281c064646d04ff462d3bdd69521e17dc0897728972f",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 1200,
+          "file": "/media/common/portada-fondo-1200w.webp",
+          "bytes": 154346
+        }
+      ]
+    },
+    {
+      "id": "ume-cover",
+      "file": "/media/stories/una-manana-diferente/cover.webp",
+      "source": "exec-70a6d1c7-ea1b-4fef-b7f6-41789b8c49bc.png",
+      "sourceSize": [
+        1448,
+        1086
+      ],
+      "exportSize": [
+        2048,
+        1536
+      ],
+      "bytes": 392720,
+      "sha256": "c2666d4806771c9e425475e95cea180ed14eb77843736b2936f3605765569e0e",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 1200,
+          "file": "/media/stories/una-manana-diferente/cover-1200w.webp",
+          "bytes": 216364
+        }
+      ]
+    },
+    {
+      "id": "ume-s1-puerta",
+      "file": "/media/stories/una-manana-diferente/scenes/s1-puerta.webp",
+      "source": "exec-c3e652ad-afc3-49a7-9b15-fe7c35ae3197.png",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "exportSize": [
+        2400,
+        1350
+      ],
+      "bytes": 457568,
+      "sha256": "b655c97b5fbb466353b4d27b3dba2c6b65c513efdde32b1e8e6087ed1e2e98f2",
+      "resampled": true,
+      "variants": [
+        {
+          "width": 1200,
+          "file": "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+          "bytes": 207002
+        }
+      ]
+    }
+  ],
+  "modelSheets": {
+    "nubi": "exec-57b82eb3-ebd7-4e9b-b619-ec3e71be537a.png",
+    "teo": "exec-d931db2e-420e-4647-b266-2bdf94dfa03a.png",
+    "rosa": "exec-fa825689-1dd5-4eb1-b0bf-d1f88e283e36.png",
+    "andres": "exec-a5e543e7-e945-47ff-92f6-e1603ee819de.png",
+    "aya": "exec-1a882a28-bc2c-4855-8156-b6c5dd978ac9.png",
+    "bruno": "exec-bb4a217b-14cf-4f52-b3f9-1c3514f10ff9.png",
+    "lia": "exec-255005ce-a5b5-4f3e-8c74-302091d2987f.png",
+    "carmen": "exec-f485d49f-d466-46b3-83db-fa58e5b5c076.png",
+    "pilar": "exec-e2734d76-bf85-4119-8b28-f17997204d38.png"
+  }
+}

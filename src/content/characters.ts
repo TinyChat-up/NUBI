@@ -10,7 +10,7 @@ export const characters: Record<string, Character> = {
     name: 'Nubi',
     role: 'Guía del mundo de historias',
     visual:
-      'Pequeña nube redondeada, color crema cálido con borde azul petróleo suave, ojos de punto, mejillas coral. Sin boca grande ni gestos exagerados. Flota a poca altura. Diseño PROVISIONAL.',
+      'Pequeña nube redondeada, color crema cálido con borde azul petróleo suave, ojos de punto, mejillas coral. Sin boca grande ni gestos exagerados. Flota a poca altura. Diseño maestro editorial en docs/art-direction/models/nubi.webp.',
     traits: 'Hace preguntas abiertas, nunca juzga. Habla en frases cortas. Recuerda que cada persona siente a su manera.',
     color: '#F4EAD7',
     isGuide: true,
