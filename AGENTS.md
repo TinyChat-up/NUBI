@@ -48,7 +48,7 @@ Este archivo rige el trabajo de **todos los agentes** (Claude Code, Codex) y de 
 
 ## 6. Git
 
-- Rama de trabajo de Claude: `feat/claude-foundation`. Codex trabaja en ramas propias (`feat/codex-*` o `review/codex-*`).
+- Ramas: Claude en `feat/claude-*`, Codex en `feat/codex-*` o `review/codex-*`. Reparto desde la fase 3A: Claude → interfaz, animación, accesibilidad e integración técnica (`src/components`, `src/screens`, estilos); Codex → dirección artística e ilustraciones (`public/media`, registros de assets). Cambios de formato entre ambos se documentan en `docs/ILLUSTRATION_INTEGRATION.md`.
 - **Nunca** hacer merge a `main` sin autorización explícita de la persona responsable.
 - Commits pequeños y descriptivos (`feat:`, `fix:`, `docs:`, `content:`, `chore:`).
 - No modificar archivos ajenos al proyecto ni configuraciones globales.

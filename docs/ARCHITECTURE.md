@@ -49,10 +49,11 @@ Añadir un tipo de paso = ampliar la unión `Step`, el validador, `speechFor` y 
 ## 4. Interfaz
 
 - **Router**: `src/lib/router.tsx`, ~80 líneas sobre History API (`useSyncExternalStore`). Rutas declaradas en `App.tsx` con `exists()` para mostrar "Este camino no existe" ante IDs inválidos. Al cambiar de ruta, el foco va al `h1`.
-- **Reproductor** (`components/player/StoryPlayer.tsx`): barra superior (volver, título, progreso, mapa de escenas), escenario desplazable y controles (Atrás, Repetir, Leer/Escuchar, Subtítulos, Animaciones, Siguiente). Flechas ← → del teclado. Región `aria-live` con el texto de cada paso.
+- **Reproductor** (`components/player/StoryPlayer.tsx`): barra superior (volver, título, progreso, mapa de escenas), escenario desplazable y controles (Atrás, Repetir, Leer/Escuchar, Subtítulos, Animaciones, Siguiente). Flechas ← → del teclado y deslizar en pantallas táctiles (`lib/useSwipe.ts`, solo en páginas y viñetas). Región `aria-live` con el texto de cada paso.
+- **Página de cuento** (`components/player/StoryPage.tsx`): ilustración entera (sin recorte ni texto encima) + página de texto debajo (vertical) o al lado (tableta horizontal). Narración, diálogo (bocadillo con hablante) y guía (Nubi) se distinguen. Cambio de página animado según la dirección de lectura; la imagen no se reanima si no cambia. `components/player/presentation.ts` decide qué precargar y qué miniatura de escena acompaña a cada pregunta.
 - **Recreaciones** reutilizan `ChoiceGrid` y `ConsequenceBody` fuera del reproductor.
 - **Vídeo** (`components/video/VideoPlayer.tsx`): `<video>` + `<track kind="captions">`, controles grandes propios, capítulos por escena, velocidad lenta, sin autoplay. Si `video.status !== 'listo'` o falla la carga, muestra "Vídeo en producción" con alternativas.
-- **Ilustraciones** (`components/Illustration.tsx`): si el asset está `listo`, `<img>` con `alt`; si no (o si falla), placeholder SVG generado de sus metadatos (`motif`, `figures`, `icon`).
+- **Ilustraciones** (`components/Illustration.tsx` + `components/illustration/`): si el asset está `listo`, `<img>` con `alt`, `width/height`, `srcset` (campo opcional `variants`), punto focal (`focus`), carga diferida o prioritaria y aparición suave; si no (o si falla), placeholder SVG generado de sus metadatos. `GuideArt`/`EmotionArt` usan el arte final de Nubi y emociones cuando existe. Contrato completo con la producción artística: `docs/ILLUSTRATION_INTEGRATION.md`.
 
 ## 5. Estado y persistencia
 
