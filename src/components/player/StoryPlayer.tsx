@@ -20,13 +20,17 @@ import { navigate } from '../../lib/router.tsx';
 import { useNarration } from '../../lib/useNarration.ts';
 import { useProgress } from '../../state/progress.tsx';
 import { useSettings, type Settings } from '../../state/settings.tsx';
+import { getAsset } from '../../content/assets/index.ts';
 import { Icon } from '../Icon.tsx';
-import { Illustration } from '../Illustration.tsx';
-import { Nubi } from '../Nubi.tsx';
+import { useSwipe } from '../../lib/useSwipe.ts';
+import { preload } from '../illustration/imageSource.ts';
+import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
 import { SceneMenu } from './SceneMenu.tsx';
+import { contextIllustration, upcomingIllustrations } from './presentation.ts';
+import { StoryPage, type PageDirection } from './StoryPage.tsx';
 import { SummaryView } from './SummaryView.tsx';
 
 interface StoryPlayerProps {
@@ -69,7 +73,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   const { recordRun, saveRun, loadRun, clearRun } = useProgress();
   const narration = useNarration();
 
-  const [state, dispatch] = useReducer(
+  const [state, rawDispatch] = useReducer(
     (s: RunState, a: RunAction) => runReducer(story, s, a),
     undefined,
     () => {
@@ -79,6 +83,13 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       return saved ?? createRun(story, format, startSceneId);
     },
   );
+
+  // Dirección de lectura para animar el cambio de página (adelante / atrás).
+  const direction = useRef<PageDirection>('next');
+  const dispatch = useCallback((a: RunAction) => {
+    direction.current = a.type === 'prev' ? 'prev' : 'next';
+    rawDispatch(a);
+  }, []);
 
   const [mode, setMode] = useState<Settings['playerMode']>('leer');
   const [subtitles, setSubtitles] = useState(settings.subtitles);
@@ -103,6 +114,11 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     recordRun(state, { completed: atEnd, chosenTools });
   }, [state, atEnd, story, saveRun, recordRun]);
 
+  // Precarga discreta de las ilustraciones que vienen después (solo recursos listos).
+  useEffect(() => {
+    preload(upcomingIllustrations(story, state).map(getAsset));
+  }, [story, state]);
+
   // En modo "Escuchar", cada paso nuevo se narra (el niño o la niña lo ha pedido).
   const stepKey = `${state.position.sceneId}#${state.position.stepIndex}`;
   useEffect(() => {
@@ -122,8 +138,8 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     stageRef.current?.focus({ preventScroll: true });
   }, [stepKey, isPanel]);
 
-  const next = useCallback(() => dispatch({ type: 'next' }), []);
-  const prev = useCallback(() => dispatch({ type: 'prev' }), []);
+  const next = useCallback(() => dispatch({ type: 'next' }), [dispatch]);
+  const prev = useCallback(() => dispatch({ type: 'prev' }), [dispatch]);
   const advanceAllowed = canAdvance(story, state);
   const canGoBack = state.history.length > 0;
 
@@ -166,45 +182,29 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   let stage: ReactNode;
   if (play.kind === 'beat') {
     const beat = play.step;
-    const speaker = beat.speaker ? characters[beat.speaker] : undefined;
-    const text = settings.shortText && beat.short ? beat.short : beat.text;
     stage = (
-      <div key={beat.id} className="grid gap-4 lg:grid-cols-[3fr_2fr] lg:items-center lg:gap-8">
-        <Illustration
-          id={beat.illustration}
-          className={`card aspect-[16/9] w-full ${beat.motion === 'rise' ? 'animate-rise' : 'animate-pop'} ${beat.motion === 'float' ? '[&_svg]:animate-float' : ''}`}
-        />
-        {showText ? (
-          <div
-            className={`animate-rise rounded-[var(--radius-card)] p-5 sm:p-7 ${mode === 'escuchar' ? 'bg-petroleo-900 text-crema-50' : 'card'}`}
-            style={{ animationDelay: '120ms' }}
-          >
-            {speaker && (
-              <p className="mb-2 flex items-center gap-2 text-sm font-black tracking-wide uppercase">
-                {speaker.isGuide ? <Nubi size={30} mood="happy" /> : <span aria-hidden className="size-3 rounded-full" style={{ backgroundColor: speaker.color }} />}
-                {speaker.name}
-              </p>
-            )}
-            <p className="reading-text text-2xl leading-snug font-bold sm:text-[1.75rem]">{text}</p>
-          </div>
-        ) : (
-          <div className="grid place-items-center gap-2 rounded-[var(--radius-card)] bg-crema-50/70 p-6 text-center text-tinta-suave">
-            <Icon name={narration.speaking ? 'volume' : 'subtitles'} size={36} />
-            <p className="font-bold">{narration.speaking ? 'Escuchando…' : 'Subtítulos desactivados'}</p>
-          </div>
-        )}
-      </div>
+      <StoryPage
+        beat={beat}
+        text={settings.shortText && beat.short ? beat.short : beat.text}
+        speaker={beat.speaker ? characters[beat.speaker] : undefined}
+        opener={state.position.stepIndex === 0 ? { number: scene.number, title: scene.title } : undefined}
+        direction={direction.current}
+        mode={mode}
+        showText={showText}
+        speaking={narration.speaking}
+      />
     );
   } else if (play.kind === 'panel') {
-    stage = <ComicView panels={play.panels} index={play.index} pausedMotion={motionPaused} />;
+    stage = <ComicView panels={play.panels} index={play.index} pausedMotion={motionPaused} onReveal={next} />;
   } else {
     const s = play.step;
+    const context = contextIllustration(story, state);
     switch (s.type) {
       case 'feelings':
-        stage = <FeelingsView step={s} state={state} dispatch={dispatch} />;
+        stage = <FeelingsView step={s} state={state} dispatch={dispatch} context={context} />;
         break;
       case 'know-need':
-        stage = <KnowNeedView step={s} state={state} dispatch={dispatch} />;
+        stage = <KnowNeedView step={s} state={state} dispatch={dispatch} context={context} />;
         break;
       case 'choice':
         stage = <ChoiceView step={s} state={state} dispatch={dispatch} />;
@@ -229,7 +229,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
             </div>
           ) : (
             <div className="grid place-items-center gap-4 py-10 text-center">
-              <Nubi mood="thinking" size={120} />
+              <GuideArt mood="thinking" size={120} />
               <p className="reading-text text-xl font-bold">Primero elige una posibilidad para ver qué puede pasar.</p>
               <Button icon="arrow-left" onClick={() => dispatch({ type: 'goto', sceneId: s.routes[0].to.sceneId, stepId: s.routes[0].to.stepId })}>
                 Ver las posibilidades
@@ -239,7 +239,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         break;
       }
       case 'strategies':
-        stage = <StrategiesView step={s} state={state} dispatch={dispatch} />;
+        stage = <StrategiesView step={s} state={state} dispatch={dispatch} context={context} />;
         break;
       case 'summary':
         stage = <SummaryView story={story} state={state} step={s} onRestart={restart} />;
@@ -248,6 +248,11 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   }
 
   const isChoice = play.kind === 'interactive' && play.step.type === 'choice';
+  const swipe = useSwipe({
+    enabled: play.kind !== 'interactive',
+    onNext: () => advanceAllowed && !atEnd && next(),
+    onPrev: () => canGoBack && prev(),
+  });
 
   return (
     <div className={`flex h-dvh flex-col bg-crema-100 ${motionPaused ? 'anim-paused' : ''}`}>
@@ -280,8 +285,8 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </header>
 
       {/* Escenario */}
-      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="flex-1 overflow-y-auto">
-        <div className={`mx-auto flex min-h-full w-full max-w-6xl flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'justify-center' : ''}`}>{stage}</div>
+      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="flex-1 touch-pan-y overflow-x-hidden overflow-y-auto focus-visible:shadow-none focus-visible:[outline-offset:-6px]" {...swipe}>
+        <div className={`mx-auto flex min-h-full w-full flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'max-w-7xl justify-center' : 'max-w-6xl'}`}>{stage}</div>
       </div>
 
       {/* Región viva para lectores de pantalla */}

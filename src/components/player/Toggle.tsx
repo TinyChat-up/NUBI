@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Icon } from '../Icon.tsx';
+import { Illustration } from '../Illustration.tsx';
 
 /** Tarjeta seleccionable grande (selección múltiple, sin "correcto/incorrecto"). */
 export function ToggleCard({
@@ -31,7 +32,7 @@ export function ToggleCard({
       aria-pressed={selected}
       onClick={onToggle}
       className={`tap soft-border relative flex min-h-20 w-full items-center gap-3 rounded-3xl border-[3px] p-3 text-left transition-colors ${
-        selected ? 'border-petroleo-600 bg-petroleo-50' : 'border-transparent bg-crema-50 shadow-[var(--shadow-soft)] hover:border-petroleo-200'
+        selected ? 'border-petroleo-600 bg-petroleo-50' : 'border-crema-300/80 bg-crema-50 hover:border-petroleo-200'
       }`}
     >
       {icon && (
@@ -56,13 +57,18 @@ export function ToggleCard({
   );
 }
 
-export function StepHeading({ title, help, icon = 'sparkle' }: { title: string; help?: string; icon?: string }) {
+export function StepHeading({ title, help, icon = 'sparkle', context }: { title: string; help?: string; icon?: string; context?: string }) {
   return (
-    <div className="mb-5 flex items-start gap-3">
-      <span className="mt-1 grid size-11 shrink-0 place-items-center rounded-full bg-coral-100 text-coral-700">
-        <Icon name={icon} size={24} />
-      </span>
-      <div>
+    <div className="mb-6 flex items-center gap-4">
+      {context ? (
+        // Miniatura de la escena (proporción completa, sin recorte) para anclar la pregunta en la historia.
+        <Illustration id={context} decorative ratio className="w-28 shrink-0 rounded-2xl shadow-[var(--shadow-soft)] sm:w-44" sizes="176px" />
+      ) : (
+        <span className="grid size-11 shrink-0 place-items-center self-start rounded-full bg-coral-100 text-coral-700">
+          <Icon name={icon} size={24} />
+        </span>
+      )}
+      <div className="min-w-0">
         <h2 className="reading-text text-2xl text-petroleo-900 sm:text-3xl">{title}</h2>
         {help && <p className="reading-text mt-1 text-lg text-tinta-suave">{help}</p>}
       </div>

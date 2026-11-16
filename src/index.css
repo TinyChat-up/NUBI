@@ -58,6 +58,50 @@
   --animate-rise: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   --animate-drift: drift 80s linear infinite;
   --animate-pop: pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  /* Cambio de página del cuento: fundido + desplazamiento corto en la dirección de lectura. */
+  --animate-page-next: page-next 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-page-prev: page-prev 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-fade: fade 0.45s ease-out both;
+  /* Movimiento sutil de un personaje recortado (solo sprites transparentes, nunca escenas completas). */
+  --animate-sway: sway 7s ease-in-out infinite;
+
+  @keyframes page-next {
+    from {
+      opacity: 0;
+      transform: translateX(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes page-prev {
+    from {
+      opacity: 0;
+      transform: translateX(-18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes sway {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-6px) rotate(-1.5deg);
+    }
+  }
 
   @keyframes float {
     0%,

@@ -12,7 +12,7 @@ const toggle = (list: string[], id: string) => (list.includes(id) ? list.filter(
 
 // ───────────────────────── ¿Cómo te sentirías? ─────────────────────────
 
-export function FeelingsView({ step, state, dispatch }: Ctx & { step: FeelingsStep }) {
+export function FeelingsView({ step, state, dispatch, context }: Ctx & { step: FeelingsStep; context?: string }) {
   const selected = state.responses[step.id] ?? [];
   const intensityKey = `${step.id}:intensidad`;
   const intensity = state.responses[intensityKey]?.[0];
@@ -26,7 +26,7 @@ export function FeelingsView({ step, state, dispatch }: Ctx & { step: FeelingsSt
 
   return (
     <div className="animate-rise">
-      <StepHeading title={step.prompt} help={step.help} icon="heart" />
+      <StepHeading title={step.prompt} help={step.help} icon="heart" context={context} />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {step.options.map((o, i) => (
           <ToggleCard
@@ -77,7 +77,7 @@ export function FeelingsView({ step, state, dispatch }: Ctx & { step: FeelingsSt
 
 // ───────────────────────── Lo que sabemos / lo que necesito saber ─────────────────────────
 
-export function KnowNeedView({ step, state, dispatch }: Ctx & { step: KnowNeedStep }) {
+export function KnowNeedView({ step, state, dispatch, context }: Ctx & { step: KnowNeedStep; context?: string }) {
   const selected = state.responses[step.id] ?? [];
   const onToggle = (id: string) => {
     let next = toggle(selected, id);
@@ -104,7 +104,7 @@ export function KnowNeedView({ step, state, dispatch }: Ctx & { step: KnowNeedSt
         </ul>
       </section>
       <section>
-        <StepHeading title={step.needPrompt} help={step.help} icon="question" />
+        <StepHeading title={step.needPrompt} help={step.help} icon="question" context={context} />
         <div className="grid gap-3 sm:grid-cols-2">
           {step.questions.map((q) => (
             <ToggleCard key={q.id} selected={selected.includes(q.id)} onToggle={() => onToggle(q.id)} icon={q.icon} label={q.label} tone={q.id === 'nada' ? 'salvia' : 'mostaza'} />
@@ -137,9 +137,9 @@ export function ChoiceGrid({
               <button
                 type="button"
                 onClick={() => onChoose(o)}
-                className="tap group card flex h-full w-full flex-col overflow-hidden text-left hover:shadow-[var(--shadow-lift)]"
+                className="tap group flex h-full w-full flex-col overflow-hidden rounded-[1.75rem] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
               >
-                <Illustration id={o.illustration} decorative className="aspect-[4/3] w-full" />
+                <Illustration id={o.illustration} decorative ratio sizes="(min-width: 1024px) 33vw, (min-width: 480px) 50vw, 100vw" className="w-full" />
                 <span className="flex flex-1 items-center gap-3 p-4">
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
                     <Icon name={o.icon} size={22} />
@@ -177,23 +177,24 @@ export function ChoiceView({ step, state, dispatch }: Ctx & { step: ChoiceStep }
 
 export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: ChoiceOption; protagonist?: string }) {
   const c = option.consequence;
-  const cards = [
-    { icon: 'heart', title: 'Cómo te puedes sentir', text: c.youMayFeel, cls: 'bg-coral-50' },
-    { icon: 'friends', title: 'Cómo pueden sentirse otros', text: c.othersMay, cls: 'bg-petroleo-50' },
-    { icon: 'check', title: 'Puede ayudar cuando…', text: c.helpsWhen, cls: 'bg-salvia-50' },
-    { icon: 'info', title: 'A tener en cuenta', text: c.keepInMind, cls: 'bg-mostaza-50' },
+  const reflections = [
+    { icon: 'heart', title: 'Cómo te puedes sentir', text: c.youMayFeel },
+    { icon: 'friends', title: 'Cómo pueden sentirse otros', text: c.othersMay },
+    { icon: 'check', title: 'Puede ayudar cuando…', text: c.helpsWhen },
+    { icon: 'info', title: 'A tener en cuenta', text: c.keepInMind },
   ];
   return (
     <div className="animate-rise">
       <p className="mb-1 text-sm font-extrabold tracking-wide text-coral-700 uppercase">Si {protagonist} elige…</p>
       <h2 className="reading-text mb-5 text-2xl text-petroleo-900 sm:text-3xl">{option.label}</h2>
 
+      {/* 1. Lo que puede pasar: tira ilustrada que se lee en orden. */}
       <h3 className="sr-only">Lo que puede pasar</h3>
-      <ol className="mb-6 grid gap-4 sm:grid-cols-2">
+      <ol className="mb-8 grid gap-5 md:grid-cols-2">
         {c.story.map((frame, i) => (
-          <li key={i} className="card animate-pop overflow-hidden" style={{ animationDelay: `${i * 180}ms` }}>
-            <Illustration id={frame.illustration} className="aspect-[4/3] w-full" />
-            <p className="reading-text flex gap-3 p-4 text-lg font-bold">
+          <li key={i} className="animate-pop" style={{ animationDelay: `${i * 220}ms` }}>
+            <Illustration id={frame.illustration} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full rounded-[1.5rem] border-[3px] border-tinta/80" />
+            <p className="reading-text mt-3 flex gap-3 text-xl leading-snug font-bold">
               <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full bg-petroleo-600 text-base text-crema-50">
                 {i + 1}
               </span>
@@ -203,30 +204,42 @@ export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: Choic
         ))}
       </ol>
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        {cards.map((card) => (
-          <section key={card.title} className={`rounded-3xl p-4 ${card.cls}`}>
-            <h3 className="reading-text mb-1 flex items-center gap-2 text-lg text-petroleo-900">
-              <Icon name={card.icon} size={22} /> {card.title}
-            </h3>
-            <p className="reading-text text-lg">{card.text}</p>
-          </section>
-        ))}
-      </div>
+      {/* 2. Pensamos juntos: una sola reflexión, sin cajas de colores. */}
+      <section aria-labelledby={`think-${option.id}`} className="rounded-[var(--radius-card)] bg-crema-50 px-5 py-2 sm:px-7">
+        <h3 id={`think-${option.id}`} className="sr-only">
+          Pensamos juntos
+        </h3>
+        <ul className="divide-y divide-crema-300/70">
+          {reflections.map((r) => (
+            <li key={r.title} className="flex gap-4 py-4">
+              <span aria-hidden className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-full bg-crema-200 text-petroleo-700">
+                <Icon name={r.icon} size={20} />
+              </span>
+              <p>
+                <strong className="block text-sm font-black tracking-wide text-tinta-suave uppercase">{r.title}</strong>
+                <span className="reading-text text-lg">{r.text}</span>
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {c.anotherWay && (
-        <section className="mt-3 rounded-3xl border-[3px] border-coral-300 bg-crema-50 p-4">
-          <h3 className="reading-text mb-1 flex items-center gap-2 text-lg text-coral-700">
-            <Icon name="sparkle" size={22} /> Otra forma de conseguir lo mismo
-          </h3>
-          <p className="reading-text text-lg">{c.anotherWay}</p>
+        <section className="mt-4 flex gap-4 rounded-[var(--radius-card)] border-[3px] border-coral-300 bg-coral-50 p-5">
+          <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-full bg-coral-100 text-coral-700">
+            <Icon name="sparkle" size={20} />
+          </span>
+          <div>
+            <h3 className="reading-text mb-1 text-lg text-coral-700">Otra forma de conseguir lo mismo</h3>
+            <p className="reading-text text-lg">{c.anotherWay}</p>
+          </div>
         </section>
       )}
 
-      <p className="mt-4 flex flex-wrap items-center gap-2 text-base font-bold text-tinta-suave">
+      <p className="mt-5 flex flex-wrap items-center gap-2 text-base font-bold text-tinta-suave">
         <span>Herramientas relacionadas:</span>
         {c.tools.map((t) => (
-          <span key={t} className="inline-flex items-center gap-1.5 rounded-full bg-crema-50 px-3 py-1 text-petroleo-800 shadow-[var(--shadow-soft)]">
+          <span key={t} className="inline-flex items-center gap-1.5 rounded-full border-2 border-crema-300 bg-crema-50 px-3 py-1 text-petroleo-800">
             <Icon name={tools[t].icon} size={16} /> {tools[t].name}
           </span>
         ))}
@@ -250,11 +263,11 @@ export function ExploredMeter({ total, explored }: { total: number; explored: nu
 
 // ───────────────────────── Estrategias ─────────────────────────
 
-export function StrategiesView({ step, state, dispatch }: Ctx & { step: StrategiesStep }) {
+export function StrategiesView({ step, state, dispatch, context }: Ctx & { step: StrategiesStep; context?: string }) {
   const selected = state.responses[step.id] ?? [];
   return (
     <div className="animate-rise">
-      <StepHeading title={step.prompt} help={step.help} icon="backpack" />
+      <StepHeading title={step.prompt} help={step.help} icon="backpack" context={context} />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {step.tools.map((id) => {
           const t = tools[id];
