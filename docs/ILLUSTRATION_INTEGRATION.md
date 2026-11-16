@@ -95,7 +95,8 @@ scene({
 - Proporción recomendada: **3:4** (en 390×844 y 820×1180 imagen + texto caben sin desplazar).
 - No es un recorte: si el recorte bastara, no haría falta el campo. Debe mantener continuidad con la versión horizontal (mismo momento, misma luz).
 - `imageSource.test.ts` comprueba que el archivo vertical y sus variantes existen cuando el recurso está `listo`.
-- Validado con una copia aislada y una imagen de prueba (no incluida): en vertical se sirve la versión 3:4 y la página se llena hasta los controles; en horizontal, la 16:9.
+- En uso desde el segundo lote de Codex (fase 5): las 10 escenas del cuento tienen versión 3:4 con variantes 768/1024 px. En vertical se sirve la 3:4; en horizontal, la 16:9 (`tests/browser/art-batch-2.mjs`).
+- **Cómo se dimensiona (fase 5):** en vertical, el texto de la página ocupa su alto natural y la ilustración llena el resto (consultas de contenedor), sin recortarse. Las páginas seguidas que comparten ilustración reservan el alto del texto más largo, así que la imagen no cambia de tamaño al pasar página. Consecuencia para el arte: en móvil una escena 3:4 se ve aproximadamente entre 200×265 y 335×446 px; en tableta vertical, entre 530×705 y 635×846 px. Los personajes deben leerse a ~200 px de ancho.
 
 ## 5. Formato y peso recomendados
 
@@ -127,7 +128,9 @@ npm run dev -- --host 127.0.0.1 --port 5173 --strictPort
 NUBI_BROWSER_TOOLS=… CHROMIUM_PATH=… node tests/browser/art-layout.mjs
 ```
 
-Recorre portada, mundo, ficha, cuento, decisión, consecuencia, cómic, recreaciones, herramientas y emociones en 390/820/1180 px. **Falla** si un recurso listo no carga, si una ilustración narrativa queda recortada o si hay desbordamiento horizontal. Informa (sin fallar) de los recortes decorativos de portada y cubierta.
+`tests/browser/story-fit.mjs` recorre todas las páginas del cuento y falla si algún texto no cabe sin desplazar (letra por defecto), si una ilustración se recorta o si cambia de tamaño entre páginas que la comparten.
+
+`art-layout.mjs` recorre portada, mundo, ficha, cuento, decisión, consecuencia, cómic, recreaciones, herramientas y emociones en 390/820/1180 px. **Falla** si un recurso listo no carga, si una ilustración narrativa queda recortada o si hay desbordamiento horizontal. Informa (sin fallar) de los recortes decorativos de portada y cubierta.
 
 Validado por Claude con una copia aislada en la que los 72 recursos eran `listo` con imágenes de prueba de tamaño exacto: 183 cargas, 0 errores, 0 recortes narrativos. Las imágenes de prueba no se han incluido en el repositorio.
 
@@ -136,7 +139,7 @@ Validado por Claude con una copia aislada en la que los 72 recursos eran `listo`
 | Componente | Recurso | Comportamiento |
 |---|---|---|
 | `components/Illustration.tsx` | Todos | `listo` → `<img>` con `width/height`, `srcset`, `focus`, carga diferida o prioritaria y aparición suave; si no, placeholder; si falla, placeholder |
-| `components/player/StoryPage.tsx` | `escena` | Página de cuento: imagen entera + página de texto (narración, diálogo con bocadillo o guía) |
+| `components/player/StoryPage.tsx` | `escena` | Página de cuento: imagen entera (3:4 en vertical si existe) que ocupa el alto libre + página de texto (narración, diálogo con bocadillo o Nubi sobre su bocadillo) |
 | `components/player/ComicView.tsx` | `vineta` | Viñetas descubribles, bocadillos superpuestos o en lista según el ancho |
 | `components/player/interactions.tsx` | `opcion`, `escena` | Decisiones, tira de consecuencias, miniatura de contexto en preguntas |
 | `components/illustration/GuideArt.tsx` | `nubi-saludo`, `nubi-pensando`, `emo-*` | Arte final si está listo; si no, el vector provisional de Nubi |

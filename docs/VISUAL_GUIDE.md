@@ -2,6 +2,8 @@
 
 NUBI debe parecer **un cuento interactivo de calidad editorial**, no una plataforma administrativa. Calma, exploración y curiosidad.
 
+Este documento fija los **valores** (tokens, tipografías, formas). El **criterio** para componer pantallas —jerarquía, composición por orientación, estados, reglas para pantallas nuevas— está en [`NUBI_DESIGN_PRINCIPLES.md`](NUBI_DESIGN_PRINCIPLES.md).
+
 ## 1. Paleta
 
 Tokens definidos en `src/index.css` (`@theme`). Usar siempre tokens, nunca hex sueltos en componentes.
@@ -36,9 +38,9 @@ Reglas: sin rojo/verde de acierto-error; sin colores saturados; fondos siempre c
 - Iconos propios de trazo redondeado 2 px (`components/Icon.tsx`).
 - Fondo `paper`: crema con dos manchas muy suaves de coral y salvia.
 
-## 4. Personaje guía (provisional)
+## 4. Personaje guía
 
-**Nubi**: una pequeña nube crema con borde petróleo, ojos de punto y mejillas coral. Expresiones: `happy`, `calm`, `surprised`, `curious`, `worried`, `frustrated`, `thinking`. Aparece para preguntar y acompañar, nunca para evaluar. El vector actual (`components/Nubi.tsx`) es provisional; el diseño definitivo se encarga en `ASSET_REQUESTS.md` (`nubi-saludo`, `nubi-pensando`, `char-nubi`, `emo-*`).
+**Nubi**: una pequeña nube crema con borde petróleo, ojos de punto y mejillas coral. Aparece para preguntar y acompañar, nunca para evaluar. Su arte definitivo es de Codex (`nubi-saludo`, `nubi-pensando`, `char-nubi`, con variantes 256/512 px) y se muestra con `components/illustration/GuideArt.tsx`. El vector de `components/Nubi.tsx` (expresiones `happy`, `calm`, `surprised`, `curious`, `worried`, `frustrated`, `thinking`) queda como respaldo mientras falten recursos (`emo-*`).
 
 ## 5. Ilustración
 
@@ -52,7 +54,7 @@ Dirección para el arte definitivo (detallada por recurso en `ASSET_REQUESTS.md`
 
 ## 6. Movimiento
 
-- Microanimaciones discretas: `rise` (aparecer subiendo 14 px, 0,5 s), `pop` (escala 0,96→1), `float` (flotar ±8 px, 6 s), `drift` (nubes de portada, 80 s).
+- Microanimaciones discretas: `page-next`/`page-prev` (pasar página: 18 px + fundido), `rise` (aparecer subiendo 14 px, 0,5 s), `pop` (escala 0,96→1), `fade`, `sway` (balanceo de Nubi recortada, 7 s), `float` (flotar ±8 px, 6 s), `drift` (nubes de portada provisional, 80 s; desaparecen con el paisaje final).
 - Nada parpadea, nada se mueve rápido, ninguna información depende de una animación.
 - Tres niveles de control: preferencia del sistema (`prefers-reduced-motion`), ajuste "Sin animaciones" y botón **Animaciones** del reproductor (pausa inmediata).
 
@@ -67,6 +69,7 @@ Dirección para el arte definitivo (detallada por recurso en `ASSET_REQUESTS.md`
 - Foco: anillo doble (crema + coral oscuro) visible sobre cualquier fondo.
 - Contraste AA en todo texto; opción "Más contraste".
 - Ajustes de lectura: tamaño (100/112,5/125 %), espaciado amplio, fuente legible, MAYÚSCULAS, textos cortos.
+- Objetivos táctiles ≥ 48 px en todo control; texto infantil ≥ 14 px.
 - Diseño mobile-first; prioridad tableta. Puntos de comprobación: 390, 820 y 1180 px.
 
 ## 9. Qué evitar
