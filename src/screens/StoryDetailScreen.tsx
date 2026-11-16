@@ -109,7 +109,7 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
                 <li key={id} className="flex flex-col items-center gap-1 text-center">
                   <Illustration id={`char-${id}`} ratio sizes="(min-width: 1024px) 140px, (min-width: 640px) 22vw, 30vw" className="w-full rounded-2xl bg-crema-50" />
                   <span className="font-black text-petroleo-900">{c.name}</span>
-                  <span className="text-xs leading-tight text-tinta-suave">{c.role}</span>
+                  <span className="text-sm leading-tight text-tinta-suave">{c.role}</span>
                 </li>
               );
             })}

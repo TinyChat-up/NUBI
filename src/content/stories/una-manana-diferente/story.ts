@@ -617,27 +617,27 @@ export const unaMananaDiferente: Story = {
 
   familyGuide: {
     intro:
-      'Esta historia trata sobre los cambios inesperados en el colegio: una persona nueva en clase y un horario distinto. No busca que el niño o la niña "se acostumbre" sin más, sino que reconozca lo que siente, sepa qué información necesita y conozca formas de pedirla.',
+      'Esta historia trata sobre los cambios inesperados en el colegio: una persona nueva en clase y un horario distinto. No busca que el niño o la niña «se acostumbre» sin más, sino que reconozca lo que siente, sepa qué información necesita y conozca formas de pedirla.',
     beforeReading: [
       'Elegid un momento tranquilo, no justo después de un cambio difícil.',
       'Dejad que el niño o la niña elija el formato: cuento, cómic o escuchar.',
-      'Si lo necesita, contadle antes de qué trata: "Es la historia de un día en el que cambia el plan".',
+      'Si lo necesita, contadle antes de qué trata: «Es la historia de un día en el que cambia el plan».',
     ],
     duringReading: [
       'No hace falta responder a todas las preguntas. Se pueden saltar.',
-      'Si elige "No lo sé" u "Otra cosa", es una respuesta válida.',
-      'Evitad corregir lo que siente. Podéis decir: "A mí también me pasa" o "Tiene sentido".',
+      'Si elige «No lo sé» u «Otra cosa», es una respuesta válida.',
+      'Evitad corregir lo que siente. Podéis decir: «A mí también me pasa» o «Tiene sentido».',
       'Es normal que se mueva, se balancee o no mire a la pantalla mientras escucha.',
     ],
     afterReading: [
       'Mirad juntos el resumen personal. Preguntad qué herramienta le gustaría probar primero.',
       'Pensad en un cambio real que haya vivido y qué le ayudó (o qué le habría ayudado).',
-      'Si quiere, imprimid o dibujad su "tarjeta" preferida de Mis herramientas.',
+      'Si quiere, imprimid o dibujad su «tarjeta» preferida de Mis herramientas.',
     ],
     dailyPractice: [
       { id: 'p1', title: 'El plan del día, a la vista', text: 'Por la mañana, repasad juntos el plan del día con dibujos o pictogramas. Si algo cambia, actualizadlo delante de él o ella.', tool: 'anticipar-cambios' },
       { id: 'p2', title: 'Personas de confianza', text: 'Haced una lista (con fotos o dibujos) de las personas del colegio a las que puede acudir y dónde encontrarlas.', tool: 'pedir-ayuda' },
-      { id: 'p3', title: 'Pequeños cambios con aviso', text: 'Introducid algún cambio pequeño y previsible en casa ("hoy cenamos en otro orden") avisando antes y comentando después cómo fue.', tool: 'anticipar-cambios' },
+      { id: 'p3', title: 'Pequeños cambios con aviso', text: 'Introducid algún cambio pequeño y previsible en casa («hoy cenamos en otro orden») avisando antes y comentando después cómo fue.', tool: 'anticipar-cambios' },
       { id: 'p4', title: 'Mi tarjeta de descanso', text: 'Cread juntos una tarjeta o señal para pedir un descanso y practicadla en momentos tranquilos.', tool: 'descansar' },
       { id: 'p5', title: 'Puedo decir que no me gusta', text: 'Cuando exprese desacuerdo, escuchadlo primero sin corregir. Después, buscad juntos qué parte se puede negociar.', tool: 'expresar-desacuerdo' },
     ],
@@ -671,13 +671,13 @@ export const unaMananaDiferente: Story = {
     { source: 'gray', status: 'fundamento', howApplied: 'Narración descriptiva, paciente y sin juicios; se describe qué pasa y qué pueden sentir otras personas antes de sugerir opciones. NO es una Social Story™.' },
     { source: 'social-situation-mapping', status: 'fundamento', howApplied: 'Cada posibilidad de la escena 4 enlaza acción → lo que puede pasar → cómo se sienten otros → cómo te sientes tú (escena 5).' },
     { source: 'zones', status: 'fundamento', howApplied: 'Las estrategias se presentan como habilidades practicables, y se incluye la corregulación (buscar a Pilar). Sin sistema de zonas ni colores.' },
-    { source: 'five-point-scale', status: 'propuesta', howApplied: 'Escala propia opcional de tres niveles ("un poco, bastante, mucho") en la escena 2. Pendiente de validar.' },
-    { source: 'neurodiversity-affirming', status: 'propuesta', howApplied: 'Teo mueve los dedos sin que nadie lo corrija; Lía se comunica con pictogramas; la opción "salir sin avisar" se trata sin culpa y con una alternativa que consigue lo mismo.' },
+    { source: 'five-point-scale', status: 'propuesta', howApplied: 'Escala propia opcional de tres niveles («un poco, bastante, mucho») en la escena 2. Pendiente de validar.' },
+    { source: 'neurodiversity-affirming', status: 'propuesta', howApplied: 'Teo mueve los dedos sin que nadie lo corrija; Lía se comunica con pictogramas; la opción «salir sin avisar» se trata sin culpa y con una alternativa que consigue lo mismo.' },
   ],
 
   validation: {
     status: 'pendiente-validacion',
     notes:
-      'Borrador completo. Requiere revisión por profesionales de educación especial, personas autistas adultas y familias antes de su uso comercial: lenguaje, nivel de lectura (6 años), escala de intensidad y tratamiento de la opción "salir sin avisar".',
+      'Borrador completo. Requiere revisión por profesionales de educación especial, personas autistas adultas y familias antes de su uso comercial: lenguaje, nivel de lectura (6 años), escala de intensidad y tratamiento de la opción «salir sin avisar».',
   },
 };

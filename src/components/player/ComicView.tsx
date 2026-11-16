@@ -47,7 +47,7 @@ function SpeakerLabel({ bubble }: { bubble: Bubble }) {
   const speaker = bubble.speaker ? characters[bubble.speaker] : undefined;
   if (!speaker) return null;
   return (
-    <span className="w-fit rounded-full border-2 bg-crema-50 px-2 py-0.5 text-xs font-black text-petroleo-900" style={{ borderColor: speaker.color }}>
+    <span className="w-fit rounded-full border-2 bg-crema-50 px-2.5 py-0.5 text-sm font-black text-petroleo-900" style={{ borderColor: speaker.color }}>
       {speaker.name}
       {bubble.kind === 'thought' ? ' piensa' : bubble.kind === 'device' ? ' · comunicador' : ''}
     </span>
@@ -136,7 +136,7 @@ export function ComicView({ panels, index, pausedMotion, onReveal }: { panels: C
           key={panel.id}
           ref={i === index ? currentRef : undefined}
           aria-current={i === index ? 'step' : undefined}
-          className={`${panel.span === 'full' ? 'lg:col-span-2' : ''} animate-pop overflow-hidden rounded-[1.5rem] border-[4px] border-tinta bg-crema-50 ${
+          className={`${panel.span === 'full' ? 'lg:col-span-2' : ''} animate-pop overflow-hidden rounded-3xl border-[4px] border-tinta bg-crema-50 ${
             i === index ? 'shadow-[var(--shadow-lift)]' : ''
           }`}
         >
@@ -149,13 +149,13 @@ export function ComicView({ panels, index, pausedMotion, onReveal }: { panels: C
             <button
               type="button"
               onClick={onReveal}
-              className="tap flex min-h-32 w-full flex-col items-center justify-center gap-2 rounded-[1.5rem] border-[3px] border-dashed border-crema-400 bg-crema-50/60 p-4 font-extrabold text-petroleo-800 hover:border-petroleo-400 hover:bg-petroleo-50"
+              className="tap flex min-h-32 w-full flex-col items-center justify-center gap-2 rounded-3xl border-[3px] border-dashed border-crema-400 bg-crema-50/60 p-4 font-extrabold text-petroleo-800 hover:border-petroleo-400 hover:bg-petroleo-50"
             >
               <Icon name="sparkle" size={32} />
               Descubrir la siguiente viñeta
             </button>
           ) : (
-            <div aria-label="Viñeta por descubrir" className="grid min-h-32 place-items-center rounded-[1.5rem] border-[3px] border-dashed border-crema-400 text-crema-400">
+            <div aria-label="Viñeta por descubrir" className="grid min-h-32 place-items-center rounded-3xl border-[3px] border-dashed border-crema-400 text-crema-400">
               <Icon name="question" size={40} />
             </div>
           )}

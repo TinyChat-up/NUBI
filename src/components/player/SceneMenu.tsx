@@ -36,7 +36,7 @@ export function SceneMenu({
       onClose={onClose}
       onClick={(e) => e.target === ref.current && onClose()}
       aria-labelledby="scene-menu-title"
-      className="m-auto w-[min(36rem,calc(100vw-2rem))] rounded-[var(--radius-card)] bg-crema-50 p-0 text-tinta shadow-[var(--shadow-lift)] backdrop:bg-petroleo-900/40"
+      className="m-auto w-[min(36rem,calc(100vw-2rem))] overscroll-contain rounded-[var(--radius-card)] bg-crema-50 p-0 text-tinta shadow-[var(--shadow-lift)] backdrop:bg-petroleo-900/40"
     >
       <div className="p-5 sm:p-6">
         <div className="mb-4 flex items-center justify-between gap-3">

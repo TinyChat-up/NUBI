@@ -83,7 +83,7 @@ export function ToolButton({ icon, label, pressed, tone = 'light', className = '
     <button
       type="button"
       aria-pressed={pressed}
-      className={`tap flex min-w-16 flex-col items-center gap-1 rounded-2xl px-2 py-1.5 text-xs font-extrabold disabled:opacity-40 ${className}`}
+      className={`tap flex min-w-16 flex-col items-center gap-1 rounded-2xl px-2 py-1.5 text-sm font-extrabold disabled:opacity-40 ${className}`}
       {...rest}
     >
       <span className={`grid size-12 place-items-center rounded-full ${colors} transition-colors`}>

@@ -2,7 +2,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(process.env.NUBI_BROWSER_TOOLS + '/package.json');
 const { chromium } = require('playwright');
 import assert from 'node:assert/strict';
-const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
+const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 try {
 for (const local of [false,true]) {
  const c=await b.newContext();

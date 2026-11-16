@@ -35,7 +35,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
       {chrome && (
         <header className="sticky top-0 z-30 border-b border-crema-300/70 bg-crema-100/90 backdrop-blur-md">
           <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-3 px-4 sm:px-8">
-            <Link to="/" aria-label="NUBI, ir a la portada" className="tap rounded-2xl py-1 pr-2">
+            <Link to="/" aria-label="NUBI, ir a la portada" className="tap flex min-h-12 items-center rounded-2xl pr-2">
               <Logo />
             </Link>
 
@@ -48,7 +48,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
                       <Link
                         to={item.to}
                         aria-current={active ? 'page' : undefined}
-                        className={`tap flex items-center gap-2 rounded-full px-4 py-2.5 font-extrabold ${
+                        className={`tap flex min-h-12 items-center gap-2 rounded-full px-4 font-extrabold ${
                           active ? 'bg-petroleo-600 text-crema-50' : 'text-petroleo-800 hover:bg-petroleo-100'
                         }`}
                       >
@@ -65,7 +65,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
               <Link
                 to="/ajustes"
                 aria-current={isActive(path, '/ajustes') ? 'page' : undefined}
-                className="tap flex min-h-12 items-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100 sm:px-4"
+                className="tap flex min-h-12 min-w-12 items-center justify-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100 sm:px-4"
               >
                 <Icon name="settings" size={22} />
                 <span className="hidden sm:inline">Ajustes</span>
@@ -74,7 +74,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
               <Link
                 to="/familias"
                 aria-current={isActive(path, '/familias') ? 'page' : undefined}
-                className="tap flex min-h-12 items-center gap-2 rounded-full border-2 border-petroleo-200 px-3 font-extrabold text-petroleo-800 hover:border-petroleo-400 sm:px-4"
+                className="tap flex min-h-12 min-w-12 items-center justify-center gap-2 rounded-full border-2 border-petroleo-200 px-3 font-extrabold text-petroleo-800 hover:border-petroleo-400 sm:px-4"
               >
                 <Icon name="grown" size={22} />
                 <span className="hidden sm:inline">Familias</span>

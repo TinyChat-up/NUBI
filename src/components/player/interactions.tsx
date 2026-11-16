@@ -137,7 +137,7 @@ export function ChoiceGrid({
               <button
                 type="button"
                 onClick={() => onChoose(o)}
-                className="tap group flex h-full w-full flex-col overflow-hidden rounded-[1.75rem] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
+                className="tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
               >
                 <Illustration id={o.illustration} decorative ratio sizes="(min-width: 1024px) 33vw, (min-width: 480px) 50vw, 100vw" className="w-full" />
                 <span className="flex flex-1 items-center gap-3 p-4">
@@ -193,7 +193,7 @@ export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: Choic
       <ol className="mb-8 grid gap-5 md:grid-cols-2">
         {c.story.map((frame, i) => (
           <li key={i} className="animate-pop" style={{ animationDelay: `${i * 220}ms` }}>
-            <Illustration id={frame.illustration} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full rounded-[1.5rem] border-[3px] border-tinta/80" />
+            <Illustration id={frame.illustration} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full rounded-3xl border-[3px] border-tinta/80" />
             <p className="reading-text mt-3 flex gap-3 text-xl leading-snug font-bold">
               <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full bg-petroleo-600 text-base text-crema-50">
                 {i + 1}

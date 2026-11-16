@@ -55,7 +55,7 @@ export function HomeScreen() {
 
         <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-start gap-6 px-6 pt-[4vh] pb-[30vh] text-center lg:flex-row lg:items-start lg:justify-start lg:gap-10 lg:pt-[8vh] lg:text-left">
           {hasFinalArt('nubi-saludo') ? (
-            <GuideArt size={200} className="w-36 animate-sway sm:w-48" label="Nubi, la nube guía, te saluda" />
+            <GuideArt size={240} className="w-40 animate-sway sm:w-56 lg:w-60" label="Nubi, la nube guía, te saluda" />
           ) : (
             <Nubi size={190} mood="happy" wave className="animate-float drop-shadow-[0_18px_24px_rgba(34,51,58,0.15)] max-sm:w-36" label="Nubi, la nube guía, te saluda" />
           )}

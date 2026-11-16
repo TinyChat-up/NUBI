@@ -303,8 +303,8 @@ export function FamilyScreen() {
                 </div>
                 <p className="mt-1">{r.howApplied}</p>
                 {ref.url && (
-                  <a href={ref.url} target="_blank" rel="noreferrer noopener" className="mt-1 inline-block font-bold text-petroleo-700 underline underline-offset-4">
-                    Fuente
+                  <a href={ref.url} target="_blank" rel="noreferrer noopener" className="mt-1 inline-flex min-h-12 items-center font-bold text-petroleo-700 underline underline-offset-4">
+                    Fuente<span className="sr-only">: {ref.authors} (se abre en otra pestaña)</span>
                   </a>
                 )}
               </li>

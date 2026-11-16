@@ -35,7 +35,7 @@ export const referenceList: Reference[] = [
     inNubi:
       'El tono narrativo de NUBI es descriptivo, paciente y sin juicios: describe qué pasa y qué piensan o sienten las personas antes de sugerir opciones.',
     limits:
-      'Las historias de NUBI NO son Social Stories™ ni afirman cumplir sus diez criterios. "Social Stories" es marca registrada; no usamos el término para nuestros contenidos.',
+      'Las historias de NUBI NO son Social Stories™ ni afirman cumplir sus diez criterios. «Social Stories» es marca registrada; no usamos el término para nuestros contenidos.',
   },
   {
     id: 'zones',
@@ -54,7 +54,7 @@ export const referenceList: Reference[] = [
     verified:
       'Escala personalizada de 1 a 5 para reconocer niveles de una emoción o conducta, asociando cada nivel a cómo se ve, cómo se siente y qué se puede intentar. (Verificación parcial: ficha de aula de terceros; falta consultar la obra original.)',
     inNubi:
-      'En "¿Cómo te sentirías?" se puede indicar opcionalmente cuánto (un poco / bastante / mucho). Es una escala propia, de tres niveles, sin números ni colores.',
+      'En «¿Cómo te sentirías?» se puede indicar opcionalmente cuánto (un poco / bastante / mucho). Es una escala propia, de tres niveles, sin números ni colores.',
     limits: 'No reproducimos la escala de 5 puntos ni su formato. Pendiente de validar si 3 niveles son suficientes.',
   },
   {
@@ -65,7 +65,7 @@ export const referenceList: Reference[] = [
     verified:
       'Herramienta del marco Social Thinking® (revisada en 2023) para observar la situación y decidir qué hacer o decir, relacionando acciones, cómo pueden sentirse los demás, consecuencias y cómo se siente uno.',
     inNubi:
-      'Cada opción de una decisión muestra: lo que puede pasar, cómo pueden sentirse otros, cómo te puedes sentir tú y cuándo puede ayudar. No usamos la dicotomía "esperado/inesperado".',
+      'Cada opción de una decisión muestra: lo que puede pasar, cómo pueden sentirse otros, cómo te puedes sentir tú y cuándo puede ayudar. No usamos la dicotomía «esperado/inesperado».',
     limits: 'No reproducimos los mapas, plantillas ni terminología de Social Thinking®.',
   },
   {
