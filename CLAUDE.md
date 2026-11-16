@@ -2,7 +2,9 @@
 
 Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican íntegramente. Este archivo solo añade notas prácticas para Claude Code.
 
-> **Trabajo en curso:** la fase 7 continúa en la nube. Leer primero **[docs/HANDOFF_PHASE_7.md](docs/HANDOFF_PHASE_7.md)**.
+> **Trabajo en curso:** la fase 7 continúa en la nube. Leer primero **[docs/HANDOFF_PHASE_7.md](docs/HANDOFF_PHASE_7.md)** y el informe **[docs/integration/PHASE_7_REPORT.md](docs/integration/PHASE_7_REPORT.md)**.
+>
+> **Rama de referencia:** `integration/phase-7`. El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
 
@@ -26,4 +28,5 @@ npm run assets:doc   # tras tocar cualquier registro de assets
 - Verificar visualmente los cambios de UI en 390, 820 y 1180 px de ancho.
 - Para comprobar un flujo completo del piloto, recorrer cuento y cómic hasta "Mi resumen" (el test `recorre el cuento de principio a fin` cubre la lógica, no la presentación).
 - Al añadir texto infantil, releer `docs/CONTENT_STANDARD.md` §2 (lenguaje) y §4 (decisiones).
-- Rama: `feat/claude-foundation`. No hacer merge a `main` sin autorización.
+- Rama actual: `integration/phase-7` (ver el aviso de arriba). Históricamente Claude trabajó en `feat/claude-foundation` y después en `feat/claude-experience`; esas ramas ya están integradas y no deben usarse como base. No hacer merge a `main` sin autorización.
+- Pruebas de navegador: Playwright y axe-core se instalan **fuera** del proyecto; instrucciones en `docs/HANDOFF_PHASE_7.md`. En la nube, Chromium ya está en `/opt/pw-browsers/chromium`.

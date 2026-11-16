@@ -1,5 +1,34 @@
 # Resultados de pruebas — 16/11/2026
 
+## Fase 7 · nube (última actualización)
+
+Informe completo: [`integration/PHASE_7_REPORT.md`](integration/PHASE_7_REPORT.md).
+
+Entorno: Ubuntu 24.04.5, Node 22.23.4, npm 10.9.9, Chromium preinstalado 153 (`/opt/pw-browsers/chromium`). Herramientas externas en `/tmp/nubi-browser-tools`: `playwright@1.63.0` y `@axe-core/playwright@4.14.0`. Base: `3b27492`. Sin cambios en `package.json` ni en `package-lock.json`. Catálogo: 72 recursos, 36 listos.
+
+| Comprobación | Resultado |
+|---|---|
+| `npm ci` | Correcto, 0 vulnerabilidades |
+| `npm run check` (inicial y final) | Tipos, 46 tests en 6 archivos y build ✅ |
+| `npm run assets:doc` | 72 recursos, sin diferencias |
+| `art-files.mjs` | ✅ 36 recursos / 116 archivos |
+| `art-layout.mjs` | ✅ cargado 88, provisional 72, error 0; solo el recorte decorativo de `portada-fondo` |
+| `art-batch-2.mjs` | ✅ 10 escenas × 390/820/1180 |
+| `art-batch-3.mjs` | ✅ seis decisiones y doce momentos × 3 tamaños |
+| `quality.mjs` | ✅ recorrido completo × 3 tamaños; axe sin infracciones |
+| `story-fit.mjs` | ✅ 23 páginas × 3 tamaños × 2 tamaños de letra |
+| `narration.mjs` | ✅ |
+| `screens.mjs` | ✅ |
+| `focus-obscured.mjs` (nueva) | ✅ ningún control enfocado bajo barras fijas. Antes de corregir `src/index.css` fallaba con 43 casos |
+
+Variables: `NUBI_BROWSER_TOOLS=/tmp/nubi-browser-tools`, `CHROMIUM_PATH=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome`, `NUBI_URL=http://127.0.0.1:5173`. La instalación y el bucle de ejecución están en el informe, §14.
+
+No ejecutado: lector de pantalla, zoom del sistema al 200–400 %, dispositivos reales, vídeo y audio finales. La revisión automática no equivale a una certificación WCAG.
+
+---
+
+## Fases anteriores
+
 Actualización posterior: [Fase 4 — segundo lote artístico](ART_BATCH_2_REPORT.md), con 24/72 recursos y pruebas gráficas de la integración.
 
 Entorno: Linux, Node 24.22.1, npm 11.9.0, Chromium del entorno, herramientas externas Playwright y axe-core. Base de Claude: 447edf0. No se instalaron dependencias nuevas en NUBI ni se cambió su lockfile.
