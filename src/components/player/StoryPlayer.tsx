@@ -14,7 +14,7 @@ import {
   type RunState,
 } from '../../engine/storyEngine.ts';
 import { restoreRun } from '../../engine/restoreRun.ts';
-import type { Story, ToolId } from '../../engine/types.ts';
+import type { BeatStep, Story, ToolId } from '../../engine/types.ts';
 import { characters } from '../../content/characters.ts';
 import { navigate } from '../../lib/router.tsx';
 import { useNarration } from '../../lib/useNarration.ts';
@@ -29,8 +29,8 @@ import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
 import { SceneMenu } from './SceneMenu.tsx';
-import { contextIllustration, upcomingIllustrations } from './presentation.ts';
-import { StoryPage, type PageDirection } from './StoryPage.tsx';
+import { contextIllustration, pageGroup, upcomingIllustrations } from './presentation.ts';
+import { StoryPage, type PageDirection, type PageText } from './StoryPage.tsx';
 import { SummaryView } from './SummaryView.tsx';
 
 interface StoryPlayerProps {
@@ -188,12 +188,17 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   let stage: ReactNode;
   if (play.kind === 'beat') {
     const beat = play.step;
+    const toPage = (b: BeatStep, index: number): PageText => ({
+      id: b.id,
+      text: settings.shortText && b.short ? b.short : b.text,
+      speaker: b.speaker ? characters[b.speaker] : undefined,
+      opener: index === 0 ? { number: scene.number, title: scene.title } : undefined,
+    });
     stage = (
       <StoryPage
         beat={beat}
-        text={settings.shortText && beat.short ? beat.short : beat.text}
-        speaker={beat.speaker ? characters[beat.speaker] : undefined}
-        opener={state.position.stepIndex === 0 ? { number: scene.number, title: scene.title } : undefined}
+        page={toPage(beat, state.position.stepIndex)}
+        group={pageGroup(story, state).map((g) => toPage(g.beat, g.index))}
         direction={direction.current}
         mode={mode}
         showText={showText}
