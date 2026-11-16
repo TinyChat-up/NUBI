@@ -72,7 +72,9 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     (s: RunState, a: RunAction) => runReducer(story, s, a),
     undefined,
     () => {
-      const saved = resume ? loadRun(story.id, format) : null;
+      const loaded = resume ? loadRun(story.id, format) : null;
+      // Una partida guardada con una escena que ya no existe (contenido editado) se descarta.
+      const saved = loaded && story.scenes.some((sc) => sc.id === loaded.position.sceneId) ? loaded : null;
       return saved ?? createRun(story, format, startSceneId);
     },
   );
