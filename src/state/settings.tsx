@@ -12,7 +12,7 @@ export interface Settings {
   /** auto = sigue la preferencia del sistema. */
   motion: 'auto' | 'reduced' | 'full';
   contrast: 'normal' | 'high';
-  /** Modo por defecto del reproductor. */
+  /** Preferencia antigua conservada por compatibilidad; abrir siempre en lectura evita audio automático. */
   playerMode: 'leer' | 'escuchar';
   subtitles: boolean;
   /** Permitir la voz del dispositivo cuando no hay audio grabado. */

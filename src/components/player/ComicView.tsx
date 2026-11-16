@@ -27,7 +27,7 @@ function BubbleView({ bubble, delay }: { bubble: Bubble; delay: number }) {
   }
 
   const label = speaker ? (
-    <span className="rounded-full px-2 py-0.5 text-xs font-black text-crema-50" style={{ backgroundColor: speaker.color }}>
+    <span className="rounded-full border-2 bg-crema-50 px-2 py-0.5 text-xs font-black text-petroleo-900" style={{ borderColor: speaker.color }}>
       {speaker.name}
       {bubble.kind === 'thought' ? ' piensa' : bubble.kind === 'device' ? ' · comunicador' : ''}
     </span>
@@ -67,9 +67,9 @@ export function ComicView({ panels, index, pausedMotion }: { panels: ComicPanel[
   const currentRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
-    const reduce = document.documentElement.dataset.motion === 'reduced' || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const reduce = pausedMotion || document.documentElement.dataset.motion === 'reduced' || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     currentRef.current?.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
-  }, [index]);
+  }, [index, pausedMotion]);
 
   return (
     <ol className={`grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 ${pausedMotion ? 'anim-paused' : ''}`} aria-label="Viñetas del cómic">

@@ -216,7 +216,9 @@ html[data-motion='reduced'] *::after {
 /* "Detener animaciones" del reproductor. */
 .anim-paused,
 .anim-paused * {
-  animation-play-state: paused !important;
+  animation: none !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
 /* ───────── Utilidades propias ───────── */

@@ -1,4 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { restoreRun } from '../engine/restoreRun.ts';
+import { getStory } from '../content/stories/index.ts';
 import type { RunState } from '../engine/storyEngine.ts';
 import type { ToolId } from '../engine/types.ts';
 import { clearAll, readJSON, removeKey, writeJSON } from '../lib/storage.ts';
@@ -90,7 +92,8 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       saveRun: (run: RunState) => writeJSON(runKey(run.storyId, run.format), run),
       loadRun: (storyId: string, format: RunState['format']) => {
         const run = readJSON<RunState | null>(runKey(storyId, format), null);
-        return run && run.storyId === storyId && run.position ? run : null;
+        const story = getStory(storyId);
+        return story ? restoreRun(story, format, run) : null;
       },
       clearRun: (storyId: string, format: RunState['format']) => removeKey(runKey(storyId, format)),
       resetAll: () => {

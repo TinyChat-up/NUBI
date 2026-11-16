@@ -13,6 +13,7 @@ import {
   type RunAction,
   type RunState,
 } from '../../engine/storyEngine.ts';
+import { restoreRun } from '../../engine/restoreRun.ts';
 import type { Story, ToolId } from '../../engine/types.ts';
 import { characters } from '../../content/characters.ts';
 import { navigate } from '../../lib/router.tsx';
@@ -64,7 +65,7 @@ function speechFor(story: Story, state: RunState, play: PlayStep, settings: Sett
 }
 
 export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayerProps) {
-  const { settings, update } = useSettings();
+  const { settings } = useSettings();
   const { recordRun, saveRun, loadRun, clearRun } = useProgress();
   const narration = useNarration();
 
@@ -74,12 +75,12 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     () => {
       const loaded = resume ? loadRun(story.id, format) : null;
       // Una partida guardada con una escena que ya no existe (contenido editado) se descarta.
-      const saved = loaded && story.scenes.some((sc) => sc.id === loaded.position.sceneId) ? loaded : null;
+      const saved = restoreRun(story, format, loaded);
       return saved ?? createRun(story, format, startSceneId);
     },
   );
 
-  const [mode, setMode] = useState<Settings['playerMode']>(settings.playerMode);
+  const [mode, setMode] = useState<Settings['playerMode']>('leer');
   const [subtitles, setSubtitles] = useState(settings.subtitles);
   const [motionPaused, setMotionPaused] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -118,6 +119,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   const isPanel = play.kind === 'panel';
   useEffect(() => {
     if (!isPanel) stageRef.current?.scrollTo({ top: 0 });
+    stageRef.current?.focus({ preventScroll: true });
   }, [stepKey, isPanel]);
 
   const next = useCallback(() => dispatch({ type: 'next' }), []);
@@ -131,8 +133,8 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       if (menuOpen || e.altKey || e.ctrlKey || e.metaKey) return;
       const target = e.target as HTMLElement;
       if (target.closest('input, textarea, select, dialog')) return;
-      if (e.key === 'ArrowRight' && advanceAllowed && !atEnd) next();
-      if (e.key === 'ArrowLeft' && canGoBack) prev();
+      if (e.key === 'ArrowRight' && advanceAllowed && !atEnd) { e.preventDefault(); next(); }
+      if (e.key === 'ArrowLeft' && canGoBack) { e.preventDefault(); prev(); }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -151,7 +153,6 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   const toggleMode = () => {
     const nextMode = mode === 'leer' ? 'escuchar' : 'leer';
     setMode(nextMode);
-    update({ playerMode: nextMode });
   };
 
   const repeat = () => {
@@ -159,7 +160,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     if (mode === 'escuchar' && state.position.stepIndex === 0) narration.speak(speech.text, speech.src);
   };
 
-  const showText = mode === 'leer' || subtitles;
+  const showText = mode === 'leer' || subtitles || voiceNotice || narration.error;
 
   // ───────── Contenido del escenario ─────────
   let stage: ReactNode;
@@ -179,7 +180,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
             style={{ animationDelay: '120ms' }}
           >
             {speaker && (
-              <p className="mb-2 flex items-center gap-2 text-sm font-black tracking-wide uppercase" style={{ color: mode === 'escuchar' ? undefined : speaker.color }}>
+              <p className="mb-2 flex items-center gap-2 text-sm font-black tracking-wide uppercase">
                 {speaker.isGuide ? <Nubi size={30} mood="happy" /> : <span aria-hidden className="size-3 rounded-full" style={{ backgroundColor: speaker.color }} />}
                 {speaker.name}
               </p>
@@ -279,7 +280,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </header>
 
       {/* Escenario */}
-      <div ref={stageRef} className="flex-1 overflow-y-auto">
+      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="flex-1 overflow-y-auto">
         <div className={`mx-auto flex min-h-full w-full max-w-6xl flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'justify-center' : ''}`}>{stage}</div>
       </div>
 
@@ -290,7 +291,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
 
       {/* Controles */}
       <footer className="safe-bottom border-t border-crema-300/70 bg-crema-50/95 px-2 pt-2 sm:px-6">
-        {voiceNotice && mode === 'escuchar' && (
+        {(voiceNotice || narration.error) && mode === 'escuchar' && (
           <p className="mb-2 rounded-2xl bg-mostaza-100 px-4 py-2 text-center text-sm font-bold text-mostaza-700" role="status">
             Este episodio aún no tiene audio grabado y la voz del dispositivo no está disponible. Puedes leer el texto o activarla en Ajustes.
           </p>

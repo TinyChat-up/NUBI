@@ -39,7 +39,7 @@ export function VideoPlayer({ story, video }: { story: Story; video: VideoSpec }
       <div className="card overflow-hidden">
         <div className="relative">
           <Illustration id={video.poster} className="aspect-[16/9] w-full" decorative />
-          <div className="absolute inset-0 grid place-items-center bg-petroleo-900/55 p-4">
+          <div className="relative grid place-items-center bg-petroleo-900/55 p-4 sm:absolute sm:inset-0">
             <div className="flex max-w-lg flex-col items-center gap-3 rounded-[var(--radius-card)] bg-crema-50 p-6 text-center">
               <Nubi mood="calm" size={90} />
               <h2 className="text-2xl text-petroleo-900">Vídeo en producción</h2>
@@ -105,7 +105,7 @@ export function VideoPlayer({ story, video }: { story: Story; video: VideoSpec }
               const el = v();
               if (el) el.currentTime = Number(e.target.value);
             }}
-            className="h-3 flex-1 accent-coral-500"
+            className="h-12 flex-1 accent-coral-500"
             aria-label="Posición del vídeo"
             aria-valuetext={`${fmt(time)} de ${fmt(duration)}`}
           />
@@ -127,7 +127,7 @@ export function VideoPlayer({ story, video }: { story: Story; video: VideoSpec }
                   <button
                     type="button"
                     onClick={() => { const el = v(); if (el) el.currentTime = c.start; }}
-                    className="tap flex min-h-11 items-center gap-2 rounded-full bg-crema-200 px-3 text-sm font-bold hover:bg-petroleo-100"
+                    className="tap flex min-h-12 items-center gap-2 rounded-full bg-crema-200 px-3 text-sm font-bold hover:bg-petroleo-100"
                   >
                     <Icon name="play" size={14} /> {scene?.number}. {scene?.title}
                   </button>

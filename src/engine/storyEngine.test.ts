@@ -89,3 +89,32 @@ describe('motor de historias', () => {
     expect(s.position).toEqual({ sceneId: 'llegada', stepIndex: 0 });
   });
 });
+
+describe('todas las posibilidades y rutas del piloto', () => {
+  for (const format of ['cuento', 'comic'] as const) {
+    const choice = story.scenes.flatMap((sc) => sc.steps).find((s) => s.type === 'choice')!;
+    it.each(choice.options.map((o) => [o.id] as const))(`${format}: %s llega al resumen y permite volver`, (optionId) => {
+      let s = advanceUntil(createRun(story, format), 'choice');
+      s = play(s, { type: 'respond', stepId: 'cambio-sentir', values: ['no-lo-se', 'sorpresa'] });
+      s = play(s, { type: 'choose', stepId: choice.id, optionId }, { type: 'next' });
+      expect(s.choices[choice.id]).toBe(optionId);
+      const consequence = currentPlayStep(story, s);
+      expect(consequence.kind).toBe('interactive');
+      if (consequence.kind !== 'interactive' || consequence.step.type !== 'consequence') throw new Error('Falta consecuencia');
+      for (const route of consequence.step.routes) {
+        const target = runReducer(story, s, { type: 'goto', ...route.to });
+        expect(currentPlayStep(story, target)).toBeDefined();
+      }
+      const before = s;
+      s = play(s, { type: 'prev' }, { type: 'next' });
+      expect(s.position).toEqual(before.position);
+      s = advanceUntil(s, 'strategies');
+      const strategies = currentPlayStep(story, s);
+      if (strategies.kind !== 'interactive') throw new Error('Faltan estrategias');
+      s = play(s, { type: 'respond', stepId: strategies.step.id, values: [] });
+      s = advanceUntil(s, 'summary');
+      expect(isAtEnd(story, s)).toBe(true);
+      expect(s.responses['cambio-sentir']).toEqual(['no-lo-se', 'sorpresa']);
+    });
+  }
+});

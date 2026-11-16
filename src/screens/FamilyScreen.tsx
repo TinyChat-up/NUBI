@@ -27,7 +27,7 @@ function AdultGate({ onPass }: { onPass: () => void }) {
           <Icon name="grown" size={32} />
         </span>
         <h1 className="text-3xl text-petroleo-900">Espacio para familias</h1>
-        <p className="mt-2 text-lg">Esta zona es para personas adultas.</p>
+        <p className="mt-2 text-lg">Esta zona es para personas adultas. Esta puerta de demostración no es una autenticación segura.</p>
         <p className="mt-4 text-lg font-bold">
           Pulsa el número <span className="text-coral-700">{target.word}</span>
         </p>
@@ -198,7 +198,7 @@ export function FamilyScreen() {
                   <span className="text-tinta-suave">{r.description}</span>
                 </span>
                 {r.status === 'disponible' ? (
-                  <a href="#guia" className="tap rounded-full bg-petroleo-600 px-4 py-2 font-bold text-crema-50">
+                  <a href="#guia" className="tap inline-flex min-h-12 items-center rounded-full bg-petroleo-600 px-4 py-2 font-bold text-crema-50">
                     Ver
                   </a>
                 ) : (

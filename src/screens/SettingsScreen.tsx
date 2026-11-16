@@ -70,7 +70,7 @@ export function SettingsScreen() {
         </Group>
 
         <Group title="Escuchar" icon="volume">
-          <Segmented setting="playerMode" label="Al abrir una historia" options={[{ value: 'leer', label: 'Leer', icon: 'book' }, { value: 'escuchar', label: 'Escuchar', icon: 'volume' }]} />
+          <p>Las historias se abren en lectura. Puedes activar Escuchar dentro del reproductor.</p>
           <Segmented setting="subtitles" label="Subtítulos al escuchar" options={yesNo} />
           <Segmented setting="deviceVoice" label="Usar la voz del dispositivo si no hay audio grabado" options={yesNo} />
           <Segmented setting="voiceRate" label="Velocidad de la voz" options={[{ value: 0.75, label: 'Despacio' }, { value: 0.9, label: 'Normal' }, { value: 1.05, label: 'Rápida' }]} />

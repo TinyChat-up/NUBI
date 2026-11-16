@@ -63,10 +63,10 @@ Añadir un tipo de paso = ampliar la unión `Step`, el validador, `speechFor` y 
 ## 6. Audio y narración
 
 1. Si un `beat` tiene `narration` (ruta a audio), se reproduce ese archivo.
-2. Si no, y la familia mantiene activada "voz del dispositivo", se usa `window.speechSynthesis` (síntesis local del sistema operativo).
+2. Si no, y la familia mantiene activada "voz del dispositivo", se usa una voz española declarada local (`localService`) mediante `window.speechSynthesis` (síntesis local del sistema operativo).
 3. Si no hay voz disponible, se avisa y se ofrece leer.
 
-Solo suena en modo **Escuchar** (elegido por el niño o la niña) o al pulsar un botón de escuchar. **Decisión a revisar por producto:** la síntesis del sistema no es IA generativa ni servicio externo, pero en algunos dispositivos usa voces "neurales" del SO. Si se quiere excluir cualquier síntesis, basta con poner `deviceVoice: false` por defecto en `DEFAULT_SETTINGS`.
+Cada apertura comienza en lectura; una preferencia antigua de Escuchar no activa audio. Solo suena en modo **Escuchar** (elegido por el niño o la niña en esa apertura) o al pulsar un botón de escuchar. Si no hay voz local española, o falla la reproducción, el reproductor ofrece texto aunque los subtítulos estén desactivados. **Decisión a revisar por producto:** la síntesis del sistema no es IA generativa ni servicio externo, pero en algunos dispositivos usa voces "neurales" del SO. Si se quiere excluir cualquier síntesis, basta con poner `deviceVoice: false` por defecto en `DEFAULT_SETTINGS`.
 
 ## 7. Accesibilidad (resumen técnico)
 
