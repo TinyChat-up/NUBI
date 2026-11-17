@@ -10,6 +10,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Borradores de textos cortos (fase 16):** [docs/review/PHASE_16_REPORT.md](docs/review/PHASE_16_REPORT.md), en la rama `review/phase-16-short-text-drafts`. Son propuestas **no aprobadas ni aplicadas** (`docs/review/phase-16/APPROVAL_CHECKLIST.md`); no incorporarlas a `story.ts` sin autorización expresa.
 >
+> **Revisión UI/UX y portada inmersiva (fase 18):** [docs/design/PHASE_18_UX_QA_REPORT.md](docs/design/PHASE_18_UX_QA_REPORT.md) y [PHASE_18_HOMEPAGE_COMPARISON.md](docs/design/PHASE_18_HOMEPAGE_COMPARISON.md), en la rama `review/phase-18-ux-qa` (sobre el rediseño de Codex `feat/codex-ux-infantil-v1`, pendiente de revisión, sin integrar). La decisión del logotipo sigue pendiente: no cambiarlo sin autorización.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
@@ -36,4 +38,4 @@ npm run assets:doc   # tras tocar cualquier registro de assets
 - Al añadir texto infantil, releer `docs/CONTENT_STANDARD.md` §2 (lenguaje) y §4 (decisiones).
 - Rama actual: `integration/phase-13` (ver el aviso de arriba). Históricamente Claude trabajó en `feat/claude-foundation` y después en `feat/claude-experience`; esas ramas ya están integradas y no deben usarse como base. No hacer merge a `main` sin autorización.
 - Pruebas de navegador: Playwright y axe-core se instalan **fuera** del proyecto; instrucciones en `docs/HANDOFF_PHASE_7.md`. En la nube, Chromium ya está en `/opt/pw-browsers/chromium`.
-- `tests/browser/art-batch-5.mjs` escribe en `docs/art-batch-5/` (evidencias versionadas de Codex): tras ejecutarla, restaurar solo esos archivos (`git checkout -- docs/art-batch-5/previews docs/art-batch-5/browser-results.json`).
+- En `integration/phase-13`, `tests/browser/art-batch-5.mjs` escribe en `docs/art-batch-5/` (evidencias versionadas de Codex): tras ejecutarla, restaurar solo esos archivos (`git checkout -- docs/art-batch-5/previews docs/art-batch-5/browser-results.json`). Desde el rediseño de Codex (fase 17) escribe en `NUBI_ART_EVIDENCE` o en `/tmp`.
