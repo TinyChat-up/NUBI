@@ -91,6 +91,8 @@ const characterSheets: AssetSpec[] = [
 const place = (id: string, description: string, alt: string, tint: AssetSpec['placeholder']['tint'], icon: string): AssetSpec =>
   defineAsset('lugar', {
     id: `place-${id}`,
+    status: 'listo',
+    variants: [800, 1200],
     file: `/media/places/${id}.webp`,
     usage: 'Mi mundo (pantalla B) — tarjeta de lugar',
     description,
@@ -115,6 +117,8 @@ const places: AssetSpec[] = [
 const tool = (id: string, description: string, alt: string, icon: string, tint: AssetSpec['placeholder']['tint']): AssetSpec =>
   defineAsset('herramienta', {
     id: `tool-${id}`,
+    status: 'listo',
+    variants: [256, 512],
     file: `/media/tools/${id}.png`,
     usage: 'Mis herramientas (pantalla G) y escena 6 del piloto',
     description,

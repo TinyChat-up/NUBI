@@ -1,0 +1,165 @@
+[
+  {
+    "id": "tool-pedir-ayuda",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Teo, same brown hair petrol hoodie as reference, standing at left shows a large cream help card with a simple hand pictogram (NO text) to Andres at right, kneeling to the child's height and attentively looking at the CARD, not demanding eye contact. Respectful available adult, child active and capable. Two figures only, anatomically natural hands, warm expressions.",
+    "references": [
+      "docs/art-direction/models/teo.webp",
+      "docs/art-direction/models/andres.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-0fb1b748-aa57-4995-925e-fc109519ca45.png",
+    "initialSource": "/workspace/generated_images/exec-0fb1b748-aa57-4995-925e-fc109519ca45.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-pedir-ayuda.png"
+  },
+  {
+    "id": "tool-descansar",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Aya with her approved two black hair buns, round glasses, coral jumper and petrol trousers sits comfortably on a large sage cushion. Relaxed awake pose, legs comfortably folded, a clear glass of water beside her. Rest is freely chosen, no adult, no punishment, no bed. ONE girl and cushion and glass only.",
+    "references": [
+      "docs/art-direction/models/aya.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-6b3aca74-b87f-492d-9708-2e0cae1fda4c.png",
+    "initialSource": "/workspace/generated_images/exec-6b3aca74-b87f-492d-9708-2e0cae1fda4c.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-descansar.png"
+  },
+  {
+    "id": "tool-espacio-tranquilo",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Open welcoming small cream fabric play tent with a wide open entrance, two large sage/coral cushions inside, small soft mustard lamp and a potted sage plant beside it. Compact group, no room walls, no child shut inside, open freely available space. Broad simple shapes not clutter.",
+    "references": [
+      "public/media/stories/una-manana-diferente/comic/k6-3.webp"
+    ],
+    "correction": "Edit this NUBI tent illustration to make an EMPTY freely available quiet corner. REMOVE ALL THREE CHILDREN AND BOOK completely. Keep only the cream fabric tent with wide OPEN entrance, two LARGE sage/coral cushions inside, small mustard lamp and green plant at right. Do not add any people, faces, books or objects. Compact simple isolated gouache vignette readable at 56px. Whole tent with safe 6% margin all four sides, square 1024x1024. Same warm gouache/pencil style, soft volume. Real transparent background outside vignette. No halo, glow, shadows beneath or room background, no text. The inside contains ONLY two cushions, open and welcoming not isolation.",
+    "generationSource": "/workspace/generated_images/exec-3770ef43-606d-41a7-92ea-80965c3586fc.png",
+    "initialSource": "/workspace/generated_images/exec-13d6cacc-c31c-4dc0-8a56-dff3f8c11c6f.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-espacio-tranquilo.png"
+  },
+  {
+    "id": "tool-comunicar-necesidad",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Three equal-sized modes of communication arranged in a compact triangle, equal visual weight: top empty cream speech bubble outlined petrol; lower left a naturally drawn small hand pointing to a large cream pictogram card bearing a sage chair; lower right a cream paper note and a warm mustard pencil with a hand actively writing a few NON-LETTER abstract short pencil strokes. No actual words. All three equally valued, no ranking, no extra faces.",
+    "references": [
+      "public/media/stories/una-manana-diferente/comic/k6-3.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-32c455fc-511e-46f7-b2b9-e62b089d180f.png",
+    "initialSource": "/workspace/generated_images/exec-32c455fc-511e-46f7-b2b9-e62b089d180f.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-comunicar-necesidad.png"
+  },
+  {
+    "id": "tool-anticipar-cambios",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. One compact sage-framed visual schedule with THREE large movable cream picture cards aligned horizontally: open book, sun/play ball, paintbrush. Use same pictogram materials and book/sun/brush world as reference. One card visibly lifted slightly and moved to another slot by ONE gentle curved petrol arrow. No hands needed, no words, numbers or clock times. Clear low-detail visual plan, not calendar grid.",
+    "references": [
+      "public/media/stories/una-manana-diferente/comic/k6-1.webp"
+    ],
+    "correction": "Edit attached visual-schedule illustration into a SIMPLER compact NUBI tool icon. REMOVE the child completely and REMOVE ALL plants and pots. Keep ONLY the sage framed board with three large cream cards: book, ball/sun, paintbrush. Paintbrush card is lifted above empty third slot with one curved petrol arrow. Whole board centered on square 1024x1024 canvas, safe transparent margin 8%, REAL TRANSPARENT ALPHA background. No words, numbers, floor, background, halo or drop shadow. Same warm gouache/pencil and cream/petrol/coral/mustard palette. At 56px the pictograms and single changing card must be clear. One isolated board, no character. Do not add any objects. Preserve real painted texture not SVG.",
+    "generationSource": "/workspace/generated_images/exec-e0442bc8-2db2-47fb-bd66-2b0f6c640d3c.png",
+    "initialSource": "/workspace/generated_images/exec-939dccd5-cfd1-4426-9010-a1eeb656ea91.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-anticipar-cambios.png"
+  },
+  {
+    "id": "tool-expresar-desacuerdo",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Aya with approved two black buns, round glasses, coral jumper stands at left, calmly holding ONE open hand raised at chest height to express her opinion. Andres at right crouches to listen, relaxed open posture, not scolding, no pointing at child, no obedience. Child confident neutral expression, adult receptive. Two figures only, simple compact composition, natural hands.",
+    "references": [
+      "docs/art-direction/models/aya.webp",
+      "docs/art-direction/models/andres.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-e4570c71-a24f-4ece-9a5f-76b20024a086.png",
+    "initialSource": "/workspace/generated_images/exec-e4570c71-a24f-4ece-9a5f-76b20024a086.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-expresar-desacuerdo.png"
+  },
+  {
+    "id": "tool-apoyos-sensoriales",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Square 1:1 canvas 1024x1024 requested. TRUE TRANSPARENT alpha background, no floor or surrounding room, no halo, no glow, no cast shadow. Compact isolated vignette fills about 85% of canvas with safe margins, nothing cropped. One action readable at 56px. Do not reproduce reference sheet or multiple views. Compact still life kit of exactly FOUR objects: Teo's approved sage green over-ear noise defenders with thick rounded ear cups and dark padded headband from reference; petrol sunglasses; one coral soft squeeze ball; one folded sage/cream blanket. Each object large and separate, arranged in balanced 2x2 grouping, no labels, no medical badges.",
+    "references": [
+      "docs/art-direction/models/teo.webp",
+      "public/media/stories/una-manana-diferente/comic/k6-3.webp"
+    ],
+    "correction": "Remove ALL white background, cast shadows and glows from attached NUBI four-object kit. Keep exact painted objects and colors: sage noise defenders, petrol sunglasses, coral squeeze ball, folded sage cream blanket. TRUE TRANSPARENT BACKGROUND with actual alpha=0 everywhere outside objects, including spaces between objects, inside headband opening and around edges. NO white matte, paper backdrop, floor or shadows. Maintain painted object interiors, NOT photographic or 3D. Center four objects in balanced compact grouping on square 1024x1024, leave 6% fully transparent safe border all sides. No text. This is a cutout production PNG for a tinted app surface.",
+    "generationSource": "/workspace/generated_images/exec-10bf9949-0728-44da-a791-a6bd7321c0da.png",
+    "initialSource": "/workspace/generated_images/exec-01a375f2-b623-4951-b230-554c67584604.png",
+    "nativeFile": "docs/art-batch-6/originals/tool-apoyos-sensoriales.png"
+  },
+  {
+    "id": "place-colegio",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. Show the SAME familiar school from reference as calm recognizable exterior card, no foreground people. Preserve light stone/brick facade, terracotta tiled roof, central gable with round clock (tick marks only), arched open petrol doorway and matching tall windows, open petrol iron gates with stone posts, large plane tree to left, two bicycles under side shelter. Warm morning. Simpler surrounding detail, familiar school not a new building.",
+    "references": [
+      "public/media/stories/una-manana-diferente/scenes/s1-puerta.webp",
+      "public/media/common/portada-fondo.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-aaadef66-a24b-43c1-970b-28ce20c3e189.png",
+    "initialSource": "/workspace/generated_images/exec-aaadef66-a24b-43c1-970b-28ce20c3e189.png",
+    "nativeFile": "docs/art-batch-6/originals/place-colegio.png"
+  },
+  {
+    "id": "place-casa",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. Cozy TWO-storey light stone house from same village as attached panorama, terracotta roof, petrol window frames, warmly lit windows, a clearly visible small cat sitting in lower window, small welcoming garden and low stone boundary. Quiet early sunset. Main house whole with safe margin. No people, no crowds, no signage.",
+    "references": [
+      "public/media/common/portada-fondo.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-d3a5d3d2-d835-47fd-9ec9-001a0dc5bc05.png",
+    "initialSource": "/workspace/generated_images/exec-d3a5d3d2-d835-47fd-9ec9-001a0dc5bc05.png",
+    "nativeFile": "docs/art-batch-6/originals/place-casa.png"
+  },
+  {
+    "id": "place-parque",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. Serene open park from same village as reference. ONE large leafy tree, simple wooden swings, a wooden bench and a winding cream path. Sage lawn, warm light, small restrained flowers. Clear accessible welcoming open space, no crowds or foreground people. All key objects whole and easily readable.",
+    "references": [
+      "public/media/common/portada-fondo.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-3d12b574-4081-4423-b5f6-c3ee2793cc60.png",
+    "initialSource": "/workspace/generated_images/exec-3d12b574-4081-4423-b5f6-c3ee2793cc60.png",
+    "nativeFile": "docs/art-batch-6/originals/place-parque.png"
+  },
+  {
+    "id": "place-amigos",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. Close editorial scene of a wooden bench beneath a large tree. On the bench exactly two backpacks, one mustard and one coral/petrol, one ball and an OPEN picture book (no words). Friendship through shared space and objects, no faces or people. Bench and all objects whole. Warm sage garden background with airy pale sky above.",
+    "references": [
+      "public/media/common/portada-fondo.webp",
+      "public/media/stories/una-manana-diferente/comic/k6-1.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-97e67a26-fbb6-4197-aca4-ce3626a5b917.png",
+    "initialSource": "/workspace/generated_images/exec-97e67a26-fbb6-4197-aca4-ce3626a5b917.png",
+    "nativeFile": "docs/art-batch-6/originals/place-amigos.png"
+  },
+  {
+    "id": "place-emociones",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. Slightly fantastical serene garden of a few soft floating CLOUDS of different organic shapes in muted cream, pale sage, dusty blue and blush. Link to Nubi's gouache texture and cloud shape but NO faces, eyes or new mascot characters. Gentle garden path, soft low foliage, welcoming dreamlike space, no rigid color categories or good/bad symbolism. Main clouds readable, generous sky.",
+    "references": [
+      "docs/art-batch-5/collection-review.png",
+      "public/media/common/portada-fondo.webp"
+    ],
+    "correction": "Edit this NUBI illustration into a serene DREAMLIKE CLOUD GARDEN. REMOVE the entire school building, gates, houses, bicycles and playground. Replace their area with a simple welcoming garden of soft sage shrubs, a curving cream path and a few low coral flowers. The FIVE soft gouache CLOUDS without faces remain the dominant subject, floating at differing heights close to the garden. Keep original cloud shapes, subtle cream/sage/dusty blue/blush colors without categorizing good or bad. NO architecture, NO faces, NO eyes, NO new mascot, NO words. Landscape 4:3 canvas 2048x1536 requested, opaque painted background, quiet warm light, airy upper third, consistent warm NUBI gouache and pencil texture. Main subject clouds and garden should read at small card size. Not a school scene.",
+    "generationSource": "/workspace/generated_images/exec-49d567db-1195-4684-a840-4761853cbbf1.png",
+    "initialSource": "/workspace/generated_images/exec-4cdedcd4-2766-43cd-bab9-aad5fe752f6a.png",
+    "nativeFile": "docs/art-batch-6/originals/place-emociones.png"
+  },
+  {
+    "id": "place-herramientas",
+    "tool": "image_gen.imagegen",
+    "prompt": "Create ONE final original NUBI children's editorial illustration, matching the attached approved artwork's digital gouache and colored pencil, subtle paper texture, soft volume, warm gentle lighting, organic forms. Muted cream #FBF5EA, petrol #22606B, coral #E2704F, sage, mustard and warm browns. NOT 3D, clipart, emoji, flat vector or photo. No words, letters, numbers, logos, watermarks or labels. No decorative confetti. Simple clear composition with large readable shapes. Landscape 4:3 canvas 2048x1536 requested. Full opaque painted scene edge to edge. Compatible gentle eye-level perspective across the six-place collection. Clear main subject in lower two thirds with airy upper third. No people in foreground, no narrative cropping. A large OPEN MUSTARD BACKPACK, matching Teo's approved backpack, rests in a simple warm garden nook. From open main compartment emerge his sage green over-ear noise defenders, a few large cream communication pictogram cards, one coral soft ball and a short picture schedule with open book/sun/brush, NO words. Backpack and objects whole, calm simple background, lower foreground main subject and airy upper area. Everyday useful supports not magical rewards.",
+    "references": [
+      "docs/art-direction/models/teo.webp",
+      "public/media/stories/una-manana-diferente/comic/k6-1.webp"
+    ],
+    "correction": null,
+    "generationSource": "/workspace/generated_images/exec-ccfd3c2b-704f-446e-8e81-6fd511914882.png",
+    "initialSource": "/workspace/generated_images/exec-ccfd3c2b-704f-446e-8e81-6fd511914882.png",
+    "nativeFile": "docs/art-batch-6/originals/place-herramientas.png"
+  }
+]

@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **72 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -47,19 +47,19 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 | `char-carmen` | Personaje | `/media/characters/carmen.png` | listo |
 | `char-pilar` | Personaje | `/media/characters/pilar.png` | listo |
 | `char-rosa` | Personaje | `/media/characters/rosa.png` | listo |
-| `place-colegio` | Lugar | `/media/places/colegio.webp` | pendiente |
-| `place-casa` | Lugar | `/media/places/casa.webp` | pendiente |
-| `place-parque` | Lugar | `/media/places/parque.webp` | pendiente |
-| `place-amigos` | Lugar | `/media/places/amigos.webp` | pendiente |
-| `place-emociones` | Lugar | `/media/places/emociones.webp` | pendiente |
-| `place-herramientas` | Lugar | `/media/places/herramientas.webp` | pendiente |
-| `tool-pedir-ayuda` | Herramienta | `/media/tools/pedir-ayuda.png` | pendiente |
-| `tool-descansar` | Herramienta | `/media/tools/descansar.png` | pendiente |
-| `tool-espacio-tranquilo` | Herramienta | `/media/tools/espacio-tranquilo.png` | pendiente |
-| `tool-comunicar-necesidad` | Herramienta | `/media/tools/comunicar-necesidad.png` | pendiente |
-| `tool-anticipar-cambios` | Herramienta | `/media/tools/anticipar-cambios.png` | pendiente |
-| `tool-expresar-desacuerdo` | Herramienta | `/media/tools/expresar-desacuerdo.png` | pendiente |
-| `tool-apoyos-sensoriales` | Herramienta | `/media/tools/apoyos-sensoriales.png` | pendiente |
+| `place-colegio` | Lugar | `/media/places/colegio.webp` | listo |
+| `place-casa` | Lugar | `/media/places/casa.webp` | listo |
+| `place-parque` | Lugar | `/media/places/parque.webp` | listo |
+| `place-amigos` | Lugar | `/media/places/amigos.webp` | listo |
+| `place-emociones` | Lugar | `/media/places/emociones.webp` | listo |
+| `place-herramientas` | Lugar | `/media/places/herramientas.webp` | listo |
+| `tool-pedir-ayuda` | Herramienta | `/media/tools/pedir-ayuda.png` | listo |
+| `tool-descansar` | Herramienta | `/media/tools/descansar.png` | listo |
+| `tool-espacio-tranquilo` | Herramienta | `/media/tools/espacio-tranquilo.png` | listo |
+| `tool-comunicar-necesidad` | Herramienta | `/media/tools/comunicar-necesidad.png` | listo |
+| `tool-anticipar-cambios` | Herramienta | `/media/tools/anticipar-cambios.png` | listo |
+| `tool-expresar-desacuerdo` | Herramienta | `/media/tools/expresar-desacuerdo.png` | listo |
+| `tool-apoyos-sensoriales` | Herramienta | `/media/tools/apoyos-sensoriales.png` | listo |
 | `emo-alegria` | Emoción | `/media/emotions/alegria.png` | listo |
 | `emo-calma` | Emoción | `/media/emotions/calma.png` | listo |
 | `emo-sorpresa` | Emoción | `/media/emotions/sorpresa.png` | listo |
@@ -241,6 +241,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-colegio`
 
 - **Nombre de archivo:** `public/media/places/colegio.webp`
+- **Variantes:** `public/media/places/colegio-800w.webp` (800 px), `public/media/places/colegio-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Fachada de un colegio pequeño de ladrillo claro, con reloj, árbol y bicicletas aparcadas. Puerta abierta, luz de mañana.
 - **Personajes:** —
@@ -254,6 +255,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-casa`
 
 - **Nombre de archivo:** `public/media/places/casa.webp`
+- **Variantes:** `public/media/places/casa-800w.webp` (800 px), `public/media/places/casa-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Casa de dos plantas con ventanas iluminadas, jardín pequeño y un gato en la ventana. Tarde tranquila.
 - **Personajes:** —
@@ -267,6 +269,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-parque`
 
 - **Nombre de archivo:** `public/media/places/parque.webp`
+- **Variantes:** `public/media/places/parque-800w.webp` (800 px), `public/media/places/parque-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Parque con un árbol grande, columpios, un banco y un camino. Sin multitudes.
 - **Personajes:** —
@@ -280,6 +283,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-amigos`
 
 - **Nombre de archivo:** `public/media/places/amigos.webp`
+- **Variantes:** `public/media/places/amigos-800w.webp` (800 px), `public/media/places/amigos-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Un banco bajo un árbol con dos mochilas, una pelota y un libro abierto: señales de amistad sin mostrar caras.
 - **Personajes:** —
@@ -293,6 +297,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-emociones`
 
 - **Nombre de archivo:** `public/media/places/emociones.webp`
+- **Variantes:** `public/media/places/emociones-800w.webp` (800 px), `public/media/places/emociones-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Un jardín de nubes de colores suaves, cada una con una forma distinta. Ambiente onírico y sereno.
 - **Personajes:** —
@@ -306,6 +311,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `place-herramientas`
 
 - **Nombre de archivo:** `public/media/places/herramientas.webp`
+- **Variantes:** `public/media/places/herramientas-800w.webp` (800 px), `public/media/places/herramientas-1200w.webp` (1200 px)
 - **Escena / uso:** Mi mundo (pantalla B) — tarjeta de lugar
 - **Descripción visual:** Una mochila abierta de la que salen objetos de apoyo: cascos, tarjetas, una pelota blanda, un horario dibujado.
 - **Personajes:** —
@@ -319,6 +325,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-pedir-ayuda`
 
 - **Nombre de archivo:** `public/media/tools/pedir-ayuda.png`
+- **Variantes:** `public/media/tools/pedir-ayuda-256w.png` (256 px), `public/media/tools/pedir-ayuda-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Un niño o niña se acerca a un adulto y le enseña una tarjeta. El adulto se agacha a su altura. No hace falta que se miren a los ojos.
 - **Personajes:** —
@@ -332,6 +339,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-descansar`
 
 - **Nombre de archivo:** `public/media/tools/descansar.png`
+- **Variantes:** `public/media/tools/descansar-256w.png` (256 px), `public/media/tools/descansar-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Un niño o niña sentado en un cojín, con un vaso de agua, balanceándose suavemente.
 - **Personajes:** —
@@ -345,6 +353,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-espacio-tranquilo`
 
 - **Nombre de archivo:** `public/media/tools/espacio-tranquilo.png`
+- **Variantes:** `public/media/tools/espacio-tranquilo-256w.png` (256 px), `public/media/tools/espacio-tranquilo-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Rincón con tienda de tela, cojines, luz suave y una planta.
 - **Personajes:** —
@@ -358,6 +367,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-comunicar-necesidad`
 
 - **Nombre de archivo:** `public/media/tools/comunicar-necesidad.png`
+- **Variantes:** `public/media/tools/comunicar-necesidad-256w.png` (256 px), `public/media/tools/comunicar-necesidad-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Tres formas de comunicar a la vez: un bocadillo, una mano que señala un pictograma y una nota escrita.
 - **Personajes:** —
@@ -371,6 +381,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-anticipar-cambios`
 
 - **Nombre de archivo:** `public/media/tools/anticipar-cambios.png`
+- **Variantes:** `public/media/tools/anticipar-cambios-256w.png` (256 px), `public/media/tools/anticipar-cambios-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Un horario visual de la mañana con dibujos sencillos, una pieza cambiada de sitio con una flecha.
 - **Personajes:** —
@@ -384,6 +395,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-expresar-desacuerdo`
 
 - **Nombre de archivo:** `public/media/tools/expresar-desacuerdo.png`
+- **Variantes:** `public/media/tools/expresar-desacuerdo-256w.png` (256 px), `public/media/tools/expresar-desacuerdo-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Un niño o niña con una mano levantada, diciendo algo con calma a un adulto que escucha.
 - **Personajes:** —
@@ -397,6 +409,7 @@ Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `tool-apoyos-sensoriales`
 
 - **Nombre de archivo:** `public/media/tools/apoyos-sensoriales.png`
+- **Variantes:** `public/media/tools/apoyos-sensoriales-256w.png` (256 px), `public/media/tools/apoyos-sensoriales-512w.png` (512 px)
 - **Escena / uso:** Mis herramientas (pantalla G) y escena 6 del piloto
 - **Descripción visual:** Cascos antirruido, gafas de sol, una pelota blanda y una manta, ordenados como un pequeño kit.
 - **Personajes:** —
