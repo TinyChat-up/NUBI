@@ -1,0 +1,1 @@
+PASS foco visible: 12 rutas × 3 tamaños × 2 tamaños de letra, sin controles enfocados bajo barras fijas

@@ -1,0 +1,117 @@
+{
+  "total": 72,
+  "ready": 50,
+  "pending": 22,
+  "remaining": [
+    {
+      "id": "place-colegio",
+      "kind": "lugar",
+      "file": "/media/places/colegio.webp"
+    },
+    {
+      "id": "place-casa",
+      "kind": "lugar",
+      "file": "/media/places/casa.webp"
+    },
+    {
+      "id": "place-parque",
+      "kind": "lugar",
+      "file": "/media/places/parque.webp"
+    },
+    {
+      "id": "place-amigos",
+      "kind": "lugar",
+      "file": "/media/places/amigos.webp"
+    },
+    {
+      "id": "place-emociones",
+      "kind": "lugar",
+      "file": "/media/places/emociones.webp"
+    },
+    {
+      "id": "place-herramientas",
+      "kind": "lugar",
+      "file": "/media/places/herramientas.webp"
+    },
+    {
+      "id": "tool-pedir-ayuda",
+      "kind": "herramienta",
+      "file": "/media/tools/pedir-ayuda.png"
+    },
+    {
+      "id": "tool-descansar",
+      "kind": "herramienta",
+      "file": "/media/tools/descansar.png"
+    },
+    {
+      "id": "tool-espacio-tranquilo",
+      "kind": "herramienta",
+      "file": "/media/tools/espacio-tranquilo.png"
+    },
+    {
+      "id": "tool-comunicar-necesidad",
+      "kind": "herramienta",
+      "file": "/media/tools/comunicar-necesidad.png"
+    },
+    {
+      "id": "tool-anticipar-cambios",
+      "kind": "herramienta",
+      "file": "/media/tools/anticipar-cambios.png"
+    },
+    {
+      "id": "tool-expresar-desacuerdo",
+      "kind": "herramienta",
+      "file": "/media/tools/expresar-desacuerdo.png"
+    },
+    {
+      "id": "tool-apoyos-sensoriales",
+      "kind": "herramienta",
+      "file": "/media/tools/apoyos-sensoriales.png"
+    },
+    {
+      "id": "emo-alegria",
+      "kind": "emocion",
+      "file": "/media/emotions/alegria.png"
+    },
+    {
+      "id": "emo-calma",
+      "kind": "emocion",
+      "file": "/media/emotions/calma.png"
+    },
+    {
+      "id": "emo-sorpresa",
+      "kind": "emocion",
+      "file": "/media/emotions/sorpresa.png"
+    },
+    {
+      "id": "emo-curiosidad",
+      "kind": "emocion",
+      "file": "/media/emotions/curiosidad.png"
+    },
+    {
+      "id": "emo-inseguridad",
+      "kind": "emocion",
+      "file": "/media/emotions/inseguridad.png"
+    },
+    {
+      "id": "emo-frustracion",
+      "kind": "emocion",
+      "file": "/media/emotions/frustracion.png"
+    },
+    {
+      "id": "emo-tristeza",
+      "kind": "emocion",
+      "file": "/media/emotions/tristeza.png"
+    },
+    {
+      "id": "emo-enfado",
+      "kind": "emocion",
+      "file": "/media/emotions/enfado.png"
+    },
+    {
+      "id": "emo-cansancio",
+      "kind": "emocion",
+      "file": "/media/emotions/cansancio.png"
+    }
+  ]
+}

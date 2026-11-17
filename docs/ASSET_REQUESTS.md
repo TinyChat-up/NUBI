@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -552,20 +552,20 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 | `ume-opt-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/opt-salir.webp` | listo |
 | `ume-c-salir` | Opción / consecuencia | `/media/stories/una-manana-diferente/options/c-salir.webp` | listo |
 | `ume-k1-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-1.webp` | listo |
-| `ume-k1-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-2.webp` | pendiente |
-| `ume-k1-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-3.webp` | pendiente |
-| `ume-k2-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-1.webp` | pendiente |
-| `ume-k2-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-2.webp` | pendiente |
-| `ume-k2-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-3.webp` | pendiente |
-| `ume-k2-4` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-4.webp` | pendiente |
-| `ume-k3-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k3-1.webp` | pendiente |
-| `ume-k3-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k3-2.webp` | pendiente |
-| `ume-k4-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k4-1.webp` | pendiente |
-| `ume-k6-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-1.webp` | pendiente |
-| `ume-k6-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-2.webp` | pendiente |
-| `ume-k6-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-3.webp` | pendiente |
-| `ume-k7-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k7-1.webp` | pendiente |
-| `ume-k7-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k7-2.webp` | pendiente |
+| `ume-k1-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-2.webp` | listo |
+| `ume-k1-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k1-3.webp` | listo |
+| `ume-k2-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-1.webp` | listo |
+| `ume-k2-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-2.webp` | listo |
+| `ume-k2-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-3.webp` | listo |
+| `ume-k2-4` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k2-4.webp` | listo |
+| `ume-k3-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k3-1.webp` | listo |
+| `ume-k3-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k3-2.webp` | listo |
+| `ume-k4-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k4-1.webp` | listo |
+| `ume-k6-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-1.webp` | listo |
+| `ume-k6-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-2.webp` | listo |
+| `ume-k6-3` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k6-3.webp` | listo |
+| `ume-k7-1` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k7-1.webp` | listo |
+| `ume-k7-2` | Viñeta de cómic | `/media/stories/una-manana-diferente/comic/k7-2.webp` | listo |
 
 ### `ume-cover`
 
@@ -926,6 +926,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k1-2`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k1-2.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k1-2-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k1-2-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 1 · viñeta 2
 - **Descripción visual:** Pasillo lleno de movimiento, niños corriendo. Teo en primer plano. Zona arriba a la derecha para onomatopeya; abajo a la izquierda para pensamiento.
 - **Personajes:** Teo
@@ -939,6 +940,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k1-3`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k1-3.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k1-3-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k1-3-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 1 · viñeta 3
 - **Descripción visual:** Primer plano de la mano de Teo dentro de la mochila tocando los cascos verdes.
 - **Personajes:** Teo
@@ -952,6 +954,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k2-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k2-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k2-1-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k2-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 2 · viñeta 1
 - **Descripción visual:** Teo ante la puerta de la clase, desde atrás. Arriba a la izquierda, espacio para pensamiento.
 - **Personajes:** Teo
@@ -965,6 +968,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k2-2`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k2-2.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k2-2-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k2-2-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 2 · viñeta 2
 - **Descripción visual:** Andrés, plano medio, se presenta con la mano en el pecho. Espacio arriba a la derecha.
 - **Personajes:** Andrés
@@ -978,6 +982,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k2-3`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k2-3.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k2-3-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k2-3-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 2 · viñeta 3
 - **Descripción visual:** Andrés mueve en la pizarra el dibujo de un pincel hacia la parte de la tarde. Espacio arriba a la izquierda.
 - **Personajes:** Andrés
@@ -991,6 +996,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k2-4`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k2-4.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k2-4-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k2-4-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 2 · viñeta 4
 - **Descripción visual:** Panorámica de la clase con las cuatro reacciones (ver ume-s2-reacciones). Bocadillos arriba a izquierda y derecha; comunicador de Lía abajo a la derecha.
 - **Personajes:** Aya, Bruno, Lía, Teo
@@ -1004,6 +1010,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k3-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k3-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k3-1-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k3-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 3 · viñeta 1
 - **Descripción visual:** Nubi flota delante de la pizarra de dos columnas.
 - **Personajes:** Nubi
@@ -1017,6 +1024,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k3-2`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k3-2.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k3-2-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k3-2-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 3 · viñeta 2
 - **Descripción visual:** Teo en su mesa con una gran burbuja de pensamiento (arriba a la izquierda).
 - **Personajes:** Teo
@@ -1030,6 +1038,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k4-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k4-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k4-1-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k4-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 4 · viñeta 1
 - **Descripción visual:** Teo en el centro; a su alrededor, seis pequeños caminos o puertas que representan posibilidades (sin texto).
 - **Personajes:** Teo
@@ -1043,6 +1052,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k6-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k6-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k6-1-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k6-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 6 · viñeta 1
 - **Descripción visual:** Teo y Andrés frente a la pizarra; Andrés empieza a dibujar. Bocadillos arriba izquierda y abajo derecha.
 - **Personajes:** Teo, Andrés
@@ -1056,6 +1066,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k6-2`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k6-2.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k6-2-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k6-2-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 6 · viñeta 2
 - **Descripción visual:** Teo con cascos en la biblioteca, sosteniendo un libro de trenes. Ondas de sonido suaves al fondo.
 - **Personajes:** Teo
@@ -1069,6 +1080,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k6-3`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k6-3.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k6-3-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k6-3-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 6 · viñeta 3
 - **Descripción visual:** Bruno en un puf (izquierda), Aya junto a la estantería (derecha), Lía mostrando su comunicador (abajo derecha).
 - **Personajes:** Bruno, Aya, Lía
@@ -1082,6 +1094,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k7-1`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k7-1.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k7-1-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k7-1-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 7 · viñeta 1
 - **Descripción visual:** Teo y Rosa salen por la verja. Bocadillos arriba derecha y abajo izquierda.
 - **Personajes:** Teo, Rosa
@@ -1095,6 +1108,7 @@ Estado: **36 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `ume-k7-2`
 
 - **Nombre de archivo:** `public/media/stories/una-manana-diferente/comic/k7-2.webp`
+- **Variantes:** `public/media/stories/una-manana-diferente/comic/k7-2-800w.webp` (800 px), `public/media/stories/una-manana-diferente/comic/k7-2-1200w.webp` (1200 px)
 - **Escena / uso:** Cómic · escena 7 · viñeta 2
 - **Descripción visual:** Teo y Rosa caminando de espaldas por la acera; Nubi en el cielo.
 - **Personajes:** Teo, Rosa, Nubi

@@ -1,0 +1,1 @@
+PASS 50 recursos listos / 158 archivos: SHA256, decodificación, dimensiones y alfa

@@ -1,0 +1,2 @@
+PASS narración: rechazo de voz remota y alternativa textual
+PASS narración: voz local, error asíncrono y detener

@@ -1,0 +1,6 @@
+PASS 390×844 letra=m: 23 páginas · imagen 199–335 px · desplazan 0
+PASS 820×1180 letra=m: 23 páginas · imagen 529–635 px · desplazan 0
+PASS 1180×820 letra=m: 23 páginas · imagen 728–728 px · desplazan 0
+PASS 390×844 letra=xl: 23 páginas · imagen 190–246 px · desplazan 15
+PASS 820×1180 letra=xl: 23 páginas · imagen 330–513 px · desplazan 0
+PASS 1180×820 letra=xl: 23 páginas · imagen 670–670 px · desplazan 3

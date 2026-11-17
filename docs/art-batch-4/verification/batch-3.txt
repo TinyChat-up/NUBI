@@ -1,0 +1,3 @@
+PASS 390: six choices, twelve moments, 4:3 without crop, responsive sources, exact narrative text and return navigation
+PASS 820: six choices, twelve moments, 4:3 without crop, responsive sources, exact narrative text and return navigation
+PASS 1180: six choices, twelve moments, 4:3 without crop, responsive sources, exact narrative text and return navigation
