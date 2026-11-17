@@ -4,6 +4,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 
 > **Estado:** fase 13 integrada: catálogo gráfico completo (72/72), herramientas también en el selector de estrategias y precarga corregida. Leer primero **[docs/integration/PHASE_13_REPORT.md](docs/integration/PHASE_13_REPORT.md)**; antecedentes en [PHASE_11](docs/integration/PHASE_11_REPORT.md) y [PHASE_9](docs/integration/PHASE_9_REPORT.md); el contexto del entorno cloud sigue en [docs/integration/PHASE_7_REPORT.md](docs/integration/PHASE_7_REPORT.md) y [docs/HANDOFF_PHASE_7.md](docs/HANDOFF_PHASE_7.md).
 >
+> **Revisión de preparación del piloto (fase 14):** [docs/review/PHASE_14_READINESS_REPORT.md](docs/review/PHASE_14_READINESS_REPORT.md), en la rama `review/phase-14-pilot-readiness`. Es evaluación y protocolos: no cambia la rama estable. Sus decisiones pendientes están en `docs/review/DECISION_REGISTER.md`; no aplicar cambios de texto o diseño sin aprobación.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
