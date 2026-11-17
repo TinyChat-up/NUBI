@@ -1,0 +1,183 @@
+{
+ "note": "Cuento completo explorando las seis consecuencias; Chromium 153 headless, caché vacía por contexto; solo /scenes/ y /options/.",
+ "before": [
+  {
+   "viewport": "390x844",
+   "dpr": 1,
+   "files": 32,
+   "shownFiles": 22,
+   "bytes": 3789008,
+   "unusedFiles": 10,
+   "unusedBytes": 1422208,
+   "unused": [
+    "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp"
+   ],
+   "duplicates": 0
+  },
+  {
+   "viewport": "390x844",
+   "dpr": 2,
+   "files": 32,
+   "shownFiles": 22,
+   "bytes": 3789008,
+   "unusedFiles": 10,
+   "unusedBytes": 1422208,
+   "unused": [
+    "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp"
+   ],
+   "duplicates": 0
+  },
+  {
+   "viewport": "820x1180",
+   "dpr": 1,
+   "files": 32,
+   "shownFiles": 22,
+   "bytes": 4765670,
+   "unusedFiles": 10,
+   "unusedBytes": 1422208,
+   "unused": [
+    "/media/stories/una-manana-diferente/scenes/s1-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s1-pasillo-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-puerta-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-anuncio-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-reacciones-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s3-pizarra-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s4-teo-piensa-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-plan-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-biblioteca-1200w.webp",
+    "/media/stories/una-manana-diferente/scenes/s7-salida-1200w.webp"
+   ],
+   "duplicates": 0
+  },
+  {
+   "viewport": "820x1180",
+   "dpr": 2,
+   "files": 32,
+   "shownFiles": 22,
+   "bytes": 10612502,
+   "unusedFiles": 10,
+   "unusedBytes": 3324326,
+   "unused": [
+    "/media/stories/una-manana-diferente/scenes/s1-puerta.webp",
+    "/media/stories/una-manana-diferente/scenes/s1-pasillo.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-puerta.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-anuncio.webp",
+    "/media/stories/una-manana-diferente/scenes/s2-reacciones.webp",
+    "/media/stories/una-manana-diferente/scenes/s3-pizarra.webp",
+    "/media/stories/una-manana-diferente/scenes/s4-teo-piensa.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-plan.webp",
+    "/media/stories/una-manana-diferente/scenes/s6-biblioteca.webp",
+    "/media/stories/una-manana-diferente/scenes/s7-salida.webp"
+   ],
+   "duplicates": 0
+  },
+  {
+   "viewport": "1180x820",
+   "dpr": 1,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 3464758,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "1180x820",
+   "dpr": 2,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 7321524,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  }
+ ],
+ "after": [
+  {
+   "viewport": "390x844",
+   "dpr": 1,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 2366800,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "390x844",
+   "dpr": 2,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 2366800,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "820x1180",
+   "dpr": 1,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 2366800,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "820x1180",
+   "dpr": 2,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 5333528,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "1180x820",
+   "dpr": 1,
+   "files": 22,
+   "shownFiles": 22,
+   "bytes": 2488096,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  },
+  {
+   "viewport": "1180x820",
+   "dpr": 2,
+   "files": 28,
+   "shownFiles": 28,
+   "bytes": 5909980,
+   "unusedFiles": 0,
+   "unusedBytes": 0,
+   "unused": [],
+   "duplicates": 0
+  }
+ ]
+}
