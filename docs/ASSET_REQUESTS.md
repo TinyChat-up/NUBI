@@ -3,7 +3,7 @@
 > Archivo **generado** con `npm run assets:doc` desde `src/content/assets/` y `src/content/stories/*/assets.ts`.
 > No lo edites a mano: cambia el registro y vuelve a generarlo.
 
-Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
+Estado: **59 de 72** recursos entregados. Mientras un recurso esté `pendiente`, la app muestra un placeholder vectorial temporal.
 
 ## Instrucciones generales para la producción (ChatGPT / equipo de ilustración)
 
@@ -60,15 +60,15 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 | `tool-anticipar-cambios` | Herramienta | `/media/tools/anticipar-cambios.png` | pendiente |
 | `tool-expresar-desacuerdo` | Herramienta | `/media/tools/expresar-desacuerdo.png` | pendiente |
 | `tool-apoyos-sensoriales` | Herramienta | `/media/tools/apoyos-sensoriales.png` | pendiente |
-| `emo-alegria` | Emoción | `/media/emotions/alegria.png` | pendiente |
-| `emo-calma` | Emoción | `/media/emotions/calma.png` | pendiente |
-| `emo-sorpresa` | Emoción | `/media/emotions/sorpresa.png` | pendiente |
-| `emo-curiosidad` | Emoción | `/media/emotions/curiosidad.png` | pendiente |
-| `emo-inseguridad` | Emoción | `/media/emotions/inseguridad.png` | pendiente |
-| `emo-frustracion` | Emoción | `/media/emotions/frustracion.png` | pendiente |
-| `emo-tristeza` | Emoción | `/media/emotions/tristeza.png` | pendiente |
-| `emo-enfado` | Emoción | `/media/emotions/enfado.png` | pendiente |
-| `emo-cansancio` | Emoción | `/media/emotions/cansancio.png` | pendiente |
+| `emo-alegria` | Emoción | `/media/emotions/alegria.png` | listo |
+| `emo-calma` | Emoción | `/media/emotions/calma.png` | listo |
+| `emo-sorpresa` | Emoción | `/media/emotions/sorpresa.png` | listo |
+| `emo-curiosidad` | Emoción | `/media/emotions/curiosidad.png` | listo |
+| `emo-inseguridad` | Emoción | `/media/emotions/inseguridad.png` | listo |
+| `emo-frustracion` | Emoción | `/media/emotions/frustracion.png` | listo |
+| `emo-tristeza` | Emoción | `/media/emotions/tristeza.png` | listo |
+| `emo-enfado` | Emoción | `/media/emotions/enfado.png` | listo |
+| `emo-cansancio` | Emoción | `/media/emotions/cansancio.png` | listo |
 
 ### `portada-fondo`
 
@@ -410,6 +410,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-alegria`
 
 - **Nombre de archivo:** `public/media/emotions/alegria.png`
+- **Variantes:** `public/media/emotions/alegria-256w.png` (256 px), `public/media/emotions/alegria-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi con forma redondeada y expandida, ojos en media luna. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -423,6 +424,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-calma`
 
 - **Nombre de archivo:** `public/media/emotions/calma.png`
+- **Variantes:** `public/media/emotions/calma-256w.png` (256 px), `public/media/emotions/calma-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi alargada y horizontal, ojos cerrados, flotando bajo. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -436,6 +438,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-sorpresa`
 
 - **Nombre de archivo:** `public/media/emotions/sorpresa.png`
+- **Variantes:** `public/media/emotions/sorpresa-256w.png` (256 px), `public/media/emotions/sorpresa-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi algo más alta, ojos abiertos y pequeñas líneas de movimiento. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -449,6 +452,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-curiosidad`
 
 - **Nombre de archivo:** `public/media/emotions/curiosidad.png`
+- **Variantes:** `public/media/emotions/curiosidad-256w.png` (256 px), `public/media/emotions/curiosidad-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi inclinada hacia una lupa. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -462,6 +466,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-inseguridad`
 
 - **Nombre de archivo:** `public/media/emotions/inseguridad.png`
+- **Variantes:** `public/media/emotions/inseguridad-256w.png` (256 px), `public/media/emotions/inseguridad-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi algo encogida, borde ondulado, mirando de reojo. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -475,6 +480,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-frustracion`
 
 - **Nombre de archivo:** `public/media/emotions/frustracion.png`
+- **Variantes:** `public/media/emotions/frustracion-256w.png` (256 px), `public/media/emotions/frustracion-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi con un pequeño nudo dibujado en su interior, ceño suave. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -488,6 +494,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-tristeza`
 
 - **Nombre de archivo:** `public/media/emotions/tristeza.png`
+- **Variantes:** `public/media/emotions/tristeza-256w.png` (256 px), `public/media/emotions/tristeza-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi gris clara dejando caer una gota. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -501,6 +508,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-enfado`
 
 - **Nombre de archivo:** `public/media/emotions/enfado.png`
+- **Variantes:** `public/media/emotions/enfado-256w.png` (256 px), `public/media/emotions/enfado-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi más oscura con bordes algo más marcados; sin rasgos agresivos. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi
@@ -514,6 +522,7 @@ Estado: **50 de 72** recursos entregados. Mientras un recurso esté `pendiente`,
 ### `emo-cansancio`
 
 - **Nombre de archivo:** `public/media/emotions/cansancio.png`
+- **Variantes:** `public/media/emotions/cansancio-256w.png` (256 px), `public/media/emotions/cansancio-512w.png` (512 px)
 - **Escena / uso:** Mis emociones · selector "¿Cómo te sentirías?"
 - **Descripción visual:** Nubi caída, ojos entrecerrados, con una pequeña luna. Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.
 - **Personajes:** Nubi

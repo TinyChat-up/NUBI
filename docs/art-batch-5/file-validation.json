@@ -1,0 +1,353 @@
+[
+  {
+    "file": "/media/emotions/alegria.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 697569,
+    "sha256": "7daf9341aa32d472120d6757a49103782a10733b8b2b7ef030fd55a7a1792c74"
+  },
+  {
+    "file": "/media/emotions/alegria-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 50364,
+    "sha256": "65b7b6a2f717699eebf106d5b8420277ae9fad011bbac2bded53c36a09648107"
+  },
+  {
+    "file": "/media/emotions/alegria-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 183492,
+    "sha256": "32e6c1709bca4dab3bd61cbd80e2d0c990228b7e1e51cdd39f9e11f12028be8e"
+  },
+  {
+    "file": "/media/emotions/calma.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 488295,
+    "sha256": "e850183df1205d74dab71ef76ab2a86caad47bd284d731232b58f3ca53571867"
+  },
+  {
+    "file": "/media/emotions/calma-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 36882,
+    "sha256": "07133333d34d86d108944a140ee9e3e62af2f91ef977c20d1de4d88f99b86e81"
+  },
+  {
+    "file": "/media/emotions/calma-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 131721,
+    "sha256": "567a79447cf47b0e091ec5a7425307f94c5cb5b9fb28e8b88861daca36577bda"
+  },
+  {
+    "file": "/media/emotions/sorpresa.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      254
+    ],
+    "bytes": 643925,
+    "sha256": "55c4293c3db0307e15a6eb25dd6baf478edfe155b9089eafb2791714036a24df"
+  },
+  {
+    "file": "/media/emotions/sorpresa-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 45033,
+    "sha256": "a937a00a95dafabc9f1ea8dd43646038bfb443fcdaaf8a76f6e19fbd3f62df58"
+  },
+  {
+    "file": "/media/emotions/sorpresa-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 164706,
+    "sha256": "6189afbfd5b8677419866f43a02eb298f390a7ec342e7e2c839fef62220e9c87"
+  },
+  {
+    "file": "/media/emotions/curiosidad.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 784603,
+    "sha256": "283dd21561b907349f33008128bf83c0dbba7582f175562d3a71aa4e3094b15d"
+  },
+  {
+    "file": "/media/emotions/curiosidad-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 54799,
+    "sha256": "7b60342f40654ce31a264f9cd6fdbf6c3370063c3049be01cbdfb6799c33ce5e"
+  },
+  {
+    "file": "/media/emotions/curiosidad-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 201902,
+    "sha256": "b0cf692633e37c51fef7d0356681b03be8e77785429ab6d9558e5d5bcbdb2051"
+  },
+  {
+    "file": "/media/emotions/inseguridad.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 472171,
+    "sha256": "a9bcee47f5dbef12542b006cfb67f76d48ec31d571c45e8d42c76a947f2059d1"
+  },
+  {
+    "file": "/media/emotions/inseguridad-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 36486,
+    "sha256": "d2520410147ef4faac22905c699c8b2568ff5c7c8a6dcedad2014a7bfb4a32ae"
+  },
+  {
+    "file": "/media/emotions/inseguridad-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 129440,
+    "sha256": "44c43ffc502383df3d3614dcf9895095f7d5aeeff85a5659bb9001150fa62576"
+  },
+  {
+    "file": "/media/emotions/frustracion.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 624091,
+    "sha256": "8ef5ea816920c5a50a0163661f4d691346d683afbf99b17f9e1d08655b2ae007"
+  },
+  {
+    "file": "/media/emotions/frustracion-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 48569,
+    "sha256": "6ac8514aa8df3cd20e674000f2d46fb61c17aa077863d8b27dfb39656c95ea52"
+  },
+  {
+    "file": "/media/emotions/frustracion-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 172063,
+    "sha256": "de4850c6760c0593571573503d2f1d3080bfea5ae121bb2ff7d7fb70f57c779c"
+  },
+  {
+    "file": "/media/emotions/tristeza.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 730243,
+    "sha256": "23f4bad4d9c66349252b6338b2b4d27473bb980dba036826c36ddfa66fc6b28c"
+  },
+  {
+    "file": "/media/emotions/tristeza-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 52795,
+    "sha256": "3a21c415a4ed781f04005711ecbd08d918f8a1fff49adea787ae2db6708c1e69"
+  },
+  {
+    "file": "/media/emotions/tristeza-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 191971,
+    "sha256": "d5340e179a00a5f252a3ee8e9ac2021ef88d7de45ad7a5a5177c3825737bdebb"
+  },
+  {
+    "file": "/media/emotions/enfado.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 706796,
+    "sha256": "bddbdf16460f3d645f28ee7eceb37ead536a68b66d4ed2d3074f1770124e834b"
+  },
+  {
+    "file": "/media/emotions/enfado-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 51455,
+    "sha256": "eb959e5fcb041b7b8952bdff3c348bd9e7860b6c09c288fb06a8d7aa3baf0109"
+  },
+  {
+    "file": "/media/emotions/enfado-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 183631,
+    "sha256": "23b91b4c5b284e30b3a819fc8d1855f9f6fe737cf241cae6703de90f8a1a47a8"
+  },
+  {
+    "file": "/media/emotions/cansancio.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 693141,
+    "sha256": "fc5e78c843c23cc555a6c9e1ccbb62e1e260c05517346ead3f239baae9d11032"
+  },
+  {
+    "file": "/media/emotions/cansancio-256w.png",
+    "size": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 51139,
+    "sha256": "662529373e29c8d321fefa3aa4f49aa4fa127205ba8a04cdf2cedbfa3aae9574"
+  },
+  {
+    "file": "/media/emotions/cansancio-512w.png",
+    "size": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "bytes": 183319,
+    "sha256": "4119f81fa22adb62364e99a630fb18701b2a2ce2084d649b446f7012607af5cd"
+  }
+]
