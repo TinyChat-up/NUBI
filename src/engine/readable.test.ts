@@ -10,7 +10,7 @@ import { validateStory } from './validate.ts';
 const choice = story.scenes.flatMap((s) => s.steps).find((s): s is ChoiceStep => s.type === 'choice')!;
 const salir = choice.options.find((o) => o.id === 'salir')!;
 /** Consecuencia sintética de prueba (no son textos educativos ni propuestas). */
-const withShort = (short: ChoiceOption['consequence']['short']): ChoiceOption => ({ ...salir, consequence: { ...salir.consequence, short } });
+const withShort = (short: NonNullable<ChoiceOption['consequence']>['short']): ChoiceOption => ({ ...salir, consequence: { ...salir.consequence!, short } });
 
 describe('readableBeat', () => {
   const beat = { text: 'Texto completo de la página.', short: 'Texto corto.' };
@@ -25,14 +25,14 @@ describe('readableBeat', () => {
 describe('readableConsequence', () => {
   it('el piloto aún no tiene versiones cortas de consecuencias: con y sin el ajuste se lee lo mismo', () => {
     for (const o of choice.options) {
-      expect(o.consequence.short).toBeUndefined();
-      expect(readableConsequence(o.consequence, true)).toEqual(readableConsequence(o.consequence, false));
-      expect(readableConsequence(o.consequence, false).story).toEqual(o.consequence.story.map((f) => f.text));
+      expect(o.consequence!.short).toBeUndefined();
+      expect(readableConsequence(o.consequence!, true)).toEqual(readableConsequence(o.consequence!, false));
+      expect(readableConsequence(o.consequence!, false).story).toEqual(o.consequence!.story.map((f) => f.text));
     }
   });
 
   it('usa cada versión corta solo donde existe; el resto sigue completo', () => {
-    const c = withShort({ story: [undefined, 'MOMENTO 2 CORTO'], keepInMind: 'TENER EN CUENTA CORTO' }).consequence;
+    const c = withShort({ story: [undefined, 'MOMENTO 2 CORTO'], keepInMind: 'TENER EN CUENTA CORTO' }).consequence!;
     const r = readableConsequence(c, true);
     expect(r.story).toEqual([c.story[0].text, 'MOMENTO 2 CORTO']);
     expect(r.keepInMind).toBe('TENER EN CUENTA CORTO');
@@ -44,7 +44,7 @@ describe('readableConsequence', () => {
 
 describe('validateStory: versiones cortas', () => {
   const ctx = { assets, tools, characters };
-  const variant = (short: ChoiceOption['consequence']['short']): Story => ({
+  const variant = (short: NonNullable<ChoiceOption['consequence']>['short']): Story => ({
     ...story,
     scenes: story.scenes.map((sc) => ({
       ...sc,

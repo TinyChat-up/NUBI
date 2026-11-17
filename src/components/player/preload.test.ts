@@ -24,7 +24,7 @@ describe('upcomingImages: la precarga anuncia el mismo `sizes` que tendrá cada 
     const images = upcomingImages(story, at(choiceScene.id, index));
     const options = choice.type === 'choice' ? choice.options : [];
     for (const o of options) expect(images.find((i) => i.id === o.illustration)?.sizes).toBe(OPTION_CARD_SIZES);
-    const second = options.map((o) => o.consequence.story[1].illustration);
+    const second = options.map((o) => o.consequence!.story[1].illustration);
     for (const id of second) expect(images.find((i) => i.id === id)?.sizes).toBe(CONSEQUENCE_SIZES);
     expect(new Set(images.map((i) => i.id)).size).toBe(images.length); // sin repetidos
   });

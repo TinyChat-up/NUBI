@@ -28,6 +28,7 @@ import { preload } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
+import { EndingView, OfferView } from './BranchViews.tsx';
 import { splitConsequenceRoutes } from './consequenceRoutes.ts';
 import { momentOf, protagonistName, startsMoment, storyMoments } from './moments.ts';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
@@ -49,6 +50,8 @@ const OPTIONAL_STEPS = new Set(['feelings', 'know-need', 'strategies']);
 interface StoryPlayerProps {
   story: Story;
   format: PlayableFormat;
+  /** A dónde lleva «Salir» (por defecto, la ficha del cuento). */
+  exitTo?: string;
   startSceneId?: string;
   resume?: boolean;
 }
@@ -61,6 +64,8 @@ function speechFor(story: Story, state: RunState, play: PlayStep, settings: Sett
     const parts = [p.caption, ...p.bubbles.map((b) => (b.speaker && b.kind !== 'sound' ? `${characters[b.speaker]?.name}: ${b.text.replace(/·/g, ' ')}` : b.text))];
     return { text: parts.filter(Boolean).join('. ') };
   }
+  if (play.kind === 'offer') return { text: '¿Quieres probar otra forma? Puedes seguir con tu elección o mirar otra.' };
+  if (play.kind === 'ending') return { text: `Un final del cuento: ${play.scene.ending?.title ?? ''}. Hay otros caminos.` };
   const s = play.step;
   switch (s.type) {
     case 'feelings':
@@ -72,7 +77,7 @@ function speechFor(story: Story, state: RunState, play: PlayStep, settings: Sett
     case 'consequence': {
       const choice = getChoiceStep(story, s.choiceStepId);
       const option = choice?.options.find((o) => o.id === state.choices[s.choiceStepId]);
-      return { text: option ? `${option.label}. ${readableConsequence(option.consequence, settings.shortText).story.join(' ')}` : '' };
+      return { text: option?.consequence ? `${option.label}. ${readableConsequence(option.consequence, settings.shortText).story.join(' ')}` : '' };
     }
     case 'strategies':
       return { text: `${s.prompt} ${s.help ?? ''}` };
@@ -81,7 +86,7 @@ function speechFor(story: Story, state: RunState, play: PlayStep, settings: Sett
   }
 }
 
-export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayerProps) {
+export function StoryPlayer({ story, format, startSceneId, resume, exitTo }: StoryPlayerProps) {
   const { settings } = useSettings();
   const { recordRun, saveRun, loadRun, clearRun } = useProgress();
   const narration = useNarration();
@@ -90,7 +95,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     (s: RunState, a: RunAction) => runReducer(story, s, a),
     undefined,
     () => {
-      const loaded = resume ? loadRun(story.id, format) : null;
+      const loaded = resume ? loadRun(story.id, format, story) : null;
       // Una partida guardada con una escena que ya no existe (contenido editado) se descarta.
       const saved = restoreRun(story, format, loaded);
       return saved ?? createRun(story, format, startSceneId);
@@ -117,6 +122,12 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   const moments = useMemo(() => storyMoments(story, protagonist), [story, protagonist]);
   const moment = momentOf(moments, scene.id);
   const momentStart = startsMoment(moments, scene.id);
+  // Fase 21: en una historia ramificada, el índice muestra solo el camino recorrido.
+  const branching = story.engineVersion === 2;
+  const pathMoments = useMemo(() => {
+    const onPath = new Set([...state.history.map((p) => p.sceneId), state.position.sceneId]);
+    return moments.map((m) => ({ ...m, scenes: m.scenes.filter((sc) => onPath.has(sc.id)) })).filter((m) => m.scenes.length);
+  }, [moments, state.history, state.position.sceneId]);
   const atEnd = isAtEnd(story, state);
   const speech = useMemo(() => speechFor(story, state, play, settings), [story, state, play, settings]);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -189,7 +200,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
 
   const exit = () => {
     narration.stop();
-    navigate(`/historias/${story.id}`);
+    navigate(exitTo ?? `/historias/${story.id}`);
   };
 
   const restart = () => {
@@ -232,6 +243,10 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     );
   } else if (play.kind === 'panel') {
     stage = <ComicView panels={play.panels} index={play.index} pausedMotion={motionPaused} onReveal={next} />;
+  } else if (play.kind === 'offer') {
+    stage = <OfferView story={story} state={state} dispatch={dispatch} onContinue={next} onBack={prev} onExit={exit} />;
+  } else if (play.kind === 'ending') {
+    stage = <EndingView story={story} state={state} dispatch={dispatch} scene={play.scene} onRestart={restart} />;
   } else {
     const s = play.step;
     const context = contextIllustration(story, state);
@@ -252,7 +267,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         const { retry, onward } = splitConsequenceRoutes(s);
         const go = (r: Route) => dispatch({ type: 'goto', sceneId: r.to.sceneId, stepId: r.to.stepId });
         stage =
-          option && choice ? (
+          option?.consequence && choice ? (
             <div>
               {retry && (
                 <div className="mb-5">
@@ -308,7 +323,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     );
   }
   const swipe = useSwipe({
-    enabled: play.kind !== 'interactive',
+    enabled: play.kind === 'beat' || play.kind === 'panel',
     onNext: () => advanceAllowed && !atEnd && next(),
     onPrev: () => canGoBack && prev(),
   });
@@ -424,11 +439,14 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         story={story}
-        moments={moments}
+        moments={branching ? pathMoments : moments}
         currentSceneId={state.position.sceneId}
         visited={state.visitedScenes}
         onSelect={(sceneId) => {
-          dispatch({ type: 'goto', sceneId });
+          // Ramificada: solo se vuelve a escenas del camino recorrido (rebobinando), para no mezclar caminos.
+          if (!branching) dispatch({ type: 'goto', sceneId });
+          else if (sceneId === state.position.sceneId) dispatch({ type: 'restartScene' });
+          else dispatch({ type: 'rewind', sceneId });
           setMenuOpen(false);
         }}
         onRestart={() => {

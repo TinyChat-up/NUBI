@@ -38,6 +38,7 @@ for (const story of storyList) {
       }
       if (step.type === 'choice')
         for (const o of step.options) {
+          if (!o.consequence) continue; // opción ramificada: su consecuencia son escenas
           o.consequence.story.forEach((f, i) => check(`${story.id}/${o.id}/momento-${i + 1}`, f.text));
           for (const k of ['youMayFeel', 'othersMay', 'helpsWhen', 'keepInMind', 'anotherWay'] as const) {
             const v = o.consequence[k];

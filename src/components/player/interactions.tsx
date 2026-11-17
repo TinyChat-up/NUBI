@@ -147,7 +147,7 @@ export function ChoiceGrid({
         Dos columnas desde el móvil (una con poco ancho o letra muy grande), tres en tableta horizontal.
         Todas iguales y en el orden del cuento: ninguna se destaca como preferible.
       */}
-      <ul className="choice-cards grid gap-3 sm:gap-4">
+      <ul className={`choice-cards grid gap-3 sm:gap-4 ${step.options.length <= 2 ? 'choice-cards-pair' : ''}`}>
         {step.options.map((o) => {
           const seen = explored.includes(o.id);
           return (
@@ -194,6 +194,7 @@ export function ChoiceView({ step, state, dispatch }: Ctx & { step: ChoiceStep }
 /** `short`: Ajustes → «Textos cortos». Solo cambia lo que tenga versión corta escrita (readableConsequence). */
 export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: { option: ChoiceOption; protagonist?: string; short?: boolean }) {
   const c = option.consequence;
+  if (!c) return null; // opción ramificada (fase 21): su consecuencia se cuenta en escenas
   const text = readableConsequence(c, short);
   const reflections = [
     { icon: 'heart', title: 'Cómo te puedes sentir', text: text.youMayFeel },

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useEffect } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { AppShell } from './components/AppShell.tsx';
 import { GuideArt } from './components/illustration/GuideArt.tsx';
 import { LinkButton, Page } from './components/ui.tsx';
@@ -92,7 +92,25 @@ const routes: Route[] = [
     },
   },
   { pattern: '/familias', title: 'NUBI ha cambiado', render: () => <FamilyMoved /> },
+
+  // Solo desarrollo (fase 21): historia técnica ramificada para pruebas. No existe en producción.
+  ...(import.meta.env.DEV
+    ? [
+        { pattern: '/dev/historia-ramificada/cuento', title: 'Prueba técnica', chrome: false, render: () => <DevStory format="cuento" /> },
+        { pattern: '/dev/historia-ramificada/comic', title: 'Prueba técnica', chrome: false, render: () => <DevStory format="comic" /> },
+      ]
+    : []),
 ];
+
+// Importación diferida y solo en desarrollo: la historia técnica no entra en el paquete de producción.
+const DevBranchingScreen = import.meta.env.DEV ? lazy(() => import('./screens/DevBranchingScreen.tsx').then((m) => ({ default: m.DevBranchingScreen }))) : null;
+function DevStory({ format }: { format: 'cuento' | 'comic' }) {
+  return DevBranchingScreen ? (
+    <Suspense fallback={null}>
+      <DevBranchingScreen format={format} />
+    </Suspense>
+  ) : null;
+}
 
 function NotFound() {
   return (

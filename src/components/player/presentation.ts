@@ -26,13 +26,16 @@ function imagesOf(story: Story, play: PlayStep): UpcomingImage[] {
       const s = play.step;
       // Primero las tarjetas de opción; después los momentos de cada consecuencia, con el `sizes` de cada sitio.
       if (s.type === 'choice')
-        return [...s.options.map((o) => o.illustration).map(shownAs(OPTION_CARD_SIZES)), ...s.options.flatMap((o) => o.consequence.story.map((f) => f.illustration)).map(shownAs(CONSEQUENCE_SIZES))];
+        return [...s.options.map((o) => o.illustration).map(shownAs(OPTION_CARD_SIZES)), ...s.options.flatMap((o) => o.consequence?.story.map((f) => f.illustration) ?? []).map(shownAs(CONSEQUENCE_SIZES))];
       if (s.type === 'consequence') {
         const choice = getChoiceStep(story, s.choiceStepId);
-        return choice ? choice.options.flatMap((o) => o.consequence.story.map((f) => f.illustration)).map(shownAs(CONSEQUENCE_SIZES)) : [];
+        return choice ? choice.options.flatMap((o) => o.consequence?.story.map((f) => f.illustration) ?? []).map(shownAs(CONSEQUENCE_SIZES)) : [];
       }
       return [];
     }
+    case 'offer':
+    case 'ending':
+      return [];
   }
 }
 

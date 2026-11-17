@@ -70,9 +70,15 @@ export function validateStory(story: Story, ctx: ValidationContext): string[] {
           break;
         case 'choice': {
           if (!sceneIds.has(step.next)) err(`${where}: next apunta a una escena inexistente`);
-          if (step.options.length < 3) err(`${where}: una decisión debe ofrecer al menos 3 posibilidades`);
+          // Modelo de escena común (v1): al menos 3. Ramificado (v2): al menos 2; más de 2 es solo un aviso (branchWarnings).
+          if (step.options.length < (story.engineVersion === 2 ? 2 : 3)) err(`${where}: una decisión debe ofrecer al menos ${story.engineVersion === 2 ? 2 : 3} posibilidades`);
           for (const option of step.options) {
             checkAsset(option.illustration, `${where}/${option.id}`);
+            if (option.next && !sceneIds.has(option.next)) err(`${where}/${option.id}.next apunta a una escena inexistente`);
+            if (!option.consequence) {
+              if (!option.next) err(`${where}/${option.id}: sin consecuencia ni escena propia (next)`);
+              continue;
+            }
             option.consequence.story.forEach((s) => checkAsset(s.illustration, `${where}/${option.id}`));
             option.consequence.tools.forEach((t) => checkTool(t, `${where}/${option.id}`));
             // Lectura fácil: textos editoriales explícitos; nunca vacíos ni de momentos que no existen.
@@ -123,8 +129,71 @@ export function validateStory(story: Story, ctx: ValidationContext): string[] {
     });
   }
 
-  const last = story.scenes[story.scenes.length - 1];
-  if (last && !last.steps.some((s) => s.type === 'summary')) err('La última escena debe cerrar con un resumen');
+  if (story.engineVersion === 2) {
+    errors.push(...branchErrors(story).map((m) => `[${story.id}] ${m}`));
+  } else {
+    const last = story.scenes[story.scenes.length - 1];
+    if (last && !last.steps.some((s) => s.type === 'summary')) err('La última escena debe cerrar con un resumen');
+  }
 
   return errors;
+}
+
+/** Escenas a las que se puede ir desde `scene` (sin contar las rutas «probar otra» de una consecuencia). */
+export function sceneEdges(story: Story, sceneId: string): string[] {
+  const scene = story.scenes.find((s) => s.id === sceneId);
+  if (!scene) return [];
+  const out = new Set<string>();
+  for (const step of scene.steps) if (step.type === 'choice') step.options.forEach((o) => out.add(o.next ?? step.next));
+  if (scene.next) out.add(scene.next);
+  return [...out];
+}
+
+/**
+ * Historias ramificadas (fase 21): todas las escenas alcanzables, cada camino termina en un final,
+ * sin ciclos accidentales y sin escenas que «caigan» por el orden del array.
+ */
+export function branchErrors(story: Story): string[] {
+  const errors: string[] = [];
+  const ids = new Set(story.scenes.map((s) => s.id));
+  for (const scene of story.scenes) {
+    const edges = sceneEdges(story, scene.id).filter((e) => ids.has(e));
+    if (scene.ending && edges.length) errors.push(`El final ${scene.id} no puede continuar (tiene next o una decisión)`);
+    if (!scene.ending && edges.length === 0) errors.push(`La escena ${scene.id} no continúa: añade next, una decisión o ending`);
+  }
+  if (!story.scenes.some((s) => s.ending)) errors.push('Una historia ramificada necesita al menos un final (ending)');
+  const endings = story.scenes.flatMap((s) => (s.ending ? [s.ending.id] : []));
+  if (new Set(endings).size !== endings.length) errors.push('Hay finales con el mismo id');
+  // Alcanzables desde la primera escena.
+  const seen = new Set<string>();
+  const stack = story.scenes[0] ? [story.scenes[0].id] : [];
+  while (stack.length) {
+    const id = stack.pop()!;
+    if (seen.has(id) || !ids.has(id)) continue;
+    seen.add(id);
+    stack.push(...sceneEdges(story, id));
+  }
+  for (const s of story.scenes) if (!seen.has(s.id)) errors.push(`La escena ${s.id} no es alcanzable desde el principio`);
+  // Sin ciclos (búsqueda en profundidad con colores).
+  const state = new Map<string, 'abierta' | 'cerrada'>();
+  const visit = (id: string, trail: string[]): void => {
+    if (state.get(id) === 'cerrada' || !ids.has(id)) return;
+    if (state.get(id) === 'abierta') {
+      errors.push(`Ciclo accidental: ${[...trail.slice(trail.indexOf(id)), id].join(' → ')}`);
+      return;
+    }
+    state.set(id, 'abierta');
+    for (const e of sceneEdges(story, id)) visit(e, [...trail, id]);
+    state.set(id, 'cerrada');
+  };
+  if (story.scenes[0]) visit(story.scenes[0].id, []);
+  return errors;
+}
+
+/** Avisos de diseño (no impiden publicar): más de dos opciones en una decisión ramificada. */
+export function branchWarnings(story: Story): string[] {
+  if (story.engineVersion !== 2) return [];
+  return story.scenes.flatMap((sc) =>
+    sc.steps.flatMap((st) => (st.type === 'choice' && st.options.length > 2 ? [`[${story.id}] ${sc.id}/${st.id}: ${st.options.length} opciones (se recomiendan 2)`] : [])),
+  );
 }

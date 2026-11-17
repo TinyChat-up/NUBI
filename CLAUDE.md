@@ -16,6 +16,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Cuentos visuales y voz (fase 20):** [docs/product/PHASE_20_VISUAL_REPORT.md](docs/product/PHASE_20_VISUAL_REPORT.md), en la rama `feat/codex-nubi-visual-v1` (sobre la fase 19, pendiente de revisión): carrusel de cuentos, decisiones en tarjetas ilustradas, voz elegible (`src/lib/voices.ts`), índice en la guía. Plan de historias ramificadas (sin implementar): [PHASE_21_BRANCHING_PLAN.md](docs/product/PHASE_21_BRANCHING_PLAN.md). URL de Instagram vacía a propósito en `src/content/community.ts`.
 >
+> **Motor de historias ramificadas (fase 21):** [docs/product/PHASE_21_BRANCHING_REPORT.md](docs/product/PHASE_21_BRANCHING_REPORT.md), en `feat/claude-nubi-branching-v1`. Campos opcionales `option.next`, `scene.ending/offer/role`, `engineVersion: 2`; acción `rewind`. Historia técnica de prueba (NO es contenido) en `src/content/stories/__dev__/`, solo en la ruta de desarrollo `/dev/historia-ramificada/{cuento,comic}`; prueba `tests/browser/branching.mjs`.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos

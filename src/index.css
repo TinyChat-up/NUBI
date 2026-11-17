@@ -418,6 +418,8 @@ html[data-contrast='high'] :is(.story-slide,.carousel-arrow) { border-color: var
 .choice-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 1024px) { .choice-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 359px) { .choice-cards { grid-template-columns: minmax(0, 1fr); } }
+/* Fase 21: dos opciones (historias ramificadas) se ven como pareja, también en tableta horizontal. */
+@media (min-width: 1024px) { .choice-cards-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 56rem; } }
 @media (max-width: 479px) { html[data-text-size='xl'] .choice-cards { grid-template-columns: minmax(0, 1fr); } }
 .optional-chip { max-width: 100%; }
 .support-card { border: 2px solid var(--color-crema-300); border-radius: 1.5rem; background: var(--color-crema-50); }

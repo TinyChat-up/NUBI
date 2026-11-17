@@ -242,7 +242,13 @@ export interface ChoiceOption {
   label: string;
   icon: string;
   illustration: AssetId;
-  consequence: Consequence;
+  /**
+   * Consecuencia contada dentro del paso `consequence` (modelo de la fase 19: varias opciones, una escena común).
+   * Obligatoria si la opción no tiene `next`; opcional en historias ramificadas, donde la consecuencia son escenas.
+   */
+  consequence?: Consequence;
+  /** Fase 21: escena a la que lleva ESTA opción (rama propia). Si falta, se usa `ChoiceStep.next`. */
+  next?: SceneId;
 }
 
 /** Varias posibilidades de actuación. Ninguna es "la correcta". */
@@ -330,8 +336,17 @@ export interface Scene {
   steps: Step[];
   /** Página de cómic. En formato cómic sustituye a los pasos `beat`. */
   comic?: ComicPanel[];
-  /** Escena siguiente. Si falta, se usa el orden del array. */
+  /** Escena siguiente. Si falta, se usa el orden del array (salvo en finales: ver `ending`). */
   next?: SceneId;
+  /** Fase 21: papel narrativo (momentos del lector). Si falta, se deduce de la posición respecto a la decisión. */
+  role?: 'situacion' | 'decision' | 'consecuencia' | 'final';
+  /** Fase 21: la escena es un final. Tras su último paso el cuento termina (no sigue el orden del array). */
+  ending?: { id: string; title: string };
+  /**
+   * Fase 21: al terminar esta escena, Nubi pregunta «¿Quieres probar otra forma?» y muestra las demás
+   * opciones de la última decisión. Nunca obliga: se puede seguir, volver atrás o terminar.
+   */
+  offer?: boolean;
 }
 
 export interface VideoSpec {
@@ -406,6 +421,8 @@ export interface Story {
     status: 'borrador' | 'pendiente-validacion' | 'validado';
     notes: string;
   };
+  /** Fase 21: 1 = una decisión con escena común (por defecto). 2 = ramificada (`option.next`, finales). */
+  engineVersion?: 1 | 2;
 }
 
 // ───────────────────────── Bibliotecas ─────────────────────────

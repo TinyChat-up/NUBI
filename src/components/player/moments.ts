@@ -36,8 +36,13 @@ export function storyMoments(story: Story, protagonist: string): Moment[] {
     despues: 'Qué podría pasar',
   };
   const groups: Record<MomentId, Scene[]> = { pasa: [], decide: [], despues: [] };
+  // Fase 21: si la historia declara el papel de sus escenas (ramificadas), manda el papel, no la posición.
+  const byRole: Record<NonNullable<Scene['role']>, MomentId> = { situacion: 'pasa', decision: 'decide', consecuencia: 'despues', final: 'despues' };
+  const declared = story.scenes.some((sc) => sc.role);
   story.scenes.forEach((scene, i) => {
-    const id: MomentId = first < 0 || i < first ? 'pasa' : i === first ? 'decide' : 'despues';
+    const id: MomentId = declared
+      ? byRole[scene.role ?? (hasChoice(scene) ? 'decision' : 'consecuencia')]
+      : first < 0 || i < first ? 'pasa' : i === first ? 'decide' : 'despues';
     groups[id].push(scene);
   });
   return (['pasa', 'decide', 'despues'] as const)

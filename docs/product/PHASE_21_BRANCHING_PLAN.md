@@ -1,6 +1,6 @@
 # Plan técnico · Historias ramificadas (fase 21)
 
-Estado: **propuesta**, sin implementar. No se ha creado ninguna escena, emoción ni desenlace nuevo. «Una mañana diferente» sigue igual.
+Estado: **motor implementado en la fase 21** (ver [PHASE_21_BRANCHING_REPORT.md](PHASE_21_BRANCHING_REPORT.md), §1: `revisit` pasó a ser `rewind`; la oferta y el final son pasos generados). No se ha creado ninguna escena, emoción ni desenlace nuevo para el piloto. «Una mañana diferente» sigue igual.
 
 ## 1. Objetivo
 

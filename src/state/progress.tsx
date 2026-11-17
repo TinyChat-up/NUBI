@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import { restoreRun } from '../engine/restoreRun.ts';
 import { getStory } from '../content/stories/index.ts';
 import type { RunState } from '../engine/storyEngine.ts';
-import type { ToolId } from '../engine/types.ts';
+import type { Story, ToolId } from '../engine/types.ts';
 import { clearAll, readJSON, removeKey, writeJSON } from '../lib/storage.ts';
 
 /**
@@ -37,7 +37,8 @@ interface ProgressContextValue {
   markToolPracticed: (id: ToolId, practiced: boolean) => void;
   recordRecreation: (id: string, optionIds: string[]) => void;
   saveRun: (run: RunState) => void;
-  loadRun: (storyId: string, format: RunState['format']) => RunState | null;
+  /** `story`: para historias que no están en la biblioteca (historia técnica de prueba, solo desarrollo). */
+  loadRun: (storyId: string, format: RunState['format'], story?: Story) => RunState | null;
   clearRun: (storyId: string, format: RunState['format']) => void;
   resetAll: () => void;
 }
@@ -90,9 +91,9 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
           recreations: { ...p.recreations, [id]: Array.from(new Set([...(p.recreations[id] ?? []), ...optionIds])) },
         })),
       saveRun: (run: RunState) => writeJSON(runKey(run.storyId, run.format), run),
-      loadRun: (storyId: string, format: RunState['format']) => {
+      loadRun: (storyId: string, format: RunState['format'], given?: Story) => {
         const run = readJSON<RunState | null>(runKey(storyId, format), null);
-        const story = getStory(storyId);
+        const story = given ?? getStory(storyId);
         return story ? restoreRun(story, format, run) : null;
       },
       clearRun: (storyId: string, format: RunState['format']) => removeKey(runKey(storyId, format)),

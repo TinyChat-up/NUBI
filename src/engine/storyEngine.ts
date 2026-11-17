@@ -23,7 +23,18 @@ export type PlayableFormat = Exclude<FormatId, 'video'>;
 export type PlayStep =
   | { kind: 'beat'; step: BeatStep }
   | { kind: 'panel'; panels: ComicPanel[]; index: number }
-  | { kind: 'interactive'; step: InteractiveStep };
+  | { kind: 'interactive'; step: InteractiveStep }
+  /** Fase 21 (pasos generados, no contenido): Nubi ofrece probar otra forma al terminar una escena con `offer`. */
+  | { kind: 'offer'; scene: Scene }
+  /** Fase 21: cierre de una escena final (`ending`): otro camino, leer otra vez o salir. */
+  | { kind: 'ending'; scene: Scene };
+
+/** Una decisión tomada en el camino actual. `at`: índice de la decisión en `history` cuando se tomó. */
+export interface PathEntry {
+  choiceStepId: StepId;
+  optionId: string;
+  at: number;
+}
 
 export interface Position {
   sceneId: SceneId;
@@ -44,12 +55,24 @@ export interface RunState {
   explored: Record<StepId, string[]>;
   visitedScenes: SceneId[];
   completed: boolean;
+  /**
+   * Fase 21: decisiones del camino actual, en orden. Atrás y «volver a una decisión» lo recortan, para que
+   * nunca se mezclen dos caminos. Opcional en partidas antiguas (restoreRun lo completa con []).
+   */
+  path?: PathEntry[];
+  /** Fase 21: finales descubiertos alguna vez en esta partida (no se borran al explorar otro camino). */
+  endingsSeen?: string[];
 }
 
 export type RunAction =
   | { type: 'next' }
   | { type: 'prev' }
   | { type: 'goto'; sceneId: SceneId; stepId?: StepId }
+  /**
+   * Fase 21: volver a un punto YA RECORRIDO del camino (una decisión o una escena) deshaciendo lo que vino
+   * después: recorta `history` y `path`. Conserva respuestas, lo explorado y los finales descubiertos.
+   */
+  | { type: 'rewind'; sceneId: SceneId; stepId?: StepId }
   | { type: 'restartScene' }
   | { type: 'respond'; stepId: StepId; values: string[] }
   | { type: 'choose'; stepId: StepId; optionId: string }
@@ -85,14 +108,23 @@ export function getPlaySteps(scene: Scene, format: PlayableFormat): PlayStep[] {
     const panels = scene.comic;
     const panelSteps: PlayStep[] = panels.map((_, index) => ({ kind: 'panel', panels, index }));
     const interactive = scene.steps.filter((s) => s.type !== 'beat').map(asPlay);
-    return [...panelSteps, ...interactive];
+    return [...panelSteps, ...interactive, ...generated(scene)];
   }
-  return scene.steps.map(asPlay);
+  return [...scene.steps.map(asPlay), ...generated(scene)];
+}
+
+/** Pasos que añade el motor (no el contenido): oferta de Nubi y cierre de un final. */
+function generated(scene: Scene): PlayStep[] {
+  const extra: PlayStep[] = [];
+  if (scene.offer) extra.push({ kind: 'offer', scene });
+  if (scene.ending) extra.push({ kind: 'ending', scene });
+  return extra;
 }
 
 export function nextSceneId(story: Story, sceneId: SceneId): SceneId | undefined {
   const scene = getScene(story, sceneId);
   if (scene.next) return scene.next;
+  if (scene.ending) return undefined; // un final no continúa por el orden del array
   const index = story.scenes.findIndex((s) => s.id === sceneId);
   return story.scenes[index + 1]?.id;
 }
@@ -109,6 +141,7 @@ export function canAdvance(story: Story, state: RunState): boolean {
     return Boolean(state.choices[play.step.id]);
   }
   if (play.kind === 'interactive' && play.step.type === 'summary') return false;
+  if (play.kind === 'ending') return false;
   return true;
 }
 
@@ -131,10 +164,14 @@ export function createRun(story: Story, format: PlayableFormat, startSceneId?: S
     explored: {},
     visitedScenes: [sceneId],
     completed: false,
+    path: [],
+    endingsSeen: [],
   };
 }
 
-function moveTo(state: RunState, position: Position, pushHistory = true): RunState {
+function moveTo(state: RunState, position: Position, pushHistory = true, story?: Story): RunState {
+  const ending = story?.scenes.find((s) => s.id === position.sceneId)?.ending;
+  const seen = state.endingsSeen ?? [];
   return {
     ...state,
     position,
@@ -142,13 +179,14 @@ function moveTo(state: RunState, position: Position, pushHistory = true): RunSta
     visitedScenes: state.visitedScenes.includes(position.sceneId)
       ? state.visitedScenes
       : [...state.visitedScenes, position.sceneId],
+    ...(ending && !seen.includes(ending.id) ? { endingsSeen: [...seen, ending.id] } : {}),
   };
 }
 
 function stepIndexById(story: Story, state: RunState, sceneId: SceneId, stepId?: StepId): number {
   if (!stepId) return 0;
   const steps = getPlaySteps(getScene(story, sceneId), state.format);
-  const index = steps.findIndex((p) => p.kind !== 'panel' && p.step.id === stepId);
+  const index = steps.findIndex((p) => (p.kind === 'beat' || p.kind === 'interactive') && p.step.id === stepId);
   return index < 0 ? 0 : index;
 }
 
@@ -164,28 +202,45 @@ export function runReducer(story: Story, state: RunState, action: RunAction): Ru
       const steps = getPlaySteps(scene, state.format);
       const play = steps[state.position.stepIndex];
 
-      // Una decisión lleva a su escena de consecuencias.
+      // Una decisión lleva a la escena de su opción (rama, fase 21) o a la escena común de consecuencias.
       if (play?.kind === 'interactive' && play.step.type === 'choice') {
-        return moveTo(state, { sceneId: play.step.next, stepIndex: 0 });
+        const optionId = state.choices[play.step.id];
+        const option = play.step.options.find((o) => o.id === optionId);
+        const path = [...(state.path ?? []), { choiceStepId: play.step.id, optionId, at: state.history.length }];
+        return { ...moveTo(state, { sceneId: option?.next ?? play.step.next, stepIndex: 0 }, true, story), path };
       }
       if (state.position.stepIndex < steps.length - 1) {
-        return moveTo(state, { sceneId: scene.id, stepIndex: state.position.stepIndex + 1 });
+        const moved = moveTo(state, { sceneId: scene.id, stepIndex: state.position.stepIndex + 1 }, true, story);
+        // Llegar al cierre de un final termina el cuento (sigue pudiendo explorarse otro camino).
+        return steps[state.position.stepIndex + 1]?.kind === 'ending' ? { ...moved, completed: true } : moved;
       }
       const nextId = nextSceneId(story, scene.id);
       if (!nextId) return { ...state, completed: true };
-      return moveTo(state, { sceneId: nextId, stepIndex: 0 });
+      return moveTo(state, { sceneId: nextId, stepIndex: 0 }, true, story);
     }
 
     case 'prev': {
       const previous = state.history[state.history.length - 1];
       if (!previous) return state;
-      return { ...state, position: previous, history: state.history.slice(0, -1) };
+      const history = state.history.slice(0, -1);
+      // Deshacer también las decisiones tomadas en el tramo que se abandona.
+      return { ...state, position: previous, history, path: (state.path ?? []).filter((e) => e.at < history.length) };
+    }
+
+    case 'rewind': {
+      getScene(story, action.sceneId); // valida
+      const stepIndex = stepIndexById(story, state, action.sceneId, action.stepId);
+      const at = (p: Position) => p.sceneId === action.sceneId && p.stepIndex === stepIndex;
+      let i = -1;
+      for (let k = state.history.length - 1; k >= 0; k--) if (at(state.history[k])) { i = k; break; }
+      if (i < 0) return state; // solo se vuelve a puntos del camino recorrido
+      return { ...state, position: state.history[i], history: state.history.slice(0, i), path: (state.path ?? []).filter((e) => e.at < i) };
     }
 
     case 'goto': {
       getScene(story, action.sceneId); // valida
       const stepIndex = stepIndexById(story, state, action.sceneId, action.stepId);
-      return moveTo(state, { sceneId: action.sceneId, stepIndex });
+      return moveTo(state, { sceneId: action.sceneId, stepIndex }, true, story);
     }
 
     case 'restartScene':
@@ -215,6 +270,7 @@ export function runReducer(story: Story, state: RunState, action: RunAction): Ru
 /** La historia se considera terminada al llegar al paso de resumen de la última escena. */
 export function isAtEnd(story: Story, state: RunState): boolean {
   const play = currentPlayStep(story, state);
+  if (play.kind === 'ending') return true;
   return (
     isLastScene(story, state.position.sceneId) &&
     play.kind === 'interactive' &&

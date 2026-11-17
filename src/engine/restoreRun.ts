@@ -20,5 +20,11 @@ export function restoreRun(story: Story, format: PlayableFormat, value: unknown)
   if (!record(value.explored) || !Object.values(value.explored).every(strings)) return null;
   if (!record(value.choices) || !Object.entries(value.choices).every(([id, option]) =>
     story.scenes.some((s) => s.steps.some((step) => step.type === 'choice' && step.id === id && step.options.some((o) => o.id === option))))) return null;
-  return value as unknown as RunState;
+  // Fase 21: campos nuevos opcionales. Una partida anterior se reanuda igual, con camino y finales vacíos.
+  const ints = (x: unknown) => Number.isInteger(x) && (x as number) >= 0;
+  const path = value.path ?? [];
+  if (!Array.isArray(path) || !path.every((e) => record(e) && typeof e.choiceStepId === 'string' && typeof e.optionId === 'string' && ints(e.at))) return null;
+  const endingsSeen = value.endingsSeen ?? [];
+  if (!strings(endingsSeen)) return null;
+  return { ...(value as unknown as RunState), path: path as RunState['path'], endingsSeen };
 }
