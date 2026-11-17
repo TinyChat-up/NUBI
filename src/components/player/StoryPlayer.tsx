@@ -236,11 +236,14 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         stage =
           option && choice ? (
             <div>
+              <div className="mb-5">
+                <Button variant="secondary" icon={s.routes[0].icon} onClick={() => dispatch({ type: 'goto', sceneId: s.routes[0].to.sceneId, stepId: s.routes[0].to.stepId })}>{s.routes[0].label}</Button>
+              </div>
               <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} short={settings.shortText} />
               <div className="mt-6 flex flex-col gap-4 rounded-[var(--radius-card)] bg-crema-200/70 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <ExploredMeter total={choice.options.length} explored={(state.explored[choice.id] ?? []).length} />
                 <div className="flex flex-wrap gap-3">
-                  {s.routes.map((r, i) => (
+                  {s.routes.slice(1).map((r, i) => (
                     <Button key={r.label} variant={i === 0 ? 'secondary' : 'primary'} icon={i === 0 ? r.icon : undefined} iconAfter={i === 0 ? undefined : r.icon} onClick={() => dispatch({ type: 'goto', sceneId: r.to.sceneId, stepId: r.to.stepId })}>
                       {r.label}
                     </Button>
@@ -276,7 +279,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   });
 
   return (
-    <div className={`flex ${tight ? 'min-h-dvh' : 'h-dvh'} flex-col bg-crema-100 ${motionPaused ? 'anim-paused' : ''}`} data-tight={tight || undefined}>
+    <div className={`reader flex ${tight ? 'min-h-dvh' : 'h-dvh'} flex-col bg-crema-100 ${motionPaused ? 'anim-paused' : ''}`} data-tight={tight || undefined}>
       {/* Barra superior */}
       <header ref={headerRef} className="flex items-center gap-2 border-b border-crema-300/70 bg-crema-50/90 px-3 py-2 sm:gap-4 sm:px-6">
         <button type="button" onClick={exit} className="tap flex min-h-12 items-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100">
@@ -300,7 +303,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         </div>
         <button type="button" onClick={() => setMenuOpen(true)} className="tap flex min-h-12 items-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100">
           <Icon name="map" size={24} />
-          <span className="hidden sm:inline">Escenas</span>
+          <span className="reader-scenes-label hidden sm:inline">Escenas</span>
           <span className="sr-only sm:hidden">Escenas</span>
         </button>
       </header>
@@ -316,7 +319,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </p>
 
       {/* Controles */}
-      <footer ref={footerRef} className="safe-bottom border-t border-crema-300/70 bg-crema-50/95 px-2 pt-2 sm:px-6">
+      <footer ref={footerRef} className="reader-controls safe-bottom border-t border-crema-300/70 bg-crema-50/95 px-2 pt-2 sm:px-6">
         {(voiceNotice || narration.error) && mode === 'escuchar' && (
           <p className="mb-2 rounded-2xl bg-mostaza-100 px-4 py-2 text-center text-sm font-bold text-mostaza-700" role="status">
             Este episodio aún no tiene audio grabado y la voz del dispositivo no está disponible. Puedes leer el texto o activarla en Ajustes.
@@ -327,7 +330,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
             Atrás
           </Button>
 
-          <div className="order-first flex w-full items-start justify-around sm:order-none sm:w-auto sm:justify-center sm:gap-2" role="group" aria-label="Opciones del reproductor">
+          <div className="reader-options order-first flex w-full items-start justify-around sm:order-none sm:w-auto sm:justify-center sm:gap-2" role="group" aria-label="Opciones del reproductor">
             <ToolButton icon="repeat" label="Repetir" onClick={repeat} aria-label="Repetir la escena" />
             <ToolButton
               icon={mode === 'escuchar' ? 'volume' : 'story'}

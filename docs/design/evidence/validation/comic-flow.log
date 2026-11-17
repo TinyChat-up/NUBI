@@ -1,0 +1,3 @@
+PASS 390×844: 15 viñetas en orden (ratón, → y Tab+Enter), aria-live, Atrás/←, ?continuar=1, movimiento reducido, consola limpia
+PASS 820×1180: 15 viñetas en orden (ratón, → y Tab+Enter), aria-live, Atrás/←, ?continuar=1, movimiento reducido, consola limpia
+PASS 1180×820: 15 viñetas en orden (ratón, → y Tab+Enter), aria-live, Atrás/←, ?continuar=1, movimiento reducido, consola limpia

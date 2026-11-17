@@ -96,7 +96,7 @@ export function ToolButton({ icon, label, pressed, tone = 'light', className = '
 
 export function PageHeader({ title, subtitle, icon, children }: { title: string; subtitle?: string; icon?: string; children?: ReactNode }) {
   return (
-    <header className="mb-6 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+    <header className="page-heading mb-6 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex items-center gap-4">
         {icon && (
           <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-crema-50 text-petroleo-700 shadow-[var(--shadow-soft)]">

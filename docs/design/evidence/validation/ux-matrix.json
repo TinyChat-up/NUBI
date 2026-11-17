@@ -1,0 +1,1573 @@
+{
+  "results": [
+    {
+      "key": "390-m-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-m-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "390-xl-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-m-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "820-xl-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-m-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "1180-xl-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-m-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "320-xl-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-m-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-portada",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-mundo",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-historias",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-historias-una-manana-diferente",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-emociones",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-herramientas",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-herramientas-pedir-ayuda",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "key": "640-xl-ajustes",
+      "overflow": false,
+      "small": [],
+      "h1": 1,
+      "violations": []
+    },
+    {
+      "path": "/",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 160,
+        "height": 160,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": "Nubi, una nube pequeña y amable, saluda."
+      }
+    },
+    {
+      "path": "/",
+      "dpr": 1,
+      "image": {
+        "id": "portada-fondo",
+        "width": 756,
+        "height": 425.25,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/common/portada-fondo-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 88,
+        "height": 88,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-colegio",
+        "width": 410.171875,
+        "height": 307.625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/colegio-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-emociones",
+        "width": 362,
+        "height": 271.5,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/emociones-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-herramientas",
+        "width": 362,
+        "height": 271.5,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/herramientas-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-casa",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/casa-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-parque",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/parque-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 1,
+      "image": {
+        "id": "place-amigos",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/amigos-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-alegria",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/alegria-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-calma",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/calma-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-sorpresa",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/sorpresa-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-curiosidad",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/curiosidad-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-inseguridad",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/inseguridad-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-frustracion",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/frustracion-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-tristeza",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/tristeza-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-enfado",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/enfado-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-cansancio",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/cansancio-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 1,
+      "image": {
+        "id": "emo-sorpresa",
+        "width": 120,
+        "height": 120,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/sorpresa-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-pedir-ayuda",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/pedir-ayuda-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-descansar",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/descansar-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-espacio-tranquilo",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-comunicar-necesidad",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-anticipar-cambios",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/anticipar-cambios-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-expresar-desacuerdo",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 1,
+      "image": {
+        "id": "tool-apoyos-sensoriales",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "ume-cover",
+        "width": 325.796875,
+        "height": 244.34375,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/cover-1200w.webp",
+        "alt": "Teo en la puerta de su clase, donde hay una persona nueva."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "ume-cover",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/cover-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "ume-k1-1",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "ume-k1-2",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-2-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-teo",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/teo-384w.png",
+        "alt": "Teo."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-aya",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/aya-384w.png",
+        "alt": "Aya."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-bruno",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/bruno-384w.png",
+        "alt": "Bruno."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-lia",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/lia-384w.png",
+        "alt": "Lía."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-andres",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/andres-384w.png",
+        "alt": "Andrés."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-pilar",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/pilar-384w.png",
+        "alt": "Pilar."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-rosa",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/rosa-384w.png",
+        "alt": "Rosa."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 1,
+      "image": {
+        "id": "char-nubi",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-384w.png",
+        "alt": "Nubi."
+      }
+    },
+    {
+      "path": "/",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 160,
+        "height": 160,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-512w.png",
+        "alt": "Nubi, una nube pequeña y amable, saluda."
+      }
+    },
+    {
+      "path": "/",
+      "dpr": 2,
+      "image": {
+        "id": "portada-fondo",
+        "width": 756,
+        "height": 425.25,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/common/portada-fondo.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 88,
+        "height": 88,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-colegio",
+        "width": 410.171875,
+        "height": 307.625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/colegio-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-emociones",
+        "width": 362,
+        "height": 271.5,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/emociones-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-herramientas",
+        "width": 362,
+        "height": 271.5,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/herramientas-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-casa",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/casa-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-parque",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/parque-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/mundo",
+      "dpr": 2,
+      "image": {
+        "id": "place-amigos",
+        "width": 232,
+        "height": 174,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/places/amigos-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-alegria",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/alegria-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-calma",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/calma-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-sorpresa",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/sorpresa-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-curiosidad",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/curiosidad-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-inseguridad",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/inseguridad-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-frustracion",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/frustracion-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-tristeza",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/tristeza-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-enfado",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/enfado-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-cansancio",
+        "width": 96,
+        "height": 96,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/cansancio-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/emociones",
+      "dpr": 2,
+      "image": {
+        "id": "emo-sorpresa",
+        "width": 120,
+        "height": 120,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/emotions/sorpresa-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-pedir-ayuda",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/pedir-ayuda-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-descansar",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/descansar-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-espacio-tranquilo",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-comunicar-necesidad",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-anticipar-cambios",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/anticipar-cambios-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-expresar-desacuerdo",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/herramientas",
+      "dpr": 2,
+      "image": {
+        "id": "tool-apoyos-sensoriales",
+        "width": 208,
+        "height": 208,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-512w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "nubi-saludo",
+        "width": 40,
+        "height": 40,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-saludo-256w.png",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "ume-cover",
+        "width": 325.796875,
+        "height": 244.34375,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/cover-1200w.webp",
+        "alt": "Teo en la puerta de su clase, donde hay una persona nueva."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "ume-cover",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/cover-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "ume-k1-1",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-1-1200w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "ume-k1-2",
+        "width": 104.09375,
+        "height": 78.0625,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/stories/una-manana-diferente/comic/k1-2-800w.webp",
+        "alt": ""
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-teo",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/teo-384w.png",
+        "alt": "Teo."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-aya",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/aya-384w.png",
+        "alt": "Aya."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-bruno",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/bruno-384w.png",
+        "alt": "Bruno."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-lia",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/lia-384w.png",
+        "alt": "Lía."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-andres",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/andres-384w.png",
+        "alt": "Andrés."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-pilar",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/pilar-384w.png",
+        "alt": "Pilar."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-rosa",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/rosa-384w.png",
+        "alt": "Rosa."
+      }
+    },
+    {
+      "path": "/historias/una-manana-diferente",
+      "dpr": 2,
+      "image": {
+        "id": "char-nubi",
+        "width": 180,
+        "height": 240,
+        "fit": "contain",
+        "src": "http://127.0.0.1:5173/media/characters/nubi-384w.png",
+        "alt": "Nubi."
+      }
+    }
+  ],
+  "failures": []
+}

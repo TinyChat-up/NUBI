@@ -16,8 +16,8 @@ const toggle = (list: string[], id: string) => (list.includes(id) ? list.filter(
 
 // ───────────────────────── ¿Cómo te sentirías? ─────────────────────────
 
-/** Ilustración de emoción en el selector: llena el hueco de 56 px de ToggleCard (Mis emociones usa 64 px). */
-const FEELING_ART_SIZE = 56;
+/** Ilustración de emoción en el selector: apoyo de 96 px, con nombre y marca de selección. */
+const FEELING_ART_SIZE = 96;
 
 export function FeelingsView({ step, state, dispatch, context }: Ctx & { step: FeelingsStep; context?: string }) {
   const selected = state.responses[step.id] ?? [];
@@ -34,7 +34,7 @@ export function FeelingsView({ step, state, dispatch, context }: Ctx & { step: F
   return (
     <div className="animate-rise">
       <StepHeading title={step.prompt} help={step.help} icon="heart" context={context} />
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="feelings-picker grid grid-cols-2 gap-3 sm:grid-cols-4">
         {step.options.map((o, i) => {
           // Solo el campo tipado `emotion` decide la ilustración (nunca la etiqueta ni la historia).
           // El texto visible sigue siendo el de la opción; la imagen es decorativa.
@@ -150,12 +150,12 @@ export function ChoiceGrid({
               <button
                 type="button"
                 onClick={() => onChoose(o)}
-                className="tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
+                className="choice-path tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
               >
                 <Illustration id={o.illustration} decorative ratio sizes={OPTION_CARD_SIZES} className="w-full" />
                 <span className="flex flex-1 items-center gap-3 p-4">
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
-                    <Icon name={o.icon} size={22} />
+                    <Icon name="arrow-right" size={22} />
                   </span>
                   <span className="reading-text flex-1 text-lg leading-snug font-extrabold">{o.label}</span>
                 </span>
@@ -199,7 +199,7 @@ export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: 
     { icon: 'info', title: 'A tener en cuenta', text: text.keepInMind },
   ];
   return (
-    <div className="animate-rise">
+    <div className="consequence-page animate-rise">
       <p className="mb-1 text-sm font-extrabold tracking-wide text-coral-700 uppercase">Si {protagonist} elige…</p>
       <h2 className="reading-text mb-5 text-2xl text-petroleo-900 sm:text-3xl">{option.label}</h2>
 
@@ -283,7 +283,7 @@ export function StrategiesView({ step, state, dispatch, context }: Ctx & { step:
   return (
     <div className="animate-rise">
       <StepHeading title={step.prompt} help={step.help} icon="backpack" context={context} />
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="strategy-picker grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {step.tools.map((id) => {
           const t = tools[id];
           return (
@@ -294,7 +294,7 @@ export function StrategiesView({ step, state, dispatch, context }: Ctx & { step:
               icon={t.icon}
               // Ilustración definitiva de la herramienta (la del catálogo); si aún no existe, el icono.
               // Decorativa: el nombre y la descripción ya la explican.
-              leading={hasFinalArt(t.illustration) ? <Illustration id={t.illustration} decorative ratio fit="contain" sizes="56px" className="w-full" /> : undefined}
+              leading={hasFinalArt(t.illustration) ? <Illustration id={t.illustration} decorative ratio fit="contain" sizes="96px" className="w-full" /> : undefined}
               label={t.name}
               description={t.childText}
               tone={t.color}

@@ -5,7 +5,7 @@ import { Illustration } from '../Illustration.tsx';
 /**
  * Tarjeta seleccionable grande (selección múltiple, sin "correcto/incorrecto").
  *
- * Al principio va un recurso visual en un hueco fijo de 56 px con fondo tintado:
+ * Al principio va un recurso visual en un hueco ampliable de 56 px con fondo tintado:
  * - `leading`: un elemento propio (p. ej. la ilustración de una emoción), decorativo;
  * - si no hay `leading`, el icono `icon`.
  * El nombre accesible es siempre el texto visible; la selección se indica con borde,
@@ -24,7 +24,7 @@ export function ToggleCard({
   selected: boolean;
   onToggle: () => void;
   icon?: string;
-  /** Recurso visual decorativo que sustituye al icono en el mismo hueco (56 × 56 px). */
+  /** Recurso visual decorativo que sustituye al icono en el mismo hueco adaptable de la tarjeta. */
   leading?: ReactNode;
   label: string;
   description?: string;
@@ -42,7 +42,7 @@ export function ToggleCard({
       type="button"
       aria-pressed={selected}
       onClick={onToggle}
-      className={`tap soft-border relative flex min-h-20 w-full items-center gap-3 rounded-3xl border-[3px] p-3 text-left transition-colors ${
+      className={`tap toggle-card soft-border relative flex min-h-20 w-full items-center gap-3 rounded-3xl border-[3px] p-3 text-left transition-colors ${
         selected ? 'border-petroleo-600 bg-petroleo-50' : 'border-crema-300/80 bg-crema-50 hover:border-petroleo-200'
       }`}
     >
@@ -76,7 +76,7 @@ export function ToggleCard({
 
 export function StepHeading({ title, help, icon = 'sparkle', context }: { title: string; help?: string; icon?: string; context?: string }) {
   return (
-    <div className="mb-6 flex items-center gap-4">
+    <div className="step-heading mb-6 flex items-center gap-4">
       {context ? (
         // Miniatura de la escena (proporción completa, sin recorte) para anclar la pregunta en la historia.
         <Illustration id={context} decorative ratio className="w-28 shrink-0 rounded-2xl shadow-[var(--shadow-soft)] sm:w-44" sizes="176px" />

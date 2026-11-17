@@ -13,15 +13,15 @@ export function ToolsScreen() {
   return (
     <Page>
       <PageHeader title="Mis herramientas" subtitle="Ideas que pueden ayudar. No todas sirven a todo el mundo." icon="backpack" />
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {toolList.map((t, i) => {
+      <ul className="tool-gallery">
+        {toolList.map((t) => {
           const practiced = Boolean(progress.toolsPracticed[t.id]);
           const chosen = progress.toolsChosen.includes(t.id);
           return (
-            <li key={t.id} className="animate-rise" style={{ animationDelay: `${i * 50}ms` }}>
-              <Link to={`/herramientas/${t.id}`} className="tap card flex h-full gap-4 p-4 hover:shadow-[var(--shadow-lift)]">
-                <Illustration id={t.illustration} decorative sizes="96px" className={`size-24 shrink-0 rounded-2xl ${toneBg[t.color]}`} />
-                <span className="flex flex-1 flex-col gap-1">
+            <li key={t.id} >
+              <Link to={`/herramientas/${t.id}`} className="tap tool-entry">
+                <Illustration id={t.illustration} decorative sizes="(min-width: 640px) 208px, 144px" className="tool-art" />
+                <span className="flex min-w-0 flex-1 flex-col gap-2">
                   <span className="text-xl font-black text-petroleo-900">{t.name}</span>
                   <span className="reading-text text-tinta-suave">{t.childText}</span>
                   <span className="mt-1 flex flex-wrap gap-1.5">
@@ -87,8 +87,8 @@ export function ToolDetailScreen({ toolId }: { toolId: string }) {
         </LinkButton>
       </div>
 
-      <section className={`grid gap-6 overflow-hidden rounded-[var(--radius-card)] p-6 sm:grid-cols-[auto_1fr] sm:items-center sm:p-8 ${toneBg[tool.color]}`}>
-        <Illustration id={tool.illustration} priority sizes="208px" className="mx-auto size-44 rounded-[2rem] bg-crema-50 sm:size-52" />
+      <section className={`tool-detail-opening grid gap-6 overflow-hidden rounded-[var(--radius-card)] p-6 sm:grid-cols-[auto_1fr] sm:items-center sm:p-8 ${toneBg[tool.color]}`}>
+        <Illustration id={tool.illustration} priority sizes="(min-width: 640px) 288px, 208px" className="tool-detail-art mx-auto size-52 sm:size-72" />
         <div>
           <h1 className={`text-4xl sm:text-5xl ${toneText[tool.color]}`}>{tool.name}</h1>
           <p className="reading-text mt-3 text-xl font-bold">{tool.childText}</p>

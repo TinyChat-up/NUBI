@@ -1,0 +1,755 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/mundo",
+    "measured": [
+      {
+        "id": "place-colegio",
+        "width": 354,
+        "height": 265.5,
+        "source": "http://127.0.0.1:5173/media/places/colegio-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 52vw, 100vw"
+      },
+      {
+        "id": "place-casa",
+        "width": 136.140625,
+        "height": 102.09375,
+        "source": "http://127.0.0.1:5173/media/places/casa-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-parque",
+        "width": 136.140625,
+        "height": 102.09375,
+        "source": "http://127.0.0.1:5173/media/places/parque-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-amigos",
+        "width": 136.140625,
+        "height": 102.09375,
+        "source": "http://127.0.0.1:5173/media/places/amigos-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-emociones",
+        "width": 136.140625,
+        "height": 102.09375,
+        "source": "http://127.0.0.1:5173/media/places/emociones-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      },
+      {
+        "id": "place-herramientas",
+        "width": 136.140625,
+        "height": 102.09375,
+        "source": "http://127.0.0.1:5173/media/places/herramientas-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-descansar",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 144,
+        "height": 144,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/pedir-ayuda",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/descansar",
+    "measured": [
+      {
+        "id": "tool-descansar",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/espacio-tranquilo",
+    "measured": [
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/comunicar-necesidad",
+    "measured": [
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/anticipar-cambios",
+    "measured": [
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/expresar-desacuerdo",
+    "measured": [
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "/herramientas/apoyos-sensoriales",
+    "measured": [
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "cuento: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "path": "comic: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/mundo",
+    "measured": [
+      {
+        "id": "place-colegio",
+        "width": 410.171875,
+        "height": 307.625,
+        "source": "http://127.0.0.1:5173/media/places/colegio-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 52vw, 100vw"
+      },
+      {
+        "id": "place-casa",
+        "width": 232,
+        "height": 174,
+        "source": "http://127.0.0.1:5173/media/places/casa-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-parque",
+        "width": 232,
+        "height": 174,
+        "source": "http://127.0.0.1:5173/media/places/parque-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-amigos",
+        "width": 232,
+        "height": 174,
+        "source": "http://127.0.0.1:5173/media/places/amigos-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-emociones",
+        "width": 362,
+        "height": 271.5,
+        "source": "http://127.0.0.1:5173/media/places/emociones-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      },
+      {
+        "id": "place-herramientas",
+        "width": 362,
+        "height": 271.5,
+        "source": "http://127.0.0.1:5173/media/places/herramientas-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-descansar",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/pedir-ayuda",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/descansar",
+    "measured": [
+      {
+        "id": "tool-descansar",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/espacio-tranquilo",
+    "measured": [
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/comunicar-necesidad",
+    "measured": [
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/anticipar-cambios",
+    "measured": [
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/expresar-desacuerdo",
+    "measured": [
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "/herramientas/apoyos-sensoriales",
+    "measured": [
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "cuento: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "path": "comic: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/mundo",
+    "measured": [
+      {
+        "id": "place-colegio",
+        "width": 591.265625,
+        "height": 443.4375,
+        "source": "http://127.0.0.1:5173/media/places/colegio-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 52vw, 100vw"
+      },
+      {
+        "id": "place-casa",
+        "width": 342.65625,
+        "height": 256.984375,
+        "source": "http://127.0.0.1:5173/media/places/casa-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-parque",
+        "width": 342.671875,
+        "height": 257,
+        "source": "http://127.0.0.1:5173/media/places/parque-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-amigos",
+        "width": 342.65625,
+        "height": 256.984375,
+        "source": "http://127.0.0.1:5173/media/places/amigos-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 28vw, 120px"
+      },
+      {
+        "id": "place-emociones",
+        "width": 528,
+        "height": 396,
+        "source": "http://127.0.0.1:5173/media/places/emociones-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      },
+      {
+        "id": "place-herramientas",
+        "width": 528,
+        "height": 396,
+        "source": "http://127.0.0.1:5173/media/places/herramientas-800w.webp",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 44vw, 100vw"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-descansar",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      },
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 208,
+        "height": 208,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-256w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 208px, 144px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/pedir-ayuda",
+    "measured": [
+      {
+        "id": "tool-pedir-ayuda",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/pedir-ayuda-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/descansar",
+    "measured": [
+      {
+        "id": "tool-descansar",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/descansar-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/espacio-tranquilo",
+    "measured": [
+      {
+        "id": "tool-espacio-tranquilo",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/espacio-tranquilo-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/comunicar-necesidad",
+    "measured": [
+      {
+        "id": "tool-comunicar-necesidad",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/comunicar-necesidad-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/anticipar-cambios",
+    "measured": [
+      {
+        "id": "tool-anticipar-cambios",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/anticipar-cambios-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/expresar-desacuerdo",
+    "measured": [
+      {
+        "id": "tool-expresar-desacuerdo",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/expresar-desacuerdo-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "/herramientas/apoyos-sensoriales",
+    "measured": [
+      {
+        "id": "tool-apoyos-sensoriales",
+        "width": 288,
+        "height": 288,
+        "source": "http://127.0.0.1:5173/media/tools/apoyos-sensoriales-512w.png",
+        "fit": "contain",
+        "sizes": "(min-width: 640px) 288px, 208px"
+      }
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "cuento: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "path": "comic: estrategias",
+    "tools": [
+      "tool-anticipar-cambios",
+      "tool-pedir-ayuda",
+      "tool-comunicar-necesidad",
+      "tool-apoyos-sensoriales",
+      "tool-descansar",
+      "tool-espacio-tranquilo",
+      "tool-expresar-desacuerdo"
+    ]
+  }
+]

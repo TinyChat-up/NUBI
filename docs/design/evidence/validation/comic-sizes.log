@@ -1,0 +1,6 @@
+PASS 390×844@1: 15 viñetas, variante óptima y una descarga por viñeta (1200/800 px)
+PASS 390×844@2: 15 viñetas, variante óptima y una descarga por viñeta (1200/800 px)
+PASS 820×1180@1: 15 viñetas, variante óptima y una descarga por viñeta (1200/800 px)
+PASS 820×1180@2: 15 viñetas, variante óptima y una descarga por viñeta (2048/2400 px)
+PASS 1180×820@1: 15 viñetas, variante óptima y una descarga por viñeta (1200/800 px)
+PASS 1180×820@2: 15 viñetas, variante óptima y una descarga por viñeta (1200/2400 px)

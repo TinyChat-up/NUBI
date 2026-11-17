@@ -7,7 +7,6 @@ import { EmotionArt } from '../components/illustration/GuideArt.tsx';
 import { LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
 
-const TONES = ['bg-coral-100', 'bg-salvia-100', 'bg-mostaza-100', 'bg-petroleo-100'];
 
 /** Mis emociones: conocer lo que sentimos. Todas las emociones son válidas. */
 export function EmotionsScreen() {
@@ -23,9 +22,9 @@ export function EmotionsScreen() {
       </div>
       <PageHeader title="Mis emociones" subtitle="Todas las emociones son válidas. Cada persona las siente a su manera." icon="heart" />
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
-        <div role="group" aria-label="Emociones" className="grid grid-cols-3 gap-3 self-start">
-          {emotionList.map((e, i) => {
+      <div className="emotion-explorer">
+        <div role="group" aria-label="Emociones" className="emotion-gallery">
+          {emotionList.map((e) => {
             const on = e.id === selected;
             return (
               <button
@@ -33,18 +32,19 @@ export function EmotionsScreen() {
                 type="button"
                 aria-pressed={on}
                 onClick={() => setSelected(e.id)}
-                className={`tap flex flex-col items-center gap-1 rounded-3xl border-[3px] p-3 font-extrabold ${on ? 'border-petroleo-600 bg-crema-50' : `border-transparent ${TONES[i % 4]}`}`}
+                className={`tap emotion-entry relative flex flex-col items-center gap-1 rounded-3xl border-[3px] p-3 font-extrabold ${on ? 'border-petroleo-600 bg-crema-50' : 'border-crema-300 bg-crema-50'}`}
               >
-                <EmotionArt emotion={e.id} mood={e.mood} size={64} />
+                <EmotionArt emotion={e.id} mood={e.mood} size={96} className="emotion-art" />
                 <span className="reading-text text-center leading-tight">{e.name}</span>
+                <span aria-hidden className="emotion-check">{on && <Icon name="check" size={20} />}</span>
               </button>
             );
           })}
         </div>
 
-        <section aria-live="polite" className="card animate-pop p-6" key={emotion.id}>
+        <section aria-live="polite" className="emotion-detail card animate-pop p-6" key={emotion.id}>
           <div className="flex items-center gap-4">
-            <EmotionArt emotion={emotion.id} mood={emotion.mood} size={100} className="animate-sway" />
+            <EmotionArt emotion={emotion.id} mood={emotion.mood} size={120} />
             <div>
               <h2 className="text-3xl text-petroleo-900">{emotion.name}</h2>
               <p className="reading-text text-lg">{emotion.childText}</p>

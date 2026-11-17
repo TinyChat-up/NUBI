@@ -48,7 +48,7 @@ describe('Herramientas: catálogo ↔ ilustración', () => {
 describe('StrategiesView: ilustraciones en «¿Cuáles podrían ayudarte?»', () => {
   const step = strategySteps()[0];
 
-  it('cada tarjeta muestra la ilustración de su herramienta, decorativa, a 56 px y sin duplicar el icono', () => {
+  it('cada tarjeta muestra la ilustración de su herramienta, decorativa, a 96 px y sin duplicar el icono', () => {
     const list = render(step);
     expect(list).toHaveLength(step.tools.length);
     for (const [i, id] of step.tools.entries()) {
@@ -56,7 +56,7 @@ describe('StrategiesView: ilustraciones en «¿Cuáles podrían ayudarte?»', ()
       expect(list[i].asset).toBe(t.illustration);
       expect(list[i].leading).toBe(true);
       expect(list[i].alt).toBe('');
-      expect(list[i].sizes).toBe('56px');
+      expect(list[i].sizes).toBe('96px');
       expect(list[i].svgs).toBe(1); // solo la marca ✓
       expect(list[i].text).toBe(`${t.name} ${t.childText}`); // nombre y descripción intactos
     }

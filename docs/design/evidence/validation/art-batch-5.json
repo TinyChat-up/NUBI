@@ -1,0 +1,26 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "emotionImages": "9 at 96px + each selected at 120px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors"
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "emotionImages": "9 at 96px + each selected at 120px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors"
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "emotionImages": "9 at 96px + each selected at 120px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors"
+  }
+]

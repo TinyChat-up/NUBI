@@ -8,7 +8,7 @@ const require = createRequire(process.env.NUBI_BROWSER_TOOLS + '/package.json');
 const { chromium } = require('playwright');
 const AxeBuilder = require('@axe-core/playwright').default;
 const base = process.env.NUBI_URL || 'http://127.0.0.1:5174';
-const out = new URL('../../docs/art-batch-5/previews/', import.meta.url).pathname;
+const out = (process.env.NUBI_ART_EVIDENCE || '/tmp/nubi-art-batch-5') + '/';
 mkdirSync(out, { recursive: true });
 const emotions = Object.values(assets).filter(a => a.kind === 'emocion');
 assert.equal(emotions.length, 9);
@@ -90,7 +90,7 @@ try {
       hidden: el.closest('[data-leading]').getAttribute('aria-hidden'), inside: box.left >= slot.left - .5 && box.right <= slot.right + .5 && box.top >= slot.top - .5 && box.bottom <= slot.bottom + .5,
       cornerAlpha: g.getImageData(0, 0, 1, 1).data[3], centerAlpha: g.getImageData(el.naturalWidth >> 1, el.naturalHeight >> 1, 1, 1).data[3] };
     });
-    assert(r.w >= 56 && r.w <= 64 && r.w === r.h, `${at} ${o.id}: ${r.w}×${r.h} px`);
+    assert(r.w >= 95 && r.w <= 97 && r.w === r.h, `${at} ${o.id}: ${r.w}×${r.h} px`);
     assert.equal(r.fit, 'contain');
     assert(r.inside, `${at} ${o.id}: artwork outside its slot`);
     assert.equal(r.alt, '', `${at} ${o.id}: decorative image`);
@@ -126,9 +126,9 @@ try {
   await page.screenshot({ path: `${out}${width}-selector-cuento.png` });
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  report.push({ width, height, emotionImages: '9 at 64px + each selected at 100px', keyboard: 'Enter + focus + aria-pressed + visible heading', axeViolations: 0, storySelector: 'cuento + cómic: 5 EmotionArt at 56 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors' });
+  report.push({ width, height, emotionImages: '9 at 96px + each selected at 120px', keyboard: 'Enter + focus + aria-pressed + visible heading', axeViolations: 0, storySelector: 'cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors' });
   await context.close();
  }
 } finally { await browser.close(); }
-writeFileSync(new URL('../../docs/art-batch-5/browser-results.json', import.meta.url), JSON.stringify(report, null, 2) + '\n');
+writeFileSync(out + 'results.json', JSON.stringify(report, null, 2) + '\n');
 console.log('PASS nine emotions, three viewports, keyboard, accessible labels, contain, responsive files, axe and existing story selector');

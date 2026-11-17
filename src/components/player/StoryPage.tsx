@@ -50,7 +50,7 @@ export function StoryPage({ beat, page, group = [], direction, mode, showText, s
   const textProps = { mode, showText, speaking, motion: beat.motion };
 
   return (
-    <article className="flex w-full flex-col gap-4 portrait:flex-1 sm:gap-6 lg:landscape:grid lg:landscape:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] lg:landscape:items-center lg:landscape:gap-10">
+    <article className="storybook-page flex w-full flex-col gap-4 portrait:flex-1 sm:gap-6 lg:landscape:grid lg:landscape:grid-cols-[minmax(0,2fr)_minmax(20rem,1fr)] lg:landscape:items-center lg:landscape:gap-10">
       {/*
         Ilustración. En vertical, su caja ocupa el alto que deja libre el texto (container-type: size)
         y la imagen se ajusta a esa caja sin recortarse: ancho = mín(ancho disponible, alto × proporción).
@@ -73,7 +73,7 @@ export function StoryPage({ beat, page, group = [], direction, mode, showText, s
       </div>
 
       {/* Página de texto: la actual encima de las del grupo (invisibles, solo reservan alto). */}
-      <div className="grid shrink-0 *:[grid-area:1/1]">
+      <div className="storybook-reading grid shrink-0 *:[grid-area:1/1]">
         {group
           .filter((g) => g.id !== page.id)
           .map((g) => (
@@ -105,7 +105,7 @@ function TextPage({
   const { text, speaker, opener } = page;
   const isGuide = Boolean(speaker?.isGuide);
   return (
-    <div className="flex flex-col gap-3">
+    <div className="storybook-text flex flex-col gap-3">
       {opener && (
         <p className="flex items-baseline gap-2 text-petroleo-700">
           <span className="text-sm font-black tracking-widest text-coral-700 uppercase">Escena {opener.number}</span>

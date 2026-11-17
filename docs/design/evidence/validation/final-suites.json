@@ -1,0 +1,17 @@
+[
+  {
+    "suite": "screens",
+    "exit": 0,
+    "seconds": 13.0
+  },
+  {
+    "suite": "focus-obscured",
+    "exit": 0,
+    "seconds": 90.7
+  },
+  {
+    "suite": "art-layout",
+    "exit": 0,
+    "seconds": 76.5
+  }
+]

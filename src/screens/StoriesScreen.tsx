@@ -17,7 +17,7 @@ export function StoriesScreen() {
     <Page>
       <PageHeader title="Historias" subtitle="Cuentos, cómics y vídeos para explorar sin prisa." icon="story" />
 
-      <div role="group" aria-label="Filtrar por lugar" className="-mx-4 mb-6 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
+      <div role="group" aria-label="Filtrar por lugar" className="mb-6 flex flex-wrap gap-2">
         {[{ id: 'todas' as const, name: 'Todas', icon: 'sparkle' }, ...storyPlaces].map((p) => {
           const on = filter === p.id;
           return (
@@ -34,13 +34,13 @@ export function StoriesScreen() {
         })}
       </div>
 
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="story-shelf">
         {list.map((s) => (
           <li key={s.id}>
             <StoryCard story={s} />
           </li>
         ))}
-        <li className="flex min-h-64 flex-col items-center justify-center gap-3 rounded-[var(--radius-card)] border-[3px] border-dashed border-crema-300 p-6 text-center text-tinta-suave">
+        <li className="coming-stories flex min-h-64 flex-col items-center justify-center gap-3 rounded-[var(--radius-card)] border-[3px] border-dashed border-crema-300 p-6 text-center text-tinta-suave">
           <GuideArt size={80} mood="calm" />
           <p className="reading-text text-lg font-bold">Más historias en camino</p>
           <p className="reading-text text-sm">Las preparamos con calma y con ayuda de familias y docentes.</p>

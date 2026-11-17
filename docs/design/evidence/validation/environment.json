@@ -1,0 +1,16 @@
+{
+  "base": "e9793cc0a5e1aeb4f343722f31ec8feffc490f93",
+  "protectedPaths": [
+    "src/content",
+    "src/engine",
+    "src/state",
+    "public",
+    "docs/review"
+  ],
+  "changedProtectedFiles": [],
+  "node": "v24.22.1",
+  "chromium": "Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)",
+  "beforeCaptures": 42,
+  "afterCaptures": 42,
+  "matrixFailures": 0
+}

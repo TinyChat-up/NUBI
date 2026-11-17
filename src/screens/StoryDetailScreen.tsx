@@ -32,46 +32,35 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
         </LinkButton>
       </div>
 
-      <section className="card grid overflow-hidden lg:grid-cols-[1.15fr_1fr]">
-        <Illustration id={story.cover} priority sizes="(min-width: 1024px) 55vw, 100vw" className="aspect-[4/3] w-full lg:aspect-auto lg:h-full" showBadge />
-        <div className="flex flex-col gap-4 p-6 sm:p-8">
+      <section className="story-opening">
+        <Illustration id={story.cover} priority ratio fit="contain" sizes="(min-width: 768px) 38vw, 100vw" className="story-cover-art" showBadge />
+        <div className="story-opening-copy">
           <div className="flex flex-wrap gap-2">
             <Chip icon={place.icon}>{place.name}</Chip>
-            <Chip icon="clock" tone="crema">
-              {story.durationMinutes.min}–{story.durationMinutes.max} min
-            </Chip>
-            <Chip icon="user" tone="crema">
-              {story.ages.min}–{story.ages.max} años
-            </Chip>
+            <Chip icon="clock" tone="crema">{story.durationMinutes.min}–{story.durationMinutes.max} min · orientativo</Chip>
+            <Chip icon="user" tone="crema">{story.ages.min}–{story.ages.max} años</Chip>
           </div>
-          <h1 className="text-4xl text-petroleo-900 sm:text-5xl">{story.title}</h1>
-          <p className="reading-text text-lg">{story.synopsis}</p>
-          {p && (
-            <p className="flex items-center gap-2 font-bold text-salvia-700">
-              <Icon name={p.completedAt ? 'check' : 'footsteps'} size={20} />
-              {p.completedAt ? 'Ya la has terminado. Puedes volver cuando quieras.' : `Has visitado ${p.visitedScenes.length} de ${story.scenes.length} escenas.`}
-            </p>
-          )}
+          <h1 className="reading-text text-4xl text-petroleo-900 sm:text-5xl">{story.title}</h1>
+          <p className="reading-text text-xl">{story.tagline}</p>
+          {p && <p className="flex items-center gap-2 font-bold text-salvia-700"><Icon name={p.completedAt ? 'check' : 'footsteps'} size={20} />{p.completedAt ? 'Ya la has terminado. Puedes volver cuando quieras.' : `Has visitado ${p.visitedScenes.length} de ${story.scenes.length} escenas.`}</p>}
         </div>
       </section>
 
-      <section aria-labelledby="formats-title" className="mt-8">
-        <h2 id="formats-title" className="mb-4 text-2xl text-petroleo-900">
-          ¿Cómo quieres descubrirla?
-        </h2>
-        <ul className="grid gap-4 sm:grid-cols-3">
+      <section aria-labelledby="formats-title" className="format-section">
+        <h2 id="formats-title" className="mb-5 text-2xl text-petroleo-900">¿Cómo quieres descubrirla?</h2>
+        <ul className="format-choices">
           {story.formats.map((f) => {
             const pending = f === 'video' && story.video?.status !== 'listo';
             const saved = f !== 'video' && loadRun(story.id, f);
             return (
-              <li key={f}>
-                <Link to={`/historias/${story.id}/${f}${saved ? '?continuar=1' : ''}`} className="tap card flex h-full items-center gap-4 p-5 hover:shadow-[var(--shadow-lift)]">
-                  <span className={`grid size-16 shrink-0 place-items-center rounded-2xl ${pending ? 'bg-crema-200 text-tinta-suave' : 'bg-coral-100 text-coral-700'}`}>
-                    <Icon name={FORMAT_META[f].icon} size={32} />
-                  </span>
-                  <span>
-                    <span className="block text-xl font-black text-petroleo-900">{FORMAT_META[f].label}</span>
-                    <span className="reading-text block text-tinta-suave">{pending ? 'En producción' : saved ? 'Continuar donde lo dejaste' : FORMAT_TEXT[f]}</span>
+              <li key={f} className={pending ? 'format-pending' : ''}>
+                <Link to={`/historias/${story.id}/${f}${saved ? '?continuar=1' : ''}`} className={`tap format-choice format-${f}`}>
+                  {!pending && <span className="format-art" aria-hidden>
+                    {f === 'comic' ? story.scenes.flatMap((sc) => sc.comic ?? []).slice(0, 2).map((panel) => <Illustration key={panel.id} id={panel.illustration} decorative ratio fit="contain" sizes="160px" />) : <Illustration id={story.cover} decorative ratio fit="contain" sizes="240px" />}
+                  </span>}
+                  <span className="format-copy">
+                    <span className="flex items-center gap-3 text-2xl font-black text-petroleo-900"><Icon name={FORMAT_META[f].icon} size={28} />{FORMAT_META[f].label}{!pending && <Icon name="arrow-right" className="ml-auto" />}</span>
+                    <span className="reading-text mt-2 block text-tinta-suave">{pending ? 'En producción' : saved ? 'Continuar donde lo dejaste' : FORMAT_TEXT[f]}</span>
                   </span>
                 </Link>
               </li>
@@ -79,6 +68,11 @@ export function StoryDetailScreen({ storyId }: { storyId: string }) {
           })}
         </ul>
       </section>
+
+      <details className="story-about group">
+        <summary className="flex min-h-14 cursor-pointer items-center gap-3 text-xl font-extrabold text-petroleo-900">Sobre esta historia<Icon name="chevron-right" className="ml-auto group-open:rotate-90" /></summary>
+        <p className="reading-text mt-3 text-lg">{story.synopsis}</p>
+      </details>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
         <section aria-labelledby="scenes-title">

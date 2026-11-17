@@ -38,7 +38,7 @@ try{
    const measured=[];
    for(const a of ids){const img=page.locator(`[data-asset="${a.id}"] img`);await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
     const m=await img.evaluate(el=>{const r=el.getBoundingClientRect();return {width:r.width,height:r.height,source:el.currentSrc,fit:getComputedStyle(el).objectFit,sizes:el.sizes};});
-    assert(Math.abs(m.width/m.height-(a.transparent?1:4/3))<.02);if(a.transparent)assert.equal(m.fit,'contain');assert.match(m.source,a.transparent?/-256w\.png$/:/-800w\.webp$/);measured.push({id:a.id,...m});
+    assert(Math.abs(m.width/m.height-(a.transparent?1:4/3))<.02);if(a.transparent)assert.equal(m.fit,'contain');assert.match(m.source,a.transparent?(m.width>256?/-512w\.png$/:/-256w\.png$/):/-800w\.webp$/);measured.push({id:a.id,...m});
    }
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.equal(await page.locator('[data-asset-state="error"]').count(),0);
    await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`${out}/${width}-${path.replaceAll('/','-').slice(1)}-viewport.png`});await page.screenshot({path:`${out}/${width}-${path.replaceAll('/','-').slice(1)}.png`,fullPage:true});
@@ -63,7 +63,7 @@ try{
     await img.evaluate(el=>el.decode());
     await page.waitForFunction(i=>document.querySelector(`[data-asset="${i}"]`)?.dataset.assetState==='cargado',t.illustration);
     const m=await img.evaluate(el=>{const r=el.getBoundingClientRect(),slot=el.closest('[data-leading]').getBoundingClientRect();return {w:r.width,h:r.height,fit:getComputedStyle(el).objectFit,alt:el.getAttribute('alt'),src:el.currentSrc,hidden:el.closest('[data-leading]').getAttribute('aria-hidden'),inside:r.left>=slot.left-.5&&r.right<=slot.right+.5&&r.top>=slot.top-.5&&r.bottom<=slot.bottom+.5};});
-    assert(m.w>=56&&m.w<=64&&Math.abs(m.w-m.h)<.5,`${at} ${id}: ${m.w}x${m.h}`);assert.equal(m.fit,'contain');assert(m.inside,`${at} ${id}: inside its slot`);
+    assert(m.w>=95&&m.w<=97&&Math.abs(m.w-m.h)<.5,`${at} ${id}: ${m.w}x${m.h}`);assert.equal(m.fit,'contain');assert(m.inside,`${at} ${id}: inside its slot`);
     assert.equal(m.alt,'');assert.equal(m.hidden,'true');assert.match(m.src,/-256w\.png$/);
     assert.equal(await c.locator('svg').count(),1,`${at} ${id}: icon replaced, check kept`);
     assert.equal(await c.getAttribute('aria-pressed'),'false');

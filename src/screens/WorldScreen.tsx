@@ -5,7 +5,7 @@ import { Icon } from '../components/Icon.tsx';
 import { Illustration } from '../components/Illustration.tsx';
 import { GuideArt } from '../components/illustration/GuideArt.tsx';
 import { StoryCard } from '../components/StoryCard.tsx';
-import { LinkButton, Page, PageHeader, toneBg, toneText } from '../components/ui.tsx';
+import { LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
 
 const placeHref = (place: Place) => (place.kind === 'emotions' ? '/emociones' : place.kind === 'tools' ? '/herramientas' : `/mundo/${place.id}`);
@@ -18,34 +18,38 @@ function placeStatus(place: Place): string {
 }
 
 /** B. MI MUNDO — biblioteca de escenarios. */
-export function WorldScreen() {
+function PlaceEntry({ place, featured = false, pending = false }: { place: Place; featured?: boolean; pending?: boolean }) {
   return (
-    <Page>
-      <PageHeader title="Mi mundo" subtitle="¿Adónde quieres ir hoy?" icon="map" />
-      <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {placeList.map((place, i) => {
-          const soon = placeStatus(place) === 'Próximamente';
-          return (
-            <li key={place.id} className="animate-rise" style={{ animationDelay: `${i * 60}ms` }}>
-              <Link to={placeHref(place)} className="tap card group block h-full overflow-hidden hover:shadow-[var(--shadow-lift)]">
-                <Illustration id={place.illustration} decorative sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-[1.02]" />
-                <div className="flex items-center gap-4 p-5">
-                  <span className={`grid size-14 shrink-0 place-items-center rounded-2xl ${toneBg[place.color]} ${toneText[place.color]}`}>
-                    <Icon name={place.icon} size={28} />
-                  </span>
-                  <span className="flex-1">
-                    <span className="block text-2xl font-black text-petroleo-900">{place.name}</span>
-                    <span className="reading-text block text-tinta-suave">{place.description}</span>
-                  </span>
-                </div>
-                <span className={`mx-5 mb-5 inline-flex rounded-full px-3 py-1 text-sm font-bold ${soon ? 'bg-crema-200 text-tinta-suave' : 'bg-salvia-100 text-salvia-700'}`}>
-                  {placeStatus(place)}
-                </span>
-              </Link>
-            </li>
-          );
-        })}
+    <Link to={placeHref(place)} className={`tap place-entry ${featured ? 'place-featured' : ''} ${pending ? 'place-pending' : ''}`}>
+      <Illustration id={place.illustration} decorative ratio fit="contain" priority={featured} sizes={pending ? '(min-width: 640px) 28vw, 120px' : featured ? '(min-width: 640px) 52vw, 100vw' : '(min-width: 640px) 44vw, 100vw'} className="place-picture" />
+      <span className="place-caption">
+        <span className="place-title reading-text">{place.name}<Icon name={pending ? 'clock' : 'arrow-right'} size={24} /></span>
+        <span className="reading-text place-description">{place.description}</span>
+        <span className={`place-status ${pending ? '' : 'place-status-ready'}`}>{placeStatus(place)}</span>
+      </span>
+    </Link>
+  );
+}
+
+export function WorldScreen() {
+  const available = placeList.filter((p) => p.kind === 'stories' && storiesByPlace(p.id).length > 0);
+  const companions = placeList.filter((p) => p.kind !== 'stories');
+  const upcoming = placeList.filter((p) => p.kind === 'stories' && storiesByPlace(p.id).length === 0);
+  return (
+    <Page className="world-page">
+      <PageHeader title="Mi mundo" subtitle="¿Adónde quieres ir hoy?">
+        <GuideArt size={88} />
+      </PageHeader>
+      <ul className="world-stories">
+        {available.map((place) => <li key={place.id}><PlaceEntry place={place} featured /></li>)}
       </ul>
+      <ul className="world-companions">
+        {companions.map((place) => <li key={place.id}><PlaceEntry place={place} /></li>)}
+      </ul>
+      <section aria-labelledby="upcoming-places" className="world-upcoming">
+        <h2 id="upcoming-places" className="text-2xl text-petroleo-900">Próximamente</h2>
+        <ul>{upcoming.map((place) => <li key={place.id}><PlaceEntry place={place} pending /></li>)}</ul>
+      </section>
     </Page>
   );
 }
@@ -65,7 +69,7 @@ export function PlaceScreen({ placeId }: { placeId: string }) {
       </div>
       <PageHeader title={place.name} subtitle={place.description} icon={place.icon} />
       {list.length > 0 ? (
-        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="story-shelf">
           {list.map((s) => (
             <li key={s.id}>
               <StoryCard story={s} />

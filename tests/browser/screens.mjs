@@ -9,6 +9,7 @@ const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/b
   await p.goto('http://127.0.0.1:5173'+path);await p.locator('h1').waitFor();
   const results=await new AxeBuilder({page:p}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
   console.log(path,await p.locator('h1').innerText(),JSON.stringify(results.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)}))));
+  assert.equal(results.violations.length, 0, JSON.stringify(results.violations.map(v=>v.id)));
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  }
  assert.equal(errors.length,0);await c.close();

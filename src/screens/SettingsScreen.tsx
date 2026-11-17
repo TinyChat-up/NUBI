@@ -22,6 +22,7 @@ function Segmented<K extends keyof Settings>({ setting, label, options }: { sett
             >
               {o.icon && <Icon name={o.icon} size={20} />}
               {o.label}
+              {on && <Icon name="check" size={18} />}
             </button>
           );
         })}
@@ -32,7 +33,7 @@ function Segmented<K extends keyof Settings>({ setting, label, options }: { sett
 
 function Group({ title, icon, children }: { title: string; icon: string; children: ReactNode }) {
   return (
-    <section className="card grid gap-6 p-6">
+    <section className="settings-group grid gap-6">
       <h2 className="flex items-center gap-2 text-2xl text-petroleo-900">
         <Icon name={icon} /> {title}
       </h2>
@@ -55,12 +56,12 @@ export function SettingsScreen() {
     <Page>
       <PageHeader title="Ajustes" subtitle="Para que NUBI se adapte a ti." icon="settings" />
 
-      <div className="mb-6 rounded-[var(--radius-card)] bg-crema-50 p-6 shadow-[var(--shadow-soft)]" aria-live="polite">
+      <div className="settings-preview" aria-live="polite">
         <p className="text-sm font-black tracking-wider text-coral-700 uppercase">Así se verá el texto</p>
         <p className="reading-text mt-2 text-2xl font-bold">Es martes por la mañana. Teo llega al colegio con su abuela Rosa.</p>
       </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="settings-sections">
         <Group title="Lectura" icon="text">
           <Segmented setting="textSize" label="Tamaño del texto" options={[{ value: 'm', label: 'Normal' }, { value: 'l', label: 'Grande' }, { value: 'xl', label: 'Muy grande' }]} />
           <Segmented setting="spacing" label="Espacio entre letras y líneas" options={[{ value: 'normal', label: 'Normal' }, { value: 'wide', label: 'Más espacio' }]} />

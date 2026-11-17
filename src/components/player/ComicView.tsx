@@ -130,7 +130,7 @@ export function ComicView({ panels, index, pausedMotion, onReveal }: { panels: C
   return (
     // Rejilla y bordes: si cambian, actualizar COMIC_GRID en comicLayout.ts (de ahí sale `sizes`).
     <ol
-      className={`mx-auto grid w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5 lg:landscape:max-w-[calc((100dvh-17rem)*16/9)] ${pausedMotion ? 'anim-paused' : ''}`}
+      className={`comic-pages mx-auto grid w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5 lg:landscape:max-w-[calc((100dvh-17rem)*16/9)] ${pausedMotion ? 'anim-paused' : ''}`}
       aria-label="Viñetas del cómic"
     >
       {panels.slice(0, index + 1).map((panel, i) => (
@@ -151,7 +151,7 @@ export function ComicView({ panels, index, pausedMotion, onReveal }: { panels: C
             <button
               type="button"
               onClick={onReveal}
-              className="tap flex min-h-32 w-full flex-col items-center justify-center gap-2 rounded-3xl border-[3px] border-dashed border-crema-400 bg-crema-50/60 p-4 font-extrabold text-petroleo-800 hover:border-petroleo-400 hover:bg-petroleo-50"
+              className="comic-reveal tap flex min-h-32 w-full flex-col items-center justify-center gap-2 rounded-3xl border-[3px] border-dashed border-crema-400 bg-crema-50/60 p-4 font-extrabold text-petroleo-800 hover:border-petroleo-400 hover:bg-petroleo-50"
             >
               <Icon name="sparkle" size={32} />
               Descubrir la siguiente viñeta

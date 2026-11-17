@@ -1,0 +1,8 @@
+PASS 390×844: diseño habitual (barras fijas, controles visibles, escenario ≥ 200 px)
+PASS 820×1180: diseño habitual (barras fijas, controles visibles, escenario ≥ 200 px)
+PASS 1180×820: diseño habitual (barras fijas, controles visibles, escenario ≥ 200 px)
+PASS 640×512: diseño habitual (barras fijas, controles visibles, escenario ≥ 200 px)
+PASS 320×568: diseño habitual (barras fijas, controles visibles, escenario ≥ 200 px)
+PASS 320×256 cuento: completado en 24 pasos; principio de cada paso visible; textos y controles alcanzables sin quedar tapados
+PASS 320×256 comic: completado en 19 pasos; principio de cada paso visible; textos y controles alcanzables sin quedar tapados
+PASS 320×256: 8 pantallas generales con barras no fijas y foco siempre visible
