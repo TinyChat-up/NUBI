@@ -9,6 +9,7 @@ import { ChoiceGrid, ConsequenceBody, ExploredMeter } from '../components/player
 import { Button, LinkButton, Page, PageHeader } from '../components/ui.tsx';
 import { Link } from '../lib/router.tsx';
 import { useProgress } from '../state/progress.tsx';
+import { useSettings } from '../state/settings.tsx';
 
 const recKey = (storyId: string, recId: string) => `${storyId}/${recId}`;
 
@@ -50,6 +51,7 @@ export function RecreationPlayScreen({ storyId, recId }: { storyId: string; recI
   const rec = story?.recreations.find((r) => r.id === recId);
   const step = story && rec ? getChoiceStep(story, rec.choiceStepId) : undefined;
   const { progress, recordRecreation } = useProgress();
+  const { settings: { shortText } } = useSettings();
   const [option, setOption] = useState<ChoiceOption | null>(null);
 
   if (!story || !rec || !step) return null;
@@ -87,7 +89,7 @@ export function RecreationPlayScreen({ storyId, recId }: { storyId: string; recI
         </>
       ) : (
         <>
-          <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} />
+          <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} short={shortText} />
           <div className="mt-6 flex flex-col gap-4 rounded-[var(--radius-card)] bg-crema-200/70 p-5 sm:flex-row sm:items-center sm:justify-between">
             <ExploredMeter total={step.options.length} explored={explored.length} />
             <div className="flex flex-wrap gap-3">

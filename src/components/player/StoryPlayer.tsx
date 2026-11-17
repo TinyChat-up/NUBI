@@ -14,6 +14,7 @@ import {
   type RunState,
 } from '../../engine/storyEngine.ts';
 import { restoreRun } from '../../engine/restoreRun.ts';
+import { readableBeat, readableConsequence } from '../../engine/readable.ts';
 import type { BeatStep, Story, ToolId } from '../../engine/types.ts';
 import { characters } from '../../content/characters.ts';
 import { navigate } from '../../lib/router.tsx';
@@ -43,7 +44,7 @@ interface StoryPlayerProps {
 
 /** Texto que se lee en voz alta / se anuncia para lectores de pantalla. */
 function speechFor(story: Story, state: RunState, play: PlayStep, settings: Settings): { text: string; src?: string } {
-  if (play.kind === 'beat') return { text: settings.shortText && play.step.short ? play.step.short : play.step.text, src: play.step.narration };
+  if (play.kind === 'beat') return { text: readableBeat(play.step, settings.shortText), src: play.step.narration };
   if (play.kind === 'panel') {
     const p = play.panels[play.index];
     const parts = [p.caption, ...p.bubbles.map((b) => (b.speaker && b.kind !== 'sound' ? `${characters[b.speaker]?.name}: ${b.text.replace(/·/g, ' ')}` : b.text))];
@@ -60,7 +61,7 @@ function speechFor(story: Story, state: RunState, play: PlayStep, settings: Sett
     case 'consequence': {
       const choice = getChoiceStep(story, s.choiceStepId);
       const option = choice?.options.find((o) => o.id === state.choices[s.choiceStepId]);
-      return { text: option ? `${option.label}. ${option.consequence.story.map((f) => f.text).join(' ')}` : '' };
+      return { text: option ? `${option.label}. ${readableConsequence(option.consequence, settings.shortText).story.join(' ')}` : '' };
     }
     case 'strategies':
       return { text: `${s.prompt} ${s.help ?? ''}` };
@@ -199,7 +200,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
     const beat = play.step;
     const toPage = (b: BeatStep, index: number): PageText => ({
       id: b.id,
-      text: settings.shortText && b.short ? b.short : b.text,
+      text: readableBeat(b, settings.shortText),
       speaker: b.speaker ? characters[b.speaker] : undefined,
       opener: index === 0 ? { number: scene.number, title: scene.title } : undefined,
     });
@@ -235,7 +236,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         stage =
           option && choice ? (
             <div>
-              <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} />
+              <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} short={settings.shortText} />
               <div className="mt-6 flex flex-col gap-4 rounded-[var(--radius-card)] bg-crema-200/70 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <ExploredMeter total={choice.options.length} explored={(state.explored[choice.id] ?? []).length} />
                 <div className="flex flex-wrap gap-3">

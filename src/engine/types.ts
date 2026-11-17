@@ -218,6 +218,23 @@ export interface Consequence {
   /** Otra manera de conseguir lo mismo (sobre todo en opciones con más inconvenientes). */
   anotherWay?: string;
   tools: ToolId[];
+  /** Versión corta (Ajustes → «Textos cortos»). Opcional, campo a campo; lo que falte usa el texto completo. */
+  short?: ConsequenceShort;
+}
+
+/**
+ * Lectura fácil de una consecuencia. Cada texto es **editorial y explícito** (lo escribe y aprueba
+ * una persona): nunca se genera ni se recorta automáticamente. Debe conservar hechos, personajes y
+ * formas de comunicación (p. ej. la CAA de Lía). docs/review/EDITORIAL_APPROVAL_PHASE_15.md.
+ */
+export interface ConsequenceShort {
+  /** En el mismo orden que `story`; una posición vacía usa el texto completo de ese momento. */
+  story?: (string | undefined)[];
+  youMayFeel?: string;
+  othersMay?: string;
+  helpsWhen?: string;
+  keepInMind?: string;
+  anotherWay?: string;
 }
 
 export interface ChoiceOption {

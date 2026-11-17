@@ -1,6 +1,7 @@
 import type { Dispatch } from 'react';
 import type { RunAction, RunState } from '../../engine/storyEngine.ts';
 import type { ChoiceOption, ChoiceStep, FeelingsStep, KnowNeedStep, StrategiesStep } from '../../engine/types.ts';
+import { readableConsequence } from '../../engine/readable.ts';
 import { emotions } from '../../content/emotions.ts';
 import { tools } from '../../content/tools.ts';
 import { Icon } from '../Icon.tsx';
@@ -187,13 +188,15 @@ export function ChoiceView({ step, state, dispatch }: Ctx & { step: ChoiceStep }
 
 // ───────────────────────── Consecuencias ─────────────────────────
 
-export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: ChoiceOption; protagonist?: string }) {
+/** `short`: Ajustes → «Textos cortos». Solo cambia lo que tenga versión corta escrita (readableConsequence). */
+export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: { option: ChoiceOption; protagonist?: string; short?: boolean }) {
   const c = option.consequence;
+  const text = readableConsequence(c, short);
   const reflections = [
-    { icon: 'heart', title: 'Cómo te puedes sentir', text: c.youMayFeel },
-    { icon: 'friends', title: 'Cómo pueden sentirse otros', text: c.othersMay },
-    { icon: 'check', title: 'Puede ayudar cuando…', text: c.helpsWhen },
-    { icon: 'info', title: 'A tener en cuenta', text: c.keepInMind },
+    { icon: 'heart', title: 'Cómo te puedes sentir', text: text.youMayFeel },
+    { icon: 'friends', title: 'Cómo pueden sentirse otros', text: text.othersMay },
+    { icon: 'check', title: 'Puede ayudar cuando…', text: text.helpsWhen },
+    { icon: 'info', title: 'A tener en cuenta', text: text.keepInMind },
   ];
   return (
     <div className="animate-rise">
@@ -210,7 +213,7 @@ export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: Choic
               <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full bg-petroleo-600 text-base text-crema-50">
                 {i + 1}
               </span>
-              {frame.text}
+              {text.story[i]}
             </p>
           </li>
         ))}
@@ -236,14 +239,14 @@ export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: Choic
         </ul>
       </section>
 
-      {c.anotherWay && (
+      {text.anotherWay && (
         <section className="mt-4 flex gap-4 rounded-[var(--radius-card)] border-[3px] border-coral-300 bg-coral-50 p-5">
           <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-full bg-coral-100 text-coral-700">
             <Icon name="sparkle" size={20} />
           </span>
           <div>
             <h3 className="reading-text mb-1 text-lg text-coral-700">Otra forma de conseguir lo mismo</h3>
-            <p className="reading-text text-lg">{c.anotherWay}</p>
+            <p className="reading-text text-lg">{text.anotherWay}</p>
           </div>
         </section>
       )}

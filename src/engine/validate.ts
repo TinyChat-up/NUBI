@@ -59,6 +59,7 @@ export function validateStory(story: Story, ctx: ValidationContext): string[] {
           checkAsset(step.illustration, where);
           checkCharacter(step.speaker, where);
           if (!step.text.trim()) err(`${where}: texto vacío`);
+          if (step.short !== undefined && !step.short.trim()) err(`${where}: versión corta vacía (quitar el campo o escribirla)`);
           break;
         case 'feelings':
           if (step.options.length < 3) err(`${where}: ofrece al menos 3 formas de sentir`);
@@ -74,6 +75,18 @@ export function validateStory(story: Story, ctx: ValidationContext): string[] {
             checkAsset(option.illustration, `${where}/${option.id}`);
             option.consequence.story.forEach((s) => checkAsset(s.illustration, `${where}/${option.id}`));
             option.consequence.tools.forEach((t) => checkTool(t, `${where}/${option.id}`));
+            // Lectura fácil: textos editoriales explícitos; nunca vacíos ni de momentos que no existen.
+            const short = option.consequence.short;
+            if (short) {
+              const at = `${where}/${option.id}/short`;
+              if ((short.story?.length ?? 0) > option.consequence.story.length) err(`${at}: más momentos cortos que momentos en la consecuencia`);
+              short.story?.forEach((t, i) => t !== undefined && !t.trim() && err(`${at}.story[${i}]: versión corta vacía`));
+              for (const k of ['youMayFeel', 'othersMay', 'helpsWhen', 'keepInMind', 'anotherWay'] as const) {
+                const t = short[k];
+                if (t !== undefined && !t.trim()) err(`${at}.${k}: versión corta vacía`);
+              }
+              if (short.anotherWay !== undefined && option.consequence.anotherWay === undefined) err(`${at}.anotherWay: no hay texto completo que acortar`);
+            }
           }
           break;
         }
