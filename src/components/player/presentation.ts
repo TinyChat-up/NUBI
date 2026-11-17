@@ -4,33 +4,44 @@
  */
 import { currentPlayStep, getChoiceStep, getPlaySteps, getScene, runReducer, type PlayStep, type RunState } from '../../engine/storyEngine.ts';
 import type { BeatStep, Story } from '../../engine/types.ts';
+import { comicPanelSizes } from './comicLayout.ts';
 
-function illustrationsOf(story: Story, play: PlayStep): string[] {
+/** Ilustración que se precarga y, si se conoce, el `sizes` con el que se mostrará. */
+export interface UpcomingImage {
+  id: string;
+  sizes?: string;
+}
+
+function imagesOf(story: Story, play: PlayStep): UpcomingImage[] {
+  const plain = (id: string): UpcomingImage => ({ id });
   switch (play.kind) {
     case 'beat':
-      return [play.step.illustration];
-    case 'panel':
-      return [play.panels[play.index]?.illustration].filter((x): x is string => Boolean(x));
+      return [plain(play.step.illustration)];
+    case 'panel': {
+      const panel = play.panels[play.index];
+      return panel ? [{ id: panel.illustration, sizes: comicPanelSizes(panel.span) }] : [];
+    }
     case 'interactive': {
       const s = play.step;
-      if (s.type === 'choice') return s.options.flatMap((o) => [o.illustration, ...o.consequence.story.map((f) => f.illustration)]);
+      if (s.type === 'choice') return s.options.flatMap((o) => [o.illustration, ...o.consequence.story.map((f) => f.illustration)]).map(plain);
       if (s.type === 'consequence') {
         const choice = getChoiceStep(story, s.choiceStepId);
-        return choice ? choice.options.flatMap((o) => o.consequence.story.map((f) => f.illustration)) : [];
+        return choice ? choice.options.flatMap((o) => o.consequence.story.map((f) => f.illustration)).map(plain) : [];
       }
       return [];
     }
   }
 }
 
-/** Ilustraciones del paso siguiente (y, en decisiones, de todas sus consecuencias). */
-export function upcomingIllustrations(story: Story, state: RunState): string[] {
-  const ids = new Set<string>();
+/** Ilustraciones del paso siguiente (y, en decisiones, de todas sus consecuencias), sin repetir. */
+export function upcomingImages(story: Story, state: RunState): UpcomingImage[] {
+  const byId = new Map<string, UpcomingImage>();
+  const add = (images: UpcomingImage[]) => images.forEach((img) => byId.has(img.id) || byId.set(img.id, img));
   const play = currentPlayStep(story, state);
-  if (play.kind === 'interactive' && play.step.type === 'choice') illustrationsOf(story, play).forEach((id) => ids.add(id));
+  if (play.kind === 'interactive' && play.step.type === 'choice') add(imagesOf(story, play));
   const after = runReducer(story, state, { type: 'next' });
-  if (after !== state && !after.completed) illustrationsOf(story, currentPlayStep(story, after)).forEach((id) => ids.add(id));
-  return Array.from(ids);
+  if (after !== state && !after.completed) add(imagesOf(story, currentPlayStep(story, after)));
+  return Array.from(byId.values());
 }
 
 /**

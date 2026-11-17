@@ -3,6 +3,7 @@ import type { Bubble, BubblePosition, ComicPanel } from '../../engine/types.ts';
 import { characters } from '../../content/characters.ts';
 import { Icon } from '../Icon.tsx';
 import { Illustration } from '../Illustration.tsx';
+import { comicPanelSizes } from './comicLayout.ts';
 
 /**
  * Cómic interactivo: las viñetas se descubren una a una.
@@ -89,7 +90,7 @@ function Panel({ panel, current }: { panel: ComicPanel; current: boolean }) {
     <figure className="@container m-0">
       {panel.caption && <figcaption className="reading-text border-b-[3px] border-tinta bg-mostaza-100 px-4 py-2 text-base font-extrabold sm:text-lg">{panel.caption}</figcaption>}
       <div className="relative">
-        <Illustration id={panel.illustration} ratio priority={current} sizes="(min-width: 1024px) 50vw, 100vw" className="w-full" />
+        <Illustration id={panel.illustration} ratio priority={current} sizes={comicPanelSizes(panel.span)} className="w-full" />
         {/* Bocadillos superpuestos: solo si la viñeta es ancha. */}
         {ordered.map((b, i) => (
           <p
@@ -127,6 +128,7 @@ export function ComicView({ panels, index, pausedMotion, onReveal }: { panels: C
   const nextPanel = panels[index + 1];
 
   return (
+    // Rejilla y bordes: si cambian, actualizar COMIC_GRID en comicLayout.ts (de ahí sale `sizes`).
     <ol
       className={`mx-auto grid w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5 lg:landscape:max-w-[calc((100dvh-17rem)*16/9)] ${pausedMotion ? 'anim-paused' : ''}`}
       aria-label="Viñetas del cómic"

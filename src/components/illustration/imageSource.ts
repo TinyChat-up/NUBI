@@ -52,17 +52,21 @@ export const cssAspect = (aspect: AspectRatio): string => aspect.replace(':', ' 
 
 const preloaded = new Set<string>();
 
-/** Precarga discreta (sin bloquear) de los recursos listos que se verán a continuación. */
-export function preload(assets: (AssetSpec | undefined)[]): void {
+/**
+ * Precarga discreta (sin bloquear) de los recursos listos que se verán a continuación.
+ * `sizes` debe ser el mismo que tendrá la imagen al mostrarse; si no, el navegador puede
+ * precargar otra variante y descargar dos veces (por defecto, `100vw`).
+ */
+export function preload(items: { asset: AssetSpec | undefined; sizes?: string }[]): void {
   if (typeof Image === 'undefined') return;
-  for (const a of assets) {
+  for (const { asset: a, sizes } of items) {
     if (!isReady(a) || preloaded.has(a.id)) continue;
     preloaded.add(a.id);
     const img = new Image();
     img.decoding = 'async';
     const srcSet = buildSrcSet(a);
     if (srcSet) {
-      img.sizes = '100vw';
+      img.sizes = sizes ?? '100vw';
       img.srcset = srcSet;
     }
     img.src = a.file;

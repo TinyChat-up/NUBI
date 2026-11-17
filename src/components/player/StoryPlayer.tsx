@@ -29,7 +29,7 @@ import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
 import { SceneMenu } from './SceneMenu.tsx';
-import { contextIllustration, pageGroup, upcomingIllustrations } from './presentation.ts';
+import { contextIllustration, pageGroup, upcomingImages } from './presentation.ts';
 import { StoryPage, type PageDirection, type PageText } from './StoryPage.tsx';
 import { SummaryView } from './SummaryView.tsx';
 
@@ -116,7 +116,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
 
   // Precarga discreta de las ilustraciones que vienen después (solo recursos listos).
   useEffect(() => {
-    preload(upcomingIllustrations(story, state).map(getAsset));
+    preload(upcomingImages(story, state).map(({ id, sizes }) => ({ asset: getAsset(id), sizes })));
   }, [story, state]);
 
   // En modo "Escuchar", cada paso nuevo se narra (el niño o la niña lo ha pedido).
