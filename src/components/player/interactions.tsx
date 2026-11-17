@@ -4,8 +4,9 @@ import type { ChoiceOption, ChoiceStep, FeelingsStep, KnowNeedStep, StrategiesSt
 import { emotions } from '../../content/emotions.ts';
 import { tools } from '../../content/tools.ts';
 import { Icon } from '../Icon.tsx';
-import { Illustration } from '../Illustration.tsx';
+import { Illustration, hasFinalArt } from '../Illustration.tsx';
 import { EmotionArt } from '../illustration/GuideArt.tsx';
+import { CONSEQUENCE_SIZES, OPTION_CARD_SIZES } from './imageSizes.ts';
 import { StepHeading, ToggleCard } from './Toggle.tsx';
 
 type Ctx = { state: RunState; dispatch: Dispatch<RunAction> };
@@ -150,7 +151,7 @@ export function ChoiceGrid({
                 onClick={() => onChoose(o)}
                 className="tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
               >
-                <Illustration id={o.illustration} decorative ratio sizes="(min-width: 1024px) 33vw, (min-width: 480px) 50vw, 100vw" className="w-full" />
+                <Illustration id={o.illustration} decorative ratio sizes={OPTION_CARD_SIZES} className="w-full" />
                 <span className="flex flex-1 items-center gap-3 p-4">
                   <span className="grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
                     <Icon name={o.icon} size={22} />
@@ -204,7 +205,7 @@ export function ConsequenceBody({ option, protagonist = 'Teo' }: { option: Choic
       <ol className="mb-8 grid gap-5 md:grid-cols-2">
         {c.story.map((frame, i) => (
           <li key={i} className="animate-pop" style={{ animationDelay: `${i * 220}ms` }}>
-            <Illustration id={frame.illustration} ratio sizes="(min-width: 768px) 50vw, 100vw" className="w-full rounded-3xl border-[3px] border-tinta/80" />
+            <Illustration id={frame.illustration} ratio sizes={CONSEQUENCE_SIZES} className="w-full rounded-3xl border-[3px] border-tinta/80" />
             <p className="reading-text mt-3 flex gap-3 text-xl leading-snug font-bold">
               <span aria-hidden className="grid size-8 shrink-0 place-items-center rounded-full bg-petroleo-600 text-base text-crema-50">
                 {i + 1}
@@ -288,6 +289,9 @@ export function StrategiesView({ step, state, dispatch, context }: Ctx & { step:
               selected={selected.includes(id)}
               onToggle={() => dispatch({ type: 'respond', stepId: step.id, values: toggle(selected, id) })}
               icon={t.icon}
+              // Ilustración definitiva de la herramienta (la del catálogo); si aún no existe, el icono.
+              // Decorativa: el nombre y la descripción ya la explican.
+              leading={hasFinalArt(t.illustration) ? <Illustration id={t.illustration} decorative ratio fit="contain" sizes="56px" className="w-full" /> : undefined}
               label={t.name}
               description={t.childText}
               tone={t.color}

@@ -5,6 +5,7 @@ import { getAsset } from '../../content/assets/index.ts';
 import { Illustration } from '../Illustration.tsx';
 import { ratioOf } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
+import { SCENE_SIZES } from './imageSizes.ts';
 
 export type PageDirection = 'next' | 'prev';
 
@@ -66,7 +67,7 @@ export function StoryPage({ beat, page, group = [], direction, mode, showText, s
           id={beat.illustration}
           ratio
           priority
-          sizes="(orientation: landscape) and (min-width: 1024px) 62vw, (orientation: portrait) 85vw, 100vw"
+          sizes={SCENE_SIZES}
           className={`mx-auto w-full portrait:max-w-[calc(100cqh*var(--r-p))] landscape:max-w-[calc(60dvh*var(--r))] lg:landscape:max-w-none lg:landscape:rounded-[var(--radius-card)] lg:landscape:shadow-[var(--shadow-soft)] ${pageAnim}`}
         />
       </div>

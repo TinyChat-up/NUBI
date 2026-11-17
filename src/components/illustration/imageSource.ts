@@ -56,6 +56,8 @@ const preloaded = new Set<string>();
  * Precarga discreta (sin bloquear) de los recursos listos que se verán a continuación.
  * `sizes` debe ser el mismo que tendrá la imagen al mostrarse; si no, el navegador puede
  * precargar otra variante y descargar dos veces (por defecto, `100vw`).
+ * Con composición vertical, en orientación vertical se precarga esa versión: la misma
+ * condición que el `<source media="(orientation: portrait)">` de Illustration.
  */
 export function preload(items: { asset: AssetSpec | undefined; sizes?: string }[]): void {
   if (typeof Image === 'undefined') return;
@@ -64,11 +66,12 @@ export function preload(items: { asset: AssetSpec | undefined; sizes?: string }[
     preloaded.add(a.id);
     const img = new Image();
     img.decoding = 'async';
-    const srcSet = buildSrcSet(a);
+    const vertical = a.portrait && typeof matchMedia === 'function' && matchMedia('(orientation: portrait)').matches;
+    const srcSet = vertical ? portraitSrcSet(a) : buildSrcSet(a);
     if (srcSet) {
       img.sizes = sizes ?? '100vw';
       img.srcset = srcSet;
     }
-    img.src = a.file;
+    img.src = vertical && a.portrait ? a.portrait.file : a.file;
   }
 }
