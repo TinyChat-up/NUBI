@@ -2,11 +2,20 @@ import type { ReactNode } from 'react';
 import { Icon } from '../Icon.tsx';
 import { Illustration } from '../Illustration.tsx';
 
-/** Tarjeta seleccionable grande (selección múltiple, sin "correcto/incorrecto"). */
+/**
+ * Tarjeta seleccionable grande (selección múltiple, sin "correcto/incorrecto").
+ *
+ * Al principio va un recurso visual en un hueco fijo de 56 px con fondo tintado:
+ * - `leading`: un elemento propio (p. ej. la ilustración de una emoción), decorativo;
+ * - si no hay `leading`, el icono `icon`.
+ * El nombre accesible es siempre el texto visible; la selección se indica con borde,
+ * marca ✓ y `aria-pressed`, nunca solo con la imagen.
+ */
 export function ToggleCard({
   selected,
   onToggle,
   icon,
+  leading,
   label,
   description,
   tone = 'petroleo',
@@ -15,6 +24,8 @@ export function ToggleCard({
   selected: boolean;
   onToggle: () => void;
   icon?: string;
+  /** Recurso visual decorativo que sustituye al icono en el mismo hueco (56 × 56 px). */
+  leading?: ReactNode;
   label: string;
   description?: string;
   tone?: 'petroleo' | 'coral' | 'salvia' | 'mostaza';
@@ -35,10 +46,16 @@ export function ToggleCard({
         selected ? 'border-petroleo-600 bg-petroleo-50' : 'border-crema-300/80 bg-crema-50 hover:border-petroleo-200'
       }`}
     >
-      {icon && (
-        <span className={`grid size-14 shrink-0 place-items-center rounded-2xl ${tones[tone]}`}>
-          <Icon name={icon} size={28} />
+      {leading ? (
+        <span aria-hidden data-leading className={`grid size-14 shrink-0 place-items-center rounded-2xl ${tones[tone]}`}>
+          {leading}
         </span>
+      ) : (
+        icon && (
+          <span className={`grid size-14 shrink-0 place-items-center rounded-2xl ${tones[tone]}`}>
+            <Icon name={icon} size={28} />
+          </span>
+        )
       )}
       <span className="flex-1">
         <span className="reading-text block text-lg leading-snug font-extrabold text-tinta">{label}</span>

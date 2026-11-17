@@ -1,9 +1,11 @@
 import type { Dispatch } from 'react';
 import type { RunAction, RunState } from '../../engine/storyEngine.ts';
 import type { ChoiceOption, ChoiceStep, FeelingsStep, KnowNeedStep, StrategiesStep } from '../../engine/types.ts';
+import { emotions } from '../../content/emotions.ts';
 import { tools } from '../../content/tools.ts';
 import { Icon } from '../Icon.tsx';
 import { Illustration } from '../Illustration.tsx';
+import { EmotionArt } from '../illustration/GuideArt.tsx';
 import { StepHeading, ToggleCard } from './Toggle.tsx';
 
 type Ctx = { state: RunState; dispatch: Dispatch<RunAction> };
@@ -11,6 +13,9 @@ type Ctx = { state: RunState; dispatch: Dispatch<RunAction> };
 const toggle = (list: string[], id: string) => (list.includes(id) ? list.filter((x) => x !== id) : [...list, id]);
 
 // ───────────────────────── ¿Cómo te sentirías? ─────────────────────────
+
+/** Ilustración de emoción en el selector: llena el hueco de 56 px de ToggleCard (Mis emociones usa 64 px). */
+const FEELING_ART_SIZE = 56;
 
 export function FeelingsView({ step, state, dispatch, context }: Ctx & { step: FeelingsStep; context?: string }) {
   const selected = state.responses[step.id] ?? [];
@@ -28,16 +33,22 @@ export function FeelingsView({ step, state, dispatch, context }: Ctx & { step: F
     <div className="animate-rise">
       <StepHeading title={step.prompt} help={step.help} icon="heart" context={context} />
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {step.options.map((o, i) => (
-          <ToggleCard
-            key={o.id}
-            selected={selected.includes(o.id)}
-            onToggle={() => onToggle(o.id)}
-            icon={o.icon}
-            label={o.label}
-            tone={(['coral', 'petroleo', 'salvia', 'mostaza'] as const)[i % 4]}
-          />
-        ))}
+        {step.options.map((o, i) => {
+          // Solo el campo tipado `emotion` decide la ilustración (nunca la etiqueta ni la historia).
+          // El texto visible sigue siendo el de la opción; la imagen es decorativa.
+          const emotion = o.emotion ? emotions[o.emotion] : undefined;
+          return (
+            <ToggleCard
+              key={o.id}
+              selected={selected.includes(o.id)}
+              onToggle={() => onToggle(o.id)}
+              icon={o.icon}
+              leading={emotion && <EmotionArt emotion={emotion.id} mood={emotion.mood} size={FEELING_ART_SIZE} />}
+              label={o.label}
+              tone={(['coral', 'petroleo', 'salvia', 'mostaza'] as const)[i % 4]}
+            />
+          );
+        })}
       </div>
 
       {step.intensity && hasFeeling && (
