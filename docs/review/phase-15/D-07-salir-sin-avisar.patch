@@ -1,0 +1,19 @@
+diff --git a/src/content/stories/una-manana-diferente/story.ts b/src/content/stories/una-manana-diferente/story.ts
+index ae2a0c3..de3bb3c 100644
+--- a/src/content/stories/una-manana-diferente/story.ts
++++ b/src/content/stories/una-manana-diferente/story.ts
+@@ -399,11 +399,11 @@ export const unaMananaDiferente: Story = {
+                   { illustration: 'ume-c-salir', text: 'Pero Andrés no sabe dónde está Teo. Se preocupa y sale a buscarle por los pasillos.' },
+                 ],
+                 youMayFeel: 'Alivio al estar en un sitio tranquilo. Quizá también susto o agobio cuando te buscan.',
+-                othersMay: 'Los adultos se preocupan cuando no saben dónde está un niño o una niña. Su trabajo es que estés seguro.',
++                othersMay: 'Los adultos se preocupan cuando no saben dónde está un niño o una niña. Su trabajo es que estés a salvo.',
+                 helpsWhen: 'Necesitar salir es válido. Querer un sitio tranquilo muestra que conoces lo que te ayuda.',
+-                keepInMind: 'Salir sin avisar puede hacer que los demás se preocupen, y que te pidan explicaciones cuando aún no estás preparado.',
++                keepInMind: 'Si sales sin avisar, los demás pueden preocuparse y buscarte. Quizá te pregunten qué pasó antes de que estés preparado o preparada.',
+                 anotherWay:
+-                  'Puedes conseguir lo mismo avisando: enseña tu tarjeta de descanso, di «necesito salir» o usa una señal acordada. Así tienes tu momento tranquilo y los adultos saben que estás bien.',
++                  'Puedes conseguir lo mismo avisando. Puedes enseñar tu tarjeta de descanso, decir «necesito salir» o usar una señal acordada. Así tienes tu momento tranquilo y los adultos saben que estás bien.',
+                 tools: ['espacio-tranquilo', 'descansar', 'comunicar-necesidad'],
+               },
+             },

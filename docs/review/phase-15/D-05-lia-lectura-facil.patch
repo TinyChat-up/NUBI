@@ -1,0 +1,13 @@
+diff --git a/src/content/stories/una-manana-diferente/story.ts b/src/content/stories/una-manana-diferente/story.ts
+index ae2a0c3..e615cd1 100644
+--- a/src/content/stories/una-manana-diferente/story.ts
++++ b/src/content/stories/una-manana-diferente/story.ts
+@@ -139,7 +139,7 @@ export const unaMananaDiferente: Story = {
+           id: 'cambio-4',
+           illustration: 'ume-s2-reacciones',
+           text: 'Cada persona reacciona a su manera. Aya pregunta: «¿Y qué haremos allí?». Bruno protesta: «¡Pero yo quería plástica!». Lía busca en su comunicador el pictograma «no sé».',
+-          short: 'Aya tiene curiosidad. Bruno se enfada un poco. Lía no está segura.',
++          short: 'Aya pregunta. Bruno protesta. Lía usa su comunicador.',
+         },
+         {
+           type: 'beat',

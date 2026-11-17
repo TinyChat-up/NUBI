@@ -1,0 +1,13 @@
+diff --git a/src/content/stories/una-manana-diferente/story.ts b/src/content/stories/una-manana-diferente/story.ts
+index ae2a0c3..98d7495 100644
+--- a/src/content/stories/una-manana-diferente/story.ts
++++ b/src/content/stories/una-manana-diferente/story.ts
+@@ -328,7 +328,7 @@ export const unaMananaDiferente: Story = {
+               consequence: {
+                 story: [
+                   { illustration: 'ume-opt-horario', text: 'Teo se acerca a Andrés y le dice: «¿Me enseñas el plan de hoy?»' },
+-                  { illustration: 'ume-c-horario', text: 'Andrés dibuja el plan en la pizarra: biblioteca, recreo, lengua, comida y plástica. Teo lo mira entero, de arriba abajo.' },
++                  { illustration: 'ume-c-horario', text: 'Andrés dibuja el plan en la pizarra: biblioteca, recreo, lengua, comida y plástica. Teo lo mira entero, de principio a fin.' },
+                 ],
+                 youMayFeel: 'Alivio al ver el día completo. Cuando el plan se ve, el cambio parece más pequeño.',
+                 othersMay: 'A Lía y a Aya también les viene bien ver el plan dibujado. Andrés descubre una forma de ayudar a toda la clase.',

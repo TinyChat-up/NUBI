@@ -22,15 +22,18 @@ try {
       await page.waitForTimeout(250);
       const m = await page.evaluate(() => {
         const stage = document.querySelector('[aria-label="Contenido de la escena"]');
-        const bars = [...document.querySelectorAll('header,nav,footer')].filter(e => ['fixed', 'sticky'].includes(getComputedStyle(e).position) || (stage && e.matches('header,footer')));
+        // Ventana baja (fase 15): las barras dejan de ser fijas y la página se desplaza entera.
+        const tight = document.documentElement.hasAttribute('data-tight');
+        const fixedPlayer = stage && !tight;
+        const bars = [...document.querySelectorAll('header,nav,footer')].filter(e => ['fixed', 'sticky'].includes(getComputedStyle(e).position) || (fixedPlayer && e.matches('header,footer')));
         const barHeight = Math.round(bars.reduce((s, e) => s + e.getBoundingClientRect().height, 0));
-        return { overflowX: document.documentElement.scrollWidth - innerWidth, useful: stage ? Math.round(stage.clientHeight) : innerHeight - barHeight, barHeight };
+        return { overflowX: document.documentElement.scrollWidth - innerWidth, useful: fixedPlayer ? Math.round(stage.clientHeight) : innerHeight - barHeight, barHeight, tight };
       });
       rows.push({ zoom, viewport: `${width}×${height}`, route, ...m });
     }
     await context.close();
   }
 } finally { await browser.close(); }
-for (const r of rows) console.log(`${r.zoom.padEnd(16)} ${r.viewport.padEnd(8)} ${r.route.padEnd(44)} desbordamiento ${r.overflowX} px · alto útil ${r.useful} px (barras ${r.barHeight} px)`);
+for (const r of rows) console.log(`${r.zoom.padEnd(16)} ${r.viewport.padEnd(8)} ${r.route.padEnd(44)} desbordamiento ${r.overflowX} px · alto útil ${r.useful} px (barras fijas ${r.barHeight} px)${r.tight ? ' · ventana baja' : ''}`);
 const blocked = rows.filter(r => r.useful < 120);
 console.log(`\nPantallas con menos de 120 px útiles: ${blocked.length}${blocked.length ? ' → ' + blocked.map(r => `${r.zoom} ${r.route}`).join(' | ') : ''}`);
