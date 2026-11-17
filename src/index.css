@@ -203,6 +203,16 @@ html {
   }
 }
 
+/* Ventana baja (zoom alto ≈ 400 %): las barras dejan de ser fijas (useTightViewport), así que
+   el margen de desplazamiento ya no tiene que reservar su alto, ni la página el de la navegación. */
+html[data-tight] {
+  scroll-padding-top: 1rem;
+  scroll-padding-bottom: 1rem;
+}
+html[data-tight] .app-page {
+  padding-bottom: 2rem;
+}
+
 /* Escenario del reproductor: recibe el foco tras cambiar de paso. Anillo interior (no tapa la cabecera). */
 .stage-focus:focus-visible {
   outline: none;

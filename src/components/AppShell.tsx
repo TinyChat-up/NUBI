@@ -1,7 +1,8 @@
-import type { ReactNode } from 'react';
+import { useRef, type ReactNode } from 'react';
 import { Icon } from './Icon.tsx';
 import { Nubi } from './Nubi.tsx';
 import { Link, useLocation } from '../lib/router.tsx';
+import { useTightViewport } from '../lib/useTightViewport.ts';
 
 const NAV = [
   { to: '/mundo', label: 'Mi mundo', icon: 'map' },
@@ -25,6 +26,10 @@ export function Logo({ size = 40 }: { size?: number }) {
 
 export function AppShell({ children, chrome = true }: { children: ReactNode; chrome?: boolean }) {
   const { path } = useLocation();
+  // Ventana baja (zoom alto): cabecera y navegación inferior dejan de ser fijas para no tapar el contenido.
+  const headerRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const tight = useTightViewport([headerRef, navRef], chrome);
 
   return (
     <div className="paper flex min-h-dvh flex-col">
@@ -33,7 +38,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
       </a>
 
       {chrome && (
-        <header className="sticky top-0 z-30 border-b border-crema-300/70 bg-crema-100/90 backdrop-blur-md">
+        <header ref={headerRef} className={`${tight ? 'static' : 'sticky top-0'} z-30 border-b border-crema-300/70 bg-crema-100/90 backdrop-blur-md`}>
           <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-3 px-4 sm:px-8">
             <Link to="/" aria-label="NUBI, ir a la portada" className="tap flex min-h-12 items-center rounded-2xl pr-2">
               <Logo />
@@ -90,7 +95,7 @@ export function AppShell({ children, chrome = true }: { children: ReactNode; chr
       </main>
 
       {chrome && (
-        <nav aria-label="Principal" className="safe-bottom fixed inset-x-0 bottom-0 z-30 border-t border-crema-300/70 bg-crema-50/95 backdrop-blur-md lg:hidden">
+        <nav ref={navRef} aria-label="Principal" className={`safe-bottom ${tight ? 'static' : 'fixed inset-x-0 bottom-0'} z-30 border-t border-crema-300/70 bg-crema-50/95 backdrop-blur-md lg:hidden`}>
           <ul className="mx-auto grid max-w-xl grid-cols-4 px-2 pt-2">
             {NAV.map((item) => {
               const active = isActive(path, item.to);

@@ -23,6 +23,7 @@ import { useSettings, type Settings } from '../../state/settings.tsx';
 import { getAsset } from '../../content/assets/index.ts';
 import { Icon } from '../Icon.tsx';
 import { useSwipe } from '../../lib/useSwipe.ts';
+import { useTightViewport } from '../../lib/useTightViewport.ts';
 import { preload } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, ToolButton } from '../ui.tsx';
@@ -137,10 +138,18 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   // un anillo de foco sin que el niño o la niña haya interactuado.
   // (Se compara con el paso anterior para que el doble efecto de StrictMode tampoco enfoque al abrir.)
   const lastStepKey = useRef(stepKey);
+  // Ventana baja (zoom alto): cabecera y controles dejan de ser fijos y se desplaza la página entera.
+  const headerRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+  const tight = useTightViewport([headerRef, footerRef]);
+  const tightRef = useRef(tight);
+  tightRef.current = tight;
   useEffect(() => {
     if (!isPanel) stageRef.current?.scrollTo({ top: 0 });
     if (lastStepKey.current === stepKey) return;
     lastStepKey.current = stepKey;
+    // En ventana baja la página se habrá quedado en los controles: mostrar el principio del paso nuevo.
+    if (tightRef.current && !isPanel) stageRef.current?.scrollIntoView({ block: 'start' });
     stageRef.current?.focus({ preventScroll: true });
   }, [stepKey, isPanel]);
 
@@ -266,9 +275,9 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   });
 
   return (
-    <div className={`flex h-dvh flex-col bg-crema-100 ${motionPaused ? 'anim-paused' : ''}`}>
+    <div className={`flex ${tight ? 'min-h-dvh' : 'h-dvh'} flex-col bg-crema-100 ${motionPaused ? 'anim-paused' : ''}`} data-tight={tight || undefined}>
       {/* Barra superior */}
-      <header className="flex items-center gap-2 border-b border-crema-300/70 bg-crema-50/90 px-3 py-2 sm:gap-4 sm:px-6">
+      <header ref={headerRef} className="flex items-center gap-2 border-b border-crema-300/70 bg-crema-50/90 px-3 py-2 sm:gap-4 sm:px-6">
         <button type="button" onClick={exit} className="tap flex min-h-12 items-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100">
           <Icon name="close" size={24} />
           <span className="hidden sm:inline">Volver a la historia</span>
@@ -296,7 +305,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </header>
 
       {/* Escenario */}
-      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className="stage-focus flex-1 touch-pan-y overflow-x-hidden overflow-y-auto" {...swipe}>
+      <div ref={stageRef} tabIndex={-1} role="region" aria-label="Contenido de la escena" className={`stage-focus touch-pan-y ${tight ? 'flex-none overflow-x-clip' : 'flex-1 overflow-x-hidden overflow-y-auto'}`} {...swipe}>
         <div className={`mx-auto flex min-h-full w-full flex-col px-3 py-4 sm:px-6 sm:py-6 ${play.kind === 'beat' ? 'max-w-7xl portrait:pt-0 landscape:justify-center' : 'max-w-6xl'}`}>{stage}</div>
       </div>
 
@@ -306,7 +315,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       </p>
 
       {/* Controles */}
-      <footer className="safe-bottom border-t border-crema-300/70 bg-crema-50/95 px-2 pt-2 sm:px-6">
+      <footer ref={footerRef} className="safe-bottom border-t border-crema-300/70 bg-crema-50/95 px-2 pt-2 sm:px-6">
         {(voiceNotice || narration.error) && mode === 'escuchar' && (
           <p className="mb-2 rounded-2xl bg-mostaza-100 px-4 py-2 text-center text-sm font-bold text-mostaza-700" role="status">
             Este episodio aún no tiene audio grabado y la voz del dispositivo no está disponible. Puedes leer el texto o activarla en Ajustes.

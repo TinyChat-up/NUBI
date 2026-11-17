@@ -145,5 +145,6 @@ export const toneText = {
 
 /** Contenedor de página con márgenes adaptados a tableta/móvil. */
 export function Page({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`mx-auto w-full max-w-6xl px-4 pt-6 pb-32 sm:px-8 sm:pt-10 ${className}`}>{children}</div>;
+  // `app-page`: en ventana baja la navegación inferior no es fija y sobra la reserva de pb-32 (index.css).
+  return <div className={`app-page mx-auto w-full max-w-6xl px-4 pt-6 pb-32 sm:px-8 sm:pt-10 ${className}`}>{children}</div>;
 }
