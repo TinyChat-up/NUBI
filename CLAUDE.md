@@ -6,6 +6,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Revisión de preparación del piloto (fase 14):** [docs/review/PHASE_14_READINESS_REPORT.md](docs/review/PHASE_14_READINESS_REPORT.md), en la rama `review/phase-14-pilot-readiness`. Es evaluación y protocolos: no cambia la rama estable. Sus decisiones pendientes están en `docs/review/DECISION_REGISTER.md`; no aplicar cambios de texto o diseño sin aprobación.
 >
+> **Correcciones previas al piloto (fase 15):** [docs/review/PHASE_15_REMEDIATION_REPORT.md](docs/review/PHASE_15_REMEDIATION_REPORT.md), en la rama `feat/claude-pilot-remediation` (pendiente de revisión, sin integrar). Las propuestas de texto de [EDITORIAL_APPROVAL_PHASE_15.md](docs/review/EDITORIAL_APPROVAL_PHASE_15.md) **no están aplicadas**: solo se aplican con autorización humana expresa.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
