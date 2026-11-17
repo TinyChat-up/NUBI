@@ -1,0 +1,416 @@
+[
+  {
+    "file": "/media/tools/pedir-ayuda.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/pedir-ayuda-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/pedir-ayuda-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/descansar.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/descansar-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/descansar-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/espacio-tranquilo.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/espacio-tranquilo-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/espacio-tranquilo-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/comunicar-necesidad.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/comunicar-necesidad-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/comunicar-necesidad-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/anticipar-cambios.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/anticipar-cambios-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/anticipar-cambios-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/expresar-desacuerdo.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/expresar-desacuerdo-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/expresar-desacuerdo-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/apoyos-sensoriales.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/apoyos-sensoriales-256w.png",
+    "dimensions": [
+      256,
+      256
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/tools/apoyos-sensoriales-512w.png",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha": [
+      0,
+      255
+    ],
+    "icc": true
+  },
+  {
+    "file": "/media/places/colegio.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/colegio-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/colegio-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/casa.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/casa-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/casa-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/parque.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/parque-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/parque-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/amigos.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/amigos-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/amigos-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/emociones.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/emociones-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/emociones-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/herramientas.webp",
+    "dimensions": [
+      2048,
+      1536
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/herramientas-800w.webp",
+    "dimensions": [
+      800,
+      600
+    ],
+    "alpha": null,
+    "icc": true
+  },
+  {
+    "file": "/media/places/herramientas-1200w.webp",
+    "dimensions": [
+      1200,
+      900
+    ],
+    "alpha": null,
+    "icc": true
+  }
+]

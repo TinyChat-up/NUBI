@@ -1,0 +1,717 @@
+[
+  {
+    "id": "tool-pedir-ayuda",
+    "source": "docs/art-batch-6/originals/tool-pedir-ayuda.png",
+    "nativeSha256": "717e5624e2e63f3af04fc94ef8409a4669ad4926ab940b035ee84908eba6bfb6",
+    "file": "/media/tools/pedir-ayuda.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1193746,
+    "sha256": "ef62f8990e507ab9e9aee410d1cf7d3833c0c9bbd60f56bf959066440dec2fc2",
+    "variants": [
+      {
+        "file": "/media/tools/pedir-ayuda-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 89252,
+        "sha256": "48426c2b57a788bfbe9f0b9161f62ff0872d9a2a9d19032e1bdfbb3787c51d63"
+      },
+      {
+        "file": "/media/tools/pedir-ayuda-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 311999,
+        "sha256": "9bf750aaf447aa557fd3c7383867db35fafccd87b63c4ca9b988662a655ad955"
+      }
+    ]
+  },
+  {
+    "id": "tool-descansar",
+    "source": "docs/art-batch-6/originals/tool-descansar.png",
+    "nativeSha256": "c13c1a1e1b326ecbd1f06dd7409340a6f4c03fc2c3e8f47223b95821d90c1a38",
+    "file": "/media/tools/descansar.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1037514,
+    "sha256": "726d03101d01dda6e87cb4c1dccbe15d06d1e6f8623036209ed27f4639b1c373",
+    "variants": [
+      {
+        "file": "/media/tools/descansar-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 75898,
+        "sha256": "242fada50eba2719fd0f705ee82a90d1fac5a4cc33f57cc2a6bae078b35409e1"
+      },
+      {
+        "file": "/media/tools/descansar-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 272959,
+        "sha256": "f91076e0d7f56df83bfd029b2f46d6a078a558096d6cee3921e9636faf241704"
+      }
+    ]
+  },
+  {
+    "id": "tool-espacio-tranquilo",
+    "source": "docs/art-batch-6/originals/tool-espacio-tranquilo.png",
+    "nativeSha256": "d3d480a5ec358ca18e1f44c7c502828e2b3ca4f09eaf4528645020959b372945",
+    "file": "/media/tools/espacio-tranquilo.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1016000,
+    "sha256": "3547d9dfdb720f914223d3677ec616722f937b62bfe27dc95d3a1331ee77dfa0",
+    "variants": [
+      {
+        "file": "/media/tools/espacio-tranquilo-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 72491,
+        "sha256": "facf1fdff0e9701dff73cc7145a11e705bd8beeca3e3f908258464c2c2586899"
+      },
+      {
+        "file": "/media/tools/espacio-tranquilo-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 260414,
+        "sha256": "da1e6c639deffb8e85c49e3b8eee0715ab6743edf2dce5afd0f13fc2fc2e41b1"
+      }
+    ]
+  },
+  {
+    "id": "tool-comunicar-necesidad",
+    "source": "docs/art-batch-6/originals/tool-comunicar-necesidad.png",
+    "nativeSha256": "00bef487edff0fe182567e9cf35349135c378ae82d4d4570a8a437a2abb813f3",
+    "file": "/media/tools/comunicar-necesidad.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1084264,
+    "sha256": "8190480583a96fab6e98dd0f3b6f7963d6f59b4867b1b6ce19b4df62d685ad42",
+    "variants": [
+      {
+        "file": "/media/tools/comunicar-necesidad-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 79813,
+        "sha256": "d2fa9715c39e7cd97070eaff742dd1c538cdcc1fcb472862f9fe55f978d9eb81"
+      },
+      {
+        "file": "/media/tools/comunicar-necesidad-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 282835,
+        "sha256": "cbc945a546537d1a02d57ad8d53af758696182632cad77c89f9a212dc20a6926"
+      }
+    ]
+  },
+  {
+    "id": "tool-anticipar-cambios",
+    "source": "docs/art-batch-6/originals/tool-anticipar-cambios.png",
+    "nativeSha256": "694f3aee91fa854852ff66e1951fcecf21334599e8db3741e099375f6577d4cf",
+    "file": "/media/tools/anticipar-cambios.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 927018,
+    "sha256": "d22390535506d652f3cd232707dccc4f031c2f0ee5e7779399a8cd19523003ee",
+    "variants": [
+      {
+        "file": "/media/tools/anticipar-cambios-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 60834,
+        "sha256": "7afb9f610a89213fa32a1329ea65035ab31a91948766c1bd3887dd81552d6948"
+      },
+      {
+        "file": "/media/tools/anticipar-cambios-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 230638,
+        "sha256": "e430d3f9d614b53ac29be5ebb9fea03f39533bdc93dc0d0290b93bb229580f05"
+      }
+    ]
+  },
+  {
+    "id": "tool-expresar-desacuerdo",
+    "source": "docs/art-batch-6/originals/tool-expresar-desacuerdo.png",
+    "nativeSha256": "d8a94ad4183794cc8217575fed91d2d844b0f2f7ed2ad2dc7636131d5f3af14a",
+    "file": "/media/tools/expresar-desacuerdo.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1152658,
+    "sha256": "ae388dc066c75cc1a882c3a0f07c3649ef8f76b98b5e52149e1498a06f1acddd",
+    "variants": [
+      {
+        "file": "/media/tools/expresar-desacuerdo-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 88262,
+        "sha256": "bcc4b360494ecf88886ca672b5be5284984fceb3f16a0b8683c6ff0cd5db499a"
+      },
+      {
+        "file": "/media/tools/expresar-desacuerdo-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 307287,
+        "sha256": "0c18cb81304aea916884858f21a1b1b38fb8991159454ff6f4ea7a188599f654"
+      }
+    ]
+  },
+  {
+    "id": "tool-apoyos-sensoriales",
+    "source": "docs/art-batch-6/originals/tool-apoyos-sensoriales.png",
+    "nativeSha256": "25bafc2c0bc3aeb3e69f53883856fcdf0842e7cedc13138462bfd3c1ddfbb4ca",
+    "file": "/media/tools/apoyos-sensoriales.png",
+    "exportSize": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": 2,
+    "canvasInset": 0.03,
+    "bytes": 1019309,
+    "sha256": "6b130e6f5b9e415de3184b779c78a996a3342ad2f46b2af1ea9364b04331844c",
+    "variants": [
+      {
+        "file": "/media/tools/apoyos-sensoriales-256w.png",
+        "width": 256,
+        "exportSize": [
+          256,
+          256
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 80050,
+        "sha256": "23efdd3280bfbcc0cb72b178616b1c548cadc1fc556fea3aced7a69bc73b4ba5"
+      },
+      {
+        "file": "/media/tools/apoyos-sensoriales-512w.png",
+        "width": 512,
+        "exportSize": [
+          512,
+          512
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": 2,
+        "canvasInset": 0.03,
+        "bytes": 274449,
+        "sha256": "5e4d0cd2d2e31555433f95273073570b88babcbcd52bb0300da28415673fef5b"
+      }
+    ]
+  },
+  {
+    "id": "place-colegio",
+    "source": "docs/art-batch-6/originals/place-colegio.png",
+    "nativeSha256": "9ec0c6919154cf50fdf05b40035866bb1f0951284c9cae23315122f27916783c",
+    "file": "/media/places/colegio.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 466684,
+    "sha256": "64a6e738ce96dcaa6d2c985374d73cddf05d28a8aed308b6f44ef0c5302aeccb",
+    "variants": [
+      {
+        "file": "/media/places/colegio-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 131392,
+        "sha256": "9365c3fa4fa5efe6881d888f19ac3d144b062a27c1a509c6b32b0abb97950a52"
+      },
+      {
+        "file": "/media/places/colegio-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 240284,
+        "sha256": "e5db0ce014bdadbaf1ce4125733fee25b13f59fbb43971394499e754a6918e37"
+      }
+    ]
+  },
+  {
+    "id": "place-casa",
+    "source": "docs/art-batch-6/originals/place-casa.png",
+    "nativeSha256": "a70c28b18d426277289076259d0b43c438ed4e2ea44cbb24d9f51d011336cda1",
+    "file": "/media/places/casa.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 416784,
+    "sha256": "3c709c697381c86c108da326a83c1ed6820aa1a5e91ecd9036b3ad98a2ff2389",
+    "variants": [
+      {
+        "file": "/media/places/casa-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 114398,
+        "sha256": "08aac7422b0c073b32c43ab03035201400a1f5674bac8d3164ba30427b7ed5ee"
+      },
+      {
+        "file": "/media/places/casa-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 217936,
+        "sha256": "4afcf52904775954862c0350b7da6b3230260a2a4c86d1a13d03c4d73e424d1b"
+      }
+    ]
+  },
+  {
+    "id": "place-parque",
+    "source": "docs/art-batch-6/originals/place-parque.png",
+    "nativeSha256": "219bdadb87c261bd73a14db203238cb751dd370b288db594aa68c36f4f9be2f7",
+    "file": "/media/places/parque.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 336854,
+    "sha256": "f979e09812660b56ec80f0fcd496ff9666b65f770b4756b96239f5214b75e1fe",
+    "variants": [
+      {
+        "file": "/media/places/parque-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 93490,
+        "sha256": "f06a336701190e36f42b797219249414069441834ac55701777a906a54f867f2"
+      },
+      {
+        "file": "/media/places/parque-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 178040,
+        "sha256": "70c08fbe98c519cc51b113ed6a2eb12ed1647fdbc513637d0648e919810a9d1d"
+      }
+    ]
+  },
+  {
+    "id": "place-amigos",
+    "source": "docs/art-batch-6/originals/place-amigos.png",
+    "nativeSha256": "13f98a2613664b502e9b64475a4bc141b4c8074b8a3162505cefaa91c95bf374",
+    "file": "/media/places/amigos.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 412156,
+    "sha256": "9af6de3f6e534e64a1f1d33c8429190817427219f15d4b09baa8a78b20560e99",
+    "variants": [
+      {
+        "file": "/media/places/amigos-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 112214,
+        "sha256": "811e4b9dc57fcf9bb79dace7097f4c99463a2f5af9f3e6e2bc464527ebb57d5f"
+      },
+      {
+        "file": "/media/places/amigos-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 213180,
+        "sha256": "bb3065ea1e161cfe1d4d0d0f58905b4c54f9eaa308e75d7776db05e4b25e7a59"
+      }
+    ]
+  },
+  {
+    "id": "place-emociones",
+    "source": "docs/art-batch-6/originals/place-emociones.png",
+    "nativeSha256": "3f957b1ac52cd727f0ae91d73757e8d05df11b42b39fb55b424fd4035f8095a0",
+    "file": "/media/places/emociones.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 186550,
+    "sha256": "7f4e6edb54cc3780e10679db54a18bbaf7a7f40e9d0520225d7731b8cbc0f6b4",
+    "variants": [
+      {
+        "file": "/media/places/emociones-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 48642,
+        "sha256": "f6909920943f1e315382cbec729888275e90d648a579566707e5f9e93c0d8648"
+      },
+      {
+        "file": "/media/places/emociones-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 90818,
+        "sha256": "fd3b79d337bc1186a324d0f8a9eed9cfe80ee0f49243ad2c1e243571f209cddf"
+      }
+    ]
+  },
+  {
+    "id": "place-herramientas",
+    "source": "docs/art-batch-6/originals/place-herramientas.png",
+    "nativeSha256": "1f6d020308425c3d6807ba96dc40702e5329ae3263192503c8b5b065fa627e0e",
+    "file": "/media/places/herramientas.webp",
+    "exportSize": [
+      2048,
+      1536
+    ],
+    "sourceSize": [
+      1448,
+      1086
+    ],
+    "resampled": true,
+    "alphaNoiseFloor": null,
+    "canvasInset": 0,
+    "bytes": 335374,
+    "sha256": "bc7638fdc2ce3e4da734b6045cb2eee32a35cf3b9e8967fdcd4a1d7ed0336a03",
+    "variants": [
+      {
+        "file": "/media/places/herramientas-800w.webp",
+        "width": 800,
+        "exportSize": [
+          800,
+          600
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 86342,
+        "sha256": "dab14210afcff66962cf051fdcf1dbcc637d25d93b7d3e528270f258bc66b4fe"
+      },
+      {
+        "file": "/media/places/herramientas-1200w.webp",
+        "width": 1200,
+        "exportSize": [
+          1200,
+          900
+        ],
+        "sourceSize": [
+          1448,
+          1086
+        ],
+        "resampled": true,
+        "alphaNoiseFloor": null,
+        "canvasInset": 0,
+        "bytes": 167584,
+        "sha256": "9e7727a6813c7ba19de9354111ae238cbc4c8eb5bd0cbc907161618b7602e7e6"
+      }
+    ]
+  }
+]
