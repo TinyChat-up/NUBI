@@ -15,7 +15,7 @@ import {
 } from '../../engine/storyEngine.ts';
 import { restoreRun } from '../../engine/restoreRun.ts';
 import { readableBeat, readableConsequence } from '../../engine/readable.ts';
-import type { BeatStep, Story, ToolId } from '../../engine/types.ts';
+import type { BeatStep, Route, Story, ToolId } from '../../engine/types.ts';
 import { characters } from '../../content/characters.ts';
 import { navigate } from '../../lib/router.tsx';
 import { useNarration } from '../../lib/useNarration.ts';
@@ -29,6 +29,7 @@ import { preload } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
+import { splitConsequenceRoutes } from './consequenceRoutes.ts';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
 import { SceneMenu } from './SceneMenu.tsx';
 import { contextIllustration, pageGroup, upcomingImages } from './presentation.ts';
@@ -233,18 +234,25 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       case 'consequence': {
         const choice = getChoiceStep(story, s.choiceStepId);
         const option = choice?.options.find((o) => o.id === state.choices[s.choiceStepId]);
+        // «Probar otra posibilidad» arriba (fase 17) y la continuación al final como acción principal.
+        const { retry, onward } = splitConsequenceRoutes(s);
+        const go = (r: Route) => dispatch({ type: 'goto', sceneId: r.to.sceneId, stepId: r.to.stepId });
         stage =
           option && choice ? (
             <div>
-              <div className="mb-5">
-                <Button variant="secondary" icon={s.routes[0].icon} onClick={() => dispatch({ type: 'goto', sceneId: s.routes[0].to.sceneId, stepId: s.routes[0].to.stepId })}>{s.routes[0].label}</Button>
-              </div>
+              {retry && (
+                <div className="mb-5">
+                  <Button variant="secondary" icon={retry.icon} onClick={() => go(retry)}>
+                    {retry.label}
+                  </Button>
+                </div>
+              )}
               <ConsequenceBody option={option} protagonist={characters[story.characters[0]]?.name} short={settings.shortText} />
               <div className="mt-6 flex flex-col gap-4 rounded-[var(--radius-card)] bg-crema-200/70 p-5 sm:flex-row sm:items-center sm:justify-between">
                 <ExploredMeter total={choice.options.length} explored={(state.explored[choice.id] ?? []).length} />
                 <div className="flex flex-wrap gap-3">
-                  {s.routes.slice(1).map((r, i) => (
-                    <Button key={r.label} variant={i === 0 ? 'secondary' : 'primary'} icon={i === 0 ? r.icon : undefined} iconAfter={i === 0 ? undefined : r.icon} onClick={() => dispatch({ type: 'goto', sceneId: r.to.sceneId, stepId: r.to.stepId })}>
+                  {onward.map((r) => (
+                    <Button key={r.label} iconAfter={r.icon} onClick={() => go(r)}>
                       {r.label}
                     </Button>
                   ))}
@@ -255,9 +263,11 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
             <div className="grid place-items-center gap-4 py-10 text-center">
               <GuideArt mood="thinking" size={120} />
               <p className="reading-text text-xl font-bold">Primero elige una posibilidad para ver qué puede pasar.</p>
-              <Button icon="arrow-left" onClick={() => dispatch({ type: 'goto', sceneId: s.routes[0].to.sceneId, stepId: s.routes[0].to.stepId })}>
-                Ver las posibilidades
-              </Button>
+              {retry && (
+                <Button icon="arrow-left" onClick={() => go(retry)}>
+                  Ver las posibilidades
+                </Button>
+              )}
             </div>
           );
         break;

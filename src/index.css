@@ -335,7 +335,7 @@ html[data-motion='reduced'] *::after {
 .home-hero-sky { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: .75rem 1rem 0; }
 .home-hero-title { display: flex; align-items: center; gap: .75rem; }
 .home-hero-title > div { text-align: left; }
-.home-hero-guide { width: 4.5rem; filter: drop-shadow(0 8px 10px rgb(34 51 58 / .14)); }
+.home-hero-guide { filter: drop-shadow(0 8px 10px rgb(34 51 58 / .14)); }
 .home-hero-brand { font-size: 3.75rem; line-height: 1; letter-spacing: .08em; color: var(--color-petroleo-800); text-shadow: 0 0 18px var(--color-crema-50); }
 .home-hero-tagline { margin-top: .25rem; max-width: 17rem; font-size: 1.25rem; font-weight: 800; color: var(--color-tinta); text-shadow: 0 0 4px var(--color-crema-50), 0 0 12px var(--color-crema-50); }
 .home-hero-note { align-self: center; margin: auto 1rem max(1rem, env(safe-area-inset-bottom)); display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem; padding: .375rem .875rem; border-radius: 9999px; font-size: .875rem; font-weight: 700; color: var(--color-tinta-suave); background: color-mix(in srgb, var(--color-crema-50) 88%, transparent); }
@@ -418,7 +418,6 @@ html[data-motion='reduced'] *::after {
 .animate-sway, .animate-float { animation: none; }
 @media (min-width: 640px) {
   .home-hero-bar { padding-inline: 2rem; padding-top: max(1.5rem, env(safe-area-inset-top)); }
-  .home-hero-guide { width: 7rem; }
   .home-hero-brand { font-size: 5rem; }
   .home-hero-tagline { max-width: none; font-size: 1.5rem; }
   .world-companions { grid-template-columns: repeat(2,minmax(0,1fr)); }

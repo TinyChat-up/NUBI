@@ -27,7 +27,7 @@ export function HomeScreen() {
 
       <div className="home-hero-sky">
         <div className="home-hero-title">
-          <GuideArt size={160} className="home-hero-guide" label="Nubi, la nube guía, te saluda" />
+          <GuideArt size={144} className="home-hero-guide w-24 sm:w-36" label="Nubi, la nube guía, te saluda" />
           <div>
             <h1 id="home-title" className="home-hero-brand">NUBI</h1>
             <p className="reading-text home-hero-tagline">Un mundo de historias por descubrir</p>
