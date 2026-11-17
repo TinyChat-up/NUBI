@@ -41,7 +41,8 @@ try{
    for(const img of await p.locator('[data-asset] img').all()){
     await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());
     const r=await img.evaluate(i=>({id:i.closest('[data-asset]').dataset.asset,width:i.getBoundingClientRect().width,height:i.getBoundingClientRect().height,fit:getComputedStyle(i).objectFit,src:i.currentSrc,alt:i.alt}));
-    assert.equal(r.fit,'contain',r.id);
+    // Fase 18: la portada vuelve a ser fondo a sangre (`cover`, decorativo, ILLUSTRATION_INTEGRATION §2); el resto del arte, íntegro.
+    assert.equal(r.fit,r.id==='portada-fondo'?'cover':'contain',r.id);
     const originalWidth=await p.evaluate(async id=>(await import('/src/content/assets/index.ts')).assets[id].size.width,r.id);
     const sourceWidth=Number(/-(\d+)w\./.exec(r.src)?.[1]||originalWidth);
     assert(sourceWidth>=Math.min(originalWidth,r.width*dpr)-1,`${r.id}: ${sourceWidth}px for ${r.width}px @${dpr}`);
