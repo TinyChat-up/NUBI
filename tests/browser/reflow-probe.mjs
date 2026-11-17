@@ -9,7 +9,7 @@ const require = createRequire(process.env.NUBI_BROWSER_TOOLS + '/package.json');
 const { chromium } = require('playwright');
 const base = process.env.NUBI_URL || 'http://127.0.0.1:5173';
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
-const routes = ['/', '/mundo', '/historias', '/historias/una-manana-diferente', '/herramientas', '/herramientas/pedir-ayuda', '/emociones', '/ajustes',
+const routes = ['/', '/historias', '/historias/una-manana-diferente', '/acompanar', '/acompanar/una-manana-diferente', '/mundo', '/familias', '/ajustes',
   '/historias/una-manana-diferente/cuento', '/historias/una-manana-diferente/comic'];
 const rows = [];
 try {

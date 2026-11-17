@@ -67,7 +67,7 @@ for (const width of [390, 820, 1180]) {
       await page.getByRole('button', { name: label, exact: false }).click();
       await page.getByRole('heading', { name: label, exact: true }).waitFor();
       assert.equal(await page.locator('[aria-label="Contenido de la escena"]').evaluate(el => el === document.activeElement), true);
-      await page.getByRole('button', { name: /Probar otra posibilidad/ }).click();
+      await page.getByRole('button', { name: /Probar otra decisión/  /* fase 19: antes «Probar otra posibilidad» */ }).click();
     }
     await page.getByRole('button', { name: options[0], exact: false }).click();
     await capture(`05-${format}-consecuencia`);
@@ -94,13 +94,14 @@ for (const width of [390, 820, 1180]) {
   await capture('07-video');
   const link = page.getByRole('link', { name: 'Ver como cuento', exact: true });
   assert(await link.isVisible()); await link.click(); await page.locator('[aria-label="Contenido de la escena"]').waitFor();
-  await go('/familias');
-  const words = { catorce: '14', 'cuarenta y uno': '41', veintisiete: '27', 'setenta y dos': '72' };
-  const text = await page.locator('body').innerText();
-  await page.getByRole('button', { name: Object.entries(words).find(([k]) => text.includes(k))[1], exact: true }).click();
+  // Fase 19: la guía adulta no tiene puerta numérica ni datos del menor; el borrado está en Ajustes.
+  await go('/acompanar/una-manana-diferente');
+  await page.getByRole('heading', { name: 'Antes del cuento' }).waitFor();
+  assert.equal(await page.getByRole('button', { name: /^(14|41|27|72)$/ }).count(), 0, 'sin puerta numérica');
   await capture('08-familias');
+  await go('/ajustes');
   await page.evaluate(() => localStorage.setItem('other-app', 'conservar'));
-  await page.getByRole('button', { name: 'Reiniciar el progreso', exact: true }).click();
+  await page.getByRole('button', { name: 'Borrar el progreso', exact: true }).click();
   await page.getByRole('button', { name: 'Sí, borrar', exact: true }).click();
   assert.deepEqual(await page.evaluate(() => Object.keys(localStorage).filter(k => k.startsWith('nubi.v1.run.'))), []);
   assert.equal(await page.evaluate(() => localStorage.getItem('other-app')), 'conservar');

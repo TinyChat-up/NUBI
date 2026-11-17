@@ -1,11 +1,13 @@
 // Portada inmersiva (fase 18): el paisaje `portada-fondo` es el fondo a sangre de la primera pantalla.
+// Fase 19: dos entradas — «Descubrir un cuento» (principal) y «Para familias y docentes» (secundaria) — y Ajustes.
 // Falla si:
 //  - la ilustración no cubre toda la primera pantalla, está dentro de una tarjeta (bordes, radio, sombra,
 //    márgenes) o se deforma (debe ser `object-fit: cover` sobre el arte 16:9 original);
 //  - el encuadre no responde a la orientación: el colegio (punto focal) debe quedar a la vista y centrado,
 //    y el texto y el botón no deben tapar el tejado ni el reloj;
-//  - «Entrar en mi mundo», Ajustes y Familias no se ven sin desplazar, miden < 48 px, quedan tapados o no
-//    llevan su palabra visible; el título o el subtítulo quedan tapados o reducidos;
+//  - «Descubrir un cuento», «Para familias y docentes» y Ajustes no se ven sin desplazar, miden < 48 px, quedan
+//    tapados o no llevan su palabra visible; las dos entradas no se distinguen; el título o el subtítulo quedan
+//    tapados o reducidos;
 //  - con teclado el foco no es visible;
 //  - hay desbordamiento horizontal, o a 640×512 / 320×256 algún control no se puede alcanzar.
 // Uso: NUBI_BROWSER_TOOLS=… CHROMIUM_PATH=… node tests/browser/homepage.mjs  (Vite en 127.0.0.1:5173)
@@ -38,7 +40,7 @@ const reachableInFirstScreen = (page, locator, label) => locator.evaluate((e, la
 }, label);
 
 /** Título, subtítulo, botón, pastillas y nota caben enteros en el ancho (la sección recorta lo que sobresale). */
-const insideWidth = page => page.evaluate(() => ['#home-title', '.home-hero-tagline', '.home-hero-cta', '.home-hero-note', ...[...document.querySelectorAll('.home-hero-pill')].map((_, i) => `.home-hero-pill:nth-of-type(${i + 1})`)]
+const insideWidth = page => page.evaluate(() => ['#home-title', '.home-hero-tagline', '.home-hero-cta', '.home-hero-adult', '.home-hero-note', ...[...document.querySelectorAll('.home-hero-pill')].map((_, i) => `.home-hero-pill:nth-of-type(${i + 1})`)]
   .map(sel => { const r = document.querySelector(sel).getBoundingClientRect(); return { sel, ok: r.left >= -0.5 && r.right <= innerWidth + 0.5 }; })
   .filter(x => !x.ok).map(x => x.sel));
 
@@ -79,12 +81,17 @@ try {
 
     // 3. Controles y textos de la primera pantalla.
     const checks = [
-      await reachableInFirstScreen(page, page.getByRole('link', { name: 'Entrar en mi mundo' }), 'Entrar en mi mundo'),
+      await reachableInFirstScreen(page, page.getByRole('link', { name: 'Descubrir un cuento' }), 'Descubrir un cuento'),
       await reachableInFirstScreen(page, page.getByRole('link', { name: 'Ajustes', exact: true }), 'Ajustes'),
-      await reachableInFirstScreen(page, page.getByRole('link', { name: /^Familias/ }), 'Familias'),
+      await reachableInFirstScreen(page, page.getByRole('link', { name: /^Para familias y docentes/ }), 'Para familias y docentes'),
     ];
     for (const c of checks) assert(c.ok, `${label}: «${c.label}» no está a la vista, mide < 48 px o queda tapado`);
-    for (const word of ['Ajustes', 'Familias']) assert(await page.locator('.home-hero-bar').getByText(word, { exact: true }).isVisible(), `${label}: «${word}» sin palabra visible`);
+    assert(await page.locator('.home-hero-bar').getByText('Ajustes', { exact: true }).isVisible(), `${label}: «Ajustes» sin palabra visible`);
+    assert(await page.locator('.home-hero-adult').getByText('Para familias y docentes', { exact: true }).isVisible(), `${label}: acceso adulto sin palabra visible`);
+    // Las dos entradas se distinguen: la del niño es el botón relleno; la adulta, un borde sobre crema.
+    const looks = await page.evaluate(() => ['.home-hero-cta', '.home-hero-adult'].map((sel) => getComputedStyle(document.querySelector(sel)).backgroundColor));
+    assert.notEqual(looks[0], looks[1], `${label}: las dos entradas tienen el mismo aspecto`);
+    assert.equal(await page.getByRole('link', { name: /Mi mundo|^Familias$/ }).count(), 0, `${label}: quedan accesos antiguos`);
     for (const sel of ['#home-title', '.home-hero-tagline']) {
       const t = await page.locator(sel).evaluate(e => { const r = e.getBoundingClientRect(); const hit = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2); return { ok: r.top >= 0 && r.bottom <= innerHeight && (e === hit || e.contains(hit)), size: parseFloat(getComputedStyle(e).fontSize) }; });
       assert(t.ok, `${label}: ${sel} tapado o fuera de la vista`);
@@ -93,8 +100,8 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${label}: desbordamiento horizontal`);
     assert.deepEqual(await insideWidth(page), [], `${label}: elementos recortados por el ancho`);
 
-    // 4. Teclado: foco visible en Ajustes, Familias y Entrar.
-    for (const name of ['Ajustes', 'Familias', 'Entrar en mi mundo']) {
+    // 4. Teclado: foco visible en Ajustes, Descubrir un cuento y Para familias y docentes.
+    for (const name of ['Ajustes', 'Descubrir un cuento', 'Para familias y docentes']) {
       for (let i = 0; i < 6; i++) {
         await page.keyboard.press('Tab');
         if ((await page.evaluate(() => document.activeElement?.textContent?.trim() ?? '')).startsWith(name)) break;
@@ -102,8 +109,8 @@ try {
       const f = await page.evaluate(() => { const a = document.activeElement; const s = getComputedStyle(a); return { text: a.textContent.trim(), visible: a.matches(':focus-visible') && (s.outlineStyle !== 'none' || s.boxShadow !== 'none') }; });
       assert(f.text.startsWith(name) && f.visible, `${label}: foco de teclado en «${name}»`);
     }
-    await page.getByRole('link', { name: 'Entrar en mi mundo' }).click();
-    await page.waitForURL(/\/mundo$/);
+    await page.getByRole('link', { name: 'Descubrir un cuento' }).click();
+    await page.waitForURL(/\/historias$/);
     assert.deepEqual(errors, [], `${label}: consola`);
     console.log(`PASS ${label}: paisaje a sangre (cover, sin tarjeta), reloj centrado en x=${Math.round(clock.x)} px, texto en el cielo (${Math.round(sky)} ≤ tejado ${Math.round(roof)} px), controles a la vista ≥ 48 px, foco visible`);
     await context.close();
@@ -123,13 +130,13 @@ try {
       return Math.abs(section.height - art.height) < 1 && Math.abs(section.width - art.width) < 1;
     });
     assert(covered, `${label}: el paisaje no acompaña a la portada cuando crece`);
-    for (const [loc, name] of [[page.getByRole('link', { name: 'Ajustes', exact: true }), 'Ajustes'], [page.getByRole('link', { name: /^Familias/ }), 'Familias'], [page.getByRole('link', { name: 'Entrar en mi mundo' }), 'Entrar en mi mundo'], [page.locator('#home-title'), 'NUBI'], [page.locator('.home-hero-tagline'), 'subtítulo'], [page.locator('.home-hero-note'), 'nota']]) {
+    for (const [loc, name] of [[page.getByRole('link', { name: 'Ajustes', exact: true }), 'Ajustes'], [page.getByRole('link', { name: /^Para familias y docentes/ }), 'Para familias y docentes'], [page.getByRole('link', { name: 'Descubrir un cuento' }), 'Descubrir un cuento'], [page.locator('#home-title'), 'NUBI'], [page.locator('.home-hero-tagline'), 'subtítulo'], [page.locator('.home-hero-note'), 'nota']]) {
       const ok = await loc.evaluate(e => { e.scrollIntoView({ block: 'center' }); const r = e.getBoundingClientRect(); const hit = document.elementFromPoint(Math.min(Math.max(r.left + r.width / 2, 1), innerWidth - 2), Math.min(Math.max(r.top + Math.min(r.height / 2, 20), 1), innerHeight - 2)); return !!hit && (e === hit || e.contains(hit)); });
       assert(ok, `${label}: «${name}» no se puede alcanzar sin quedar tapado`);
     }
     assert(parseFloat(await page.locator('.home-hero-tagline').evaluate(e => getComputedStyle(e).fontSize)) >= 20, `${label}: subtítulo reducido`);
-    await page.getByRole('link', { name: 'Entrar en mi mundo' }).click();
-    await page.waitForURL(/\/mundo$/);
+    await page.getByRole('link', { name: /^Para familias y docentes/ }).click();
+    await page.waitForURL(/\/acompanar$/);
     console.log(`PASS ${label}: la portada crece y se desplaza; controles y textos alcanzables, sin desbordamiento ni letra reducida`);
     await context.close();
   }

@@ -9,7 +9,8 @@ const base=process.env.NUBI_URL||'http://127.0.0.1:5173';
 const out=process.env.NUBI_EVIDENCE||'/tmp/nubi-ux-redesign';mkdirSync(out,{recursive:true});
 const b=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 const results=[],failures=[];
-const paths=['/','/mundo','/historias','/historias/una-manana-diferente','/emociones','/herramientas','/herramientas/pedir-ayuda','/ajustes'];
+// Fase 19: portada, Descubrir (biblioteca y ficha), Acompañar (índice y guía), Ajustes y dos rutas antiguas.
+const paths=['/','/historias','/historias/una-manana-diferente','/acompanar','/acompanar/una-manana-diferente','/ajustes','/mundo','/familias'];
 try{
  for(const [width,height] of [[390,844],[820,1180],[1180,820],[320,256],[640,512]]){
   for(const textSize of ['m','xl']){
@@ -36,7 +37,7 @@ try{
  // DPR 1/2: arte íntegro, sin duplicar nombres, y recursos de suficiente resolución.
  for(const dpr of [1,2]){
   const ctx=await b.newContext({viewport:{width:820,height:1180},deviceScaleFactor:dpr,reducedMotion:'reduce'}),p=await ctx.newPage();
-  for(const path of ['/','/mundo','/emociones','/herramientas','/historias/una-manana-diferente']){
+  for(const path of ['/','/historias','/historias/una-manana-diferente','/acompanar/una-manana-diferente']){
    await p.goto(base+path);await p.locator('h1').waitFor();
    for(const img of await p.locator('[data-asset] img').all()){
     await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());

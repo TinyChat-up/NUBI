@@ -1,6 +1,6 @@
-import type { Dispatch } from 'react';
+import { useId, type Dispatch } from 'react';
 import type { RunAction, RunState } from '../../engine/storyEngine.ts';
-import type { ChoiceOption, ChoiceStep, FeelingsStep, KnowNeedStep, StrategiesStep } from '../../engine/types.ts';
+import type { ChoiceOption, ChoiceStep, FeelingsStep, KnowNeedStep, StrategiesStep, ToolId } from '../../engine/types.ts';
 import { readableConsequence } from '../../engine/readable.ts';
 import { emotions } from '../../content/emotions.ts';
 import { tools } from '../../content/tools.ts';
@@ -152,18 +152,21 @@ export function ChoiceGrid({
                 onClick={() => onChoose(o)}
                 className="choice-path tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
               >
-                <Illustration id={o.illustration} decorative ratio sizes={OPTION_CARD_SIZES} className="w-full" />
-                <span className="flex flex-1 items-center gap-3 p-4">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
+                <Illustration id={o.illustration} decorative ratio sizes={OPTION_CARD_SIZES} className="choice-path-art w-full" />
+                <span className="choice-path-copy flex flex-1 items-center gap-3 p-4">
+                  <span className="choice-path-arrow grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
                     <Icon name="arrow-right" size={22} />
                   </span>
-                  <span className="reading-text flex-1 text-lg leading-snug font-extrabold">{o.label}</span>
-                </span>
-                {seen && (
-                  <span className="mx-4 mb-4 -mt-1 inline-flex w-fit items-center gap-1 rounded-full bg-salvia-100 px-3 py-1 text-sm font-bold text-salvia-700">
-                    <Icon name="check" size={16} strokeWidth={3} /> Ya la exploraste
+                  <span className="flex flex-1 flex-col items-start gap-2">
+                    <span className="reading-text text-lg leading-snug font-extrabold">{o.label}</span>
+                    {/* Estado de lo ya visto (no es una valoración): siempre con texto y marca, nunca solo color. */}
+                    {seen && (
+                      <span className="inline-flex w-fit items-center gap-1 rounded-full bg-salvia-100 px-3 py-1 text-sm font-bold text-salvia-700">
+                        <Icon name="check" size={16} strokeWidth={3} /> Ya la exploraste
+                      </span>
+                    )}
                   </span>
-                )}
+                </span>
               </button>
             </li>
           );
@@ -203,8 +206,10 @@ export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: 
       <p className="mb-1 text-sm font-extrabold tracking-wide text-coral-700 uppercase">Si {protagonist} elige…</p>
       <h2 className="reading-text mb-5 text-2xl text-petroleo-900 sm:text-3xl">{option.label}</h2>
 
-      {/* 1. Lo que puede pasar: tira ilustrada que se lee en orden. */}
-      <h3 className="sr-only">Lo que puede pasar</h3>
+      {/* 1. Lo que podría pasar: tira ilustrada que se lee en orden. Es una posibilidad, no un resultado seguro. */}
+      <h3 className="consequence-frame mb-4 flex items-center gap-2 text-lg font-extrabold text-petroleo-800">
+        <Icon name="sparkle" size={20} /> Esto es lo que podría pasar
+      </h3>
       <ol className="mb-8 grid gap-5 md:grid-cols-2">
         {c.story.map((frame, i) => (
           <li key={i} className="animate-pop" style={{ animationDelay: `${i * 220}ms` }}>
@@ -251,15 +256,47 @@ export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: 
         </section>
       )}
 
-      <p className="mt-5 flex flex-wrap items-center gap-2 text-base font-bold text-tinta-suave">
-        <span>Herramientas relacionadas:</span>
-        {c.tools.map((t) => (
-          <span key={t} className="inline-flex items-center gap-1.5 rounded-full border-2 border-crema-300 bg-crema-50 px-3 py-1 text-petroleo-800">
-            <Icon name={tools[t].icon} size={16} /> {tools[t].name}
-          </span>
-        ))}
-      </p>
+      {c.tools.length > 0 && <Supports ids={c.tools} />}
     </div>
+  );
+}
+
+/**
+ * Apoyos de esta consecuencia (fase 19): en lugar de un catálogo aparte, cada apoyo relacionado se puede
+ * abrir aquí mismo para ver su dibujo, qué es y su tarjeta. Son posibilidades, no la única forma válida.
+ */
+function Supports({ ids }: { ids: ToolId[] }) {
+  const titleId = useId();
+  return (
+    <section aria-labelledby={titleId} className="consequence-supports mt-5">
+      <h3 id={titleId} className="reading-text text-lg font-extrabold text-petroleo-900">
+        Apoyos que podrían ayudar
+      </h3>
+      <p className="reading-text text-tinta-suave">Ábrelos si quieres saber más.</p>
+      <ul className="mt-3 grid gap-3 md:grid-cols-2">
+        {ids.map((id) => {
+          const t = tools[id];
+          return (
+            <li key={id}>
+              <details className="support-card group">
+                <summary className="tap flex min-h-14 cursor-pointer list-none items-center gap-3 px-4 py-2 font-extrabold text-petroleo-800">
+                  <Icon name={t.icon} size={22} />
+                  <span className="flex-1">{t.name}</span>
+                  <Icon name="chevron-right" size={20} className="transition-transform group-open:rotate-90" />
+                </summary>
+                <div className="flex items-start gap-4 px-4 pb-4">
+                  {hasFinalArt(t.illustration) && <Illustration id={t.illustration} decorative ratio fit="contain" sizes="96px" className="w-24 shrink-0" />}
+                  <div>
+                    <p className="reading-text text-lg">{t.childText}</p>
+                    <p className="reading-text mt-2 rounded-2xl bg-crema-100 px-3 py-2 font-bold">«{t.card}»</p>
+                  </div>
+                </div>
+              </details>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
 

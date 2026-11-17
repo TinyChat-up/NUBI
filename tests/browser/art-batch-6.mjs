@@ -32,9 +32,12 @@ try{
    for(const f of files){const im=new Image();im.src=f.file;await im.decode();const c=document.createElement('canvas');c.width=im.width;c.height=im.height;const g=c.getContext('2d',{willReadFrequently:true});g.drawImage(im,0,0);const d=g.getImageData(0,0,c.width,c.height).data;let lo=255,hi=0;for(let i=3;i<d.length;i+=4){lo=Math.min(lo,d[i]);hi=Math.max(hi,d[i]);}result.push({file:f.file,size:[im.naturalWidth,im.naturalHeight],alpha:[lo,hi]});}return result;
   },files);
   decoded.forEach((r,i)=>{assert.deepEqual(r.size,files[i].size);if(files[i].transparent)assert(r.alpha[0]===0&&r.alpha[1]>=250);else assert.deepEqual(r.alpha,[255,255]);});
-  for(const path of ['/mundo','/herramientas',...selected.filter(a=>a.transparent).map(a=>'/herramientas/'+a.id.slice(5))]){
+  // Fase 19: «Mi mundo» y «Mis herramientas» salieron de la navegación. Los 6 lugares se siguen comprobando
+  // arriba (hash, decodificación, alfa) aunque ninguna pantalla los muestre; las 7 herramientas se ven en la
+  // guía para familias y docentes (y en el selector y las consecuencias del cuento, más abajo).
+  for(const path of ['/acompanar/una-manana-diferente']){
    await page.goto(base+path);await page.locator('h1').waitFor();
-   const ids=path==='/mundo'?selected.filter(a=>!a.transparent):path==='/herramientas'?selected.filter(a=>a.transparent):selected.filter(a=>path.endsWith(a.id.slice(5)));
+   const ids=selected.filter(a=>a.transparent);
    const measured=[];
    for(const a of ids){const img=page.locator(`[data-asset="${a.id}"] img`);await img.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());
     const m=await img.evaluate(el=>{const r=el.getBoundingClientRect();return {width:r.width,height:r.height,source:el.currentSrc,fit:getComputedStyle(el).objectFit,sizes:el.sizes};});
@@ -85,4 +88,4 @@ try{
   assert.deepEqual(errors,[]);await ctx.close();
  }
 }finally{await browser.close();}
-writeFileSync(out+'/results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS 13 assets / 39 files, hashes, decode, formats, dimensions, alpha, variants, 27 screen checks and the strategies selector (cuento + cómic) at three viewports');
+writeFileSync(out+'/results.json',JSON.stringify(report,null,2)+'\n');console.log('PASS 13 assets / 39 files, hashes, decode, formats, dimensions, alpha, variants; 7 tools in the adult guide and the strategies selector (cuento + cómic) at three viewports');

@@ -7,7 +7,6 @@ import {
   getScene,
   isAtEnd,
   runReducer,
-  sceneProgress,
   type PlayStep,
   type PlayableFormat,
   type RunAction,
@@ -30,11 +29,22 @@ import { GuideArt } from '../illustration/GuideArt.tsx';
 import { Button, ToolButton } from '../ui.tsx';
 import { ComicView } from './ComicView.tsx';
 import { splitConsequenceRoutes } from './consequenceRoutes.ts';
+import { momentOf, protagonistName, startsMoment, storyMoments } from './moments.ts';
 import { ChoiceView, ConsequenceBody, ExploredMeter, FeelingsView, KnowNeedView, StrategiesView } from './interactions.tsx';
 import { SceneMenu } from './SceneMenu.tsx';
 import { contextIllustration, pageGroup, upcomingImages } from './presentation.ts';
 import { StoryPage, type PageDirection, type PageText } from './StoryPage.tsx';
 import { SummaryView } from './SummaryView.tsx';
+
+/**
+ * Nombres de las dos acciones tras una consecuencia (fase 19). Son controles de la interfaz, iguales en
+ * todos los cuentos; las rutas de `story.ts` conservan sus etiquetas originales (no se reescribe contenido).
+ */
+const RETRY_LABEL = 'Probar otra decisión';
+const ONWARD_LABEL = 'Seguir el cuento';
+
+/** Preguntas que se pueden dejar sin responder: el cuento sigue igual (fase 19, «menos cuestionarios»). */
+const OPTIONAL_STEPS = new Set(['feelings', 'know-need', 'strategies']);
 
 interface StoryPlayerProps {
   story: Story;
@@ -102,7 +112,11 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
 
   const scene = getScene(story, state.position.sceneId);
   const play = currentPlayStep(story, state);
-  const { current, total } = sceneProgress(story, state);
+  // Tres momentos (fase 19): qué está pasando, qué podría hacer el personaje, qué podría pasar.
+  const protagonist = protagonistName(story, characters);
+  const moments = useMemo(() => storyMoments(story, protagonist), [story, protagonist]);
+  const moment = momentOf(moments, scene.id);
+  const momentStart = startsMoment(moments, scene.id);
   const atEnd = isAtEnd(story, state);
   const speech = useMemo(() => speechFor(story, state, play, settings), [story, state, play, settings]);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -203,7 +217,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       id: b.id,
       text: readableBeat(b, settings.shortText),
       speaker: b.speaker ? characters[b.speaker] : undefined,
-      opener: index === 0 ? { number: scene.number, title: scene.title } : undefined,
+      opener: index === 0 ? { title: scene.title, moment: momentStart ? `Momento ${momentStart.number} · ${momentStart.label}` : undefined } : undefined,
     });
     stage = (
       <StoryPage
@@ -243,7 +257,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
               {retry && (
                 <div className="mb-5">
                   <Button variant="secondary" icon={retry.icon} onClick={() => go(retry)}>
-                    {retry.label}
+                    {RETRY_LABEL}
                   </Button>
                 </div>
               )}
@@ -253,7 +267,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
                 <div className="flex flex-wrap gap-3">
                   {onward.map((r) => (
                     <Button key={r.label} iconAfter={r.icon} onClick={() => go(r)}>
-                      {r.label}
+                      {onward.length === 1 ? ONWARD_LABEL : r.label}
                     </Button>
                   ))}
                 </div>
@@ -282,6 +296,17 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
   }
 
   const isChoice = play.kind === 'interactive' && play.step.type === 'choice';
+  const isOptional = play.kind === 'interactive' && OPTIONAL_STEPS.has(play.step.type);
+  if (isOptional) {
+    stage = (
+      <>
+        <p className="optional-chip mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-mostaza-100 px-4 py-1.5 font-bold text-mostaza-700">
+          <Icon name="sparkle" size={18} /> Pregunta opcional: puedes responder o seguir el cuento
+        </p>
+        {stage}
+      </>
+    );
+  }
   const swipe = useSwipe({
     enabled: play.kind !== 'interactive',
     onNext: () => advanceAllowed && !atEnd && next(),
@@ -294,20 +319,21 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
       <header ref={headerRef} className="flex items-center gap-2 border-b border-crema-300/70 bg-crema-50/90 px-3 py-2 sm:gap-4 sm:px-6">
         <button type="button" onClick={exit} className="tap flex min-h-12 items-center gap-2 rounded-full px-3 font-extrabold text-petroleo-800 hover:bg-petroleo-100">
           <Icon name="close" size={24} />
-          <span className="hidden sm:inline">Volver a la historia</span>
-          <span className="sr-only sm:hidden">Volver a la historia</span>
+          <span className="hidden sm:inline">Salir del cuento</span>
+          <span className="sr-only sm:hidden">Salir del cuento</span>
         </button>
         <div className="min-w-0 flex-1 text-center">
           <p className="truncate text-xs font-black tracking-wider text-coral-700 uppercase">
             {story.title} · {format === 'comic' ? 'Cómic' : 'Cuento'}
           </p>
           <h1 className="truncate text-lg text-petroleo-900 sm:text-xl" data-route-focus>
-            <span className="sr-only">Escena {current} de {total}: </span>
-            {scene.title}
+            <span className="sr-only">Momento {moment.number} de {moments.length}: </span>
+            {moment.label}
           </h1>
-          <div aria-hidden className="mx-auto mt-1.5 flex max-w-xs justify-center gap-1.5">
-            {story.scenes.map((sc, i) => (
-              <span key={sc.id} className={`h-1.5 flex-1 rounded-full transition-colors ${i + 1 < current ? 'bg-petroleo-400' : i + 1 === current ? 'bg-coral-400' : 'bg-crema-300'}`} />
+          {/* Tres momentos, no siete escenas: dónde estoy dentro del cuento. */}
+          <div aria-hidden className="reader-moments mx-auto mt-1.5 flex max-w-xs justify-center gap-1.5">
+            {moments.map((m) => (
+              <span key={m.id} className={`h-1.5 flex-1 rounded-full transition-colors ${m.number < moment.number ? 'bg-petroleo-400' : m.id === moment.id ? 'bg-coral-400' : 'bg-crema-300'}`} />
             ))}
           </div>
         </div>
@@ -387,6 +413,7 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         story={story}
+        moments={moments}
         currentSceneId={state.position.sceneId}
         visited={state.visitedScenes}
         onSelect={(sceneId) => {

@@ -8,8 +8,9 @@ const require = createRequire(process.env.NUBI_BROWSER_TOOLS + '/package.json');
 const { chromium } = require('playwright');
 const base = process.env.NUBI_URL || 'http://127.0.0.1:5173';
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
-const paths = ['/', '/mundo', '/mundo/colegio', '/historias', '/historias/una-manana-diferente', '/recreaciones', '/herramientas',
-  '/herramientas/pedir-ayuda', '/emociones', '/familias', '/ajustes', '/historias/una-manana-diferente/cuento?escena=posibilidades'];
+// Fase 19: rutas de las dos funciones (Descubrir / Acompañar), Ajustes y páginas de compatibilidad de rutas antiguas.
+const paths = ['/', '/historias', '/historias/una-manana-diferente', '/acompanar', '/acompanar/una-manana-diferente', '/ajustes',
+  '/mundo', '/recreaciones', '/herramientas/pedir-ayuda', '/emociones', '/familias', '/historias/una-manana-diferente/cuento?escena=posibilidades'];
 const problems = [];
 try {
   for (const [width, height] of [[390, 844], [820, 1180], [1180, 820]]) {

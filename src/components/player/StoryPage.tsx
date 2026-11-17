@@ -15,7 +15,8 @@ export interface PageText {
   text: string;
   speaker?: Character;
   /** Primera página de la escena: se muestra «Escena N» sobre el texto. */
-  opener?: { number: number; title: string };
+  /** Primera página de una escena: su título y, si además empieza uno de los tres momentos, su nombre (fase 19). */
+  opener?: { title: string; moment?: string };
 }
 
 interface StoryPageProps {
@@ -107,10 +108,13 @@ function TextPage({
   return (
     <div className="storybook-text flex flex-col gap-3">
       {opener && (
-        <p className="flex items-baseline gap-2 text-petroleo-700">
-          <span className="text-sm font-black tracking-widest text-coral-700 uppercase">Escena {opener.number}</span>
-          <span aria-hidden className="h-px flex-1 bg-crema-300" />
-        </p>
+        <div className="flex flex-col gap-1.5">
+          {opener.moment && <p className="moment-opener w-fit rounded-full bg-petroleo-600 px-3.5 py-1 text-sm font-black text-crema-50">{opener.moment}</p>}
+          <p className="flex items-baseline gap-2 text-petroleo-700">
+            <span className="text-sm font-black tracking-widest text-coral-700 uppercase">{opener.title}</span>
+            <span aria-hidden className="h-px flex-1 bg-crema-300" />
+          </p>
+        </div>
       )}
 
       {!showText ? (

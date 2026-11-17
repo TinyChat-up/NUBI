@@ -1,11 +1,13 @@
+// FUERA DE LA NAVEGACIÓN desde la fase 19 (NUBI = cuentos sociales). Se conserva sin borrar por si sus
+// piezas se reutilizan dentro de las historias; no tiene ruta. Ver docs/product/REMOVED_NAVIGATION.md.
 import { useEffect, useRef, useState } from 'react';
-import { getTool, toolList } from '../content/tools.ts';
-import { Icon } from '../components/Icon.tsx';
-import { Illustration } from '../components/Illustration.tsx';
-import { Button, LinkButton, Page, PageHeader, toneBg, toneText } from '../components/ui.tsx';
-import { Link } from '../lib/router.tsx';
-import { useNarration } from '../lib/useNarration.ts';
-import { useProgress } from '../state/progress.tsx';
+import { getTool, toolList } from '../../content/tools.ts';
+import { Icon } from '../../components/Icon.tsx';
+import { Illustration } from '../../components/Illustration.tsx';
+import { Button, LinkButton, Page, PageHeader, toneBg, toneText } from '../../components/ui.tsx';
+import { Link } from '../../lib/router.tsx';
+import { useNarration } from '../../lib/useNarration.ts';
+import { useProgress } from '../../state/progress.tsx';
 
 /** G. MIS HERRAMIENTAS — biblioteca visual de estrategias. */
 export function ToolsScreen() {

@@ -1,127 +1,125 @@
-import { characters } from '../content/characters.ts';
-import { places } from '../content/places.ts';
 import { getStory } from '../content/stories/index.ts';
 import type { FormatId } from '../engine/types.ts';
 import { Icon } from '../components/Icon.tsx';
 import { Illustration } from '../components/Illustration.tsx';
 import { FORMAT_META } from '../components/StoryCard.tsx';
-import { Chip, LinkButton, Page } from '../components/ui.tsx';
-import { Link } from '../lib/router.tsx';
+import { LinkButton, Page } from '../components/ui.tsx';
+import { Link, useLocation } from '../lib/router.tsx';
 import { useProgress } from '../state/progress.tsx';
 
-const FORMAT_TEXT: Record<FormatId, string> = {
-  cuento: 'Escenas ilustradas. Puedes leer o escuchar.',
-  comic: 'Viñetas que se descubren una a una.',
-  video: 'Pequeña película con subtítulos.',
+type Readable = Exclude<FormatId, 'video'>;
+
+const FORMAT_TEXT: Record<Readable, string> = {
+  cuento: 'Página a página, con ilustraciones grandes. Puedes leerlo o escucharlo.',
+  comic: 'Viñetas que se descubren una a una, con bocadillos.',
 };
 
-/** Ficha de historia: elegir formato, ver escenas y personajes. */
+/**
+ * Abrir un cuento (fase 19): elegir CUENTO o CÓMIC, dos formas de leer la misma historia.
+ * - Si hay una partida guardada, la opción continúa donde se dejó.
+ * - El vídeo, mientras esté en producción, es solo una nota: no compite con los dos formatos.
+ * - La guía adulta queda al final, discreta, para volver a ella cuando haga falta.
+ */
 export function StoryDetailScreen({ storyId }: { storyId: string }) {
   const story = getStory(storyId);
   const { progress, loadRun } = useProgress();
+  const { query } = useLocation();
   if (!story) return null;
 
   const p = progress.stories[story.id];
-  const place = places[story.place];
+  const fromGuide = query.get('desde') === 'guia';
+  const readable = story.formats.filter((f): f is Readable => f !== 'video');
+  const videoReady = story.formats.includes('video') && story.video?.status === 'listo';
 
   return (
     <Page>
       <div className="mb-4">
-        <LinkButton to="/historias" variant="ghost" icon="arrow-left">
-          Historias
-        </LinkButton>
+        {fromGuide ? (
+          <LinkButton to={`/acompanar/${story.id}`} variant="ghost" icon="arrow-left">
+            Volver a la guía
+          </LinkButton>
+        ) : (
+          <LinkButton to="/historias" variant="ghost" icon="arrow-left">
+            Cuentos
+          </LinkButton>
+        )}
       </div>
 
       <section className="story-opening">
-        <Illustration id={story.cover} priority ratio fit="contain" sizes="(min-width: 768px) 38vw, 100vw" className="story-cover-art" showBadge />
+        <Illustration id={story.cover} priority ratio fit="contain" sizes="(min-width: 768px) 38vw, 100vw" className="story-cover-art" />
         <div className="story-opening-copy">
-          <div className="flex flex-wrap gap-2">
-            <Chip icon={place.icon}>{place.name}</Chip>
-            <Chip icon="clock" tone="crema">{story.durationMinutes.min}–{story.durationMinutes.max} min · orientativo</Chip>
-            <Chip icon="user" tone="crema">{story.ages.min}–{story.ages.max} años</Chip>
-          </div>
           <h1 className="reading-text text-4xl text-petroleo-900 sm:text-5xl">{story.title}</h1>
           <p className="reading-text text-xl">{story.tagline}</p>
-          {p && <p className="flex items-center gap-2 font-bold text-salvia-700"><Icon name={p.completedAt ? 'check' : 'footsteps'} size={20} />{p.completedAt ? 'Ya la has terminado. Puedes volver cuando quieras.' : `Has visitado ${p.visitedScenes.length} de ${story.scenes.length} escenas.`}</p>}
+          {p && (
+            <p className="flex items-center gap-2 font-bold text-salvia-700">
+              <Icon name={p.completedAt ? 'check' : 'footsteps'} size={20} />
+              {p.completedAt ? 'Ya lo has leído. Puedes volver cuando quieras.' : 'Ya lo empezaste. Puedes seguir donde lo dejaste.'}
+            </p>
+          )}
         </div>
       </section>
 
       <section aria-labelledby="formats-title" className="format-section">
-        <h2 id="formats-title" className="mb-5 text-2xl text-petroleo-900">¿Cómo quieres descubrirla?</h2>
+        <h2 id="formats-title" className="text-2xl text-petroleo-900">
+          ¿Cómo quieres leerlo?
+        </h2>
+        <p className="reading-text mb-5 text-lg text-tinta-suave">Es la misma historia, contada de dos formas.</p>
         <ul className="format-choices">
-          {story.formats.map((f) => {
-            const pending = f === 'video' && story.video?.status !== 'listo';
-            const saved = f !== 'video' && loadRun(story.id, f);
+          {readable.map((f) => {
+            const saved = loadRun(story.id, f);
             return (
-              <li key={f} className={pending ? 'format-pending' : ''}>
+              <li key={f}>
                 <Link to={`/historias/${story.id}/${f}${saved ? '?continuar=1' : ''}`} className={`tap format-choice format-${f}`}>
-                  {!pending && <span className="format-art" aria-hidden>
-                    {f === 'comic' ? story.scenes.flatMap((sc) => sc.comic ?? []).slice(0, 2).map((panel) => <Illustration key={panel.id} id={panel.illustration} decorative ratio fit="contain" sizes="160px" />) : <Illustration id={story.cover} decorative ratio fit="contain" sizes="240px" />}
-                  </span>}
+                  <span className="format-art" aria-hidden>
+                    {f === 'comic' ? (
+                      story.scenes
+                        .flatMap((sc) => sc.comic ?? [])
+                        .slice(0, 2)
+                        .map((panel) => <Illustration key={panel.id} id={panel.illustration} decorative ratio fit="contain" sizes="160px" />)
+                    ) : (
+                      <Illustration id={story.cover} decorative ratio fit="contain" sizes="240px" />
+                    )}
+                  </span>
                   <span className="format-copy">
-                    <span className="flex items-center gap-3 text-2xl font-black text-petroleo-900"><Icon name={FORMAT_META[f].icon} size={28} />{FORMAT_META[f].label}{!pending && <Icon name="arrow-right" className="ml-auto" />}</span>
-                    <span className="reading-text mt-2 block text-tinta-suave">{pending ? 'En producción' : saved ? 'Continuar donde lo dejaste' : FORMAT_TEXT[f]}</span>
+                    <span className="flex items-center gap-3 text-2xl font-black text-petroleo-900">
+                      <Icon name={FORMAT_META[f].icon} size={28} />
+                      {FORMAT_META[f].label}
+                      <Icon name="arrow-right" className="ml-auto" />
+                    </span>
+                    <span className="reading-text mt-2 block text-tinta-suave">{saved ? 'Seguir donde lo dejaste' : FORMAT_TEXT[f]}</span>
                   </span>
                 </Link>
               </li>
             );
           })}
         </ul>
+        {story.formats.includes('video') &&
+          (videoReady ? (
+            <p className="mt-4">
+              <Link to={`/historias/${story.id}/video`} className="tap inline-flex min-h-12 items-center gap-2 font-bold text-petroleo-700 underline underline-offset-4">
+                <Icon name="film" size={20} /> También en vídeo
+              </Link>
+            </p>
+          ) : (
+            <p className="mt-4 flex items-center gap-2 text-tinta-suave">
+              <Icon name="film" size={20} /> El vídeo de este cuento está en preparación.
+            </p>
+          ))}
       </section>
 
       <details className="story-about group">
-        <summary className="flex min-h-14 cursor-pointer items-center gap-3 text-xl font-extrabold text-petroleo-900">Sobre esta historia<Icon name="chevron-right" className="ml-auto group-open:rotate-90" /></summary>
+        <summary className="flex min-h-14 cursor-pointer items-center gap-3 text-xl font-extrabold text-petroleo-900">
+          De qué trata
+          <Icon name="chevron-right" className="ml-auto group-open:rotate-90" />
+        </summary>
         <p className="reading-text mt-3 text-lg">{story.synopsis}</p>
       </details>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-        <section aria-labelledby="scenes-title">
-          <h2 id="scenes-title" className="mb-4 text-2xl text-petroleo-900">
-            Escenas
-          </h2>
-          <ol className="grid gap-2">
-            {story.scenes.map((scene) => (
-              <li key={scene.id}>
-                <Link to={`/historias/${story.id}/cuento?escena=${scene.id}`} className="tap flex min-h-14 items-center gap-3 rounded-2xl bg-crema-50 px-4 py-2 font-bold shadow-[var(--shadow-soft)] hover:bg-petroleo-50">
-                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-petroleo-100 font-black text-petroleo-800">{scene.number}</span>
-                  <span className="reading-text flex-1">{scene.title}</span>
-                  {p?.visitedScenes.includes(scene.id) && <Icon name="check" size={20} label="Visitada" />}
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section aria-labelledby="cast-title">
-          <h2 id="cast-title" className="mb-4 text-2xl text-petroleo-900">
-            Personajes
-          </h2>
-          <ul className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-3">
-            {story.characters.map((id) => {
-              const c = characters[id];
-              return (
-                <li key={id} className="flex flex-col items-center gap-1 text-center">
-                  <Illustration id={`char-${id}`} ratio sizes="(min-width: 1024px) 140px, (min-width: 640px) 22vw, 30vw" className="w-full rounded-2xl bg-crema-50" />
-                  <span className="font-black text-petroleo-900">{c.name}</span>
-                  <span className="text-sm leading-tight text-tinta-suave">{c.role}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      </div>
-
-      <section className="mt-8 rounded-[var(--radius-card)] bg-petroleo-50 p-6">
-        <h2 className="flex items-center gap-2 text-xl text-petroleo-900">
-          <Icon name="grown" /> Para personas adultas
-        </h2>
-        <p className="reading-text mt-2">{story.familyGuide.intro}</p>
-        <div className="mt-4">
-          <LinkButton to={`/familias?historia=${story.id}`} variant="secondary" icon="book">
-            Ver la guía para familias
-          </LinkButton>
-        </div>
-      </section>
+      <p className="story-adult-link mt-8">
+        <Link to={`/acompanar/${story.id}`} className="tap inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-petroleo-200 px-4 font-bold text-petroleo-800 hover:border-petroleo-400">
+          <Icon name="grown" size={20} /> Guía para familias y docentes
+        </Link>
+      </p>
     </Page>
   );
 }

@@ -44,7 +44,7 @@ try {
     };
     const story = '/historias/una-manana-diferente';
     await page.goto(base + '/'); await inspect('portada');
-    await page.goto(base + '/mundo'); await inspect('mundo');
+    await page.goto(base + '/historias'); await inspect('biblioteca');
     await page.goto(base + story); await inspect('ficha');
     await page.goto(base + story + '/cuento'); await inspect('cuento');
     await page.goto(base + story + '/cuento?escena=cambio');
@@ -53,7 +53,8 @@ try {
     await page.getByRole('button', { name: /Salir de clase sin avisar/ }).click(); await inspect('consecuencia');
     await page.goto(base + story + '/comic?escena=cambio');
     for (let i = 0; i < 4; i++) { await inspect(`comic-${i + 1}`); await next(); }
-    for (const path of ['/recreaciones', '/herramientas', '/herramientas/descansar', '/emociones']) { await page.goto(base + path); await inspect(path); }
+    // Fase 19: Recreaciones, Mis herramientas y Mis emociones salieron de la navegación; el arte de herramientas se ve en la guía adulta.
+    for (const path of ['/acompanar', '/acompanar/una-manana-diferente']) { await page.goto(base + path); await inspect(path); }
     if (broken.length) failures.push(`${width}: recursos con error HTTP: ${broken.join(', ')}`);
     await page.close();
   }

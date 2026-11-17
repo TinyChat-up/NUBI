@@ -1,4 +1,6 @@
 // Phase 10: test real emotion artwork and preserve evidence without changing the UI.
+// Fase 19: la pantalla «Mis emociones» ya no tiene ruta; se sustituye su bloque por la decodificación de los
+// nueve archivos y axe en el selector del cuento (docs/product/PHASE_19_SIMPLIFICATION_REPORT.md §10).
 import { createRequire } from 'node:module';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
@@ -23,38 +25,21 @@ try {
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => { if (['error', 'warning'].includes(m.type())) errors.push(`${m.type()}: ${m.text()}`); });
   page.on('response', r => { if (r.url().includes('/media/') && r.status() >= 400) errors.push(r.url()); });
-  await page.goto(base + '/emociones');
-  const group = page.getByRole('group', { name: 'Emociones', exact: true });
-  assert.equal(await group.getByRole('button').count(), 9);
-  await group.getByRole('button').first().focus();
-  for (const a of emotions) {
-   const button = group.getByRole('button', { name: a.emotionOrAction, exact: true });
-   assert(await button.evaluate(el => el === document.activeElement));
-   assert(await button.evaluate(el => getComputedStyle(el).outlineStyle !== 'none'));
-   await page.keyboard.press('Enter');
-   assert.equal(await button.getAttribute('aria-pressed'), 'true');
-   await page.getByRole('heading', { name: a.emotionOrAction, exact: true }).waitFor();
-   const images = page.locator(`[data-asset="${a.id}"] img`);
-   assert.equal(await images.count(), 2);
-   for (const img of await images.all()) {
-    await img.evaluate(el => el.decode());
-    assert(await img.evaluate(el => el.complete && el.naturalWidth > 0));
-    const dims = await img.evaluate(el => ({ width: el.clientWidth, height: el.clientHeight, fit: getComputedStyle(el).objectFit, source: el.currentSrc }));
-    assert.equal(dims.width, dims.height);
-    assert.equal(dims.fit, 'contain');
-    assert.match(dims.source, /-256w\.png$/);
+  // Fase 19: «Mis emociones» salió de la navegación (sus nueve ilustraciones se conservan). Se comprueba que
+  // los nueve archivos siguen sirviéndose y decodificando con transparencia; la pantalla real que los
+  // muestra es el selector del cuento (abajo), donde además se pasa axe.
+  await page.goto(base + '/');
+  const decoded = await page.evaluate(async (list) => {
+   const result = [];
+   for (const file of list) {
+    const im = new Image(); im.src = file; await im.decode();
+    const c = document.createElement('canvas'); c.width = im.naturalWidth; c.height = im.naturalHeight;
+    const g = c.getContext('2d', { willReadFrequently: true }); g.drawImage(im, 0, 0);
+    result.push({ file, w: im.naturalWidth, corner: g.getImageData(0, 0, 1, 1).data[3] });
    }
-   assert.equal(await page.locator('[data-asset-state="error"]').count(), 0);
-   if (a !== emotions.at(-1)) await page.keyboard.press('Tab');
-  }
-  await group.getByRole('button', { name: 'Calma', exact: true }).click();
-  await page.evaluate(() => window.scrollTo(0,0));
-  await page.screenshot({ path: `${out}${width}-emociones.png` });
-  await page.getByRole('heading', { name: 'Calma', exact: true }).scrollIntoViewIfNeeded();
-  await page.screenshot({ path: `${out}${width}-emocion-detalle.png` });
-  const axe = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
-  assert.deepEqual(axe.violations.map(v => v.id), []);
-  assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+   return result;
+  }, emotions.map(a => a.file));
+  for (const d of decoded) { assert(d.w > 0, d.file); assert.equal(d.corner, 0, `${d.file}: transparent`); }
   // Story selector (phase 11): options with a typed `emotion` show EmotionArt; the others keep their icon.
   const feelings = story.scenes.flatMap(s => s.steps).find(s => s.type === 'feelings');
   assert.equal(feelings.options.filter(o => o.emotion).length, 5);
@@ -124,11 +109,13 @@ try {
    });
   }
   await page.screenshot({ path: `${out}${width}-selector-cuento.png` });
+  const axe = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+  assert.deepEqual(axe.violations.map(v => v.id), [], `${width}: axe en el selector de emociones`);
   assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
   assert.deepEqual(errors, []);
-  report.push({ width, height, emotionImages: '9 at 96px + each selected at 120px', keyboard: 'Enter + focus + aria-pressed + visible heading', axeViolations: 0, storySelector: 'cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors' });
+  report.push({ width, height, emotionFiles: '9 decoded with transparency (screen «Mis emociones» retired in phase 19)', axeViolations: 0, storySelector: 'cuento + cómic: 5 EmotionArt at 96 px (transparent, contain, decorative, 256w) + 3 icons, original labels, keyboard, aria-pressed, intensity, no console errors' });
   await context.close();
  }
 } finally { await browser.close(); }
 writeFileSync(out + 'results.json', JSON.stringify(report, null, 2) + '\n');
-console.log('PASS nine emotions, three viewports, keyboard, accessible labels, contain, responsive files, axe and existing story selector');
+console.log('PASS nine emotion files decoded; story selector (cuento + cómic) at three viewports: 5 EmotionArt at 96 px, keyboard, aria-pressed, intensity, axe');

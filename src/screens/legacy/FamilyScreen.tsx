@@ -1,13 +1,15 @@
+// FUERA DE LA NAVEGACIÓN desde la fase 19 (NUBI = cuentos sociales). Se conserva sin borrar por si sus
+// piezas se reutilizan dentro de las historias; no tiene ruta. Ver docs/product/REMOVED_NAVIGATION.md.
 import { useMemo, useState } from 'react';
-import { referenceList } from '../content/references.ts';
-import { getStory, storyList } from '../content/stories/index.ts';
-import { tools } from '../content/tools.ts';
-import type { ToolId } from '../engine/types.ts';
-import { Icon } from '../components/Icon.tsx';
-import { FORMAT_META } from '../components/StoryCard.tsx';
-import { Button, Chip, LinkButton, Page, PageHeader } from '../components/ui.tsx';
-import { useLocation } from '../lib/router.tsx';
-import { useProgress } from '../state/progress.tsx';
+import { referenceList } from '../../content/references.ts';
+import { getStory, storyList } from '../../content/stories/index.ts';
+import { tools } from '../../content/tools.ts';
+import type { ToolId } from '../../engine/types.ts';
+import { Icon } from '../../components/Icon.tsx';
+import { FORMAT_META } from '../../components/StoryCard.tsx';
+import { Button, Chip, LinkButton, Page, PageHeader } from '../../components/ui.tsx';
+import { useLocation } from '../../lib/router.tsx';
+import { useProgress } from '../../state/progress.tsx';
 
 const NUMBERS = [
   { n: 14, word: 'catorce' },

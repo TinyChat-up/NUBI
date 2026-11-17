@@ -1,15 +1,17 @@
+// FUERA DE LA NAVEGACIÓN desde la fase 19 (NUBI = cuentos sociales). Se conserva sin borrar por si sus
+// piezas se reutilizan dentro de las historias; no tiene ruta. Ver docs/product/REMOVED_NAVIGATION.md.
 import { useState } from 'react';
-import { characters } from '../content/characters.ts';
-import { getStory, storyList } from '../content/stories/index.ts';
-import { getChoiceStep } from '../engine/storyEngine.ts';
-import type { ChoiceOption } from '../engine/types.ts';
-import { Illustration } from '../components/Illustration.tsx';
-import { GuideArt } from '../components/illustration/GuideArt.tsx';
-import { ChoiceGrid, ConsequenceBody, ExploredMeter } from '../components/player/interactions.tsx';
-import { Button, LinkButton, Page, PageHeader } from '../components/ui.tsx';
-import { Link } from '../lib/router.tsx';
-import { useProgress } from '../state/progress.tsx';
-import { useSettings } from '../state/settings.tsx';
+import { characters } from '../../content/characters.ts';
+import { getStory, storyList } from '../../content/stories/index.ts';
+import { getChoiceStep } from '../../engine/storyEngine.ts';
+import type { ChoiceOption } from '../../engine/types.ts';
+import { Illustration } from '../../components/Illustration.tsx';
+import { GuideArt } from '../../components/illustration/GuideArt.tsx';
+import { ChoiceGrid, ConsequenceBody, ExploredMeter } from '../../components/player/interactions.tsx';
+import { Button, LinkButton, Page, PageHeader } from '../../components/ui.tsx';
+import { Link } from '../../lib/router.tsx';
+import { useProgress } from '../../state/progress.tsx';
+import { useSettings } from '../../state/settings.tsx';
 
 const recKey = (storyId: string, recId: string) => `${storyId}/${recId}`;
 

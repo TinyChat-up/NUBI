@@ -80,14 +80,15 @@ export function SummaryView({ story, state, step, onRestart }: { story: Story; s
       <p className="mt-3 text-center text-sm font-bold text-tinta-suave">Tu resumen se guarda solo en este dispositivo.</p>
 
       <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <LinkButton to="/herramientas" icon="backpack">
-          Ver mis herramientas
-        </LinkButton>
+        {/* Fase 19: sin catálogo de herramientas ni «Mi mundo»; terminar lleva a los cuentos o al inicio. */}
         <Button variant="secondary" icon="refresh" onClick={onRestart}>
           Leer otra vez
         </Button>
-        <LinkButton to="/mundo" variant="secondary" icon="map">
-          Volver a Mi mundo
+        <LinkButton to="/historias" variant="secondary" icon="story">
+          Elegir otro cuento
+        </LinkButton>
+        <LinkButton to="/" variant="secondary" icon="home">
+          Ir al inicio
         </LinkButton>
       </div>
     </div>

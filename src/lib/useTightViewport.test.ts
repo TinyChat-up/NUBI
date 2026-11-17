@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { TIGHT_ENTER, TIGHT_LEAVE, nextTight } from './useTightViewport.ts';
+import { SINGLE_BAR, TIGHT_ENTER, TIGHT_LEAVE, nextTight } from './useTightViewport.ts';
 
 describe('nextTight (ventana baja por zoom alto)', () => {
   it('no se activa en los tamaños habituales (barras medidas en Chromium)', () => {
@@ -26,5 +26,13 @@ describe('nextTight (ventana baja por zoom alto)', () => {
   it('sin altura de ventana conocida no cambia de estado', () => {
     expect(nextTight(true, 100, 0)).toBe(true);
     expect(nextTight(false, 100, 0)).toBe(false);
+  });
+
+  it('con una sola barra (pantallas generales desde la fase 19) se activa con la cabecera a 400 %', () => {
+    const t = (bars: number, h: number, was = false) => nextTight(was, bars, h, SINGLE_BAR.enter, SINGLE_BAR.leave);
+    expect(t(72, 256)).toBe(true); // 320×256: la cabecera ocupa ≈ 28 %
+    for (const [bars, h] of [[72, 844], [72, 512], [72, 568], [72, 820], [130, 568]]) expect(t(bars, h)).toBe(false);
+    expect(t(55, 256, true)).toBe(true); // histéresis: entre 20 % y 25 % se mantiene
+    expect(t(50, 256, true)).toBe(false);
   });
 });

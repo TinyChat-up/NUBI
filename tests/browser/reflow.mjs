@@ -17,7 +17,8 @@ const base = process.env.NUBI_URL || 'http://127.0.0.1:5173';
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
 const STAGE = '[aria-label="Contenido de la escena"]';
 const option = story.scenes.flatMap(s => s.steps).find(s => s.type === 'choice').options[0];
-const generalRoutes = ['/mundo', '/historias', '/historias/una-manana-diferente', '/herramientas', '/herramientas/pedir-ayuda', '/emociones', '/ajustes', '/familias'];
+// Fase 19: las dos funciones, Ajustes y dos páginas de compatibilidad (rutas antiguas).
+const generalRoutes = ['/historias', '/historias/una-manana-diferente', '/acompanar', '/acompanar/una-manana-diferente', '/ajustes', '/mundo', '/herramientas', '/familias'];
 
 const newPage = async (width, height) => {
   const context = await browser.newContext({ viewport: { width, height }, reducedMotion: 'reduce' });
@@ -35,7 +36,9 @@ async function everythingReachable(page, label) {
   const problems = await page.evaluate(sel => {
     const stage = document.querySelector(sel);
     const items = [...stage.querySelectorAll('p,h2,h3,li,figcaption,button,a'), ...document.querySelectorAll('footer button, header button')]
-      .filter(e => { const r = e.getBoundingClientRect(); const s = getComputedStyle(e); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && !e.closest('[aria-hidden="true"],.sr-only,[inert]'); });
+      .filter(e => { const r = e.getBoundingClientRect(); const s = getComputedStyle(e); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && !e.closest('[aria-hidden="true"],.sr-only,[inert]')
+        // Fase 19: el contenido de un <details> cerrado (apoyos desplegables) no se muestra hasta abrirlo.
+        && !(e.closest('details:not([open])') && !e.closest('summary')); });
     const out = [];
     for (const e of items) {
       e.scrollIntoView({ block: 'center', inline: 'nearest' });
@@ -64,7 +67,7 @@ try {
   for (const [width, height] of [[390, 844], [820, 1180], [1180, 820], [640, 512], [320, 568]]) {
     const { context, page, errors } = await newPage(width, height);
     const label = `${width}×${height}`;
-    await page.goto(`${base}/mundo`); await page.locator('h1').waitFor();
+    await page.goto(`${base}/historias`); await page.locator('h1').waitFor();
     assert.equal(await isTight(page), false, `${label}: no debería activarse la ventana baja`);
     assert.equal(await page.getByRole('banner').evaluate(e => getComputedStyle(e).position), 'sticky', `${label}: la cabecera sigue fija`);
     for (const format of ['cuento', 'comic']) {
@@ -116,7 +119,8 @@ try {
       await page.goto(base + route); await page.locator('h1').first().waitFor(); await page.waitForTimeout(150);
       assert.equal(await isTight(page), true, `${route}: debería activarse la ventana baja`);
       assert.equal(await page.getByRole('banner').evaluate(e => getComputedStyle(e).position), 'static', `${route}: cabecera no fija`);
-      assert.equal(await page.getByRole('navigation', { name: 'Principal' }).last().evaluate(e => getComputedStyle(e).position), 'static', `${route}: navegación no fija`);
+      // Fase 19: no hay navegación inferior; solo la cabecera (con umbral de una barra, SINGLE_BAR).
+      assert.equal(await page.getByRole('navigation', { name: 'Principal' }).count(), 0, `${route}: no debe haber pestañas`);
       await noOverflow(page, route);
       const seen = new Set();
       for (let i = 0; i < 60; i++) {

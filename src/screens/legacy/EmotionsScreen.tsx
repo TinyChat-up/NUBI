@@ -1,11 +1,13 @@
+// FUERA DE LA NAVEGACIÓN desde la fase 19 (NUBI = cuentos sociales). Se conserva sin borrar por si sus
+// piezas se reutilizan dentro de las historias; no tiene ruta. Ver docs/product/REMOVED_NAVIGATION.md.
 import { useState } from 'react';
-import { emotionList } from '../content/emotions.ts';
-import { tools } from '../content/tools.ts';
-import type { EmotionId } from '../engine/types.ts';
-import { Icon } from '../components/Icon.tsx';
-import { EmotionArt } from '../components/illustration/GuideArt.tsx';
-import { LinkButton, Page, PageHeader } from '../components/ui.tsx';
-import { Link } from '../lib/router.tsx';
+import { emotionList } from '../../content/emotions.ts';
+import { tools } from '../../content/tools.ts';
+import type { EmotionId } from '../../engine/types.ts';
+import { Icon } from '../../components/Icon.tsx';
+import { EmotionArt } from '../../components/illustration/GuideArt.tsx';
+import { LinkButton, Page, PageHeader } from '../../components/ui.tsx';
+import { Link } from '../../lib/router.tsx';
 
 
 /** Mis emociones: conocer lo que sentimos. Todas las emociones son válidas. */

@@ -1,12 +1,14 @@
-import { placeList, places } from '../content/places.ts';
-import { storiesByPlace } from '../content/stories/index.ts';
-import type { Place, PlaceId } from '../engine/types.ts';
-import { Icon } from '../components/Icon.tsx';
-import { Illustration } from '../components/Illustration.tsx';
-import { GuideArt } from '../components/illustration/GuideArt.tsx';
-import { StoryCard } from '../components/StoryCard.tsx';
-import { LinkButton, Page, PageHeader } from '../components/ui.tsx';
-import { Link } from '../lib/router.tsx';
+// FUERA DE LA NAVEGACIÓN desde la fase 19 (NUBI = cuentos sociales). Se conserva sin borrar por si sus
+// piezas se reutilizan dentro de las historias; no tiene ruta. Ver docs/product/REMOVED_NAVIGATION.md.
+import { placeList, places } from '../../content/places.ts';
+import { storiesByPlace } from '../../content/stories/index.ts';
+import type { Place, PlaceId } from '../../engine/types.ts';
+import { Icon } from '../../components/Icon.tsx';
+import { Illustration } from '../../components/Illustration.tsx';
+import { GuideArt } from '../../components/illustration/GuideArt.tsx';
+import { StoryCard } from '../../components/StoryCard.tsx';
+import { LinkButton, Page, PageHeader } from '../../components/ui.tsx';
+import { Link } from '../../lib/router.tsx';
 
 const placeHref = (place: Place) => (place.kind === 'emotions' ? '/emociones' : place.kind === 'tools' ? '/herramientas' : `/mundo/${place.id}`);
 

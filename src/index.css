@@ -191,16 +191,11 @@ p {
   box-shadow: 0 0 0 7px var(--color-coral-700);
 }
 
-/* El foco de teclado nunca queda bajo la cabecera fija ni bajo la barra inferior (WCAG 2.4.11).
-   En rem para que acompañe al ajuste de tamaño de letra. La barra inferior solo existe por debajo de lg. */
+/* El foco de teclado nunca queda bajo la cabecera fija (WCAG 2.4.11). En rem para que acompañe
+   al ajuste de tamaño de letra. Desde la fase 19 no hay barra inferior de navegación. */
 html {
   scroll-padding-top: calc(4.5rem + 1rem);
-  scroll-padding-bottom: calc(5.25rem + max(0.75rem, env(safe-area-inset-bottom)) + 1rem);
-}
-@media (min-width: 80rem) {
-  html {
-    scroll-padding-bottom: 1rem;
-  }
+  scroll-padding-bottom: 1rem;
 }
 
 /* Ventana baja (zoom alto ≈ 400 %): las barras dejan de ser fijas (useTightViewport), así que
@@ -338,6 +333,12 @@ html[data-motion='reduced'] *::after {
 .home-hero-guide { filter: drop-shadow(0 8px 10px rgb(34 51 58 / .14)); }
 .home-hero-brand { font-size: 3.75rem; line-height: 1; letter-spacing: .08em; color: var(--color-petroleo-800); text-shadow: 0 0 18px var(--color-crema-50); }
 .home-hero-tagline { margin-top: .25rem; max-width: 17rem; font-size: 1.25rem; font-weight: 800; color: var(--color-tinta); text-shadow: 0 0 4px var(--color-crema-50), 0 0 12px var(--color-crema-50); }
+.home-hero-actions { display: flex; flex-direction: column; align-items: center; gap: .75rem; }
+/* Acceso adulto: secundario y distinto del botón del niño (borde, fondo crema, dos líneas: para quién y para qué). */
+.home-hero-adult { display: inline-flex; align-items: center; gap: .625rem; min-height: 3rem; padding: .375rem 1.125rem; border: 2px solid var(--color-petroleo-200); border-radius: 9999px; font-weight: 800; line-height: 1.2; color: var(--color-petroleo-800); background: color-mix(in srgb, var(--color-crema-50) 92%, transparent); box-shadow: var(--shadow-soft); text-align: left; }
+.home-hero-adult:hover { border-color: var(--color-petroleo-400); background: var(--color-crema-50); }
+.home-hero-adult-note { display: block; font-size: .875rem; font-weight: 700; color: var(--color-tinta-suave); }
+html[data-contrast='high'] .home-hero-adult { border-color: var(--color-petroleo-800); background: var(--color-crema-50); }
 .home-hero-note { align-self: center; margin: auto 1rem max(1rem, env(safe-area-inset-bottom)); display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem; padding: .375rem .875rem; border-radius: 9999px; font-size: .875rem; font-weight: 700; color: var(--color-tinta-suave); background: color-mix(in srgb, var(--color-crema-50) 88%, transparent); }
 
 .world-page > header { flex-direction: row; align-items: center; }
@@ -367,6 +368,42 @@ html[data-motion='reduced'] *::after {
 .coming-stories { min-height: auto; border: 0; border-top: 1px solid var(--color-crema-300); border-radius: 0; flex-direction: row; text-align: left; justify-content: flex-start; }
 .story-opening { display: grid; align-items: center; gap: 1.5rem; }
 .story-cover-art { width: 100%; max-width: 32rem; border-radius: var(--radius-card); }
+/* Para familias y docentes (fase 19): guía de lectura, no panel. */
+.accompany-steps { display: grid; gap: .75rem; }
+.accompany-steps li { display: flex; align-items: center; gap: .75rem; font-size: 1.125rem; font-weight: 700; }
+.accompany-steps li > span { display: grid; place-items: center; flex-shrink: 0; width: 2.25rem; height: 2.25rem; border-radius: 9999px; background: var(--color-petroleo-100); color: var(--color-petroleo-800); font-weight: 900; }
+.accompany-story { display: flex; align-items: center; gap: 1rem; height: 100%; padding: 1rem; border: 2px solid var(--color-petroleo-200); border-radius: var(--radius-card); background: var(--color-crema-50); }
+.accompany-story:hover { border-color: var(--color-petroleo-600); }
+.accompany-story-art { width: 40%; max-width: 13.75rem; flex-shrink: 0; border-radius: 1rem; }
+.guide-head { display: grid; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+.guide-head-art { width: 100%; max-width: 20rem; border-radius: var(--radius-card); }
+.guide-moments { margin-bottom: 2rem; }
+.guide-blocks { display: grid; gap: 1.5rem; }
+.guide-block { padding: 1.5rem; border-radius: var(--radius-card); background: var(--color-crema-50); box-shadow: var(--shadow-soft); }
+.guide-list { display: grid; gap: .5rem; padding-left: 1.25rem; list-style: disc; font-size: 1.0625rem; }
+.guide-supports { display: grid; gap: .75rem; }
+.guide-supports li { display: flex; align-items: flex-start; gap: .75rem; }
+.guide-support-art { width: 4rem; flex-shrink: 0; }
+html[data-contrast='high'] :is(.accompany-story,.guide-block) { border: 2px solid var(--color-petroleo-800); }
+@media (min-width: 768px) { .guide-head { grid-template-columns: 18rem minmax(0,1fr); } .guide-supports { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 479px) { .accompany-story { flex-direction: column; align-items: stretch; } .accompany-story-art { width: 100%; max-width: none; } }
+/* Decisiones en móvil (fase 19): seis filas compactas, imagen a la izquierda y texto a la derecha.
+   Mismo tamaño y orden para todas: ninguna se destaca. */
+@media (max-width: 479px) {
+  .choice-path { flex-direction: row; align-items: center; }
+  .choice-path-art { width: 40%; flex-shrink: 0; }
+  .choice-path-copy { padding: .75rem; }
+  .choice-path-arrow { display: none; }
+}
+.optional-chip { max-width: 100%; }
+.support-card { border: 2px solid var(--color-crema-300); border-radius: 1.5rem; background: var(--color-crema-50); }
+.support-card[open] { border-color: var(--color-petroleo-200); }
+.support-card summary::-webkit-details-marker { display: none; }
+/* Biblioteca con un solo cuento (fase 19): cubierta grande, título, descripción y un botón. */
+.story-featured { display: grid; align-items: center; gap: 1.5rem; }
+.story-featured-art { width: 100%; max-width: 36rem; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
+.story-featured-copy { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+@media (min-width: 768px) { .story-featured { grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 2.5rem; } }
 .story-opening-copy { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
 .format-section { margin-block: 2rem; }
 .format-choices { display: grid; gap: 1rem; }
@@ -420,6 +457,7 @@ html[data-motion='reduced'] *::after {
   .home-hero-bar { padding-inline: 2rem; padding-top: max(1.5rem, env(safe-area-inset-top)); }
   .home-hero-brand { font-size: 5rem; }
   .home-hero-tagline { max-width: none; font-size: 1.5rem; }
+  .home-hero-actions { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .world-companions { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .place-featured { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); align-items: center; }
   .place-featured .place-caption { padding: 2rem; }
@@ -471,17 +509,15 @@ html[data-contrast='high'] :is(.place-entry,.story-book,.format-choice,.tool-ent
   .world-companions .place-entry { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
 }
 
-/* Etiquetas de navegación completas: dos columnas cuando cuatro ya no caben. */
+/* Cabecera estrecha (fase 19): el logotipo deja la palabra NUBI para que «Inicio» y «Ajustes»
+   mantengan su texto visible. */
+@media (max-width: 419px) {
+  .app-bar .logo-word { display: none; }
+}
 @media (max-width: 359px) {
-  .primary-tabs ul { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  html:not([data-tight]) { scroll-padding-bottom: 12rem; }
-  html:not([data-tight]) .app-page { padding-bottom: 13rem; }
   .world-companions .place-entry { display: block; }
 }
 @media (max-width: 479px) {
-  html[data-text-size='xl'] .primary-tabs ul { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  html[data-text-size='xl']:not([data-tight]) { scroll-padding-bottom: 12rem; }
-  html[data-text-size='xl']:not([data-tight]) .app-page { padding-bottom: 13rem; }
   html[data-text-size='xl'] .tool-entry { flex-direction: column; align-items: stretch; }
   html[data-text-size='xl'] .tool-art { align-self: center; }
   html[data-text-size='xl'] .world-companions .place-entry { display: block; }

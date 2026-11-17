@@ -1,7 +1,8 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import { Icon } from '../components/Icon.tsx';
 import { Button, Page, PageHeader } from '../components/ui.tsx';
 import { useNarration } from '../lib/useNarration.ts';
+import { useProgress } from '../state/progress.tsx';
 import { useSettings, type Settings } from '../state/settings.tsx';
 
 function Segmented<K extends keyof Settings>({ setting, label, options }: { setting: K; label: string; options: { value: Settings[K]; label: string; icon?: string }[] }) {
@@ -105,6 +106,52 @@ export function SettingsScreen() {
           Volver a los ajustes iniciales
         </Button>
       </div>
+
+      <DeviceData />
     </Page>
+  );
+}
+
+/**
+ * Datos de este dispositivo (antes en el Espacio familiar, fase 19). Borra el punto de los cuentos y lo
+ * explorado; conserva estos ajustes. No hay servidor: nada sale del navegador.
+ */
+function DeviceData() {
+  const { resetAll } = useProgress();
+  const [confirm, setConfirm] = useState(false);
+  const [done, setDone] = useState(false);
+  return (
+    <section aria-labelledby="device-data" className="mt-10 rounded-[var(--radius-card)] border-2 border-crema-300 p-6">
+      <h2 id="device-data" className="flex items-center gap-2 text-xl text-petroleo-900">
+        <Icon name="lock" /> Datos de este dispositivo
+      </h2>
+      <p className="mt-2">NUBI guarda en este navegador estos ajustes y el punto donde se quedó cada cuento. No hay cuentas y no se envía nada a ningún servidor.</p>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        {confirm ? (
+          <>
+            <span className="font-bold">¿Borrar el progreso de los cuentos?</span>
+            <Button
+              variant="coral"
+              icon="trash"
+              onClick={() => {
+                resetAll();
+                setConfirm(false);
+                setDone(true);
+              }}
+            >
+              Sí, borrar
+            </Button>
+            <Button variant="ghost" onClick={() => setConfirm(false)}>
+              Cancelar
+            </Button>
+          </>
+        ) : (
+          <Button variant="secondary" icon="trash" onClick={() => { setConfirm(true); setDone(false); }}>
+            Borrar el progreso
+          </Button>
+        )}
+      </div>
+      {done && <p role="status" className="mt-3 font-bold text-salvia-700">Progreso borrado. Los ajustes se mantienen.</p>}
+    </section>
   );
 }

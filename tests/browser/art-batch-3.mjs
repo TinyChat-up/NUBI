@@ -52,7 +52,7 @@ try {
         assert((await stage.innerText()).includes(moment.text), `${width}/${moment.illustration}: narrative`);
         await box.locator('..').screenshot({ path: `${out}/${width}-${moment.illustration}.jpg`, type: 'jpeg', quality: 86 });
       }
-      await page.getByRole('button', { name: /Probar otra posibilidad/ }).click();
+      await page.getByRole('button', { name: /Probar otra decisión/  /* fase 19: antes «Probar otra posibilidad» */ }).click();
       await page.getByRole('heading', { name: '¿Qué podría hacer Teo?', exact: true }).waitFor();
     }
     assert.deepEqual(errors, []);

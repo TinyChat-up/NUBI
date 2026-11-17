@@ -58,7 +58,7 @@ try {
             await page.getByRole('button', { name: o.label, exact: false }).click();
             await page.getByRole('heading', { name: o.label, exact: true }).waitFor();
             await collect();
-            if (k < options.length - 1) { await page.getByRole('button', { name: /Probar otra posibilidad/ }).click(); await collect(); }
+            if (k < options.length - 1) { await page.getByRole('button', { name: /Probar otra decisión/  /* fase 19: antes «Probar otra posibilidad» */ }).click(); await collect(); }
           }
         }
         await page.getByRole('button', { name: 'Siguiente', exact: true }).click();
