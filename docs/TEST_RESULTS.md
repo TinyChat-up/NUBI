@@ -1,6 +1,21 @@
-# Resultados de pruebas — 16/11/2026
+# Resultados de pruebas
 
-## Fase 7 · nube (última actualización)
+## Fase 9 · cómic completo (17/11/2026, última actualización)
+
+Informe completo: [`integration/PHASE_9_REPORT.md`](integration/PHASE_9_REPORT.md). Rama `integration/phase-9` = `integration/phase-7` + `feat/codex-art-batch-4` + corrección de `sizes` y de la precarga del cómic. Mismo entorno y herramientas externas que en la fase 7. Catálogo: 72 recursos, 50 listos, 22 pendientes.
+
+| Comprobación | Resultado |
+|---|---|
+| `npm run assets:doc` | 72 recursos, sin diferencias |
+| `npm run check` | Tipos, **55 tests en 7 archivos** (46 + 9 de `comicLayout.test.ts`) y build ✅ |
+| `art-files`, `art-layout`, `art-batch-2`, `art-batch-3`, `art-batch-4` | ✅ (50 recursos / 158 archivos; 15 viñetas y 62 regiones protegidas) |
+| `quality`, `story-fit`, `focus-obscured`, `narration`, `screens` | ✅ |
+| `comic-sizes.mjs` (nueva) | ✅ 15 viñetas × 390/820/1180 × DPR 1/2: variante óptima y una descarga por viñeta. Sin la corrección falla |
+| `comic-flow.mjs` (nueva) | ✅ orden, descubrir con ratón, → y Tab + Enter, aria-live, Atrás/←, `?continuar=1`, movimiento reducido, consola limpia |
+
+---
+
+## Fase 7 · nube
 
 Informe completo: [`integration/PHASE_7_REPORT.md`](integration/PHASE_7_REPORT.md).
 
