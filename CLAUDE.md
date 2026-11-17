@@ -18,6 +18,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Motor de historias ramificadas (fase 21):** [docs/product/PHASE_21_BRANCHING_REPORT.md](docs/product/PHASE_21_BRANCHING_REPORT.md), en `feat/claude-nubi-branching-v1`. Campos opcionales `option.next`, `scene.ending/offer/role`, `engineVersion: 2`; acción `rewind`. Historia técnica de prueba (NO es contenido) en `src/content/stories/__dev__/`, solo en la ruta de desarrollo `/dev/historia-ramificada/{cuento,comic}`; prueba `tests/browser/branching.mjs`.
 >
+> **Cuento 2, propuesta editorial (fase 22):** [docs/stories/STORY_02_PROPOSAL.md](docs/stories/STORY_02_PROPOSAL.md) («El libro de trenes»), mapa e inventario de arte en `docs/stories/`, rama `feat/claude-nubi-story-2-v1`. **No implementado**: no añadirlo a la biblioteca ni encargar ilustraciones sin aprobación.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
