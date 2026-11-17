@@ -23,6 +23,10 @@ interface Route {
   render: (params: Record<string, string>) => ReactNode;
 }
 
+// Solo desarrollo: importación diferida; no entra en el paquete de producción.
+const DevPlayer = import.meta.env.DEV ? lazy(() => import('./screens/DevScreens.tsx').then((m) => ({ default: m.DevPlayer }))) : null;
+const DevIndex = import.meta.env.DEV ? lazy(() => import('./screens/DevScreens.tsx').then((m) => ({ default: m.DevIndex }))) : null;
+
 const storyExists = (p: Record<string, string>) => Boolean(getStory(p.id));
 
 /**
@@ -93,24 +97,16 @@ const routes: Route[] = [
   },
   { pattern: '/familias', title: 'NUBI ha cambiado', render: () => <FamilyMoved /> },
 
-  // Solo desarrollo (fase 21): historia técnica ramificada para pruebas. No existe en producción.
-  ...(import.meta.env.DEV
+  // Solo desarrollo (fases 21–22): historias de prueba y revisión. No existen en producción.
+  ...(import.meta.env.DEV && DevPlayer && DevIndex
     ? [
-        { pattern: '/dev/historia-ramificada/cuento', title: 'Prueba técnica', chrome: false, render: () => <DevStory format="cuento" /> },
-        { pattern: '/dev/historia-ramificada/comic', title: 'Prueba técnica', chrome: false, render: () => <DevStory format="comic" /> },
+        { pattern: '/dev', title: 'Historias de desarrollo', chrome: false, render: () => <Suspense fallback={null}><DevIndex /></Suspense> },
+        { pattern: '/dev/libro-de-trenes/cuento', title: 'El libro de trenes (desarrollo)', chrome: false, render: () => <Suspense fallback={null}><DevPlayer storyId="libro-de-trenes" format="cuento" /></Suspense> },
+        { pattern: '/dev/historia-ramificada/cuento', title: 'Prueba técnica', chrome: false, render: () => <Suspense fallback={null}><DevPlayer storyId="prueba-ramificada" format="cuento" /></Suspense> },
+        { pattern: '/dev/historia-ramificada/comic', title: 'Prueba técnica', chrome: false, render: () => <Suspense fallback={null}><DevPlayer storyId="prueba-ramificada" format="comic" /></Suspense> },
       ]
     : []),
 ];
-
-// Importación diferida y solo en desarrollo: la historia técnica no entra en el paquete de producción.
-const DevBranchingScreen = import.meta.env.DEV ? lazy(() => import('./screens/DevBranchingScreen.tsx').then((m) => ({ default: m.DevBranchingScreen }))) : null;
-function DevStory({ format }: { format: 'cuento' | 'comic' }) {
-  return DevBranchingScreen ? (
-    <Suspense fallback={null}>
-      <DevBranchingScreen format={format} />
-    </Suspense>
-  ) : null;
-}
 
 function NotFound() {
   return (

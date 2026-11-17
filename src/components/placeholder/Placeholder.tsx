@@ -331,6 +331,16 @@ export function Placeholder({ asset, className }: { asset: AssetSpec; className?
         <Figure key={`${f.character}-${i}`} id={f.character} mood={f.mood} x={start + i * spread} base={base} scale={scale} showName={motif !== 'portrait'} />
       ))}
       <rect width={w} height={h} filter={`url(#grain-${uid})`} opacity={0.6} />
+      {asset.provisional && (
+        // Marcador provisional (fase 22): borde discontinuo y etiqueta legible; nunca parece arte definitivo.
+        <g>
+          <rect x={w * 0.03} y={h * 0.03} width={w * 0.94} height={h * 0.94} rx={24} fill="none" stroke="#B4441F" strokeWidth={Math.max(6, w / 150)} strokeDasharray={`${w / 30} ${w / 60}`} />
+          <rect x={w * 0.12} y={h * 0.84} width={w * 0.76} height={h * 0.09} rx={h * 0.045} fill="#B4441F" />
+          <text x={w / 2} y={h * 0.9} textAnchor="middle" dominantBaseline="middle" fill="#FFFCF6" fontFamily="sans-serif" fontWeight={800} fontSize={h * 0.046}>
+            PROVISIONAL · sin ilustración definitiva
+          </text>
+        </g>
+      )}
     </svg>
   );
 }

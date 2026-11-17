@@ -109,6 +109,11 @@ export interface AssetSpec {
   background: string;
   transparent: boolean;
   alt: string;
+  /**
+   * Fase 22: marcador PROVISIONAL de una ilustración que aún no existe. Se dibuja con una etiqueta visible
+   * y un borde discontinuo, para que nunca se confunda con arte definitivo. Solo lo usan recursos de desarrollo.
+   */
+  provisional?: boolean;
   /** Instrucciones para el placeholder temporal. */
   placeholder: {
     motif: PlaceholderMotif;
