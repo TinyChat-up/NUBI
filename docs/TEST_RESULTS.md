@@ -1,6 +1,21 @@
 # Resultados de pruebas
 
-## Fase 9 · cómic completo (17/11/2026, última actualización)
+## Fase 11 · nueve emociones (17/11/2026, última actualización)
+
+Informe completo: [`integration/PHASE_11_REPORT.md`](integration/PHASE_11_REPORT.md). Rama `integration/phase-11` = `integration/phase-9` + `feat/codex-art-batch-5` + `EmotionArt` en el selector «¿Cómo te sentirías?» (`ToggleCard.leading`). Catálogo: 72 recursos, 59 listos, 13 pendientes (7 herramientas, 6 lugares).
+
+| Comprobación | Resultado |
+|---|---|
+| `npm run assets:doc` | 72 recursos, sin diferencias |
+| `npm run check` | Tipos, **63 tests en 8 archivos** (55 + 8 de `feelings.test.ts`) y build ✅ |
+| `art-batch-5.mjs` (bloque del selector actualizado) | ✅ Mis emociones + selector en cuento y cómic × 390/820/1180: 5 `EmotionArt` + 3 iconos, textos, transparencia, 56 px, teclado, intensidad, consola |
+| `art-files`, `art-layout`, `art-batch-2/3/4`, `quality`, `story-fit`, `focus-obscured`, `narration`, `screens`, `comic-sizes`, `comic-flow` | ✅ |
+
+`art-batch-5.mjs` reescribe evidencias en `docs/art-batch-5/`; tras ejecutarla, restaurarlas con `git checkout -- docs/art-batch-5`.
+
+---
+
+## Fase 9 · cómic completo (17/11/2026)
 
 Informe completo: [`integration/PHASE_9_REPORT.md`](integration/PHASE_9_REPORT.md). Rama `integration/phase-9` = `integration/phase-7` + `feat/codex-art-batch-4` + corrección de `sizes` y de la precarga del cómic. Mismo entorno y herramientas externas que en la fase 7. Catálogo: 72 recursos, 50 listos, 22 pendientes.
 
