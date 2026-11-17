@@ -1,0 +1,123 @@
+diff --git a/src/content/stories/una-manana-diferente/story.ts b/src/content/stories/una-manana-diferente/story.ts
+index ae2a0c3..6349e00 100644
+--- a/src/content/stories/una-manana-diferente/story.ts
++++ b/src/content/stories/una-manana-diferente/story.ts
+@@ -154,6 +154,7 @@ export const unaMananaDiferente: Story = {
+           illustration: 'ume-s2-reacciones',
+           speaker: 'nubi',
+           text: 'No hay una forma correcta de sentir un cambio. Cada persona lo vive a su manera.',
++          short: 'No hay una forma correcta de sentir. Cada persona siente a su manera.', // BORRADOR fase 16
+           motion: 'float',
+         },
+         {
+@@ -295,6 +296,7 @@ export const unaMananaDiferente: Story = {
+           id: 'posibilidades-1',
+           illustration: 'ume-s4-teo-piensa',
+           text: 'Teo tiene muchas preguntas en la cabeza. ¿Qué podría hacer ahora?',
++          short: 'Teo tiene muchas preguntas. ¿Qué podría hacer?', // BORRADOR fase 16
+         },
+         {
+           type: 'choice',
+@@ -318,6 +320,14 @@ export const unaMananaDiferente: Story = {
+                 helpsWhen: 'Te ayuda saber qué viene después y te ves con fuerzas para preguntar.',
+                 keepInMind: 'A veces el adulto tampoco lo sabe todo. Puede decir: «Aún no lo sé. Te lo cuento en cuanto lo sepa».',
+                 tools: ['anticipar-cambios', 'comunicar-necesidad'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo levanta la mano y pregunta: «¿Qué hacemos después?»', 'Andrés responde: «Recreo y luego lengua, como siempre.» Teo respira un poco más despacio.'],
++                  youMayFeel: 'Más tranquilidad al saber lo que viene. Quizá vergüenza por preguntar delante de todos. Eso también es normal.',
++                  othersMay: 'Andrés agradece la pregunta. Así sabe qué necesita la clase. Otros quizá tenían la misma duda.',
++                  helpsWhen: 'Necesitas saber qué viene después. Y te sientes capaz de preguntar.',
++                  keepInMind: 'A veces el adulto tampoco lo sabe. Puede decir: «Aún no lo sé. Te lo cuento cuando lo sepa».',
++                },
+               },
+             },
+             {
+@@ -335,6 +345,14 @@ export const unaMananaDiferente: Story = {
+                 helpsWhen: 'Entiendes mejor las cosas cuando las ves que cuando las oyes.',
+                 keepInMind: 'Si el plan vuelve a cambiar, puedes pedir que lo actualicen en la pizarra.',
+                 tools: ['anticipar-cambios'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo se acerca a Andrés: «¿Me enseñas el plan de hoy?»', 'Andrés dibuja el plan en la pizarra. Biblioteca, recreo, lengua, comida y plástica. Teo lo mira entero.'],
++                  youMayFeel: 'Alivio al ver el día completo.',
++                  othersMay: 'A Lía y a Aya también les ayuda ver el plan. Así Andrés ayuda a toda la clase.',
++                  helpsWhen: 'Entiendes mejor lo que ves que lo que oyes.',
++                  keepInMind: 'El plan puede cambiar otra vez. Puedes pedir que lo dibujen de nuevo.',
++                },
+               },
+             },
+             {
+@@ -352,6 +370,13 @@ export const unaMananaDiferente: Story = {
+                 helpsWhen: 'Todavía no tienes confianza con la persona nueva y otra persona conocida puede ayudarte.',
+                 keepInMind: 'Ayuda saber de antemano quiénes son tus personas de confianza en el cole y dónde encontrarlas.',
+                 tools: ['pedir-ayuda'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo busca a Pilar, su maestra de apoyo. Pilar le conoce bien.', 'Pilar escucha a Teo. Van juntos a hablar con Andrés. Le cuentan qué ayuda a Teo.'],
++                  othersMay: 'Pilar se alegra de que Teo la busque. Andrés aprende cosas nuevas de Teo.',
++                  helpsWhen: 'Aún no tienes confianza con la persona nueva. Otra persona conocida puede ayudarte.',
++                  keepInMind: 'Ayuda saber antes quiénes son tus personas de confianza. Y dónde encontrarlas en el cole.',
++                },
+               },
+             },
+             {
+@@ -369,6 +394,13 @@ export const unaMananaDiferente: Story = {
+                 helpsWhen: 'El ruido o los nervios no te dejan pensar.',
+                 keepInMind: 'Tu recurso te calma, pero puede que aún necesites saber qué va a pasar. Se pueden combinar herramientas.',
+                 tools: ['apoyos-sensoriales', 'descansar'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo se pone sus cascos. Aprieta su pelota blanda.', 'El ruido suena más suave. Poco a poco, el nudo de la tripa se afloja.'],
++                  youMayFeel: 'Más calma en el cuerpo. Así es más fácil pensar.',
++                  othersMay: 'Los demás siguen con lo suyo. Usar apoyos es normal, como llevar gafas.',
++                  keepInMind: 'Tu recurso puede calmarte. Quizá aún necesites saber qué va a pasar. Puedes usar varias herramientas a la vez.',
++                },
+               },
+             },
+             {
+@@ -386,6 +418,12 @@ export const unaMananaDiferente: Story = {
+                 helpsWhen: 'Necesitas mirar y entender antes de empezar algo nuevo.',
+                 keepInMind: 'A veces el grupo tiene que moverse. Se puede pedir ir un poco después, ir con alguien o mirar primero desde la puerta.',
+                 tools: ['comunicar-necesidad', 'descansar'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo le dice a Andrés: «Necesito un momento.» También podría enseñar su tarjeta de descanso.', 'Andrés responde: «Vale. Avísame cuando estés listo.» Teo mira cómo se prepara la clase.'],
++                  othersMay: 'Andrés entiende que Teo necesita más tiempo. Así no tiene que adivinarlo.',
++                  keepInMind: 'A veces el grupo tiene que irse. Puedes pedir ir un poco después. O ir con alguien. O mirar primero desde la puerta.',
++                },
+               },
+             },
+             {
+@@ -405,6 +443,15 @@ export const unaMananaDiferente: Story = {
+                 anotherWay:
+                   'Puedes conseguir lo mismo avisando: enseña tu tarjeta de descanso, di «necesito salir» o usa una señal acordada. Así tienes tu momento tranquilo y los adultos saben que estás bien.',
+                 tools: ['espacio-tranquilo', 'descansar', 'comunicar-necesidad'],
++                // Lectura fácil (fase 16, BORRADOR pendiente de aprobación): docs/review/phase-16/
++                short: {
++                  story: ['Teo sale al pasillo sin avisar. Allí hay menos ruido. Respira mejor.', 'Andrés no sabe dónde está Teo. Se preocupa y sale a buscarle.'],
++                  youMayFeel: 'Alivio en un sitio tranquilo. Quizá también susto o agobio cuando te buscan.',
++                  othersMay: 'Los adultos se preocupan si no saben dónde estás. Su trabajo es que estés a salvo.',
++                  helpsWhen: 'Necesitar salir está bien. Buscar un sitio tranquilo muestra que sabes qué te ayuda.',
++                  keepInMind: 'Si sales sin avisar, los demás pueden preocuparse. Quizá te pregunten qué pasó antes de que estés listo o lista.',
++                  anotherWay: 'Puedes avisar antes de salir. Con tu tarjeta de descanso. Diciendo «necesito salir». O con una señal acordada. Así tienes tu momento tranquilo. Y los adultos saben que estás bien.',
++                },
+               },
+             },
+           ],
+@@ -477,6 +524,7 @@ export const unaMananaDiferente: Story = {
+           illustration: 'ume-s6-biblioteca',
+           speaker: 'nubi',
+           text: 'Lo que ayuda a una persona puede no ayudar a otra. Por eso está bien tener varias herramientas.',
++          short: 'A cada persona le ayudan cosas distintas. Por eso está bien tener varias herramientas.', // BORRADOR fase 16
+           motion: 'float',
+         },
+         {
+@@ -546,6 +594,7 @@ export const unaMananaDiferente: Story = {
+           illustration: 'ume-s7-salida',
+           speaker: 'nubi',
+           text: 'Los cambios pueden sorprender. Pero hay cosas que puedes hacer: preguntar, pedir ayuda, usar tus apoyos o tomarte tu tiempo.',
++          short: 'Los cambios pueden sorprender. Puedes preguntar o pedir ayuda. Puedes usar tus apoyos o tomarte tu tiempo.', // BORRADOR fase 16
+           motion: 'float',
+         },
+         {

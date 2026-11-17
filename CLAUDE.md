@@ -8,6 +8,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Correcciones previas al piloto (fase 15):** [docs/review/PHASE_15_REMEDIATION_REPORT.md](docs/review/PHASE_15_REMEDIATION_REPORT.md), en la rama `feat/claude-pilot-remediation` (pendiente de revisión, sin integrar). Las propuestas de texto de [EDITORIAL_APPROVAL_PHASE_15.md](docs/review/EDITORIAL_APPROVAL_PHASE_15.md) **no están aplicadas**: solo se aplican con autorización humana expresa.
 >
+> **Borradores de textos cortos (fase 16):** [docs/review/PHASE_16_REPORT.md](docs/review/PHASE_16_REPORT.md), en la rama `review/phase-16-short-text-drafts`. Son propuestas **no aprobadas ni aplicadas** (`docs/review/phase-16/APPROVAL_CHECKLIST.md`); no incorporarlas a `story.ts` sin autorización expresa.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos
