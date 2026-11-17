@@ -1,0 +1,26 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "emotionImages": "9 at 64px + each selected at 100px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "existing icons, selection and intensity pass; artwork integration requires React change"
+  },
+  {
+    "width": 820,
+    "height": 1180,
+    "emotionImages": "9 at 64px + each selected at 100px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "existing icons, selection and intensity pass; artwork integration requires React change"
+  },
+  {
+    "width": 1180,
+    "height": 820,
+    "emotionImages": "9 at 64px + each selected at 100px",
+    "keyboard": "Enter + focus + aria-pressed + visible heading",
+    "axeViolations": 0,
+    "storySelector": "existing icons, selection and intensity pass; artwork integration requires React change"
+  }
+]

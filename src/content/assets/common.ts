@@ -141,6 +141,8 @@ const tools: AssetSpec[] = [
 const emotion = (id: string, name: string, description: string, icon: string): AssetSpec =>
   defineAsset('emocion', {
     id: `emo-${id}`,
+    status: 'listo',
+    variants: [256, 512],
     file: `/media/emotions/${id}.png`,
     usage: 'Mis emociones · selector "¿Cómo te sentirías?"',
     description: `${description} Representar la emoción con Nubi (cara y forma de la nube), no con una persona, para que cualquier niño o niña pueda identificarse. Expresión clara pero no exagerada.`,

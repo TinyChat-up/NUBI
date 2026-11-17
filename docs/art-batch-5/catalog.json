@@ -1,0 +1,9 @@
+{
+  "total": 72,
+  "ready": 59,
+  "pending": 13,
+  "pendingByKind": {
+    "lugar": 6,
+    "herramienta": 7
+  }
+}

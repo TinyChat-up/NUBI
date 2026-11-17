@@ -1,0 +1,52 @@
+{
+  "generator": "image_gen.imagegen",
+  "date": "2026-11-17",
+  "records": [
+    {
+      "id": "emo-alegria",
+      "nativeFile": "docs/art-batch-5/originals/alegria.png",
+      "generationSource": "exec-d078849d-6cd3-4ab3-978b-14842bd0b17d.png"
+    },
+    {
+      "id": "emo-calma",
+      "nativeFile": "docs/art-batch-5/originals/calma.png",
+      "generationSource": "exec-6b31d250-73f6-4b8d-a3e4-bc309e7ded3f.png"
+    },
+    {
+      "id": "emo-sorpresa",
+      "nativeFile": "docs/art-batch-5/originals/sorpresa.png",
+      "generationSource": "exec-b59bcfd2-3d4b-48b0-9606-f1c9572e6c75.png"
+    },
+    {
+      "id": "emo-curiosidad",
+      "nativeFile": "docs/art-batch-5/originals/curiosidad.png",
+      "generationSource": "exec-0f868544-43a7-4dd0-921b-64a8accf9fee.png"
+    },
+    {
+      "id": "emo-inseguridad",
+      "nativeFile": "docs/art-batch-5/originals/inseguridad.png",
+      "generationSource": "exec-c01b6dc4-81ce-4486-b0fb-e710377a8840.png"
+    },
+    {
+      "id": "emo-frustracion",
+      "nativeFile": "docs/art-batch-5/originals/frustracion.png",
+      "generationSource": "exec-8049a03f-dc3e-416e-9507-5fc21f7277b9.png"
+    },
+    {
+      "id": "emo-tristeza",
+      "nativeFile": "docs/art-batch-5/originals/tristeza.png",
+      "generationSource": "exec-880f61f5-bbb8-470d-9519-69c256f00205.png"
+    },
+    {
+      "id": "emo-enfado",
+      "nativeFile": "docs/art-batch-5/originals/enfado.png",
+      "generationSource": "exec-f4e501d3-5d60-47c0-8c44-8c99dc66e1ed.png"
+    },
+    {
+      "id": "emo-cansancio",
+      "nativeFile": "docs/art-batch-5/originals/cansancio.png",
+      "generationSource": "exec-8db9421a-4dac-43bb-8337-b156a706cec1.png"
+    }
+  ],
+  "review": "First 3x3 series reviewed. Final expressions individually generated. Calm glow and multi-character insecurity/frustration attempts rejected and replaced through single-image editing."
+}
