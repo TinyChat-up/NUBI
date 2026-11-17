@@ -26,6 +26,22 @@ async function child(page, label) {
   await page.waitForURL(/\/historias$/);
   await noOverflow(page, `${label} biblioteca`);
   assert.equal(await page.getByRole('button', { name: /^Todas$/ }).count(), 0, `${label}: sin filtros con un solo cuento`);
+  // Fase 20: carrusel de portadas. Flechas visibles, teclado y tarjeta final sin historias ni enlaces inventados.
+  const carousel = page.getByRole('region', { name: 'Cuentos' });
+  assert.equal(await carousel.locator('.story-carousel-track > li').count(), 2, `${label}: un cuento + «Próximamente»`);
+  assert.equal(await page.getByText('Próximamente: nuevas historias').count(), 1);
+  assert.equal(await carousel.locator('a[href*="instagram"]').count(), 0, `${label}: sin enlace inventado`);
+  await page.getByRole('button', { name: 'Cuento siguiente' }).click();
+  await page.getByText('2 de 2', { exact: true }).waitFor();
+  assert(await page.getByRole('button', { name: 'Cuento siguiente' }).isDisabled(), `${label}: última tarjeta`);
+  await page.getByRole('button', { name: 'Cuento anterior' }).click();
+  await page.getByText('1 de 2', { exact: true }).waitFor();
+  await page.getByRole('link', { name: 'Abrir el cuento' }).focus();
+  await page.keyboard.press('ArrowRight');
+  await page.getByText('2 de 2', { exact: true }).waitFor();
+  await page.keyboard.press('ArrowLeft');
+  await page.getByText('1 de 2', { exact: true }).waitFor();
+  await noOverflow(page, `${label} carrusel`);
   await page.getByRole('link', { name: 'Abrir el cuento' }).click();
   await page.waitForURL(/\/historias\/una-manana-diferente$/);
   await noOverflow(page, `${label} ficha`);
@@ -98,6 +114,15 @@ async function adult(page, label) {
   await page.getByRole('link', { name: /Una mañana diferente/ }).click();
   await page.waitForURL(/\/acompanar\/una-manana-diferente$/);
   for (const t of ['Antes del cuento', 'Durante el cuento', 'Después del cuento']) await page.getByRole('heading', { name: t, exact: true }).waitFor();
+  // Fase 20: índice al principio; cada enlace lleva a su parte, visible y no tapada por la cabecera.
+  const index = page.getByRole('navigation', { name: 'Partes de la guía' });
+  assert((await index.boundingBox()).y < (await page.getByRole('heading', { name: 'Antes del cuento', exact: true }).boundingBox()).y, `${label}: índice antes de la guía`);
+  for (const [link, heading] of [['Durante', 'Durante el cuento'], ['Después', 'Después del cuento'], ['Antes', 'Antes del cuento']]) {
+    await index.getByRole('link', { name: link }).click();
+    await page.waitForTimeout(200);
+    const top = await page.getByRole('heading', { name: heading, exact: true }).evaluate((e) => { const r = e.getBoundingClientRect(); const header = document.querySelector('header'); const hb = header && getComputedStyle(header).position === 'sticky' ? header.getBoundingClientRect().bottom : 0; return { ok: r.top >= hb - 1 && r.top < innerHeight }; });
+    assert(top.ok, `${label}: «${link}» lleva a su parte, visible`);
+  }
   const text = await page.locator('main').innerText();
   assert(!/\d+\s?%/.test(text), `${label}: sin porcentajes`);
   assert.equal(await page.getByRole('button', { name: /^(14|41|27|72)$/ }).count(), 0, `${label}: sin puerta numérica`);

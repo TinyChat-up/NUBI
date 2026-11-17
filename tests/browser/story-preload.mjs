@@ -39,7 +39,9 @@ try {
       const shown = new Map(); // ruta → anchos mostrados
       const collect = async () => {
         await page.waitForTimeout(150);
-        const imgs = await page.locator('[aria-label="Contenido de la escena"] img').evaluateAll(list => Promise.all(list.map(async i => {
+        // Fase 20: las imágenes de un <details> cerrado (apoyos desplegables, fase 19) no se muestran ni se cargan
+        // (lazy): decode() no se resolvería nunca. Se excluyen; siguen contando si se descargaran sin mostrarse.
+        const imgs = await page.locator('[aria-label="Contenido de la escena"] img').evaluateAll(list => Promise.all(list.filter(i => !i.closest('details:not([open])')).map(async i => {
           try { await i.decode(); } catch { /* imagen aún no visible */ }
           return { src: decodeURIComponent(new URL(i.currentSrc || i.src).pathname), width: i.getBoundingClientRect().width, scene: !!i.closest('[data-asset^="ume-s"]'), thumb: i.getBoundingClientRect().width < 200 };
         })));

@@ -142,7 +142,12 @@ export function ChoiceGrid({
   return (
     <div className="animate-rise">
       <StepHeading title={step.prompt} help={step.help} icon="footsteps" />
-      <ul className="grid grid-cols-1 gap-4 min-[480px]:grid-cols-2 lg:grid-cols-3">
+      {/*
+        Fase 20: tarjetas de álbum ilustrado. La ilustración cuenta la acción y una frase breve la nombra.
+        Dos columnas desde el móvil (una con poco ancho o letra muy grande), tres en tableta horizontal.
+        Todas iguales y en el orden del cuento: ninguna se destaca como preferible.
+      */}
+      <ul className="choice-cards grid gap-3 sm:gap-4">
         {step.options.map((o) => {
           const seen = explored.includes(o.id);
           return (
@@ -150,22 +155,17 @@ export function ChoiceGrid({
               <button
                 type="button"
                 onClick={() => onChoose(o)}
-                className="choice-path tap group flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] border-crema-300/80 bg-crema-50 text-left transition-colors hover:border-petroleo-400"
+                className="choice-path tap group relative flex h-full w-full flex-col overflow-hidden rounded-[var(--radius-card)] border-[3px] bg-crema-50 text-left transition-colors"
               >
                 <Illustration id={o.illustration} decorative ratio sizes={OPTION_CARD_SIZES} className="choice-path-art w-full" />
-                <span className="choice-path-copy flex flex-1 items-center gap-3 p-4">
-                  <span className="choice-path-arrow grid size-11 shrink-0 place-items-center rounded-full bg-petroleo-100 text-petroleo-700">
-                    <Icon name="arrow-right" size={22} />
+                {/* Estado de lo ya visto (no es una valoración): siempre con texto y marca, nunca solo color. */}
+                {seen && (
+                  <span className="choice-seen absolute top-2 left-2 inline-flex items-center gap-1 rounded-full bg-crema-50 px-2.5 py-1 text-sm font-bold text-salvia-700 shadow-[var(--shadow-soft)]">
+                    <Icon name="check" size={16} strokeWidth={3} /> Ya la exploraste
                   </span>
-                  <span className="flex flex-1 flex-col items-start gap-2">
-                    <span className="reading-text text-lg leading-snug font-extrabold">{o.label}</span>
-                    {/* Estado de lo ya visto (no es una valoración): siempre con texto y marca, nunca solo color. */}
-                    {seen && (
-                      <span className="inline-flex w-fit items-center gap-1 rounded-full bg-salvia-100 px-3 py-1 text-sm font-bold text-salvia-700">
-                        <Icon name="check" size={16} strokeWidth={3} /> Ya la exploraste
-                      </span>
-                    )}
-                  </span>
+                )}
+                <span className="choice-path-copy flex flex-1 items-center justify-center p-3 text-center sm:p-4">
+                  <span className="reading-text text-lg leading-snug font-extrabold">{o.label}</span>
                 </span>
               </button>
             </li>
@@ -229,7 +229,8 @@ export function ConsequenceBody({ option, protagonist = 'Teo', short = false }: 
         <h3 id={`think-${option.id}`} className="sr-only">
           Pensamos juntos
         </h3>
-        <ul className="divide-y divide-crema-300/70">
+        {/* Fase 20: dos columnas desde tableta (mismo texto, la mitad de alto). */}
+        <ul className="grid divide-y divide-crema-300/70 md:grid-cols-2 md:gap-x-8 md:divide-y-0">
           {reflections.map((r) => (
             <li key={r.title} className="flex gap-4 py-4">
               <span aria-hidden className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-full bg-crema-200 text-petroleo-700">

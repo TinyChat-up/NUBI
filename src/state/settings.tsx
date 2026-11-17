@@ -18,6 +18,8 @@ export interface Settings {
   /** Permitir la voz del dispositivo cuando no hay audio grabado. */
   deviceVoice: boolean;
   voiceRate: number;
+  /** Voz local elegida (fase 20). Vacía: la mejor clasificada del dispositivo (src/lib/voices.ts). */
+  voiceURI?: string;
 }
 
 export const DEFAULT_SETTINGS: Settings = {

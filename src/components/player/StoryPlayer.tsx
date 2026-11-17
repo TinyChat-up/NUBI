@@ -361,6 +361,17 @@ export function StoryPlayer({ story, format, startSceneId, resume }: StoryPlayer
             Este episodio aún no tiene audio grabado y la voz del dispositivo no está disponible. Puedes leer el texto o activarla en Ajustes.
           </p>
         )}
+        {mode === 'escuchar' && (
+          // Fase 20: repetir solo lo que se está escuchando (sin volver al principio de la escena) y parar la voz.
+          <div className="listen-controls mx-auto mb-2 flex max-w-6xl flex-wrap justify-center gap-2" role="group" aria-label="Voz">
+            <Button variant="soft" icon="repeat" onClick={() => { const ok = narration.speak(speech.text, speech.src); setVoiceNotice(!ok); }}>
+              Escuchar otra vez
+            </Button>
+            <Button variant="soft" icon="pause" onClick={narration.stop} disabled={!narration.speaking}>
+              Parar la voz
+            </Button>
+          </div>
+        )}
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2">
           <Button variant="secondary" icon="arrow-left" onClick={prev} disabled={!canGoBack} className="flex-1 px-4 sm:flex-none sm:px-6">
             Atrás

@@ -104,7 +104,8 @@ function Panel({ panel, current }: { panel: ComicPanel; current: boolean }) {
       </div>
       {/* Bocadillos en lista: viñeta estrecha. */}
       {ordered.length > 0 && (
-        <ol className="flex flex-col gap-3 border-t-[3px] border-tinta bg-crema-100 p-3 @lg:hidden">
+        // Fase 20: en la lista (móvil) el texto de los bocadillos sube a 18 px (index.css, .comic-list).
+        <ol className="comic-list flex flex-col gap-3 border-t-[3px] border-tinta bg-crema-100 p-3 @lg:hidden">
           {ordered.map((b, i) => (
             <li key={b.id} className="flex animate-rise flex-col gap-1" style={{ animationDelay: `${150 + i * 300}ms` }}>
               <SpeakerLabel bubble={b} />

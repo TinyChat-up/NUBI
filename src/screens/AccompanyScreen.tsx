@@ -67,11 +67,14 @@ function AdultNote() {
 function Block({ id, title, intro, children }: { id: string; title: string; intro: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="guide-block">
-      <h2 id={id} className="text-3xl text-petroleo-900">
+      <h2 id={id} tabIndex={-1} className="text-3xl text-petroleo-900">
         {title}
       </h2>
       <p className="reading-text mt-1 text-lg text-tinta-suave">{intro}</p>
       <div className="mt-5 grid gap-6">{children}</div>
+      <a href="#indice-guia" className="tap mt-4 inline-flex min-h-12 items-center gap-2 font-bold text-petroleo-700 underline underline-offset-4">
+        <Icon name="arrow-left" size={18} className="rotate-90" /> Volver al índice
+      </a>
     </section>
   );
 }
@@ -135,6 +138,13 @@ export function AccompanyGuideScreen({ storyId }: { storyId: string }) {
           Para familias y docentes
         </LinkButton>
       </div>
+
+      {/* Fase 20: índice al principio para ir directo a cada parte (la guía completa es larga en móvil). */}
+      <nav id="indice-guia" aria-label="Partes de la guía" className="guide-index">
+        <a href="#antes" className="tap guide-index-link"><span aria-hidden>1</span> Antes</a>
+        <a href="#durante" className="tap guide-index-link"><span aria-hidden>2</span> Durante</a>
+        <a href="#despues" className="tap guide-index-link"><span aria-hidden>3</span> Después</a>
+      </nav>
 
       <header className="guide-head">
         <Illustration id={story.cover} priority ratio fit="contain" sizes="(min-width: 768px) 300px, 100vw" className="guide-head-art" />

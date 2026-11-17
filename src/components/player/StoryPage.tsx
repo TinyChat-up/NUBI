@@ -2,7 +2,7 @@ import type { BeatStep, Character } from '../../engine/types.ts';
 import { Icon } from '../Icon.tsx';
 import type { CSSProperties, ReactNode } from 'react';
 import { getAsset } from '../../content/assets/index.ts';
-import { Illustration } from '../Illustration.tsx';
+import { Illustration, hasFinalArt } from '../Illustration.tsx';
 import { ratioOf } from '../illustration/imageSource.ts';
 import { GuideArt } from '../illustration/GuideArt.tsx';
 import { SCENE_SIZES } from './imageSizes.ts';
@@ -163,8 +163,9 @@ function Bubble({
     <figure className="relative min-w-0">
       {speaker && (
         <figcaption className="mb-3 flex items-end gap-2">
-          {lead}
-          <span className="mb-1 inline-flex items-center gap-2 rounded-full border-2 bg-crema-50 px-3 py-0.5 text-sm font-black text-petroleo-900" style={{ borderColor: speaker.color }}>
+          {/* Quién habla (fase 20): su retrato oficial junto al nombre; el nombre sigue siendo el texto que cuenta. */}
+          {lead ?? (hasFinalArt(`char-${speaker.id}`) && <Illustration id={`char-${speaker.id}`} decorative ratio fit="contain" sizes="48px" className="speaker-portrait w-10 shrink-0 sm:w-12" />)}
+          <span className="mb-1 inline-flex items-center gap-2 rounded-full border-2 bg-crema-50 px-3 py-0.5 text-base font-black text-petroleo-900" style={{ borderColor: speaker.color }}>
             <span aria-hidden className="size-2.5 rounded-full" style={{ backgroundColor: speaker.color }} />
             {speaker.name}
           </span>

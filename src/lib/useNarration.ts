@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSettings } from '../state/settings.tsx';
+import { pickVoice, rankVoices } from './voices.ts';
 
 /**
  * Narración accesible.
@@ -15,14 +16,17 @@ export function useNarration() {
   const [error, setError] = useState(false);
   const generation = useRef(0);
   const synthSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
-  const [localVoice, setLocalVoice] = useState(() => synthSupported && window.speechSynthesis.getVoices().some((v) => v.localService && v.lang?.toLowerCase().startsWith('es')));
+  // Voces locales en español, ordenadas (src/lib/voices.ts). Se actualizan cuando el sistema las carga.
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>(() => (synthSupported ? rankVoices(window.speechSynthesis.getVoices()) : []));
   useEffect(() => {
     if (!synthSupported) return;
-    const refresh = () => setLocalVoice(window.speechSynthesis.getVoices().some((v) => v.localService && v.lang?.toLowerCase().startsWith('es')));
+    const refresh = () => setVoices(rankVoices(window.speechSynthesis.getVoices()));
     refresh();
     window.speechSynthesis.addEventListener('voiceschanged', refresh);
     return () => window.speechSynthesis.removeEventListener('voiceschanged', refresh);
   }, [synthSupported]);
+  const localVoice = voices.length > 0;
+  const voice = pickVoice(voices, settings.voiceURI);
   const canSpeak = synthSupported && settings.deviceVoice && localVoice;
 
   const stop = useCallback(() => {
@@ -35,8 +39,12 @@ export function useNarration() {
     setSpeaking(false);
   }, [synthSupported]);
 
+  /**
+   * Lee un texto. `src`: narración humana grabada, que siempre tiene prioridad (preparado para el futuro).
+   * `options.voiceURI`: probar otra voz (muestra en Ajustes) sin cambiar la preferencia guardada.
+   */
   const speak = useCallback(
-    (text: string, src?: string) => {
+    (text: string, src?: string, options: { voiceURI?: string; rate?: number } = {}) => {
       stop();
       setError(false);
       const current = generation.current;
@@ -53,21 +61,22 @@ export function useNarration() {
       if (!canSpeak || !text.trim()) return false;
       const utterance = new SpeechSynthesisUtterance(text.replace(/[«»]/g, ''));
       utterance.lang = 'es-ES';
-      utterance.rate = settings.voiceRate;
-      // Evitar voces remotas del sistema: el texto infantil permanece en el dispositivo.
-      const voice = window.speechSynthesis.getVoices().find((v) => v.localService && v.lang?.toLowerCase().startsWith('es'));
-      if (!voice) return false;
-      if (voice) utterance.voice = voice;
+      utterance.rate = options.rate ?? settings.voiceRate;
+      // Solo voces locales: el texto infantil permanece en el dispositivo.
+      const chosen = pickVoice(rankVoices(window.speechSynthesis.getVoices()), options.voiceURI ?? settings.voiceURI);
+      if (!chosen) return false;
+      utterance.voice = chosen;
+      utterance.lang = chosen.lang;
       utterance.onend = () => { if (current === generation.current) setSpeaking(false); };
       utterance.onerror = failed;
       setSpeaking(true);
       try { window.speechSynthesis.speak(utterance); } catch { failed(); return false; }
       return true;
     },
-    [canSpeak, settings.voiceRate, stop],
+    [canSpeak, settings.voiceRate, settings.voiceURI, stop],
   );
 
   useEffect(() => stop, [stop]);
 
-  return { speak, stop, speaking, error, available: canSpeak };
+  return { speak, stop, speaking, error, available: canSpeak, voices, voice };
 }

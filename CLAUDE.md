@@ -14,6 +14,8 @@ Las reglas del repositorio están en **[AGENTS.md](AGENTS.md)** y se aplican ín
 >
 > **Cuentos sociales interactivos (fase 19):** [docs/product/PHASE_19_SIMPLIFICATION_REPORT.md](docs/product/PHASE_19_SIMPLIFICATION_REPORT.md), en la rama `feat/claude-social-stories-v1` (sobre `review/phase-18-ux-qa`, pendiente de revisión, sin integrar). NUBI pasa a tener dos funciones: **Descubrir un cuento** (`/historias`) y **Para familias y docentes** (`/acompanar`), más Ajustes; las rutas antiguas muestran «NUBI ha cambiado» ([REMOVED_NAVIGATION.md](docs/product/REMOVED_NAVIGATION.md)). Pantallas retiradas en `src/screens/legacy/`. Propuestas editoriales P-1…P-8 sin aplicar.
 >
+> **Cuentos visuales y voz (fase 20):** [docs/product/PHASE_20_VISUAL_REPORT.md](docs/product/PHASE_20_VISUAL_REPORT.md), en la rama `feat/codex-nubi-visual-v1` (sobre la fase 19, pendiente de revisión): carrusel de cuentos, decisiones en tarjetas ilustradas, voz elegible (`src/lib/voices.ts`), índice en la guía. Plan de historias ramificadas (sin implementar): [PHASE_21_BRANCHING_PLAN.md](docs/product/PHASE_21_BRANCHING_PLAN.md). URL de Instagram vacía a propósito en `src/content/community.ts`.
+>
 > **Rama de referencia:** `integration/phase-13` (sucesora de `integration/phase-11`, `-9` y `-7`). El trabajo de Claude continúa ahí (o en una rama `feat/claude-*` creada desde ella); el de Codex, en `feat/codex-*` creada desde ella. `main` no recibe merges sin autorización.
 
 ## Comandos

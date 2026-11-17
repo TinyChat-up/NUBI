@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { Icon } from '../components/Icon.tsx';
 import { Button, Page, PageHeader } from '../components/ui.tsx';
 import { useNarration } from '../lib/useNarration.ts';
+import { voiceLabel } from '../lib/voices.ts';
 import { useProgress } from '../state/progress.tsx';
 import { useSettings, type Settings } from '../state/settings.tsx';
 
@@ -75,13 +76,17 @@ export function SettingsScreen() {
           <p>Las historias se abren en lectura. Puedes activar Escuchar dentro del reproductor.</p>
           <Segmented setting="subtitles" label="Subtítulos al escuchar" options={yesNo} />
           <Segmented setting="deviceVoice" label="Usar la voz del dispositivo si no hay audio grabado" options={yesNo} />
-          <Segmented setting="voiceRate" label="Velocidad de la voz" options={[{ value: 0.75, label: 'Despacio' }, { value: 0.9, label: 'Normal' }, { value: 1.05, label: 'Rápida' }]} />
-          <div>
-            <Button variant="soft" icon="volume" disabled={!narration.available} onClick={() => narration.speak('Hola, soy Nubi. Así suena la voz.')}>
-              Probar la voz
-            </Button>
-            {!narration.available && <p className="mt-2 text-sm text-tinta-suave">La voz del dispositivo no está disponible o está desactivada.</p>}
-          </div>
+          <Segmented
+            setting="voiceRate"
+            label="Velocidad de la voz"
+            options={[
+              { value: 0.75, label: 'Muy despacio' },
+              { value: 0.85, label: 'Pausada' },
+              { value: 0.9, label: 'Normal' },
+              { value: 1.05, label: 'Rápida' },
+            ]}
+          />
+          <VoicePicker narration={narration} />
         </Group>
 
         <Group title="Movimiento" icon="motion">
@@ -153,5 +158,55 @@ function DeviceData() {
       </div>
       {done && <p role="status" className="mt-3 font-bold text-salvia-700">Progreso borrado. Los ajustes se mantienen.</p>}
     </section>
+  );
+}
+
+const SAMPLE = 'Es martes por la mañana. Teo llega al colegio con su abuela Rosa.';
+
+/**
+ * Voces del dispositivo (fase 20): todas las locales en español, ordenadas por src/lib/voices.ts.
+ * Cada una se puede escuchar antes de elegirla. No se califica ninguna como «dulce» o «natural»:
+ * depende del dispositivo y de quien escucha. Nada se envía fuera del dispositivo.
+ */
+function VoicePicker({ narration }: { narration: ReturnType<typeof useNarration> }) {
+  const { settings, update } = useSettings();
+  if (!narration.voices.length) {
+    return <p className="text-tinta-suave">Este dispositivo no tiene voces en español instaladas, o el navegador no las ofrece. Las historias se pueden leer igual.</p>;
+  }
+  const current = narration.voice?.voiceURI;
+  return (
+    <fieldset className="grid gap-2">
+      <legend className="mb-1 text-lg font-black text-petroleo-900">Voz</legend>
+      <p className="mb-2 text-tinta-suave">Escucha una muestra y elige la que te resulte más clara. Cada dispositivo tiene voces distintas.</p>
+      <ul className="voice-list grid gap-2">
+        {narration.voices.map((v) => {
+          const on = v.voiceURI === current;
+          return (
+            <li key={v.voiceURI} className="flex flex-wrap items-center gap-2">
+              <button
+                type="button"
+                aria-pressed={on}
+                onClick={() => update({ voiceURI: v.voiceURI })}
+                className={`tap flex min-h-14 flex-1 items-center gap-2 rounded-full border-[3px] px-5 text-left font-extrabold ${on ? 'border-petroleo-600 bg-petroleo-50 text-petroleo-900' : 'border-crema-300 bg-crema-50'}`}
+              >
+                {voiceLabel(v)}
+                {on && <Icon name="check" size={18} />}
+              </button>
+              <Button variant="soft" icon="volume" onClick={() => narration.speak(SAMPLE, undefined, { voiceURI: v.voiceURI })} aria-label={`Escuchar una muestra de ${voiceLabel(v)}`}>
+                Muestra
+              </Button>
+            </li>
+          );
+        })}
+      </ul>
+      {narration.speaking && (
+        <div>
+          <Button variant="secondary" icon="pause" onClick={narration.stop}>
+            Parar
+          </Button>
+        </div>
+      )}
+      {settings.voiceURI && settings.voiceURI !== current && <p className="text-sm text-tinta-suave">La voz que elegiste no está en este dispositivo; se usa la primera de la lista.</p>}
+    </fieldset>
   );
 }
